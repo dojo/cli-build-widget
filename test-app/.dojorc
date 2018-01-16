@@ -1,0 +1,22 @@
+{
+	"build-app": {
+		"locale": "en",
+		"supportedLocales": [ "es" ],
+		"features": {
+			"foo": true,
+			"bar": false
+		},
+		"bundles": {
+			"widgets": [
+				"src/Bar",
+				"src/Baz"
+			]
+		},
+		"pwa": {
+			"manifest": {
+				"name": "Test App",
+				"description": "A test application for @dojo/cli-build-app"
+			}
+		}
+	}
+}
