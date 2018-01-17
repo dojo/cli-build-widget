@@ -25,7 +25,7 @@ function assertOutput(mode: string) {
 	const outputFileIdentifiers = Object.keys(outputManifest);
 	assert.deepEqual(outputFileIdentifiers, fixtureFileIdentifiers);
 	fixtureFileIdentifiers.forEach(id => {
-		if (id !== 'runtime.js.map') {
+		if (id !== 'runtime.js.map' && id !== 'widget-core.js.map') {
 			const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, fixtureManifest[id]);
 			const outputFilePath = path.join(appRootDir, 'output', mode, outputManifest[id]);
 			const fixtureContents = fs.readFileSync(fixtureFilePath, 'utf8');
