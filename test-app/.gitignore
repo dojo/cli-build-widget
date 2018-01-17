@@ -1,4 +1,4 @@
 /output
-/src/app.m.css.d.ts
+/src/**/*.css.d.ts
 /node_modules
 package-lock.json
