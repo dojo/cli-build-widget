@@ -19,13 +19,14 @@
   "scripts": {
     "test": "npm run setup-tests && grunt test --color",
     "test-ci": "npm run setup-tests && grunt dev && grunt intern:node --test-reporter --color",
+    "clean": "shx rm -rf dist",
     "setup-tests": "npm run build-test-artifact && cd test-app && shx rm -rf node_modules package-lock.json && npm i",
-    "build-test-artifact": "grunt dist && grunt release-publish-flat --dry-run && shx mv dist/dojo-cli-build-widget-* dist/dojo-cli-build-widget.tgz",
+    "build-test-artifact": "npm run clean dist && grunt dist && grunt release-publish-flat --dry-run && shx mv dist/dojo-cli-build-widget-* dist/dojo-cli-build-widget.tgz",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
     "generate-unix-fixtures": "cd test-app && npm run generate-unix-fixtures && cd ..",
     "generate-windows-fixtures": "cd test-app && npm run generate-windows-fixtures && cd ..",
     "precommit": "lint-staged",
-    "test-release": "shx rm -rf dist && grunt release --pre-release-tag=rc --dry-run --skip-checks --initial --dry-run"
+    "test-release": "npm run clean dist && grunt release --pre-release-tag=rc --dry-run --skip-checks --initial --dry-run"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
