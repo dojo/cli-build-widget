@@ -220,7 +220,8 @@ const command: Command = {
 					'./dev.config.js',
 					'./dist.config.js',
 					'./ejected.config.js',
-					'./test.config.js'
+					'./test.config.js',
+					'./util.js'
 				]
 			},
 			hints: [
