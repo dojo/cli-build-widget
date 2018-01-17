@@ -1,0 +1,9 @@
+/*!
+ * 
+ * [Dojo](https://dojo.io/)
+ * Copyright [JS Foundation](https://js.foundation/) & contributors
+ * [New BSD license](https://github.com/dojo/meta/blob/master/LICENSE)
+ * All rights reserved
+ * 
+ */!function(e){var n=window.dojoWebpackJsonptest_app;window.dojoWebpackJsonptest_app=function(t,u,c){for(var i,a,f,p=0,m=[];p<t.length;p++)a=t[p],r[a]&&m.push(r[a][0]),r[a]=0;for(i in u)Object.prototype.hasOwnProperty.call(u,i)&&(e[i]=u[i]);for(n&&n(t,u,c);m.length;)m.shift()();if(c)for(p=0;p<c.length;p++)f=o(o.s=c[p]);return f};var t={},r={"widget-core":0};function o(n){if(t[n])return t[n].exports;var r=t[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,o),r.l=!0,r.exports}o.e=function(e){var n=r[e];if(0===n)return new Promise(function(e){e()});if(n)return n[2];var t=new Promise(function(t,o){n=r[e]=[t,o]});n[2]=t;var u=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.charset="utf-8",c.async=!0,c.timeout=12e4,o.nc&&c.setAttribute("nonce",o.nc),c.src=o.p+""+({runtime:"runtime","menu-item/MenuItem":"menu-item/MenuItem","menu/Menu":"menu/Menu"}[e]||e)+"."+{runtime:"a9fd34e6e27a13b21d4d","menu-item/MenuItem":"471f32cc3957c3157821","menu/Menu":"3bc337c1c825a51022cb"}[e]+".bundle.js";var i=setTimeout(a,12e4);function a(){c.onerror=c.onload=null,clearTimeout(i);var n=r[e];0!==n&&(n&&n[1](new Error("Loading chunk "+e+" failed.")),r[e]=void 0)}return c.onerror=c.onload=a,u.appendChild(c),t},o.m=e,o.c=t,o.d=function(e,n,t){o.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:t})},o.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(n,"a",n),n},o.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},o.p="",o.oe=function(e){throw console.error(e),e}}([]);
+//# sourceMappingURL=widget-core.js.map
