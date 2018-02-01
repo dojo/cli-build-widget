@@ -9,11 +9,18 @@
 </head>
 <body>
 	<div class="menu-container">
-		<demo-menu>
-			<demo-menu-item title="Menu Item A"></demo-menu-item>
+		<demo-menu id="menu">
+			<demo-menu-item id="a" title="Menu Item A"></demo-menu-item>
 			<demo-menu-item title="Menu Item B"></demo-menu-item>
 			<demo-menu-item title="Menu Item C" selected></demo-menu-item>
 		</demo-menu>
 	</div>
+	<script>
+		a.data = { foo: 'bar' };
+		menu.addEventListener('selected', function(event) {
+			const detail = event.detail;
+			console.log(detail);
+		});
+	</script>
 </body>
 </html>

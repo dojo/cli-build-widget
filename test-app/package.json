@@ -15,7 +15,7 @@
     "@dojo/cli": "0.2.0",
     "@dojo/shim": "0.2.5",
     "@dojo/test-extras": "0.4.1",
-    "@dojo/widget-core": "0.6.5",
+    "@dojo/widget-core": "~0.7.0",
     "intern": "~4.1.0",
     "tslib": "1.8.0"
   },

@@ -53,3 +53,5 @@ export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem
 		]);
 	}
 }
+
+export default Menu;
