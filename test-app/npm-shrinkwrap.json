@@ -2803,6 +2803,7 @@
         "mkdirp": "0.5.1",
         "node-gyp": "https://registry.npmjs.org/node-gyp/-/node-gyp-3.4.0.tgz",
         "nopt": "https://registry.npmjs.org/nopt/-/nopt-3.0.6.tgz",
+        "normalize-git-url": "3.0.2",
         "normalize-package-data": "2.3.5",
         "npm-cache-filename": "1.0.2",
         "npm-install-checks": "3.0.0",
@@ -2821,6 +2822,7 @@
         "read-package-tree": "https://registry.npmjs.org/read-package-tree/-/read-package-tree-5.1.5.tgz",
         "readable-stream": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.1.5.tgz",
         "readdir-scoped-modules": "1.0.2",
+        "realize-package-specifier": "3.0.3",
         "request": "https://registry.npmjs.org/request/-/request-2.75.0.tgz",
         "retry": "https://registry.npmjs.org/retry/-/retry-0.10.0.tgz",
         "rimraf": "https://registry.npmjs.org/rimraf/-/rimraf-2.5.4.tgz",
@@ -3509,7 +3511,7 @@
           }
         },
         "normalize-git-url": {
-          "version": "~3.0.2",
+          "version": "3.0.2",
           "integrity": "sha1-jl8Uvgva7bc+ByADEKpBbCc1D8Q="
         },
         "normalize-package-data": {
@@ -4077,7 +4079,7 @@
           }
         },
         "realize-package-specifier": {
-          "version": "~3.0.2",
+          "version": "3.0.3",
           "integrity": "sha1-0N74gpUrjeP2frpekRmWYScfQfQ=",
           "requires": {
             "dezalgo": "1.0.3",
@@ -4589,9 +4591,12 @@
         "unique-filename": {
           "version": "https://registry.npmjs.org/unique-filename/-/unique-filename-1.1.0.tgz",
           "integrity": "sha1-0F8v5AMlYIcfMOk8vnNe6iAVFPM=",
+          "requires": {
+            "unique-slug": "2.0.0"
+          },
           "dependencies": {
             "unique-slug": {
-              "version": "^2.0.0",
+              "version": "2.0.0",
               "integrity": "sha1-22Z258fMBimHj/GWCXx4hVrp9Ks=",
               "requires": {
                 "imurmurhash": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
