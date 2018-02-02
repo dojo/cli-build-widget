@@ -17,7 +17,7 @@ export interface MenuItemProperties extends WidgetProperties {
 	tag: 'demo-menu-item',
 	attributes: ['title', 'selected'],
 	events: ['onSelected'],
-	properties: ['data']
+	properties: ['data', 'selected']
 })
 @theme(css)
 export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
@@ -40,3 +40,5 @@ export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
 		]);
 	}
 }
+
+export default MenuItem;

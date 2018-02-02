@@ -6,13 +6,38 @@
 	<script src="https://rawgit.com/webcomponents/custom-elements/master/src/native-shim.js"></script>
 	<script
 	src="https://rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+	<style>
+		.menu-container {
+			padding: 10px;
+			margin-bottom: 20px;
+			background: white;
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+		}
+		.text {
+			color: white;
+			line-height: 50px;
+		}
+	</style>
 </head>
 <body>
 	<div class="menu-container">
-		<demo-menu>
-			<demo-menu-item title="Menu Item A"></demo-menu-item>
+		<demo-menu id="menu">
+			<demo-menu-item id="a" title="Menu Item A"></demo-menu-item>
 			<demo-menu-item title="Menu Item B"></demo-menu-item>
-			<demo-menu-item title="Menu Item C" selected></demo-menu-item>
+			<demo-menu-item id="c" title="Menu Item C"></demo-menu-item>
+		</demo-menu>
+	</div>
+	<script>
+		a.data = { foo: 'bar' };
+		c.selected = true;
+		menu.addEventListener('selected', function(event) {
+			const detail = event.detail;
+			console.log(detail);
+		});
+	</script>
+	<div class="menu-container text">
+		<demo-menu>
+			Text Node!
 		</demo-menu>
 	</div>
 </body>

@@ -53,7 +53,7 @@ tests/
 .dojorc
 ```
 
-The `index.html` file is meant to be used as an example page for viewing the custom element in a browser. The generated JavaScript and CSS files for each widget will be injected into the `index.html` file in the order specified in the `.dojorc` (see below).
+The `index.html` file is meant to be used as an example page for viewing the custom element in a browser. The generated JavaScript and CSS files for each widget will be injected into the `index.html` file in the order specified in the `.dojorc` ([see below](#configuration)).
 
 ### Building
 
@@ -120,14 +120,14 @@ Custom element projects use a `.dojorc` file at the project root to control vari
 
 #### `elements`: string[]
 
-Contains paths _relative to the `src` directory_ to the custom elements that should be built. As noted above, the generated JS and CSS will be injected into the `src/index.html` in the order specified in the `elements` array. For example, with the following configuration the custom elements located at `src/menu-item/MenuItem.ts` and `src/menu/Menu.ts` will be built to `output/{mode}/menu-item/MenuItem.js` and `output/{mode}/menu/Menu.js`, respectively:
+Contains paths _relative to the project root_ to the custom elements that should be built. As noted above, the generated JS and CSS will be injected into the `src/index.html` in the order specified in the `elements` array. For example, with the following configuration the custom elements located at `src/menu-item/MenuItem.ts` and `src/menu/Menu.ts` will be built to `output/{mode}/menu-item/MenuItem.js` and `output/{mode}/menu/Menu.js`, respectively:
 
 ```
 {
 	"build-widget": {
 		"elements": [
-			"menu-item/MenuItem",
-			"menu/Menu"
+			"src/menu-item/MenuItem",
+			"src/menu/Menu"
 		]
 	}
 }
