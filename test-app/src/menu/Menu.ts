@@ -20,13 +20,12 @@ export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem
 	private _selectedId: number;
 
 	private _onSelected(id: number, data: any) {
-		console.log(data, !!this.properties.onSelected);
 		this._selectedId = id;
 		this.properties.onSelected(data);
 		this.invalidate();
 	}
 
-	render() {
+	protected render() {
 		const items = this.children.map((child, index) => {
 			if (child) {
 				const properties: Partial<MenuItemProperties> = {

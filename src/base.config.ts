@@ -80,10 +80,8 @@ All rights reserved
 export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const config: webpack.Configuration = {
 		entry: args.elements.reduce((entry: any, element: string) => {
-			entry[element] = `imports-loader?widgetFactory=${path.join('..', '..', '..', '..', 'src', element)}!${path.join(
-				'node_modules',
-				'@dojo',
-				'cli-build-widget',
+			entry[element] = `imports-loader?widgetFactory=${element}!${path.join(
+				__dirname,
 				'template',
 				'custom-element.js'
 			)}`;
@@ -107,9 +105,6 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 			new CssModulePlugin(basePath),
 			new webpack.BannerPlugin(banner),
 			new IgnorePlugin(/request\/providers\/node/),
-			new webpack.DefinePlugin({
-				__dojoCustomElements__: true
-			}),
 			new ExtractTextPlugin({
 				filename: (getPath: any) => getPath('[name].css')
 			} as any),

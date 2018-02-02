@@ -4,7 +4,7 @@
   "scripts": {
     "clean-dts": "shx rm -rf src/menu/menu.m.css.d.ts src/menu-item/menuItem.m.css.d.ts",
     "install-build-widget": "npm install --no-save ../dist/dojo-cli-build-widget.tgz",
-    "generate-fixtures": "shx rm -rf output && npm run clean-dts && dojo build && npm run clean-dts && dojo build --mode dev && npm run clean-dts && dojo build --mode test",
+    "generate-fixtures": "shx rm -rf output & npm run clean-dts & dojo build && npm run clean-dts && dojo build --mode dev && npm run clean-dts && dojo build --mode test",
     "generate-unix-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/unix/",
     "generate-windows-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/windows/",
     "build-dist": "dojo build --mode dist",
@@ -15,11 +15,12 @@
     "@dojo/cli": "0.2.0",
     "@dojo/shim": "0.2.5",
     "@dojo/test-extras": "0.4.1",
-    "@dojo/widget-core": "~0.7.0",
-    "intern": "~4.1.0",
-    "tslib": "1.8.0"
+    "@dojo/widget-core": "0.8.0",
+    "tslib": "1.8.0",
+    "typescript": "2.6.2"
   },
   "devDependencies": {
-    "shx": "0.2.2"
+    "shx": "0.2.2",
+    "intern": "4.1.5"
   }
 }

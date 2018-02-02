@@ -17,7 +17,7 @@ export interface MenuItemProperties extends WidgetProperties {
 	tag: 'demo-menu-item',
 	attributes: ['title', 'selected'],
 	events: ['onSelected'],
-	properties: ['data']
+	properties: ['data', 'selected']
 })
 @theme(css)
 export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
@@ -27,14 +27,12 @@ export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
 
 	protected render() {
 		const { title, selected } = this.properties;
-		// TODO selected is a string when passed as an attribute
-		const isSelected = typeof selected === 'string' || selected === true;
 
 		return v('li', { classes: this.theme(css.root) }, [
 			v(
 				'span',
 				{
-					classes: this.theme([css.item, isSelected ? css.selected : null]),
+					classes: this.theme([css.item, selected ? css.selected : null]),
 					onclick: this._onClick
 				},
 				[title]
