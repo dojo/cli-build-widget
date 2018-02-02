@@ -1,8 +1,8 @@
 {
-  "menu-item/MenuItem.css": "menu-item/MenuItem.css",
-  "menu-item/MenuItem.js": "menu-item/MenuItem.js",
-  "menu/Menu.css": "menu/Menu.css",
-  "menu/Menu.js": "menu/Menu.js",
   "runtime.js": "runtime.js",
+  "src/menu-item/MenuItem.css": "src/menu-item/MenuItem.css",
+  "src/menu-item/MenuItem.js": "src/menu-item/MenuItem.js",
+  "src/menu/Menu.css": "src/menu/Menu.css",
+  "src/menu/Menu.js": "src/menu/Menu.js",
   "widget-core.js": "widget-core.js"
 }
