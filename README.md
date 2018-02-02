@@ -53,7 +53,7 @@ tests/
 .dojorc
 ```
 
-The `index.html` file is meant to be used as an example page for viewing the custom element in a browser. The generated JavaScript and CSS files for each widget will be injected into the `index.html` file in the order specified in the `.dojorc` (see below).
+The `index.html` file is meant to be used as an example page for viewing the custom element in a browser. The generated JavaScript and CSS files for each widget will be injected into the `index.html` file in the order specified in the `.dojorc` ([see below](#configuration)).
 
 ### Building
 
