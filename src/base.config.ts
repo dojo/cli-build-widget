@@ -91,7 +91,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 		output: {
 			chunkFilename: '[name].js',
 			filename: '[name].js',
-			jsonpFunction: getJsonpFunctionName(packageName),
+			jsonpFunction: getJsonpFunctionName(`${packageName}-widget`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output')
 		},
