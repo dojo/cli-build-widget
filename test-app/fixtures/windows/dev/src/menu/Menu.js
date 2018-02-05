@@ -6,7 +6,7 @@
  * All rights reserved
  * 
  */
-(dojoWebpackJsonptest_app(["src/menu/Menu"],{
+(dojoWebpackJsonptest_app_widget(["src/menu/Menu"],{
 
 /***/ "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js":
 /***/ (function(module, exports, __webpack_require__) {

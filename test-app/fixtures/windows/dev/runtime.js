@@ -6,7 +6,7 @@
  * All rights reserved
  * 
  */
-dojoWebpackJsonptest_app(["runtime"],{
+dojoWebpackJsonptest_app_widget(["runtime"],{
 
 /***/ "./node_modules/@dojo/core/Destroyable.js":
 /***/ (function(module, exports, __webpack_require__) {
