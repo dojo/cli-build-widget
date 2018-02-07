@@ -2,35 +2,31 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "9b7fb184b9ea18e120b5",
-  "time": 6939,
+  "hash": "8526d6660d24bee5d577",
+  "time": 9620,
   "publicPath": "",
   "assetsByChunkName": {
-    "runtime": [
-      "runtime.57d6f0dc3f93cf168ec5.bundle.js",
-      "runtime.57d6f0dc3f93cf168ec5.bundle.js.map"
-    ],
     "src/menu-item/MenuItem": [
-      "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js",
-      "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css",
-      "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js.map",
-      "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css.map"
+      "src/menu-item/MenuItem-1.0.0.bundle.js",
+      "src/menu-item/MenuItem-1.0.0.bundle.css",
+      "src/menu-item/MenuItem-1.0.0.bundle.js.map",
+      "src/menu-item/MenuItem-1.0.0.bundle.css.map"
     ],
     "src/menu/Menu": [
-      "src/menu/Menu.adda85bcf65cae9010d3.bundle.js",
-      "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css",
-      "src/menu/Menu.adda85bcf65cae9010d3.bundle.js.map",
-      "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css.map"
+      "src/menu/Menu-1.0.0.bundle.js",
+      "src/menu/Menu-1.0.0.bundle.css",
+      "src/menu/Menu-1.0.0.bundle.js.map",
+      "src/menu/Menu-1.0.0.bundle.css.map"
     ],
     "widget-core": [
-      "widget-core.js",
-      "widget-core.js.map"
+      "test-app-vendor-1.0.0.js",
+      "test-app-vendor-1.0.0.js.map"
     ]
   },
   "assets": [
     {
-      "name": "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js.map",
-      "size": 4324,
+      "name": "src/menu-item/MenuItem-1.0.0.bundle.css.map",
+      "size": 1722,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -40,30 +36,19 @@
       "emitted": true
     },
     {
-      "name": "runtime.57d6f0dc3f93cf168ec5.bundle.js",
-      "size": 104866,
+      "name": "src/menu-item/MenuItem-1.0.0.bundle.js",
+      "size": 2061,
       "chunks": [
-        "runtime"
+        "src/menu-item/MenuItem"
       ],
       "chunkNames": [
-        "runtime"
+        "src/menu-item/MenuItem"
       ],
       "emitted": true
     },
     {
-      "name": "src/menu/Menu.adda85bcf65cae9010d3.bundle.js",
-      "size": 2039,
-      "chunks": [
-        "src/menu/Menu"
-      ],
-      "chunkNames": [
-        "src/menu/Menu"
-      ],
-      "emitted": true
-    },
-    {
-      "name": "widget-core.js",
-      "size": 1894,
+      "name": "test-app-vendor-1.0.0.js",
+      "size": 106331,
       "chunks": [
         "widget-core"
       ],
@@ -73,8 +58,8 @@
       "emitted": true
     },
     {
-      "name": "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css",
-      "size": 426,
+      "name": "src/menu/Menu-1.0.0.bundle.css",
+      "size": 399,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -84,8 +69,8 @@
       "emitted": true
     },
     {
-      "name": "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css",
-      "size": 1250,
+      "name": "src/menu-item/MenuItem-1.0.0.bundle.css",
+      "size": 1223,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -95,19 +80,8 @@
       "emitted": true
     },
     {
-      "name": "runtime.57d6f0dc3f93cf168ec5.bundle.js.map",
-      "size": 423093,
-      "chunks": [
-        "runtime"
-      ],
-      "chunkNames": [
-        "runtime"
-      ],
-      "emitted": true
-    },
-    {
-      "name": "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js",
-      "size": 2067,
+      "name": "src/menu-item/MenuItem-1.0.0.bundle.js.map",
+      "size": 4309,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -117,19 +91,8 @@
       "emitted": true
     },
     {
-      "name": "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css.map",
-      "size": 1749,
-      "chunks": [
-        "src/menu-item/MenuItem"
-      ],
-      "chunkNames": [
-        "src/menu-item/MenuItem"
-      ],
-      "emitted": true
-    },
-    {
-      "name": "src/menu/Menu.adda85bcf65cae9010d3.bundle.js.map",
-      "size": 4726,
+      "name": "src/menu/Menu-1.0.0.bundle.js",
+      "size": 2033,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -139,8 +102,8 @@
       "emitted": true
     },
     {
-      "name": "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css.map",
-      "size": 505,
+      "name": "src/menu/Menu-1.0.0.bundle.js.map",
+      "size": 4711,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -150,8 +113,19 @@
       "emitted": true
     },
     {
-      "name": "widget-core.js.map",
-      "size": 8129,
+      "name": "src/menu/Menu-1.0.0.bundle.css.map",
+      "size": 478,
+      "chunks": [
+        "src/menu/Menu"
+      ],
+      "chunkNames": [
+        "src/menu/Menu"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "test-app-vendor-1.0.0.js.map",
+      "size": 430669,
       "chunks": [
         "widget-core"
       ],
@@ -162,14 +136,14 @@
     },
     {
       "name": "manifest.json",
-      "size": 930,
+      "size": 658,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
       "name": "index.html",
-      "size": 1686,
+      "size": 1527,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -180,57 +154,327 @@
     "src/menu/Menu": {
       "chunks": [
         "widget-core",
-        "runtime",
         "src/menu/Menu"
       ],
       "assets": [
-        "widget-core.js",
-        "widget-core.js.map",
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js",
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js.map",
-        "src/menu/Menu.adda85bcf65cae9010d3.bundle.js",
-        "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css",
-        "src/menu/Menu.adda85bcf65cae9010d3.bundle.js.map",
-        "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css.map"
+        "test-app-vendor-1.0.0.js",
+        "test-app-vendor-1.0.0.js.map",
+        "src/menu/Menu-1.0.0.bundle.js",
+        "src/menu/Menu-1.0.0.bundle.css",
+        "src/menu/Menu-1.0.0.bundle.js.map",
+        "src/menu/Menu-1.0.0.bundle.css.map"
       ]
     },
     "src/menu-item/MenuItem": {
       "chunks": [
         "widget-core",
-        "runtime",
         "src/menu-item/MenuItem"
       ],
       "assets": [
-        "widget-core.js",
-        "widget-core.js.map",
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js",
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js.map",
-        "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js",
-        "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css",
-        "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js.map",
-        "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css.map"
+        "test-app-vendor-1.0.0.js",
+        "test-app-vendor-1.0.0.js.map",
+        "src/menu-item/MenuItem-1.0.0.bundle.js",
+        "src/menu-item/MenuItem-1.0.0.bundle.css",
+        "src/menu-item/MenuItem-1.0.0.bundle.js.map",
+        "src/menu-item/MenuItem-1.0.0.bundle.css.map"
       ]
     }
   },
   "chunks": [
     {
-      "id": "runtime",
+      "id": "src/menu-item/MenuItem",
       "rendered": true,
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 266319,
+      "size": 2161,
       "names": [
-        "runtime"
+        "src/menu-item/MenuItem"
       ],
       "files": [
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js",
-        "runtime.57d6f0dc3f93cf168ec5.bundle.js.map"
+        "src/menu-item/MenuItem-1.0.0.bundle.js",
+        "src/menu-item/MenuItem-1.0.0.bundle.css",
+        "src/menu-item/MenuItem-1.0.0.bundle.js.map",
+        "src/menu-item/MenuItem-1.0.0.bundle.css.map"
       ],
-      "hash": "57d6f0dc3f93cf168ec5",
+      "hash": "5a9e928d2b33adea4775",
       "parents": [
         "widget-core"
       ],
+      "modules": [
+        {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 47,
+          "index2": 49,
+          "size": 493,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu-item/MenuItem"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
+          "id": "./src/menu-item/MenuItem.ts",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
+          "name": "./src/menu-item/MenuItem.ts",
+          "index": 48,
+          "index2": 48,
+          "size": 1528,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu-item/MenuItem"
+          ],
+          "assets": [],
+          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "issuerId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "issuerName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "module": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "type": "cjs require",
+              "userRequest": "src/menu-item/MenuItem",
+              "loc": "2:20-53"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = require(\"tslib\");\nvar d_1 = require(\"@dojo/widget-core/d\");\nvar customElement_1 = require(\"@dojo/widget-core/decorators/customElement\");\nvar Themed_1 = require(\"@dojo/widget-core/mixins/Themed\");\nvar WidgetBase_1 = require(\"@dojo/widget-core/WidgetBase\");\nvar css = require(\"./menuItem.m.css\");\nvar MenuItem = /** @class */ (function (_super) {\n    tslib_1.__extends(MenuItem, _super);\n    function MenuItem() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    MenuItem.prototype._onClick = function () {\n        this.properties.onSelected && this.properties.onSelected(this.properties.data);\n    };\n    MenuItem.prototype.render = function () {\n        var _a = this.properties, title = _a.title, selected = _a.selected;\n        return d_1.v('li', { classes: this.theme(css.root) }, [\n            d_1.v('span', {\n                classes: this.theme([css.item, selected ? css.selected : null]),\n                onclick: this._onClick\n            }, [title])\n        ]);\n    };\n    MenuItem = tslib_1.__decorate([\n        customElement_1.customElement({\n            tag: 'demo-menu-item',\n            attributes: ['title', 'selected'],\n            events: ['onSelected'],\n            properties: ['data', 'selected']\n        }),\n        Themed_1.theme(css)\n    ], MenuItem);\n    return MenuItem;\n}(Themed_1.ThemedMixin(WidgetBase_1.WidgetBase)));\nexports.MenuItem = MenuItem;\nexports.default = MenuItem;\n"
+        },
+        {
+          "id": "./src/menu-item/menuItem.m.css",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/extract-text-webpack-plugin/dist/loader.js??ref--9-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/style-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-decorator-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/css-loader/index.js??ref--9-3!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/postcss-loader/lib/index.js??postcss!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=css!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/menuItem.m.css",
+          "name": "./src/menu-item/menuItem.m.css",
+          "index": 49,
+          "index2": 47,
+          "size": 140,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu-item/MenuItem"
+          ],
+          "assets": [],
+          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
+          "issuerId": "./src/menu-item/MenuItem.ts",
+          "issuerName": "./src/menu-item/MenuItem.ts",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./src/menu-item/MenuItem.ts",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
+              "module": "./src/menu-item/MenuItem.ts",
+              "moduleName": "./src/menu-item/MenuItem.ts",
+              "type": "cjs require",
+              "userRequest": "./menuItem.m.css",
+              "loc": "8:10-37"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "// removed by extract-text-webpack-plugin\nmodule.exports = {\" _key\":\"menuItem\",\"root\":\"sUmUi4Sh\",\"item\":\"_2Mk6Rdqa\",\"selected\":\"_1-f3ItOh\"};"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "module": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "loc": "",
+          "name": "src/menu-item/MenuItem",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "src/menu/Menu",
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 2448,
+      "names": [
+        "src/menu/Menu"
+      ],
+      "files": [
+        "src/menu/Menu-1.0.0.bundle.js",
+        "src/menu/Menu-1.0.0.bundle.css",
+        "src/menu/Menu-1.0.0.bundle.js.map",
+        "src/menu/Menu-1.0.0.bundle.css.map"
+      ],
+      "hash": "adda85bcf65cae9010d3",
+      "parents": [
+        "widget-core"
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 0,
+          "index2": 46,
+          "size": 484,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu/Menu"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
+          "id": "./src/menu/Menu.ts",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
+          "name": "./src/menu/Menu.ts",
+          "index": 1,
+          "index2": 38,
+          "size": 1841,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu/Menu"
+          ],
+          "assets": [],
+          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "issuerId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "issuerName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "module": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+              "type": "cjs require",
+              "userRequest": "src/menu/Menu",
+              "loc": "2:20-44"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = require(\"tslib\");\nvar d_1 = require(\"@dojo/widget-core/d\");\nvar customElement_1 = require(\"@dojo/widget-core/decorators/customElement\");\nvar Themed_1 = require(\"@dojo/widget-core/mixins/Themed\");\nvar WidgetBase_1 = require(\"@dojo/widget-core/WidgetBase\");\nvar css = require(\"./menu.m.css\");\nvar Menu = /** @class */ (function (_super) {\n    tslib_1.__extends(Menu, _super);\n    function Menu() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    Menu.prototype._onSelected = function (id, data) {\n        this._selectedId = id;\n        this.properties.onSelected(data);\n        this.invalidate();\n    };\n    Menu.prototype.render = function () {\n        var _this = this;\n        var items = this.children.map(function (child, index) {\n            if (child) {\n                var properties = {\n                    onSelected: function (data) {\n                        _this._onSelected(index, data);\n                    }\n                };\n                if (_this._selectedId !== undefined) {\n                    properties.selected = index === _this._selectedId;\n                }\n                child.properties = tslib_1.__assign({}, child.properties, properties);\n            }\n            return child;\n        });\n        return d_1.v('nav', { classes: this.theme(css.root) }, [\n            d_1.v('ol', {\n                classes: this.theme(css.menuContainer)\n            }, items)\n        ]);\n    };\n    Menu = tslib_1.__decorate([\n        customElement_1.customElement({\n            tag: 'demo-menu',\n            events: ['onSelected']\n        }),\n        Themed_1.theme(css)\n    ], Menu);\n    return Menu;\n}(Themed_1.ThemedMixin(WidgetBase_1.WidgetBase)));\nexports.Menu = Menu;\nexports.default = Menu;\n"
+        },
+        {
+          "id": "./src/menu/menu.m.css",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/extract-text-webpack-plugin/dist/loader.js??ref--9-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/style-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-decorator-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/css-loader/index.js??ref--9-3!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/postcss-loader/lib/index.js??postcss!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=css!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/menu.m.css",
+          "name": "./src/menu/menu.m.css",
+          "index": 39,
+          "index2": 37,
+          "size": 123,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "src/menu/Menu"
+          ],
+          "assets": [],
+          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
+          "issuerId": "./src/menu/Menu.ts",
+          "issuerName": "./src/menu/Menu.ts",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
+              "type": "cjs require",
+              "userRequest": "./menu.m.css",
+              "loc": "8:10-33"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "// removed by extract-text-webpack-plugin\nmodule.exports = {\" _key\":\"menu\",\"root\":\"_3bA6jdSn\",\"menuContainer\":\"_1eoGfqku\"};"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "module": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "loc": "",
+          "name": "src/menu/Menu",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "widget-core",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 266319,
+      "names": [
+        "widget-core"
+      ],
+      "files": [
+        "test-app-vendor-1.0.0.js",
+        "test-app-vendor-1.0.0.js.map"
+      ],
+      "hash": "b335b4b25545ec009513",
+      "parents": [],
       "modules": [
         {
           "id": "./node_modules/@dojo/core/Destroyable.js",
@@ -244,7 +488,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -282,7 +526,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -347,7 +591,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -385,7 +629,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -450,7 +694,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
@@ -497,7 +741,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -571,7 +815,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
@@ -618,7 +862,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/d.js",
@@ -710,7 +954,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -775,7 +1019,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -822,7 +1066,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -959,7 +1203,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1015,7 +1259,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1053,7 +1297,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
@@ -1109,7 +1353,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/iterator.js",
@@ -1147,7 +1391,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1248,7 +1492,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
@@ -1286,7 +1530,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1342,7 +1586,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -1380,7 +1624,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1418,7 +1662,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1483,7 +1727,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1521,7 +1765,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -1586,7 +1830,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -1624,7 +1868,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -1662,7 +1906,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -1754,7 +1998,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -1792,7 +2036,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/decorators/inject.js",
@@ -1830,7 +2074,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -1877,7 +2121,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -1915,7 +2159,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -1989,7 +2233,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -2027,7 +2271,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -2074,7 +2318,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -2112,7 +2356,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -2159,7 +2403,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
@@ -2206,7 +2450,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -2244,7 +2488,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -2291,7 +2535,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -2329,7 +2573,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/has/has.js",
@@ -2376,7 +2620,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/timers-browserify/main.js",
@@ -2414,7 +2658,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/queue.js",
@@ -2452,7 +2696,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -2589,19 +2833,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/array.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
-              "module": "./node_modules/@dojo/shim/array.js",
-              "moduleName": "./node_modules/@dojo/shim/array.js",
+              "moduleId": "./node_modules/@dojo/core/lang.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
+              "module": "./node_modules/@dojo/core/lang.js",
+              "moduleName": "./node_modules/@dojo/core/lang.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/core/lang.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
-              "module": "./node_modules/@dojo/core/lang.js",
-              "moduleName": "./node_modules/@dojo/core/lang.js",
+              "moduleId": "./node_modules/@dojo/shim/array.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
+              "module": "./node_modules/@dojo/shim/array.js",
+              "moduleName": "./node_modules/@dojo/shim/array.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2634,19 +2878,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "moduleId": "./node_modules/@dojo/core/Evented.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+              "module": "./node_modules/@dojo/core/Evented.js",
+              "moduleName": "./node_modules/@dojo/core/Evented.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/core/Evented.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-              "module": "./node_modules/@dojo/core/Evented.js",
-              "moduleName": "./node_modules/@dojo/core/Evented.js",
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2697,7 +2941,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "runtime"
+            "widget-core"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/global.js",
@@ -2753,304 +2997,6 @@
       ],
       "filteredModules": 0,
       "origins": []
-    },
-    {
-      "id": "src/menu-item/MenuItem",
-      "rendered": true,
-      "initial": true,
-      "entry": false,
-      "extraAsync": false,
-      "size": 2161,
-      "names": [
-        "src/menu-item/MenuItem"
-      ],
-      "files": [
-        "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js",
-        "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css",
-        "src/menu-item/MenuItem.5a9e928d2b33adea4775.bundle.js.map",
-        "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css.map"
-      ],
-      "hash": "5a9e928d2b33adea4775",
-      "parents": [
-        "runtime"
-      ],
-      "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 47,
-          "index2": 49,
-          "size": 493,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu-item/MenuItem"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
-        {
-          "id": "./src/menu-item/MenuItem.ts",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
-          "name": "./src/menu-item/MenuItem.ts",
-          "index": 48,
-          "index2": 48,
-          "size": 1528,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu-item/MenuItem"
-          ],
-          "assets": [],
-          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "issuerId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "issuerName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "module": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "type": "cjs require",
-              "userRequest": "src/menu-item/MenuItem",
-              "loc": "2:20-53"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 1,
-          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = require(\"tslib\");\nvar d_1 = require(\"@dojo/widget-core/d\");\nvar customElement_1 = require(\"@dojo/widget-core/decorators/customElement\");\nvar Themed_1 = require(\"@dojo/widget-core/mixins/Themed\");\nvar WidgetBase_1 = require(\"@dojo/widget-core/WidgetBase\");\nvar css = require(\"./menuItem.m.css\");\nvar MenuItem = /** @class */ (function (_super) {\n    tslib_1.__extends(MenuItem, _super);\n    function MenuItem() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    MenuItem.prototype._onClick = function () {\n        this.properties.onSelected && this.properties.onSelected(this.properties.data);\n    };\n    MenuItem.prototype.render = function () {\n        var _a = this.properties, title = _a.title, selected = _a.selected;\n        return d_1.v('li', { classes: this.theme(css.root) }, [\n            d_1.v('span', {\n                classes: this.theme([css.item, selected ? css.selected : null]),\n                onclick: this._onClick\n            }, [title])\n        ]);\n    };\n    MenuItem = tslib_1.__decorate([\n        customElement_1.customElement({\n            tag: 'demo-menu-item',\n            attributes: ['title', 'selected'],\n            events: ['onSelected'],\n            properties: ['data', 'selected']\n        }),\n        Themed_1.theme(css)\n    ], MenuItem);\n    return MenuItem;\n}(Themed_1.ThemedMixin(WidgetBase_1.WidgetBase)));\nexports.MenuItem = MenuItem;\nexports.default = MenuItem;\n"
-        },
-        {
-          "id": "./src/menu-item/menuItem.m.css",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/extract-text-webpack-plugin/dist/loader.js??ref--9-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/style-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-decorator-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/css-loader/index.js??ref--9-3!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/postcss-loader/lib/index.js??postcss!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=css!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/menuItem.m.css",
-          "name": "./src/menu-item/menuItem.m.css",
-          "index": 49,
-          "index2": 47,
-          "size": 140,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu-item/MenuItem"
-          ],
-          "assets": [],
-          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
-          "issuerId": "./src/menu-item/MenuItem.ts",
-          "issuerName": "./src/menu-item/MenuItem.ts",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": "./src/menu-item/MenuItem.ts",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
-              "module": "./src/menu-item/MenuItem.ts",
-              "moduleName": "./src/menu-item/MenuItem.ts",
-              "type": "cjs require",
-              "userRequest": "./menuItem.m.css",
-              "loc": "8:10-37"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 2,
-          "source": "// removed by extract-text-webpack-plugin\nmodule.exports = {\" _key\":\"menuItem\",\"root\":\"sUmUi4Sh\",\"item\":\"_2Mk6Rdqa\",\"selected\":\"_1-f3ItOh\"};"
-        }
-      ],
-      "filteredModules": 0,
-      "origins": [
-        {
-          "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "module": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "loc": "",
-          "name": "src/menu-item/MenuItem",
-          "reasons": []
-        }
-      ]
-    },
-    {
-      "id": "src/menu/Menu",
-      "rendered": true,
-      "initial": true,
-      "entry": false,
-      "extraAsync": false,
-      "size": 2448,
-      "names": [
-        "src/menu/Menu"
-      ],
-      "files": [
-        "src/menu/Menu.adda85bcf65cae9010d3.bundle.js",
-        "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css",
-        "src/menu/Menu.adda85bcf65cae9010d3.bundle.js.map",
-        "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css.map"
-      ],
-      "hash": "adda85bcf65cae9010d3",
-      "parents": [
-        "runtime"
-      ],
-      "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 0,
-          "index2": 46,
-          "size": 484,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu/Menu"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
-        {
-          "id": "./src/menu/Menu.ts",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
-          "name": "./src/menu/Menu.ts",
-          "index": 1,
-          "index2": 38,
-          "size": 1841,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu/Menu"
-          ],
-          "assets": [],
-          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "issuerId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "issuerName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "module": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-              "type": "cjs require",
-              "userRequest": "src/menu/Menu",
-              "loc": "2:20-44"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 1,
-          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = require(\"tslib\");\nvar d_1 = require(\"@dojo/widget-core/d\");\nvar customElement_1 = require(\"@dojo/widget-core/decorators/customElement\");\nvar Themed_1 = require(\"@dojo/widget-core/mixins/Themed\");\nvar WidgetBase_1 = require(\"@dojo/widget-core/WidgetBase\");\nvar css = require(\"./menu.m.css\");\nvar Menu = /** @class */ (function (_super) {\n    tslib_1.__extends(Menu, _super);\n    function Menu() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    Menu.prototype._onSelected = function (id, data) {\n        this._selectedId = id;\n        this.properties.onSelected(data);\n        this.invalidate();\n    };\n    Menu.prototype.render = function () {\n        var _this = this;\n        var items = this.children.map(function (child, index) {\n            if (child) {\n                var properties = {\n                    onSelected: function (data) {\n                        _this._onSelected(index, data);\n                    }\n                };\n                if (_this._selectedId !== undefined) {\n                    properties.selected = index === _this._selectedId;\n                }\n                child.properties = tslib_1.__assign({}, child.properties, properties);\n            }\n            return child;\n        });\n        return d_1.v('nav', { classes: this.theme(css.root) }, [\n            d_1.v('ol', {\n                classes: this.theme(css.menuContainer)\n            }, items)\n        ]);\n    };\n    Menu = tslib_1.__decorate([\n        customElement_1.customElement({\n            tag: 'demo-menu',\n            events: ['onSelected']\n        }),\n        Themed_1.theme(css)\n    ], Menu);\n    return Menu;\n}(Themed_1.ThemedMixin(WidgetBase_1.WidgetBase)));\nexports.Menu = Menu;\nexports.default = Menu;\n"
-        },
-        {
-          "id": "./src/menu/menu.m.css",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/extract-text-webpack-plugin/dist/loader.js??ref--9-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/style-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-decorator-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/css-loader/index.js??ref--9-3!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/postcss-loader/lib/index.js??postcss!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=css!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/menu.m.css",
-          "name": "./src/menu/menu.m.css",
-          "index": 39,
-          "index2": 37,
-          "size": 123,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu/Menu"
-          ],
-          "assets": [],
-          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
-          "issuerId": "./src/menu/Menu.ts",
-          "issuerName": "./src/menu/Menu.ts",
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
-              "type": "cjs require",
-              "userRequest": "./menu.m.css",
-              "loc": "8:10-33"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 2,
-          "source": "// removed by extract-text-webpack-plugin\nmodule.exports = {\" _key\":\"menu\",\"root\":\"_3bA6jdSn\",\"menuContainer\":\"_1eoGfqku\"};"
-        }
-      ],
-      "filteredModules": 0,
-      "origins": [
-        {
-          "moduleId": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "module": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "moduleName": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "loc": "",
-          "name": "src/menu/Menu",
-          "reasons": []
-        }
-      ]
-    },
-    {
-      "id": "widget-core",
-      "rendered": true,
-      "initial": true,
-      "entry": true,
-      "extraAsync": false,
-      "size": 0,
-      "names": [
-        "widget-core"
-      ],
-      "files": [
-        "widget-core.js",
-        "widget-core.js.map"
-      ],
-      "hash": "d41d8cd98f00b204e980",
-      "parents": [],
-      "modules": [],
-      "filteredModules": 0,
-      "origins": []
     }
   ],
   "modules": [
@@ -3066,7 +3012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -3104,7 +3050,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -3169,7 +3115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -3207,7 +3153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3272,7 +3218,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
@@ -3319,7 +3265,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -3393,7 +3339,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
@@ -3440,7 +3386,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/d.js",
@@ -3532,7 +3478,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -3597,7 +3543,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3644,7 +3590,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3781,7 +3727,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -3837,7 +3783,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -3875,7 +3821,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
@@ -3931,7 +3877,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/iterator.js",
@@ -3969,7 +3915,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -4070,7 +4016,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
@@ -4108,7 +4054,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -4164,7 +4110,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4202,7 +4148,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4240,7 +4186,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4305,7 +4251,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4343,7 +4289,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4408,7 +4354,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -4446,7 +4392,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -4484,7 +4430,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4576,7 +4522,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -4614,7 +4560,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/decorators/inject.js",
@@ -4652,7 +4598,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4699,7 +4645,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4737,7 +4683,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4811,7 +4757,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4849,7 +4795,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4896,7 +4842,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -4934,7 +4880,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4981,7 +4927,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
@@ -5028,7 +4974,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -5066,7 +5012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -5169,7 +5115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -5207,7 +5153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/has/has.js",
@@ -5254,7 +5200,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/timers-browserify/main.js",
@@ -5292,7 +5238,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/queue.js",
@@ -5330,7 +5276,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -5467,19 +5413,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/array.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
-          "module": "./node_modules/@dojo/shim/array.js",
-          "moduleName": "./node_modules/@dojo/shim/array.js",
+          "moduleId": "./node_modules/@dojo/core/lang.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
+          "module": "./node_modules/@dojo/core/lang.js",
+          "moduleName": "./node_modules/@dojo/core/lang.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/core/lang.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
-          "module": "./node_modules/@dojo/core/lang.js",
-          "moduleName": "./node_modules/@dojo/core/lang.js",
+          "moduleId": "./node_modules/@dojo/shim/array.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
+          "module": "./node_modules/@dojo/shim/array.js",
+          "moduleName": "./node_modules/@dojo/shim/array.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5512,19 +5458,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "moduleId": "./node_modules/@dojo/core/Evented.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+          "module": "./node_modules/@dojo/core/Evented.js",
+          "moduleName": "./node_modules/@dojo/core/Evented.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/core/Evented.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-          "module": "./node_modules/@dojo/core/Evented.js",
-          "moduleName": "./node_modules/@dojo/core/Evented.js",
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5575,7 +5521,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "runtime"
+        "widget-core"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/global.js",
