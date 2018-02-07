@@ -7,9 +7,13 @@ import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ManifestPlugin from 'webpack-manifest-plugin';
 import * as WebpackChunkHash from 'webpack-chunk-hash';
+import { existsSync } from 'fs';
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer-sunburst').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+const packageJsonPath = path.join(process.cwd(), 'package.json');
+const packageJson = existsSync(packageJsonPath) ? require(packageJsonPath) : {};
 
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
@@ -39,18 +43,15 @@ function webpackConfig(args: any): webpack.Configuration {
 		new WebpackChunkHash(),
 		new CleanWebpackPlugin(['dist'], { root: output.path, verbose: false }),
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'runtime'
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
 			name: 'widget-core',
-			filename: 'widget-core.js'
+			filename: `${packageJson.name}-vendor-${packageJson.version}.js`
 		})
 	];
 
 	config.plugins = config.plugins.map(plugin => {
 		if (plugin instanceof ExtractTextPlugin) {
 			return new ExtractTextPlugin({
-				filename: '[name].[contenthash].bundle.css',
+				filename: `[name]-${packageJson.version}.bundle.css`,
 				allChunks: true
 			});
 		}
@@ -59,9 +60,7 @@ function webpackConfig(args: any): webpack.Configuration {
 
 	config.output = {
 		...output,
-		path: path.join(output.path!, 'dist'),
-		chunkFilename: '[name].[chunkhash].bundle.js',
-		filename: '[name].[chunkhash].bundle.js'
+		path: path.join(output.path!, 'dist')
 	};
 
 	return config;

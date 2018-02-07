@@ -89,9 +89,9 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 		}, {}),
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: '[name].js',
-			filename: '[name].js',
-			jsonpFunction: getJsonpFunctionName(`${packageName}-widget`),
+			chunkFilename: `[name]-${packageJson.version}.bundle.js`,
+			filename: `[name]-${packageJson.version}.bundle.js`,
+			jsonpFunction: getJsonpFunctionName(`-${packageName}-custom-elements`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output')
 		},
@@ -106,7 +106,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 			new webpack.BannerPlugin(banner),
 			new IgnorePlugin(/request\/providers\/node/),
 			new ExtractTextPlugin({
-				filename: (getPath: any) => getPath('[name].css')
+				filename: (getPath: any) => getPath(`[name]-${packageJson.version}.css`)
 			} as any),
 			new webpack.NamedChunksPlugin(),
 			new webpack.NamedModulesPlugin()

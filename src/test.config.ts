@@ -73,6 +73,8 @@ function webpackConfig(args: any): webpack.Configuration {
 	config.devtool = 'inline-source-map';
 	config.output = {
 		...output,
+		chunkFilename: `[name].js`,
+		filename: `[name].js`,
 		path: path.join(output.path, 'test')
 	};
 	return config;
