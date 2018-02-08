@@ -1,14 +1,12 @@
 {
-  "runtime.js": "runtime.8f9bf8c24f94530f3b25.bundle.js",
-  "runtime.js.map": "runtime.8f9bf8c24f94530f3b25.bundle.js.map",
-  "src/menu-item/MenuItem.css": "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css",
-  "src/menu-item/MenuItem.css.map": "src/menu-item/MenuItem.b27e9c51ee1a4188acec038b91e3e647.bundle.css.map",
-  "src/menu-item/MenuItem.js": "src/menu-item/MenuItem.850f26ff31d21ec18686.bundle.js",
-  "src/menu-item/MenuItem.js.map": "src/menu-item/MenuItem.850f26ff31d21ec18686.bundle.js.map",
-  "src/menu/Menu.css": "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css",
-  "src/menu/Menu.css.map": "src/menu/Menu.ea4478e6af0eb0445d3a4a531feebe1f.bundle.css.map",
-  "src/menu/Menu.js": "src/menu/Menu.e843ada77aafe18669ba.bundle.js",
-  "src/menu/Menu.js.map": "src/menu/Menu.e843ada77aafe18669ba.bundle.js.map",
-  "widget-core.js": "widget-core.js",
-  "widget-core.js.map": "widget-core.js.map"
+  "src/menu-item/MenuItem.css": "src/menu-item/MenuItem-1.0.0.bundle.css",
+  "src/menu-item/MenuItem.css.map": "src/menu-item/MenuItem-1.0.0.bundle.css.map",
+  "src/menu-item/MenuItem.js": "src/menu-item/MenuItem-1.0.0.bundle.js",
+  "src/menu-item/MenuItem.js.map": "src/menu-item/MenuItem-1.0.0.bundle.js.map",
+  "src/menu/Menu.css": "src/menu/Menu-1.0.0.bundle.css",
+  "src/menu/Menu.css.map": "src/menu/Menu-1.0.0.bundle.css.map",
+  "src/menu/Menu.js": "src/menu/Menu-1.0.0.bundle.js",
+  "src/menu/Menu.js.map": "src/menu/Menu-1.0.0.bundle.js.map",
+  "vendor.js": "test-app-vendor-1.0.0.js",
+  "vendor.js.map": "test-app-vendor-1.0.0.js.map"
 }
