@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "36c1626dbe96d2a4dc72",
-  "time": 6360,
+  "hash": "da0cfd29e28b22df3ce0",
+  "time": 8266,
   "publicPath": "",
   "assetsByChunkName": {
     "src/menu-item/MenuItem": [
@@ -18,7 +18,7 @@
       "src/menu/Menu-1.0.0.bundle.js.map",
       "src/menu/Menu-1.0.0.bundle.css.map"
     ],
-    "widget-core": [
+    "vendor": [
       "test-app-vendor-1.0.0.js",
       "test-app-vendor-1.0.0.js.map"
     ]
@@ -37,7 +37,7 @@
     },
     {
       "name": "src/menu-item/MenuItem-1.0.0.bundle.js",
-      "size": 2061,
+      "size": 1651,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -48,12 +48,12 @@
     },
     {
       "name": "test-app-vendor-1.0.0.js",
-      "size": 106331,
+      "size": 107126,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "chunkNames": [
-        "widget-core"
+        "vendor"
       ],
       "emitted": true
     },
@@ -81,7 +81,7 @@
     },
     {
       "name": "src/menu-item/MenuItem-1.0.0.bundle.js.map",
-      "size": 4309,
+      "size": 3067,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -92,7 +92,7 @@
     },
     {
       "name": "src/menu/Menu-1.0.0.bundle.js",
-      "size": 2033,
+      "size": 1641,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -103,7 +103,7 @@
     },
     {
       "name": "src/menu/Menu-1.0.0.bundle.js.map",
-      "size": 4711,
+      "size": 3510,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -125,18 +125,18 @@
     },
     {
       "name": "test-app-vendor-1.0.0.js.map",
-      "size": 428993,
+      "size": 431082,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "chunkNames": [
-        "widget-core"
+        "vendor"
       ],
       "emitted": true
     },
     {
       "name": "manifest.json",
-      "size": 658,
+      "size": 648,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -153,7 +153,7 @@
   "entrypoints": {
     "src/menu/Menu": {
       "chunks": [
-        "widget-core",
+        "vendor",
         "src/menu/Menu"
       ],
       "assets": [
@@ -167,7 +167,7 @@
     },
     "src/menu-item/MenuItem": {
       "chunks": [
-        "widget-core",
+        "vendor",
         "src/menu-item/MenuItem"
       ],
       "assets": [
@@ -187,7 +187,7 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 2199,
+      "size": 1706,
       "names": [
         "src/menu-item/MenuItem"
       ],
@@ -197,39 +197,11 @@
         "src/menu-item/MenuItem-1.0.0.bundle.js.map",
         "src/menu-item/MenuItem-1.0.0.bundle.css.map"
       ],
-      "hash": "850f26ff31d21ec18686",
+      "hash": "78af00192fee947350bc",
       "parents": [
-        "widget-core"
+        "vendor"
       ],
       "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu-item/MenuItem!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 47,
-          "index2": 49,
-          "size": 493,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu-item/MenuItem"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
         {
           "id": "./src/menu-item/MenuItem.ts",
           "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
@@ -326,7 +298,7 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 2499,
+      "size": 2015,
       "names": [
         "src/menu/Menu"
       ],
@@ -336,39 +308,11 @@
         "src/menu/Menu-1.0.0.bundle.js.map",
         "src/menu/Menu-1.0.0.bundle.css.map"
       ],
-      "hash": "e843ada77aafe18669ba",
+      "hash": "ebdd05deb5a7f7ba2474",
       "parents": [
-        "widget-core"
+        "vendor"
       ],
       "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu/Menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 0,
-          "index2": 46,
-          "size": 484,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu/Menu"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
         {
           "id": "./src/menu/Menu.ts",
           "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
@@ -460,20 +404,20 @@
       ]
     },
     {
-      "id": "widget-core",
+      "id": "vendor",
       "rendered": true,
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 271440,
+      "size": 272417,
       "names": [
-        "widget-core"
+        "vendor"
       ],
       "files": [
         "test-app-vendor-1.0.0.js",
         "test-app-vendor-1.0.0.js.map"
       ],
-      "hash": "21779c94e9bfb359dc3d",
+      "hash": "55f7f1602365d7edfb0e",
       "parents": [],
       "modules": [
         {
@@ -488,7 +432,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\Evented.js",
@@ -526,7 +470,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\RegistryHandler.js",
@@ -591,7 +535,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\Evented.js",
@@ -629,7 +573,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -694,7 +638,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
@@ -741,7 +685,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -815,7 +759,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Registry.js",
@@ -862,7 +806,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\d.js",
@@ -954,7 +898,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -1019,7 +963,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -1066,7 +1010,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -1131,15 +1075,6 @@
               "loc": "4:15-34"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/number.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\number.js",
-              "module": "./node_modules/@dojo/shim/number.js",
-              "moduleName": "./node_modules/@dojo/shim/number.js",
-              "type": "cjs require",
-              "userRequest": "./global",
-              "loc": "3:15-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/support/has.js",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
               "module": "./node_modules/@dojo/shim/support/has.js",
@@ -1147,6 +1082,15 @@
               "type": "cjs require",
               "userRequest": "../global",
               "loc": "5:15-35"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/number.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\number.js",
+              "module": "./node_modules/@dojo/shim/number.js",
+              "moduleName": "./node_modules/@dojo/shim/number.js",
+              "type": "cjs require",
+              "userRequest": "./global",
+              "loc": "3:15-34"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/Promise.js",
@@ -1203,7 +1147,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -1259,7 +1203,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -1297,7 +1241,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\lang.js",
@@ -1353,7 +1297,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\iterator.js",
@@ -1391,7 +1335,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -1492,7 +1436,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\Promise.js",
@@ -1530,7 +1474,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -1586,7 +1530,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -1624,7 +1568,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -1662,7 +1606,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -1727,7 +1671,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -1765,7 +1709,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -1785,6 +1729,15 @@
               "loc": "7:19-42"
             },
             {
+              "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
+              "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "type": "cjs require",
+              "userRequest": "./../WidgetBase",
+              "loc": "4:19-45"
+            },
+            {
               "moduleId": "./src/menu/Menu.ts",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
               "module": "./src/menu/Menu.ts",
@@ -1801,15 +1754,6 @@
               "type": "cjs require",
               "userRequest": "@dojo/widget-core/WidgetBase",
               "loc": "7:19-58"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
-              "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "type": "cjs require",
-              "userRequest": "./../WidgetBase",
-              "loc": "4:19-45"
             }
           ],
           "usedExports": true,
@@ -1830,7 +1774,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -1868,7 +1812,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\registerCustomElement.js",
@@ -1906,7 +1850,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -1924,24 +1868,6 @@
               "type": "cjs require",
               "userRequest": "./d",
               "loc": "8:10-24"
-            },
-            {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
-              "type": "cjs require",
-              "userRequest": "@dojo/widget-core/d",
-              "loc": "4:10-40"
-            },
-            {
-              "moduleId": "./src/menu-item/MenuItem.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
-              "module": "./src/menu-item/MenuItem.ts",
-              "moduleName": "./src/menu-item/MenuItem.ts",
-              "type": "cjs require",
-              "userRequest": "@dojo/widget-core/d",
-              "loc": "4:10-40"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1971,6 +1897,24 @@
               "loc": "8:10-27"
             },
             {
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
+              "type": "cjs require",
+              "userRequest": "@dojo/widget-core/d",
+              "loc": "4:10-40"
+            },
+            {
+              "moduleId": "./src/menu-item/MenuItem.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
+              "module": "./src/menu-item/MenuItem.ts",
+              "moduleName": "./src/menu-item/MenuItem.ts",
+              "type": "cjs require",
+              "userRequest": "@dojo/widget-core/d",
+              "loc": "4:10-40"
+            },
+            {
               "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\vdom.js",
               "module": "./node_modules/@dojo/widget-core/vdom.js",
@@ -1998,7 +1942,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -2036,7 +1980,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\inject.js",
@@ -2074,7 +2018,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
@@ -2121,7 +2065,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -2159,25 +2103,16 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-          "issuerId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "issuerName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
+          "issuerId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+          "issuerName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "type": "cjs require",
-              "userRequest": "./../decorators/handleDecorator",
-              "loc": "6:24-66"
-            },
             {
               "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
@@ -2186,6 +2121,15 @@
               "type": "cjs require",
               "userRequest": "./handleDecorator",
               "loc": "3:24-52"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "type": "cjs require",
+              "userRequest": "./../decorators/handleDecorator",
+              "loc": "6:24-66"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/decorators/inject.js",
@@ -2233,7 +2177,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -2271,7 +2215,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -2318,7 +2262,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -2356,7 +2300,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
@@ -2403,7 +2347,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu/Menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
@@ -2450,7 +2394,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -2488,7 +2432,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -2524,6 +2468,62 @@
           "source": "\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar tslib_1 = require(\"tslib\");\r\nvar global_1 = require(\"@dojo/shim/global\");\r\nvar array_1 = require(\"@dojo/shim/array\");\r\nvar d_1 = require(\"./d\");\r\nvar Registry_1 = require(\"./Registry\");\r\nvar WeakMap_1 = require(\"@dojo/shim/WeakMap\");\r\nvar NAMESPACE_W3 = 'http://www.w3.org/';\r\nvar NAMESPACE_SVG = NAMESPACE_W3 + '2000/svg';\r\nvar NAMESPACE_XLINK = NAMESPACE_W3 + '1999/xlink';\r\nvar emptyArray = [];\r\nexports.widgetInstanceMap = new WeakMap_1.default();\r\nvar instanceMap = new WeakMap_1.default();\r\nvar renderQueueMap = new WeakMap_1.default();\r\nfunction same(dnode1, dnode2) {\r\n    if (d_1.isVNode(dnode1) && d_1.isVNode(dnode2)) {\r\n        if (dnode1.tag !== dnode2.tag) {\r\n            return false;\r\n        }\r\n        if (dnode1.properties.key !== dnode2.properties.key) {\r\n            return false;\r\n        }\r\n        return true;\r\n    }\r\n    else if (d_1.isWNode(dnode1) && d_1.isWNode(dnode2)) {\r\n        if (dnode1.widgetConstructor !== dnode2.widgetConstructor) {\r\n            return false;\r\n        }\r\n        if (dnode1.properties.key !== dnode2.properties.key) {\r\n            return false;\r\n        }\r\n        return true;\r\n    }\r\n    return false;\r\n}\r\nvar missingTransition = function () {\r\n    throw new Error('Provide a transitions object to the projectionOptions to do animations');\r\n};\r\nfunction getProjectionOptions(projectorOptions, projectorInstance) {\r\n    var defaults = {\r\n        namespace: undefined,\r\n        styleApplyer: function (domNode, styleName, value) {\r\n            domNode.style[styleName] = value;\r\n        },\r\n        transitions: {\r\n            enter: missingTransition,\r\n            exit: missingTransition\r\n        },\r\n        deferredRenderCallbacks: [],\r\n        afterRenderCallbacks: [],\r\n        nodeMap: new WeakMap_1.default(),\r\n        depth: 0,\r\n        merge: false,\r\n        renderScheduled: undefined,\r\n        renderQueue: [],\r\n        projectorInstance: projectorInstance\r\n    };\r\n    return tslib_1.__assign({}, defaults, projectorOptions);\r\n}\r\nfunction checkStyleValue(styleValue) {\r\n    if (typeof styleValue !== 'string') {\r\n        throw new Error('Style values must be strings');\r\n    }\r\n}\r\nfunction updateEvents(domNode, propName, properties, projectionOptions, previousProperties) {\r\n    var previous = previousProperties || Object.create(null);\r\n    var currentValue = properties[propName];\r\n    var previousValue = previous[propName];\r\n    var eventName = propName.substr(2);\r\n    var eventMap = projectionOptions.nodeMap.get(domNode) || new WeakMap_1.default();\r\n    if (previousValue) {\r\n        var previousEvent = eventMap.get(previousValue);\r\n        domNode.removeEventListener(eventName, previousEvent);\r\n    }\r\n    var callback = currentValue.bind(properties.bind);\r\n    if (eventName === 'input') {\r\n        callback = function (evt) {\r\n            currentValue.call(this, evt);\r\n            evt.target['oninput-value'] = evt.target.value;\r\n        }.bind(properties.bind);\r\n    }\r\n    domNode.addEventListener(eventName, callback);\r\n    eventMap.set(currentValue, callback);\r\n    projectionOptions.nodeMap.set(domNode, eventMap);\r\n}\r\nfunction addClasses(domNode, classes) {\r\n    if (classes) {\r\n        var classNames = classes.split(' ');\r\n        for (var i = 0; i < classNames.length; i++) {\r\n            domNode.classList.add(classNames[i]);\r\n        }\r\n    }\r\n}\r\nfunction removeClasses(domNode, classes) {\r\n    if (classes) {\r\n        var classNames = classes.split(' ');\r\n        for (var i = 0; i < classNames.length; i++) {\r\n            domNode.classList.remove(classNames[i]);\r\n        }\r\n    }\r\n}\r\nfunction focusNode(propValue, previousValue, domNode, projectionOptions) {\r\n    var result;\r\n    if (typeof propValue === 'function') {\r\n        result = propValue();\r\n    }\r\n    else {\r\n        result = propValue && !previousValue;\r\n    }\r\n    if (result === true) {\r\n        projectionOptions.deferredRenderCallbacks.push(function () {\r\n            domNode.focus();\r\n        });\r\n    }\r\n}\r\nfunction setProperties(domNode, properties, projectionOptions) {\r\n    var propNames = Object.keys(properties);\r\n    var propCount = propNames.length;\r\n    for (var i = 0; i < propCount; i++) {\r\n        var propName = propNames[i];\r\n        var propValue = properties[propName];\r\n        if (propName === 'classes') {\r\n            var currentClasses = Array.isArray(propValue) ? propValue : [propValue];\r\n            if (!domNode.className) {\r\n                domNode.className = currentClasses.join(' ').trim();\r\n            }\r\n            else {\r\n                for (var i_1 = 0; i_1 < currentClasses.length; i_1++) {\r\n                    addClasses(domNode, currentClasses[i_1]);\r\n                }\r\n            }\r\n        }\r\n        else if (propName === 'focus') {\r\n            focusNode(propValue, false, domNode, projectionOptions);\r\n        }\r\n        else if (propName === 'styles') {\r\n            var styleNames = Object.keys(propValue);\r\n            var styleCount = styleNames.length;\r\n            for (var j = 0; j < styleCount; j++) {\r\n                var styleName = styleNames[j];\r\n                var styleValue = propValue[styleName];\r\n                if (styleValue) {\r\n                    checkStyleValue(styleValue);\r\n                    projectionOptions.styleApplyer(domNode, styleName, styleValue);\r\n                }\r\n            }\r\n        }\r\n        else if (propName !== 'key' && propValue !== null && propValue !== undefined) {\r\n            var type = typeof propValue;\r\n            if (type === 'function' && propName.lastIndexOf('on', 0) === 0) {\r\n                updateEvents(domNode, propName, properties, projectionOptions);\r\n            }\r\n            else if (type === 'string' && propName !== 'value' && propName !== 'innerHTML') {\r\n                if (projectionOptions.namespace === NAMESPACE_SVG && propName === 'href') {\r\n                    domNode.setAttributeNS(NAMESPACE_XLINK, propName, propValue);\r\n                }\r\n                else {\r\n                    domNode.setAttribute(propName, propValue);\r\n                }\r\n            }\r\n            else {\r\n                domNode[propName] = propValue;\r\n            }\r\n        }\r\n    }\r\n}\r\nfunction removeOrphanedEvents(domNode, previousProperties, properties, projectionOptions) {\r\n    var eventMap = projectionOptions.nodeMap.get(domNode);\r\n    if (eventMap) {\r\n        Object.keys(previousProperties).forEach(function (propName) {\r\n            if (propName.substr(0, 2) === 'on' && !properties[propName]) {\r\n                var eventCallback = eventMap.get(previousProperties[propName]);\r\n                if (eventCallback) {\r\n                    domNode.removeEventListener(propName.substr(2), eventCallback);\r\n                }\r\n            }\r\n        });\r\n    }\r\n}\r\nfunction updateProperties(domNode, previousProperties, properties, projectionOptions) {\r\n    var propertiesUpdated = false;\r\n    var propNames = Object.keys(properties);\r\n    var propCount = propNames.length;\r\n    if (propNames.indexOf('classes') === -1 && previousProperties.classes) {\r\n        if (Array.isArray(previousProperties.classes)) {\r\n            for (var i = 0; i < previousProperties.classes.length; i++) {\r\n                removeClasses(domNode, previousProperties.classes[i]);\r\n            }\r\n        }\r\n        else {\r\n            removeClasses(domNode, previousProperties.classes);\r\n        }\r\n    }\r\n    removeOrphanedEvents(domNode, previousProperties, properties, projectionOptions);\r\n    for (var i = 0; i < propCount; i++) {\r\n        var propName = propNames[i];\r\n        var propValue = properties[propName];\r\n        var previousValue = previousProperties[propName];\r\n        if (propName === 'classes') {\r\n            var previousClasses = Array.isArray(previousValue) ? previousValue : [previousValue];\r\n            var currentClasses = Array.isArray(propValue) ? propValue : [propValue];\r\n            if (previousClasses && previousClasses.length > 0) {\r\n                if (!propValue || propValue.length === 0) {\r\n                    for (var i_2 = 0; i_2 < previousClasses.length; i_2++) {\r\n                        removeClasses(domNode, previousClasses[i_2]);\r\n                    }\r\n                }\r\n                else {\r\n                    var newClasses = tslib_1.__spread(currentClasses);\r\n                    for (var i_3 = 0; i_3 < previousClasses.length; i_3++) {\r\n                        var previousClassName = previousClasses[i_3];\r\n                        if (previousClassName) {\r\n                            var classIndex = newClasses.indexOf(previousClassName);\r\n                            if (classIndex === -1) {\r\n                                removeClasses(domNode, previousClassName);\r\n                            }\r\n                            else {\r\n                                newClasses.splice(classIndex, 1);\r\n                            }\r\n                        }\r\n                    }\r\n                    for (var i_4 = 0; i_4 < newClasses.length; i_4++) {\r\n                        addClasses(domNode, newClasses[i_4]);\r\n                    }\r\n                }\r\n            }\r\n            else {\r\n                for (var i_5 = 0; i_5 < currentClasses.length; i_5++) {\r\n                    addClasses(domNode, currentClasses[i_5]);\r\n                }\r\n            }\r\n        }\r\n        else if (propName === 'focus') {\r\n            focusNode(propValue, previousValue, domNode, projectionOptions);\r\n        }\r\n        else if (propName === 'styles') {\r\n            var styleNames = Object.keys(propValue);\r\n            var styleCount = styleNames.length;\r\n            for (var j = 0; j < styleCount; j++) {\r\n                var styleName = styleNames[j];\r\n                var newStyleValue = propValue[styleName];\r\n                var oldStyleValue = previousValue[styleName];\r\n                if (newStyleValue === oldStyleValue) {\r\n                    continue;\r\n                }\r\n                propertiesUpdated = true;\r\n                if (newStyleValue) {\r\n                    checkStyleValue(newStyleValue);\r\n                    projectionOptions.styleApplyer(domNode, styleName, newStyleValue);\r\n                }\r\n                else {\r\n                    projectionOptions.styleApplyer(domNode, styleName, '');\r\n                }\r\n            }\r\n        }\r\n        else {\r\n            if (!propValue && typeof previousValue === 'string') {\r\n                propValue = '';\r\n            }\r\n            if (propName === 'value') {\r\n                var domValue = domNode[propName];\r\n                if (domValue !== propValue &&\r\n                    (domNode['oninput-value']\r\n                        ? domValue === domNode['oninput-value']\r\n                        : propValue !== previousValue)) {\r\n                    domNode[propName] = propValue;\r\n                    domNode['oninput-value'] = undefined;\r\n                }\r\n                if (propValue !== previousValue) {\r\n                    propertiesUpdated = true;\r\n                }\r\n            }\r\n            else if (propValue !== previousValue) {\r\n                var type = typeof propValue;\r\n                if (type === 'function' && propName.lastIndexOf('on', 0) === 0) {\r\n                    updateEvents(domNode, propName, properties, projectionOptions, previousProperties);\r\n                }\r\n                else if (type === 'string' && propName !== 'innerHTML') {\r\n                    if (projectionOptions.namespace === NAMESPACE_SVG && propName === 'href') {\r\n                        domNode.setAttributeNS(NAMESPACE_XLINK, propName, propValue);\r\n                    }\r\n                    else if (propName === 'role' && propValue === '') {\r\n                        domNode.removeAttribute(propName);\r\n                    }\r\n                    else {\r\n                        domNode.setAttribute(propName, propValue);\r\n                    }\r\n                }\r\n                else {\r\n                    if (domNode[propName] !== propValue) {\r\n                        // Comparison is here for side-effects in Edge with scrollLeft and scrollTop\r\n                        domNode[propName] = propValue;\r\n                    }\r\n                }\r\n                propertiesUpdated = true;\r\n            }\r\n        }\r\n    }\r\n    return propertiesUpdated;\r\n}\r\nfunction findIndexOfChild(children, sameAs, start) {\r\n    for (var i = start; i < children.length; i++) {\r\n        if (same(children[i], sameAs)) {\r\n            return i;\r\n        }\r\n    }\r\n    return -1;\r\n}\r\nfunction toParentVNode(domNode) {\r\n    return {\r\n        tag: '',\r\n        properties: {},\r\n        children: undefined,\r\n        domNode: domNode,\r\n        type: d_1.VNODE\r\n    };\r\n}\r\nexports.toParentVNode = toParentVNode;\r\nfunction toTextVNode(data) {\r\n    return {\r\n        tag: '',\r\n        properties: {},\r\n        children: undefined,\r\n        text: \"\" + data,\r\n        domNode: undefined,\r\n        type: d_1.VNODE\r\n    };\r\n}\r\nexports.toTextVNode = toTextVNode;\r\nfunction toInternalWNode(instance, instanceData) {\r\n    return {\r\n        instance: instance,\r\n        rendered: [],\r\n        coreProperties: instanceData.coreProperties,\r\n        children: instance.children,\r\n        widgetConstructor: instance.constructor,\r\n        properties: instanceData.inputProperties,\r\n        type: d_1.WNODE\r\n    };\r\n}\r\nfunction filterAndDecorateChildren(children, instance) {\r\n    if (children === undefined) {\r\n        return emptyArray;\r\n    }\r\n    children = Array.isArray(children) ? children : [children];\r\n    for (var i = 0; i < children.length;) {\r\n        var child = children[i];\r\n        if (child === undefined || child === null) {\r\n            children.splice(i, 1);\r\n            continue;\r\n        }\r\n        else if (typeof child === 'string') {\r\n            children[i] = toTextVNode(child);\r\n        }\r\n        else {\r\n            if (d_1.isVNode(child)) {\r\n                if (child.properties.bind === undefined) {\r\n                    child.properties.bind = instance;\r\n                    if (child.children && child.children.length > 0) {\r\n                        filterAndDecorateChildren(child.children, instance);\r\n                    }\r\n                }\r\n            }\r\n            else {\r\n                if (!child.coreProperties) {\r\n                    var instanceData = exports.widgetInstanceMap.get(instance);\r\n                    child.coreProperties = {\r\n                        bind: instance,\r\n                        baseRegistry: instanceData.coreProperties.baseRegistry\r\n                    };\r\n                }\r\n                if (child.children && child.children.length > 0) {\r\n                    filterAndDecorateChildren(child.children, instance);\r\n                }\r\n            }\r\n        }\r\n        i++;\r\n    }\r\n    return children;\r\n}\r\nexports.filterAndDecorateChildren = filterAndDecorateChildren;\r\nfunction nodeAdded(dnode, transitions) {\r\n    if (d_1.isVNode(dnode) && dnode.properties) {\r\n        var enterAnimation = dnode.properties.enterAnimation;\r\n        if (enterAnimation) {\r\n            if (typeof enterAnimation === 'function') {\r\n                enterAnimation(dnode.domNode, dnode.properties);\r\n            }\r\n            else {\r\n                transitions.enter(dnode.domNode, dnode.properties, enterAnimation);\r\n            }\r\n        }\r\n    }\r\n}\r\nfunction callOnDetach(dNodes, parentInstance) {\r\n    dNodes = Array.isArray(dNodes) ? dNodes : [dNodes];\r\n    for (var i = 0; i < dNodes.length; i++) {\r\n        var dNode = dNodes[i];\r\n        if (d_1.isWNode(dNode)) {\r\n            if (dNode.rendered) {\r\n                callOnDetach(dNode.rendered, dNode.instance);\r\n            }\r\n            if (dNode.instance) {\r\n                var instanceData = exports.widgetInstanceMap.get(dNode.instance);\r\n                instanceData.onDetach();\r\n            }\r\n        }\r\n        else {\r\n            if (dNode.children) {\r\n                callOnDetach(dNode.children, parentInstance);\r\n            }\r\n        }\r\n    }\r\n}\r\nfunction nodeToRemove(dnode, transitions, projectionOptions) {\r\n    if (d_1.isWNode(dnode)) {\r\n        var rendered = dnode.rendered || emptyArray;\r\n        for (var i = 0; i < rendered.length; i++) {\r\n            var child = rendered[i];\r\n            if (d_1.isVNode(child)) {\r\n                child.domNode.parentNode.removeChild(child.domNode);\r\n            }\r\n            else {\r\n                nodeToRemove(child, transitions, projectionOptions);\r\n            }\r\n        }\r\n    }\r\n    else {\r\n        var domNode_1 = dnode.domNode;\r\n        var properties = dnode.properties;\r\n        var exitAnimation = properties.exitAnimation;\r\n        if (properties && exitAnimation) {\r\n            domNode_1.style.pointerEvents = 'none';\r\n            var removeDomNode = function () {\r\n                domNode_1 && domNode_1.parentNode && domNode_1.parentNode.removeChild(domNode_1);\r\n            };\r\n            if (typeof exitAnimation === 'function') {\r\n                exitAnimation(domNode_1, removeDomNode, properties);\r\n                return;\r\n            }\r\n            else {\r\n                transitions.exit(dnode.domNode, properties, exitAnimation, removeDomNode);\r\n                return;\r\n            }\r\n        }\r\n        domNode_1 && domNode_1.parentNode && domNode_1.parentNode.removeChild(domNode_1);\r\n    }\r\n}\r\nfunction checkDistinguishable(childNodes, indexToCheck, parentInstance) {\r\n    var childNode = childNodes[indexToCheck];\r\n    if (d_1.isVNode(childNode) && !childNode.tag) {\r\n        return; // Text nodes need not be distinguishable\r\n    }\r\n    var key = childNode.properties.key;\r\n    if (key === undefined || key === null) {\r\n        for (var i = 0; i < childNodes.length; i++) {\r\n            if (i !== indexToCheck) {\r\n                var node = childNodes[i];\r\n                if (same(node, childNode)) {\r\n                    var nodeIdentifier = void 0;\r\n                    var parentName = parentInstance.constructor.name || 'unknown';\r\n                    if (d_1.isWNode(childNode)) {\r\n                        nodeIdentifier = childNode.widgetConstructor.name || 'unknown';\r\n                    }\r\n                    else {\r\n                        nodeIdentifier = childNode.tag;\r\n                    }\r\n                    console.warn(\"A widget (\" + parentName + \") has had a child addded or removed, but they were not able to uniquely identified. It is recommended to provide a unique 'key' property when using the same widget or element (\" + nodeIdentifier + \") multiple times as siblings\");\r\n                    break;\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\nfunction updateChildren(parentVNode, oldChildren, newChildren, parentInstance, projectionOptions) {\r\n    oldChildren = oldChildren || emptyArray;\r\n    newChildren = newChildren;\r\n    var oldChildrenLength = oldChildren.length;\r\n    var newChildrenLength = newChildren.length;\r\n    var transitions = projectionOptions.transitions;\r\n    projectionOptions = tslib_1.__assign({}, projectionOptions, { depth: projectionOptions.depth + 1 });\r\n    var oldIndex = 0;\r\n    var newIndex = 0;\r\n    var i;\r\n    var textUpdated = false;\r\n    var _loop_1 = function () {\r\n        var oldChild = oldIndex < oldChildrenLength ? oldChildren[oldIndex] : undefined;\r\n        var newChild = newChildren[newIndex];\r\n        if (d_1.isVNode(newChild) && typeof newChild.deferredPropertiesCallback === 'function') {\r\n            newChild.inserted = d_1.isVNode(oldChild) && oldChild.inserted;\r\n            addDeferredProperties(newChild, projectionOptions);\r\n        }\r\n        if (oldChild !== undefined && same(oldChild, newChild)) {\r\n            textUpdated = updateDom(oldChild, newChild, projectionOptions, parentVNode, parentInstance) || textUpdated;\r\n            oldIndex++;\r\n        }\r\n        else {\r\n            var findOldIndex = findIndexOfChild(oldChildren, newChild, oldIndex + 1);\r\n            if (findOldIndex >= 0) {\r\n                var _loop_2 = function () {\r\n                    var oldChild_1 = oldChildren[i];\r\n                    var indexToCheck = i;\r\n                    projectionOptions.afterRenderCallbacks.push(function () {\r\n                        callOnDetach(oldChild_1, parentInstance);\r\n                        checkDistinguishable(oldChildren, indexToCheck, parentInstance);\r\n                    });\r\n                    nodeToRemove(oldChildren[i], transitions, projectionOptions);\r\n                };\r\n                for (i = oldIndex; i < findOldIndex; i++) {\r\n                    _loop_2();\r\n                }\r\n                textUpdated =\r\n                    updateDom(oldChildren[findOldIndex], newChild, projectionOptions, parentVNode, parentInstance) ||\r\n                        textUpdated;\r\n                oldIndex = findOldIndex + 1;\r\n            }\r\n            else {\r\n                var insertBefore = undefined;\r\n                var child = oldChildren[oldIndex];\r\n                if (child) {\r\n                    var nextIndex = oldIndex + 1;\r\n                    while (insertBefore === undefined) {\r\n                        if (d_1.isWNode(child)) {\r\n                            if (child.rendered) {\r\n                                child = child.rendered[0];\r\n                            }\r\n                            else if (oldChildren[nextIndex]) {\r\n                                child = oldChildren[nextIndex];\r\n                                nextIndex++;\r\n                            }\r\n                            else {\r\n                                break;\r\n                            }\r\n                        }\r\n                        else {\r\n                            insertBefore = child.domNode;\r\n                        }\r\n                    }\r\n                }\r\n                createDom(newChild, parentVNode, insertBefore, projectionOptions, parentInstance);\r\n                nodeAdded(newChild, transitions);\r\n                var indexToCheck_1 = newIndex;\r\n                projectionOptions.afterRenderCallbacks.push(function () {\r\n                    checkDistinguishable(newChildren, indexToCheck_1, parentInstance);\r\n                });\r\n            }\r\n        }\r\n        newIndex++;\r\n    };\r\n    while (newIndex < newChildrenLength) {\r\n        _loop_1();\r\n    }\r\n    if (oldChildrenLength > oldIndex) {\r\n        var _loop_3 = function () {\r\n            var oldChild = oldChildren[i];\r\n            var indexToCheck = i;\r\n            projectionOptions.afterRenderCallbacks.push(function () {\r\n                callOnDetach(oldChild, parentInstance);\r\n                checkDistinguishable(oldChildren, indexToCheck, parentInstance);\r\n            });\r\n            nodeToRemove(oldChildren[i], transitions, projectionOptions);\r\n        };\r\n        // Remove child fragments\r\n        for (i = oldIndex; i < oldChildrenLength; i++) {\r\n            _loop_3();\r\n        }\r\n    }\r\n    return textUpdated;\r\n}\r\nfunction addChildren(parentVNode, children, projectionOptions, parentInstance, insertBefore, childNodes) {\r\n    if (insertBefore === void 0) { insertBefore = undefined; }\r\n    if (children === undefined) {\r\n        return;\r\n    }\r\n    if (projectionOptions.merge && childNodes === undefined) {\r\n        childNodes = array_1.from(parentVNode.domNode.childNodes);\r\n    }\r\n    projectionOptions = tslib_1.__assign({}, projectionOptions, { depth: projectionOptions.depth + 1 });\r\n    for (var i = 0; i < children.length; i++) {\r\n        var child = children[i];\r\n        if (d_1.isVNode(child)) {\r\n            if (projectionOptions.merge && childNodes) {\r\n                var domElement = undefined;\r\n                while (child.domNode === undefined && childNodes.length > 0) {\r\n                    domElement = childNodes.shift();\r\n                    if (domElement && domElement.tagName === (child.tag.toUpperCase() || undefined)) {\r\n                        child.domNode = domElement;\r\n                    }\r\n                }\r\n            }\r\n            createDom(child, parentVNode, insertBefore, projectionOptions, parentInstance);\r\n        }\r\n        else {\r\n            createDom(child, parentVNode, insertBefore, projectionOptions, parentInstance, childNodes);\r\n        }\r\n    }\r\n}\r\nfunction initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions) {\r\n    addChildren(dnode, dnode.children, projectionOptions, parentInstance, undefined);\r\n    if (typeof dnode.deferredPropertiesCallback === 'function' && dnode.inserted === undefined) {\r\n        addDeferredProperties(dnode, projectionOptions);\r\n    }\r\n    setProperties(domNode, dnode.properties, projectionOptions);\r\n    if (dnode.properties.key !== null && dnode.properties.key !== undefined) {\r\n        var instanceData = exports.widgetInstanceMap.get(parentInstance);\r\n        instanceData.nodeHandler.add(domNode, \"\" + dnode.properties.key);\r\n    }\r\n    dnode.inserted = true;\r\n}\r\nfunction createDom(dnode, parentVNode, insertBefore, projectionOptions, parentInstance, childNodes) {\r\n    var domNode;\r\n    if (d_1.isWNode(dnode)) {\r\n        var widgetConstructor = dnode.widgetConstructor;\r\n        var parentInstanceData = exports.widgetInstanceMap.get(parentInstance);\r\n        if (!Registry_1.isWidgetBaseConstructor(widgetConstructor)) {\r\n            var item = parentInstanceData.registry().get(widgetConstructor);\r\n            if (item === null) {\r\n                return;\r\n            }\r\n            widgetConstructor = item;\r\n        }\r\n        var instance_1 = new widgetConstructor();\r\n        dnode.instance = instance_1;\r\n        var instanceData_1 = exports.widgetInstanceMap.get(instance_1);\r\n        instanceData_1.invalidate = function () {\r\n            instanceData_1.dirty = true;\r\n            if (instanceData_1.rendering === false) {\r\n                var renderQueue = renderQueueMap.get(projectionOptions.projectorInstance);\r\n                renderQueue.push({ instance: instance_1, depth: projectionOptions.depth });\r\n                scheduleRender(projectionOptions);\r\n            }\r\n        };\r\n        instanceData_1.rendering = true;\r\n        instance_1.__setCoreProperties__(dnode.coreProperties);\r\n        instance_1.__setChildren__(dnode.children);\r\n        instance_1.__setProperties__(dnode.properties);\r\n        instanceData_1.rendering = false;\r\n        var rendered = instance_1.__render__();\r\n        if (rendered) {\r\n            var filteredRendered = filterAndDecorateChildren(rendered, instance_1);\r\n            dnode.rendered = filteredRendered;\r\n            addChildren(parentVNode, filteredRendered, projectionOptions, instance_1, insertBefore, childNodes);\r\n        }\r\n        instanceMap.set(instance_1, { dnode: dnode, parentVNode: parentVNode });\r\n        instanceData_1.nodeHandler.addRoot();\r\n        projectionOptions.afterRenderCallbacks.push(function () {\r\n            instanceData_1.onAttach();\r\n        });\r\n    }\r\n    else {\r\n        if (projectionOptions.merge && projectionOptions.mergeElement !== undefined) {\r\n            domNode = dnode.domNode = projectionOptions.mergeElement;\r\n            projectionOptions.mergeElement = undefined;\r\n            initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions);\r\n            return;\r\n        }\r\n        var doc = parentVNode.domNode.ownerDocument;\r\n        if (!dnode.tag && typeof dnode.text === 'string') {\r\n            if (dnode.domNode !== undefined && dnode.domNode.parentNode) {\r\n                var newDomNode = dnode.domNode.ownerDocument.createTextNode(dnode.text);\r\n                dnode.domNode.parentNode.replaceChild(newDomNode, dnode.domNode);\r\n                dnode.domNode = newDomNode;\r\n            }\r\n            else {\r\n                domNode = dnode.domNode = doc.createTextNode(dnode.text);\r\n                if (insertBefore !== undefined) {\r\n                    parentVNode.domNode.insertBefore(domNode, insertBefore);\r\n                }\r\n                else {\r\n                    parentVNode.domNode.appendChild(domNode);\r\n                }\r\n            }\r\n        }\r\n        else {\r\n            if (dnode.domNode === undefined) {\r\n                if (dnode.tag === 'svg') {\r\n                    projectionOptions = tslib_1.__assign({}, projectionOptions, { namespace: NAMESPACE_SVG });\r\n                }\r\n                if (projectionOptions.namespace !== undefined) {\r\n                    domNode = dnode.domNode = doc.createElementNS(projectionOptions.namespace, dnode.tag);\r\n                }\r\n                else {\r\n                    domNode = dnode.domNode = dnode.domNode || doc.createElement(dnode.tag);\r\n                }\r\n            }\r\n            else {\r\n                domNode = dnode.domNode;\r\n            }\r\n            initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions);\r\n            if (insertBefore !== undefined) {\r\n                parentVNode.domNode.insertBefore(domNode, insertBefore);\r\n            }\r\n            else if (domNode.parentNode !== parentVNode.domNode) {\r\n                parentVNode.domNode.appendChild(domNode);\r\n            }\r\n        }\r\n    }\r\n}\r\nfunction updateDom(previous, dnode, projectionOptions, parentVNode, parentInstance) {\r\n    if (d_1.isWNode(dnode)) {\r\n        var instance = previous.instance;\r\n        if (instance) {\r\n            var _a = instanceMap.get(instance), parentVNode_1 = _a.parentVNode, node = _a.dnode;\r\n            var previousRendered = node ? node.rendered : previous.rendered;\r\n            var instanceData = exports.widgetInstanceMap.get(instance);\r\n            instanceData.rendering = true;\r\n            instance.__setCoreProperties__(dnode.coreProperties);\r\n            instance.__setChildren__(dnode.children);\r\n            instance.__setProperties__(dnode.properties);\r\n            instanceData.rendering = false;\r\n            dnode.instance = instance;\r\n            instanceMap.set(instance, { dnode: dnode, parentVNode: parentVNode_1 });\r\n            if (instanceData.dirty === true) {\r\n                var rendered = instance.__render__();\r\n                dnode.rendered = filterAndDecorateChildren(rendered, instance);\r\n                updateChildren(parentVNode_1, previousRendered, dnode.rendered, instance, projectionOptions);\r\n            }\r\n            else {\r\n                dnode.rendered = previousRendered;\r\n            }\r\n            instanceData.nodeHandler.addRoot();\r\n        }\r\n        else {\r\n            createDom(dnode, parentVNode, undefined, projectionOptions, parentInstance);\r\n        }\r\n    }\r\n    else {\r\n        if (previous === dnode) {\r\n            return false;\r\n        }\r\n        var domNode = (dnode.domNode = previous.domNode);\r\n        var textUpdated = false;\r\n        var updated = false;\r\n        if (!dnode.tag && typeof dnode.text === 'string') {\r\n            if (dnode.text !== previous.text) {\r\n                var newDomNode = domNode.ownerDocument.createTextNode(dnode.text);\r\n                domNode.parentNode.replaceChild(newDomNode, domNode);\r\n                dnode.domNode = newDomNode;\r\n                textUpdated = true;\r\n                return textUpdated;\r\n            }\r\n        }\r\n        else {\r\n            if (dnode.tag && dnode.tag.lastIndexOf('svg', 0) === 0) {\r\n                projectionOptions = tslib_1.__assign({}, projectionOptions, { namespace: NAMESPACE_SVG });\r\n            }\r\n            if (previous.children !== dnode.children) {\r\n                var children = filterAndDecorateChildren(dnode.children, parentInstance);\r\n                dnode.children = children;\r\n                updated =\r\n                    updateChildren(dnode, previous.children, children, parentInstance, projectionOptions) || updated;\r\n            }\r\n            updated = updateProperties(domNode, previous.properties, dnode.properties, projectionOptions) || updated;\r\n            if (dnode.properties.key !== null && dnode.properties.key !== undefined) {\r\n                var instanceData = exports.widgetInstanceMap.get(parentInstance);\r\n                instanceData.nodeHandler.add(domNode, \"\" + dnode.properties.key);\r\n            }\r\n        }\r\n        if (updated && dnode.properties && dnode.properties.updateAnimation) {\r\n            dnode.properties.updateAnimation(domNode, dnode.properties, previous.properties);\r\n        }\r\n    }\r\n}\r\nfunction addDeferredProperties(vnode, projectionOptions) {\r\n    // transfer any properties that have been passed - as these must be decorated properties\r\n    vnode.decoratedDeferredProperties = vnode.properties;\r\n    var properties = vnode.deferredPropertiesCallback(!!vnode.inserted);\r\n    vnode.properties = tslib_1.__assign({}, properties, vnode.decoratedDeferredProperties);\r\n    projectionOptions.deferredRenderCallbacks.push(function () {\r\n        var properties = tslib_1.__assign({}, vnode.deferredPropertiesCallback(!!vnode.inserted), vnode.decoratedDeferredProperties);\r\n        updateProperties(vnode.domNode, vnode.properties, properties, projectionOptions);\r\n        vnode.properties = properties;\r\n    });\r\n}\r\nfunction runDeferredRenderCallbacks(projectionOptions) {\r\n    if (projectionOptions.deferredRenderCallbacks.length) {\r\n        if (projectionOptions.sync) {\r\n            while (projectionOptions.deferredRenderCallbacks.length) {\r\n                var callback = projectionOptions.deferredRenderCallbacks.shift();\r\n                callback && callback();\r\n            }\r\n        }\r\n        else {\r\n            global_1.default.requestAnimationFrame(function () {\r\n                while (projectionOptions.deferredRenderCallbacks.length) {\r\n                    var callback = projectionOptions.deferredRenderCallbacks.shift();\r\n                    callback && callback();\r\n                }\r\n            });\r\n        }\r\n    }\r\n}\r\nfunction runAfterRenderCallbacks(projectionOptions) {\r\n    if (projectionOptions.sync) {\r\n        while (projectionOptions.afterRenderCallbacks.length) {\r\n            var callback = projectionOptions.afterRenderCallbacks.shift();\r\n            callback && callback();\r\n        }\r\n    }\r\n    else {\r\n        if (global_1.default.requestIdleCallback) {\r\n            global_1.default.requestIdleCallback(function () {\r\n                while (projectionOptions.afterRenderCallbacks.length) {\r\n                    var callback = projectionOptions.afterRenderCallbacks.shift();\r\n                    callback && callback();\r\n                }\r\n            });\r\n        }\r\n        else {\r\n            setTimeout(function () {\r\n                while (projectionOptions.afterRenderCallbacks.length) {\r\n                    var callback = projectionOptions.afterRenderCallbacks.shift();\r\n                    callback && callback();\r\n                }\r\n            });\r\n        }\r\n    }\r\n}\r\nfunction scheduleRender(projectionOptions) {\r\n    if (projectionOptions.sync) {\r\n        render(projectionOptions);\r\n    }\r\n    else if (projectionOptions.renderScheduled === undefined) {\r\n        projectionOptions.renderScheduled = global_1.default.requestAnimationFrame(function () {\r\n            render(projectionOptions);\r\n        });\r\n    }\r\n}\r\nfunction render(projectionOptions) {\r\n    projectionOptions.renderScheduled = undefined;\r\n    var renderQueue = renderQueueMap.get(projectionOptions.projectorInstance);\r\n    var renders = tslib_1.__spread(renderQueue);\r\n    renderQueueMap.set(projectionOptions.projectorInstance, []);\r\n    renders.sort(function (a, b) { return a.depth - b.depth; });\r\n    while (renders.length) {\r\n        var instance = renders.shift().instance;\r\n        var _a = instanceMap.get(instance), parentVNode = _a.parentVNode, dnode = _a.dnode;\r\n        var instanceData = exports.widgetInstanceMap.get(instance);\r\n        updateDom(dnode, toInternalWNode(instance, instanceData), projectionOptions, parentVNode, instance);\r\n    }\r\n    runAfterRenderCallbacks(projectionOptions);\r\n    runDeferredRenderCallbacks(projectionOptions);\r\n}\r\nexports.dom = {\r\n    append: function (parentNode, instance, projectionOptions) {\r\n        if (projectionOptions === void 0) { projectionOptions = {}; }\r\n        var instanceData = exports.widgetInstanceMap.get(instance);\r\n        var finalProjectorOptions = getProjectionOptions(projectionOptions, instance);\r\n        finalProjectorOptions.rootNode = parentNode;\r\n        var parentVNode = toParentVNode(finalProjectorOptions.rootNode);\r\n        var node = toInternalWNode(instance, instanceData);\r\n        var renderQueue = [];\r\n        instanceMap.set(instance, { dnode: node, parentVNode: parentVNode });\r\n        renderQueueMap.set(finalProjectorOptions.projectorInstance, renderQueue);\r\n        instanceData.invalidate = function () {\r\n            instanceData.dirty = true;\r\n            if (instanceData.rendering === false) {\r\n                var renderQueue_1 = renderQueueMap.get(finalProjectorOptions.projectorInstance);\r\n                renderQueue_1.push({ instance: instance, depth: finalProjectorOptions.depth });\r\n                scheduleRender(finalProjectorOptions);\r\n            }\r\n        };\r\n        updateDom(node, node, finalProjectorOptions, parentVNode, instance);\r\n        finalProjectorOptions.afterRenderCallbacks.push(function () {\r\n            instanceData.onAttach();\r\n        });\r\n        runDeferredRenderCallbacks(finalProjectorOptions);\r\n        runAfterRenderCallbacks(finalProjectorOptions);\r\n        return {\r\n            domNode: finalProjectorOptions.rootNode\r\n        };\r\n    },\r\n    create: function (instance, projectionOptions) {\r\n        return this.append(document.createElement('div'), instance, projectionOptions);\r\n    },\r\n    merge: function (element, instance, projectionOptions) {\r\n        if (projectionOptions === void 0) { projectionOptions = {}; }\r\n        projectionOptions.merge = true;\r\n        projectionOptions.mergeElement = element;\r\n        return this.append(element.parentNode, instance, projectionOptions);\r\n    }\r\n};"
         },
         {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu-item/MenuItem!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 47,
+          "index2": 49,
+          "size": 493,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "vendor"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu/Menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 0,
+          "index2": 46,
+          "size": 484,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "vendor"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
           "id": "./node_modules/pepjs/dist/pep.js",
           "identifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\pepjs\\dist\\pep.js",
           "name": "./node_modules/pepjs/dist/pep.js",
@@ -2535,7 +2535,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -2573,7 +2573,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\has\\has.js",
@@ -2620,7 +2620,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\timers-browserify\\main.js",
@@ -2658,7 +2658,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\queue.js",
@@ -2696,7 +2696,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\registerCustomElement.js",
@@ -2716,6 +2716,15 @@
               "loc": "3:14-30"
             },
             {
+              "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
+              "module": "./node_modules/@dojo/widget-core/customElements.js",
+              "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
+              "type": "cjs require",
+              "userRequest": "tslib",
+              "loc": "3:14-30"
+            },
+            {
               "moduleId": "./src/menu/Menu.ts",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
               "module": "./src/menu/Menu.ts",
@@ -2729,15 +2738,6 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
               "module": "./src/menu-item/MenuItem.ts",
               "moduleName": "./src/menu-item/MenuItem.ts",
-              "type": "cjs require",
-              "userRequest": "tslib",
-              "loc": "3:14-30"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
-              "module": "./node_modules/@dojo/widget-core/customElements.js",
-              "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2774,15 +2774,6 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
               "module": "./node_modules/@dojo/widget-core/mixins/Projector.js",
               "moduleName": "./node_modules/@dojo/widget-core/mixins/Projector.js",
-              "type": "cjs require",
-              "userRequest": "tslib",
-              "loc": "3:14-30"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2842,10 +2833,10 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
-              "module": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2873,6 +2864,15 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
               "module": "./node_modules/@dojo/shim/support/has.js",
               "moduleName": "./node_modules/@dojo/shim/support/has.js",
+              "type": "cjs require",
+              "userRequest": "tslib",
+              "loc": "3:14-30"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
+              "module": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2941,7 +2941,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\global.js",
@@ -3012,7 +3012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\Evented.js",
@@ -3050,7 +3050,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\RegistryHandler.js",
@@ -3115,7 +3115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\Evented.js",
@@ -3153,7 +3153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -3218,7 +3218,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
@@ -3265,7 +3265,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -3339,7 +3339,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Registry.js",
@@ -3386,7 +3386,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\d.js",
@@ -3478,7 +3478,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -3543,7 +3543,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -3590,7 +3590,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -3655,15 +3655,6 @@
           "loc": "4:15-34"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/number.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\number.js",
-          "module": "./node_modules/@dojo/shim/number.js",
-          "moduleName": "./node_modules/@dojo/shim/number.js",
-          "type": "cjs require",
-          "userRequest": "./global",
-          "loc": "3:15-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/support/has.js",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
           "module": "./node_modules/@dojo/shim/support/has.js",
@@ -3671,6 +3662,15 @@
           "type": "cjs require",
           "userRequest": "../global",
           "loc": "5:15-35"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/number.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\number.js",
+          "module": "./node_modules/@dojo/shim/number.js",
+          "moduleName": "./node_modules/@dojo/shim/number.js",
+          "type": "cjs require",
+          "userRequest": "./global",
+          "loc": "3:15-34"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/Promise.js",
@@ -3727,7 +3727,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -3783,7 +3783,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -3821,7 +3821,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\core\\lang.js",
@@ -3877,7 +3877,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\iterator.js",
@@ -3915,7 +3915,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -4016,7 +4016,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\Promise.js",
@@ -4054,7 +4054,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\array.js",
@@ -4110,7 +4110,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -4148,7 +4148,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -4186,7 +4186,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -4251,7 +4251,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -4289,7 +4289,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -4309,6 +4309,15 @@
           "loc": "7:19-42"
         },
         {
+          "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
+          "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "type": "cjs require",
+          "userRequest": "./../WidgetBase",
+          "loc": "4:19-45"
+        },
+        {
           "moduleId": "./src/menu/Menu.ts",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
           "module": "./src/menu/Menu.ts",
@@ -4325,15 +4334,6 @@
           "type": "cjs require",
           "userRequest": "@dojo/widget-core/WidgetBase",
           "loc": "7:19-58"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
-          "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "type": "cjs require",
-          "userRequest": "./../WidgetBase",
-          "loc": "4:19-45"
         }
       ],
       "usedExports": true,
@@ -4354,7 +4354,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -4392,7 +4392,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\registerCustomElement.js",
@@ -4430,7 +4430,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -4448,24 +4448,6 @@
           "type": "cjs require",
           "userRequest": "./d",
           "loc": "8:10-24"
-        },
-        {
-          "moduleId": "./src/menu/Menu.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-          "module": "./src/menu/Menu.ts",
-          "moduleName": "./src/menu/Menu.ts",
-          "type": "cjs require",
-          "userRequest": "@dojo/widget-core/d",
-          "loc": "4:10-40"
-        },
-        {
-          "moduleId": "./src/menu-item/MenuItem.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
-          "module": "./src/menu-item/MenuItem.ts",
-          "moduleName": "./src/menu-item/MenuItem.ts",
-          "type": "cjs require",
-          "userRequest": "@dojo/widget-core/d",
-          "loc": "4:10-40"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4495,6 +4477,24 @@
           "loc": "8:10-27"
         },
         {
+          "moduleId": "./src/menu/Menu.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+          "module": "./src/menu/Menu.ts",
+          "moduleName": "./src/menu/Menu.ts",
+          "type": "cjs require",
+          "userRequest": "@dojo/widget-core/d",
+          "loc": "4:10-40"
+        },
+        {
+          "moduleId": "./src/menu-item/MenuItem.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
+          "module": "./src/menu-item/MenuItem.ts",
+          "moduleName": "./src/menu-item/MenuItem.ts",
+          "type": "cjs require",
+          "userRequest": "@dojo/widget-core/d",
+          "loc": "4:10-40"
+        },
+        {
           "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\vdom.js",
           "module": "./node_modules/@dojo/widget-core/vdom.js",
@@ -4522,7 +4522,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -4560,7 +4560,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\inject.js",
@@ -4598,7 +4598,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
@@ -4645,7 +4645,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -4683,25 +4683,16 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-      "issuerId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-      "issuerName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+      "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
+      "issuerId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+      "issuerName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "type": "cjs require",
-          "userRequest": "./../decorators/handleDecorator",
-          "loc": "6:24-66"
-        },
         {
           "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
@@ -4710,6 +4701,15 @@
           "type": "cjs require",
           "userRequest": "./handleDecorator",
           "loc": "3:24-52"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "type": "cjs require",
+          "userRequest": "./../decorators/handleDecorator",
+          "loc": "6:24-66"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/decorators/inject.js",
@@ -4757,7 +4757,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -4795,7 +4795,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -4842,7 +4842,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -4880,7 +4880,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
@@ -4927,7 +4927,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\imports-loader\\index.js?widgetFactory=src/menu/Menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\cli-build-widget\\template\\custom-element.js",
@@ -4974,7 +4974,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
@@ -5012,7 +5012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
@@ -5059,7 +5059,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "src/menu-item/MenuItem"
+        "vendor"
       ],
       "assets": [],
       "issuer": null,
@@ -5087,7 +5087,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "src/menu/Menu"
+        "vendor"
       ],
       "assets": [],
       "issuer": null,
@@ -5115,7 +5115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
@@ -5153,7 +5153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\has\\has.js",
@@ -5200,7 +5200,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\timers-browserify\\main.js",
@@ -5238,7 +5238,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\queue.js",
@@ -5276,7 +5276,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\registerCustomElement.js",
@@ -5296,6 +5296,15 @@
           "loc": "3:14-30"
         },
         {
+          "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
+          "module": "./node_modules/@dojo/widget-core/customElements.js",
+          "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
+          "type": "cjs require",
+          "userRequest": "tslib",
+          "loc": "3:14-30"
+        },
+        {
           "moduleId": "./src/menu/Menu.ts",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
           "module": "./src/menu/Menu.ts",
@@ -5309,15 +5318,6 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_dojo!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
           "module": "./src/menu-item/MenuItem.ts",
           "moduleName": "./src/menu-item/MenuItem.ts",
-          "type": "cjs require",
-          "userRequest": "tslib",
-          "loc": "3:14-30"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
-          "module": "./node_modules/@dojo/widget-core/customElements.js",
-          "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5354,15 +5354,6 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
           "module": "./node_modules/@dojo/widget-core/mixins/Projector.js",
           "moduleName": "./node_modules/@dojo/widget-core/mixins/Projector.js",
-          "type": "cjs require",
-          "userRequest": "tslib",
-          "loc": "3:14-30"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5422,10 +5413,10 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
-          "module": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5453,6 +5444,15 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
           "module": "./node_modules/@dojo/shim/support/has.js",
           "moduleName": "./node_modules/@dojo/shim/support/has.js",
+          "type": "cjs require",
+          "userRequest": "tslib",
+          "loc": "3:14-30"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
+          "module": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5521,7 +5521,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\global.js",

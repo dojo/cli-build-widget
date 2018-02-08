@@ -7,6 +7,6 @@
   "src/menu/Menu.css.map": "src/menu/Menu-1.0.0.bundle.css.map",
   "src/menu/Menu.js": "src/menu/Menu-1.0.0.bundle.js",
   "src/menu/Menu.js.map": "src/menu/Menu-1.0.0.bundle.js.map",
-  "widget-core.js": "test-app-vendor-1.0.0.js",
-  "widget-core.js.map": "test-app-vendor-1.0.0.js.map"
+  "vendor.js": "test-app-vendor-1.0.0.js",
+  "vendor.js.map": "test-app-vendor-1.0.0.js.map"
 }
