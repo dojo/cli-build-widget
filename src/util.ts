@@ -38,18 +38,3 @@ export function moveBuildOptions(key: string): string {
 	fs.writeFileSync(tmpRc, JSON.stringify(rc));
 	return tmpRc;
 }
-
-/**
- * Enforce chunk priorities for the html webpack plugin, ensuring that chunks are loaded
- * in the proper order.
- *
- * @param elements The custom element chunk names
- * @return A map of chunk names to numerical priorities
- */
-export function getChunkPriorities(elements: string[]): { [chunk: string]: number } {
-	const priorities: { [chunk: string]: number } = {};
-	return ['widget-core', 'runtime', ...elements].reduce((priorities, chunk, i) => {
-		priorities[chunk] = i;
-		return priorities;
-	}, priorities);
-}

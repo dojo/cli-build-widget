@@ -1,5 +1,4 @@
 import baseConfigFactory from './base.config';
-import { getChunkPriorities } from './util';
 import webpack = require('webpack');
 import * as path from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -18,7 +17,6 @@ const packageJson = existsSync(packageJsonPath) ? require(packageJsonPath) : {};
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
-	const chunkPriorities = getChunkPriorities(args.elements);
 
 	config.plugins = [
 		...plugins,
@@ -33,18 +31,17 @@ function webpackConfig(args: any): webpack.Configuration {
 		}),
 		new HtmlWebpackPlugin({
 			inject: true,
-			chunks: Object.keys(chunkPriorities),
-			template: 'src/index.html',
-			chunksSortMode: function(left: any, right: any) {
-				return chunkPriorities[left.id] - chunkPriorities[right.id];
-			}
+			template: 'src/index.html'
 		}),
 		new UglifyJsPlugin({ sourceMap: true, cache: true }),
 		new WebpackChunkHash(),
 		new CleanWebpackPlugin(['dist'], { root: output.path, verbose: false }),
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'widget-core',
-			filename: `${packageJson.name}-vendor-${packageJson.version}.js`
+			name: 'vendor',
+			filename: `${packageJson.name}-vendor-${packageJson.version}.js`,
+			minChunks: function(module: any) {
+				return module.context && module.context.includes('node_modules');
+			}
 		})
 	];
 
