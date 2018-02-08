@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "8526d6660d24bee5d577",
-  "time": 9620,
+  "hash": "a99a30cb9fd543863913",
+  "time": 6515,
   "publicPath": "",
   "assetsByChunkName": {
     "src/menu-item/MenuItem": [
@@ -18,7 +18,7 @@
       "src/menu/Menu-1.0.0.bundle.js.map",
       "src/menu/Menu-1.0.0.bundle.css.map"
     ],
-    "widget-core": [
+    "vendor": [
       "test-app-vendor-1.0.0.js",
       "test-app-vendor-1.0.0.js.map"
     ]
@@ -37,7 +37,7 @@
     },
     {
       "name": "src/menu-item/MenuItem-1.0.0.bundle.js",
-      "size": 2061,
+      "size": 1651,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -48,12 +48,12 @@
     },
     {
       "name": "test-app-vendor-1.0.0.js",
-      "size": 106331,
+      "size": 107126,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "chunkNames": [
-        "widget-core"
+        "vendor"
       ],
       "emitted": true
     },
@@ -81,7 +81,7 @@
     },
     {
       "name": "src/menu-item/MenuItem-1.0.0.bundle.js.map",
-      "size": 4309,
+      "size": 3067,
       "chunks": [
         "src/menu-item/MenuItem"
       ],
@@ -92,7 +92,7 @@
     },
     {
       "name": "src/menu/Menu-1.0.0.bundle.js",
-      "size": 2033,
+      "size": 1641,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -103,7 +103,7 @@
     },
     {
       "name": "src/menu/Menu-1.0.0.bundle.js.map",
-      "size": 4711,
+      "size": 3510,
       "chunks": [
         "src/menu/Menu"
       ],
@@ -125,18 +125,18 @@
     },
     {
       "name": "test-app-vendor-1.0.0.js.map",
-      "size": 430669,
+      "size": 432948,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "chunkNames": [
-        "widget-core"
+        "vendor"
       ],
       "emitted": true
     },
     {
       "name": "manifest.json",
-      "size": 658,
+      "size": 648,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -153,7 +153,7 @@
   "entrypoints": {
     "src/menu/Menu": {
       "chunks": [
-        "widget-core",
+        "vendor",
         "src/menu/Menu"
       ],
       "assets": [
@@ -167,7 +167,7 @@
     },
     "src/menu-item/MenuItem": {
       "chunks": [
-        "widget-core",
+        "vendor",
         "src/menu-item/MenuItem"
       ],
       "assets": [
@@ -187,7 +187,7 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 2161,
+      "size": 1668,
       "names": [
         "src/menu-item/MenuItem"
       ],
@@ -197,39 +197,11 @@
         "src/menu-item/MenuItem-1.0.0.bundle.js.map",
         "src/menu-item/MenuItem-1.0.0.bundle.css.map"
       ],
-      "hash": "5a9e928d2b33adea4775",
+      "hash": "3b23ded0b34d8c483e0d",
       "parents": [
-        "widget-core"
+        "vendor"
       ],
       "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 47,
-          "index2": 49,
-          "size": 493,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu-item/MenuItem"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
         {
           "id": "./src/menu-item/MenuItem.ts",
           "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
@@ -326,7 +298,7 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 2448,
+      "size": 1964,
       "names": [
         "src/menu/Menu"
       ],
@@ -336,39 +308,11 @@
         "src/menu/Menu-1.0.0.bundle.js.map",
         "src/menu/Menu-1.0.0.bundle.css.map"
       ],
-      "hash": "adda85bcf65cae9010d3",
+      "hash": "13b15e4fbc45c9444d48",
       "parents": [
-        "widget-core"
+        "vendor"
       ],
       "modules": [
-        {
-          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
-          "index": 0,
-          "index2": 46,
-          "size": 484,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "src/menu/Menu"
-          ],
-          "assets": [],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
-        },
         {
           "id": "./src/menu/Menu.ts",
           "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -460,20 +404,20 @@
       ]
     },
     {
-      "id": "widget-core",
+      "id": "vendor",
       "rendered": true,
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 266319,
+      "size": 267296,
       "names": [
-        "widget-core"
+        "vendor"
       ],
       "files": [
         "test-app-vendor-1.0.0.js",
         "test-app-vendor-1.0.0.js.map"
       ],
-      "hash": "b335b4b25545ec009513",
+      "hash": "349f2cf11dfa69b13321",
       "parents": [],
       "modules": [
         {
@@ -488,7 +432,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -526,7 +470,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -591,7 +535,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -629,7 +573,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -694,7 +638,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
@@ -741,7 +685,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -815,7 +759,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
@@ -862,7 +806,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/d.js",
@@ -918,15 +862,6 @@
               "loc": "3:0-19"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
-              "type": "cjs require",
-              "userRequest": "./Symbol",
-              "loc": "6:0-19"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/object.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
               "module": "./node_modules/@dojo/shim/object.js",
@@ -934,6 +869,15 @@
               "type": "cjs require",
               "userRequest": "./Symbol",
               "loc": "5:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./Symbol",
+              "loc": "6:0-19"
             }
           ],
           "usedExports": true,
@@ -954,7 +898,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1019,7 +963,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -1066,7 +1010,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -1149,15 +1093,6 @@
               "loc": "5:15-35"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
-              "type": "cjs require",
-              "userRequest": "./global",
-              "loc": "4:15-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/object.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
               "module": "./node_modules/@dojo/shim/object.js",
@@ -1165,6 +1100,15 @@
               "type": "cjs require",
               "userRequest": "./global",
               "loc": "3:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./global",
+              "loc": "4:15-34"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -1203,7 +1147,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1259,7 +1203,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1297,7 +1241,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
@@ -1353,7 +1297,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/iterator.js",
@@ -1391,7 +1335,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1438,15 +1382,6 @@
               "loc": "7:12-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
-              "type": "cjs require",
-              "userRequest": "./support/has",
-              "loc": "7:12-36"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/object.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
               "module": "./node_modules/@dojo/shim/object.js",
@@ -1454,6 +1389,15 @@
               "type": "cjs require",
               "userRequest": "./support/has",
               "loc": "4:12-36"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./support/has",
+              "loc": "7:12-36"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -1492,7 +1436,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
@@ -1530,7 +1474,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -1586,7 +1530,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -1624,7 +1568,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1662,7 +1606,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1727,7 +1671,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1765,7 +1709,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -1830,7 +1774,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -1868,7 +1812,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -1906,7 +1850,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -1998,7 +1942,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -2036,7 +1980,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/decorators/inject.js",
@@ -2074,7 +2018,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -2121,7 +2065,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -2159,7 +2103,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -2233,7 +2177,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -2271,7 +2215,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -2318,7 +2262,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -2356,7 +2300,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -2403,7 +2347,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
@@ -2450,7 +2394,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -2488,7 +2432,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -2524,6 +2468,62 @@
           "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = require(\"tslib\");\nvar global_1 = require(\"@dojo/shim/global\");\nvar array_1 = require(\"@dojo/shim/array\");\nvar d_1 = require(\"./d\");\nvar Registry_1 = require(\"./Registry\");\nvar WeakMap_1 = require(\"@dojo/shim/WeakMap\");\nvar NAMESPACE_W3 = 'http://www.w3.org/';\nvar NAMESPACE_SVG = NAMESPACE_W3 + '2000/svg';\nvar NAMESPACE_XLINK = NAMESPACE_W3 + '1999/xlink';\nvar emptyArray = [];\nexports.widgetInstanceMap = new WeakMap_1.default();\nvar instanceMap = new WeakMap_1.default();\nvar renderQueueMap = new WeakMap_1.default();\nfunction same(dnode1, dnode2) {\n    if (d_1.isVNode(dnode1) && d_1.isVNode(dnode2)) {\n        if (dnode1.tag !== dnode2.tag) {\n            return false;\n        }\n        if (dnode1.properties.key !== dnode2.properties.key) {\n            return false;\n        }\n        return true;\n    }\n    else if (d_1.isWNode(dnode1) && d_1.isWNode(dnode2)) {\n        if (dnode1.widgetConstructor !== dnode2.widgetConstructor) {\n            return false;\n        }\n        if (dnode1.properties.key !== dnode2.properties.key) {\n            return false;\n        }\n        return true;\n    }\n    return false;\n}\nvar missingTransition = function () {\n    throw new Error('Provide a transitions object to the projectionOptions to do animations');\n};\nfunction getProjectionOptions(projectorOptions, projectorInstance) {\n    var defaults = {\n        namespace: undefined,\n        styleApplyer: function (domNode, styleName, value) {\n            domNode.style[styleName] = value;\n        },\n        transitions: {\n            enter: missingTransition,\n            exit: missingTransition\n        },\n        deferredRenderCallbacks: [],\n        afterRenderCallbacks: [],\n        nodeMap: new WeakMap_1.default(),\n        depth: 0,\n        merge: false,\n        renderScheduled: undefined,\n        renderQueue: [],\n        projectorInstance: projectorInstance\n    };\n    return tslib_1.__assign({}, defaults, projectorOptions);\n}\nfunction checkStyleValue(styleValue) {\n    if (typeof styleValue !== 'string') {\n        throw new Error('Style values must be strings');\n    }\n}\nfunction updateEvents(domNode, propName, properties, projectionOptions, previousProperties) {\n    var previous = previousProperties || Object.create(null);\n    var currentValue = properties[propName];\n    var previousValue = previous[propName];\n    var eventName = propName.substr(2);\n    var eventMap = projectionOptions.nodeMap.get(domNode) || new WeakMap_1.default();\n    if (previousValue) {\n        var previousEvent = eventMap.get(previousValue);\n        domNode.removeEventListener(eventName, previousEvent);\n    }\n    var callback = currentValue.bind(properties.bind);\n    if (eventName === 'input') {\n        callback = function (evt) {\n            currentValue.call(this, evt);\n            evt.target['oninput-value'] = evt.target.value;\n        }.bind(properties.bind);\n    }\n    domNode.addEventListener(eventName, callback);\n    eventMap.set(currentValue, callback);\n    projectionOptions.nodeMap.set(domNode, eventMap);\n}\nfunction addClasses(domNode, classes) {\n    if (classes) {\n        var classNames = classes.split(' ');\n        for (var i = 0; i < classNames.length; i++) {\n            domNode.classList.add(classNames[i]);\n        }\n    }\n}\nfunction removeClasses(domNode, classes) {\n    if (classes) {\n        var classNames = classes.split(' ');\n        for (var i = 0; i < classNames.length; i++) {\n            domNode.classList.remove(classNames[i]);\n        }\n    }\n}\nfunction focusNode(propValue, previousValue, domNode, projectionOptions) {\n    var result;\n    if (typeof propValue === 'function') {\n        result = propValue();\n    }\n    else {\n        result = propValue && !previousValue;\n    }\n    if (result === true) {\n        projectionOptions.deferredRenderCallbacks.push(function () {\n            domNode.focus();\n        });\n    }\n}\nfunction setProperties(domNode, properties, projectionOptions) {\n    var propNames = Object.keys(properties);\n    var propCount = propNames.length;\n    for (var i = 0; i < propCount; i++) {\n        var propName = propNames[i];\n        var propValue = properties[propName];\n        if (propName === 'classes') {\n            var currentClasses = Array.isArray(propValue) ? propValue : [propValue];\n            if (!domNode.className) {\n                domNode.className = currentClasses.join(' ').trim();\n            }\n            else {\n                for (var i_1 = 0; i_1 < currentClasses.length; i_1++) {\n                    addClasses(domNode, currentClasses[i_1]);\n                }\n            }\n        }\n        else if (propName === 'focus') {\n            focusNode(propValue, false, domNode, projectionOptions);\n        }\n        else if (propName === 'styles') {\n            var styleNames = Object.keys(propValue);\n            var styleCount = styleNames.length;\n            for (var j = 0; j < styleCount; j++) {\n                var styleName = styleNames[j];\n                var styleValue = propValue[styleName];\n                if (styleValue) {\n                    checkStyleValue(styleValue);\n                    projectionOptions.styleApplyer(domNode, styleName, styleValue);\n                }\n            }\n        }\n        else if (propName !== 'key' && propValue !== null && propValue !== undefined) {\n            var type = typeof propValue;\n            if (type === 'function' && propName.lastIndexOf('on', 0) === 0) {\n                updateEvents(domNode, propName, properties, projectionOptions);\n            }\n            else if (type === 'string' && propName !== 'value' && propName !== 'innerHTML') {\n                if (projectionOptions.namespace === NAMESPACE_SVG && propName === 'href') {\n                    domNode.setAttributeNS(NAMESPACE_XLINK, propName, propValue);\n                }\n                else {\n                    domNode.setAttribute(propName, propValue);\n                }\n            }\n            else {\n                domNode[propName] = propValue;\n            }\n        }\n    }\n}\nfunction removeOrphanedEvents(domNode, previousProperties, properties, projectionOptions) {\n    var eventMap = projectionOptions.nodeMap.get(domNode);\n    if (eventMap) {\n        Object.keys(previousProperties).forEach(function (propName) {\n            if (propName.substr(0, 2) === 'on' && !properties[propName]) {\n                var eventCallback = eventMap.get(previousProperties[propName]);\n                if (eventCallback) {\n                    domNode.removeEventListener(propName.substr(2), eventCallback);\n                }\n            }\n        });\n    }\n}\nfunction updateProperties(domNode, previousProperties, properties, projectionOptions) {\n    var propertiesUpdated = false;\n    var propNames = Object.keys(properties);\n    var propCount = propNames.length;\n    if (propNames.indexOf('classes') === -1 && previousProperties.classes) {\n        if (Array.isArray(previousProperties.classes)) {\n            for (var i = 0; i < previousProperties.classes.length; i++) {\n                removeClasses(domNode, previousProperties.classes[i]);\n            }\n        }\n        else {\n            removeClasses(domNode, previousProperties.classes);\n        }\n    }\n    removeOrphanedEvents(domNode, previousProperties, properties, projectionOptions);\n    for (var i = 0; i < propCount; i++) {\n        var propName = propNames[i];\n        var propValue = properties[propName];\n        var previousValue = previousProperties[propName];\n        if (propName === 'classes') {\n            var previousClasses = Array.isArray(previousValue) ? previousValue : [previousValue];\n            var currentClasses = Array.isArray(propValue) ? propValue : [propValue];\n            if (previousClasses && previousClasses.length > 0) {\n                if (!propValue || propValue.length === 0) {\n                    for (var i_2 = 0; i_2 < previousClasses.length; i_2++) {\n                        removeClasses(domNode, previousClasses[i_2]);\n                    }\n                }\n                else {\n                    var newClasses = tslib_1.__spread(currentClasses);\n                    for (var i_3 = 0; i_3 < previousClasses.length; i_3++) {\n                        var previousClassName = previousClasses[i_3];\n                        if (previousClassName) {\n                            var classIndex = newClasses.indexOf(previousClassName);\n                            if (classIndex === -1) {\n                                removeClasses(domNode, previousClassName);\n                            }\n                            else {\n                                newClasses.splice(classIndex, 1);\n                            }\n                        }\n                    }\n                    for (var i_4 = 0; i_4 < newClasses.length; i_4++) {\n                        addClasses(domNode, newClasses[i_4]);\n                    }\n                }\n            }\n            else {\n                for (var i_5 = 0; i_5 < currentClasses.length; i_5++) {\n                    addClasses(domNode, currentClasses[i_5]);\n                }\n            }\n        }\n        else if (propName === 'focus') {\n            focusNode(propValue, previousValue, domNode, projectionOptions);\n        }\n        else if (propName === 'styles') {\n            var styleNames = Object.keys(propValue);\n            var styleCount = styleNames.length;\n            for (var j = 0; j < styleCount; j++) {\n                var styleName = styleNames[j];\n                var newStyleValue = propValue[styleName];\n                var oldStyleValue = previousValue[styleName];\n                if (newStyleValue === oldStyleValue) {\n                    continue;\n                }\n                propertiesUpdated = true;\n                if (newStyleValue) {\n                    checkStyleValue(newStyleValue);\n                    projectionOptions.styleApplyer(domNode, styleName, newStyleValue);\n                }\n                else {\n                    projectionOptions.styleApplyer(domNode, styleName, '');\n                }\n            }\n        }\n        else {\n            if (!propValue && typeof previousValue === 'string') {\n                propValue = '';\n            }\n            if (propName === 'value') {\n                var domValue = domNode[propName];\n                if (domValue !== propValue &&\n                    (domNode['oninput-value']\n                        ? domValue === domNode['oninput-value']\n                        : propValue !== previousValue)) {\n                    domNode[propName] = propValue;\n                    domNode['oninput-value'] = undefined;\n                }\n                if (propValue !== previousValue) {\n                    propertiesUpdated = true;\n                }\n            }\n            else if (propValue !== previousValue) {\n                var type = typeof propValue;\n                if (type === 'function' && propName.lastIndexOf('on', 0) === 0) {\n                    updateEvents(domNode, propName, properties, projectionOptions, previousProperties);\n                }\n                else if (type === 'string' && propName !== 'innerHTML') {\n                    if (projectionOptions.namespace === NAMESPACE_SVG && propName === 'href') {\n                        domNode.setAttributeNS(NAMESPACE_XLINK, propName, propValue);\n                    }\n                    else if (propName === 'role' && propValue === '') {\n                        domNode.removeAttribute(propName);\n                    }\n                    else {\n                        domNode.setAttribute(propName, propValue);\n                    }\n                }\n                else {\n                    if (domNode[propName] !== propValue) {\n                        // Comparison is here for side-effects in Edge with scrollLeft and scrollTop\n                        domNode[propName] = propValue;\n                    }\n                }\n                propertiesUpdated = true;\n            }\n        }\n    }\n    return propertiesUpdated;\n}\nfunction findIndexOfChild(children, sameAs, start) {\n    for (var i = start; i < children.length; i++) {\n        if (same(children[i], sameAs)) {\n            return i;\n        }\n    }\n    return -1;\n}\nfunction toParentVNode(domNode) {\n    return {\n        tag: '',\n        properties: {},\n        children: undefined,\n        domNode: domNode,\n        type: d_1.VNODE\n    };\n}\nexports.toParentVNode = toParentVNode;\nfunction toTextVNode(data) {\n    return {\n        tag: '',\n        properties: {},\n        children: undefined,\n        text: \"\" + data,\n        domNode: undefined,\n        type: d_1.VNODE\n    };\n}\nexports.toTextVNode = toTextVNode;\nfunction toInternalWNode(instance, instanceData) {\n    return {\n        instance: instance,\n        rendered: [],\n        coreProperties: instanceData.coreProperties,\n        children: instance.children,\n        widgetConstructor: instance.constructor,\n        properties: instanceData.inputProperties,\n        type: d_1.WNODE\n    };\n}\nfunction filterAndDecorateChildren(children, instance) {\n    if (children === undefined) {\n        return emptyArray;\n    }\n    children = Array.isArray(children) ? children : [children];\n    for (var i = 0; i < children.length;) {\n        var child = children[i];\n        if (child === undefined || child === null) {\n            children.splice(i, 1);\n            continue;\n        }\n        else if (typeof child === 'string') {\n            children[i] = toTextVNode(child);\n        }\n        else {\n            if (d_1.isVNode(child)) {\n                if (child.properties.bind === undefined) {\n                    child.properties.bind = instance;\n                    if (child.children && child.children.length > 0) {\n                        filterAndDecorateChildren(child.children, instance);\n                    }\n                }\n            }\n            else {\n                if (!child.coreProperties) {\n                    var instanceData = exports.widgetInstanceMap.get(instance);\n                    child.coreProperties = {\n                        bind: instance,\n                        baseRegistry: instanceData.coreProperties.baseRegistry\n                    };\n                }\n                if (child.children && child.children.length > 0) {\n                    filterAndDecorateChildren(child.children, instance);\n                }\n            }\n        }\n        i++;\n    }\n    return children;\n}\nexports.filterAndDecorateChildren = filterAndDecorateChildren;\nfunction nodeAdded(dnode, transitions) {\n    if (d_1.isVNode(dnode) && dnode.properties) {\n        var enterAnimation = dnode.properties.enterAnimation;\n        if (enterAnimation) {\n            if (typeof enterAnimation === 'function') {\n                enterAnimation(dnode.domNode, dnode.properties);\n            }\n            else {\n                transitions.enter(dnode.domNode, dnode.properties, enterAnimation);\n            }\n        }\n    }\n}\nfunction callOnDetach(dNodes, parentInstance) {\n    dNodes = Array.isArray(dNodes) ? dNodes : [dNodes];\n    for (var i = 0; i < dNodes.length; i++) {\n        var dNode = dNodes[i];\n        if (d_1.isWNode(dNode)) {\n            if (dNode.rendered) {\n                callOnDetach(dNode.rendered, dNode.instance);\n            }\n            if (dNode.instance) {\n                var instanceData = exports.widgetInstanceMap.get(dNode.instance);\n                instanceData.onDetach();\n            }\n        }\n        else {\n            if (dNode.children) {\n                callOnDetach(dNode.children, parentInstance);\n            }\n        }\n    }\n}\nfunction nodeToRemove(dnode, transitions, projectionOptions) {\n    if (d_1.isWNode(dnode)) {\n        var rendered = dnode.rendered || emptyArray;\n        for (var i = 0; i < rendered.length; i++) {\n            var child = rendered[i];\n            if (d_1.isVNode(child)) {\n                child.domNode.parentNode.removeChild(child.domNode);\n            }\n            else {\n                nodeToRemove(child, transitions, projectionOptions);\n            }\n        }\n    }\n    else {\n        var domNode_1 = dnode.domNode;\n        var properties = dnode.properties;\n        var exitAnimation = properties.exitAnimation;\n        if (properties && exitAnimation) {\n            domNode_1.style.pointerEvents = 'none';\n            var removeDomNode = function () {\n                domNode_1 && domNode_1.parentNode && domNode_1.parentNode.removeChild(domNode_1);\n            };\n            if (typeof exitAnimation === 'function') {\n                exitAnimation(domNode_1, removeDomNode, properties);\n                return;\n            }\n            else {\n                transitions.exit(dnode.domNode, properties, exitAnimation, removeDomNode);\n                return;\n            }\n        }\n        domNode_1 && domNode_1.parentNode && domNode_1.parentNode.removeChild(domNode_1);\n    }\n}\nfunction checkDistinguishable(childNodes, indexToCheck, parentInstance) {\n    var childNode = childNodes[indexToCheck];\n    if (d_1.isVNode(childNode) && !childNode.tag) {\n        return; // Text nodes need not be distinguishable\n    }\n    var key = childNode.properties.key;\n    if (key === undefined || key === null) {\n        for (var i = 0; i < childNodes.length; i++) {\n            if (i !== indexToCheck) {\n                var node = childNodes[i];\n                if (same(node, childNode)) {\n                    var nodeIdentifier = void 0;\n                    var parentName = parentInstance.constructor.name || 'unknown';\n                    if (d_1.isWNode(childNode)) {\n                        nodeIdentifier = childNode.widgetConstructor.name || 'unknown';\n                    }\n                    else {\n                        nodeIdentifier = childNode.tag;\n                    }\n                    console.warn(\"A widget (\" + parentName + \") has had a child addded or removed, but they were not able to uniquely identified. It is recommended to provide a unique 'key' property when using the same widget or element (\" + nodeIdentifier + \") multiple times as siblings\");\n                    break;\n                }\n            }\n        }\n    }\n}\nfunction updateChildren(parentVNode, oldChildren, newChildren, parentInstance, projectionOptions) {\n    oldChildren = oldChildren || emptyArray;\n    newChildren = newChildren;\n    var oldChildrenLength = oldChildren.length;\n    var newChildrenLength = newChildren.length;\n    var transitions = projectionOptions.transitions;\n    projectionOptions = tslib_1.__assign({}, projectionOptions, { depth: projectionOptions.depth + 1 });\n    var oldIndex = 0;\n    var newIndex = 0;\n    var i;\n    var textUpdated = false;\n    var _loop_1 = function () {\n        var oldChild = oldIndex < oldChildrenLength ? oldChildren[oldIndex] : undefined;\n        var newChild = newChildren[newIndex];\n        if (d_1.isVNode(newChild) && typeof newChild.deferredPropertiesCallback === 'function') {\n            newChild.inserted = d_1.isVNode(oldChild) && oldChild.inserted;\n            addDeferredProperties(newChild, projectionOptions);\n        }\n        if (oldChild !== undefined && same(oldChild, newChild)) {\n            textUpdated = updateDom(oldChild, newChild, projectionOptions, parentVNode, parentInstance) || textUpdated;\n            oldIndex++;\n        }\n        else {\n            var findOldIndex = findIndexOfChild(oldChildren, newChild, oldIndex + 1);\n            if (findOldIndex >= 0) {\n                var _loop_2 = function () {\n                    var oldChild_1 = oldChildren[i];\n                    var indexToCheck = i;\n                    projectionOptions.afterRenderCallbacks.push(function () {\n                        callOnDetach(oldChild_1, parentInstance);\n                        checkDistinguishable(oldChildren, indexToCheck, parentInstance);\n                    });\n                    nodeToRemove(oldChildren[i], transitions, projectionOptions);\n                };\n                for (i = oldIndex; i < findOldIndex; i++) {\n                    _loop_2();\n                }\n                textUpdated =\n                    updateDom(oldChildren[findOldIndex], newChild, projectionOptions, parentVNode, parentInstance) ||\n                        textUpdated;\n                oldIndex = findOldIndex + 1;\n            }\n            else {\n                var insertBefore = undefined;\n                var child = oldChildren[oldIndex];\n                if (child) {\n                    var nextIndex = oldIndex + 1;\n                    while (insertBefore === undefined) {\n                        if (d_1.isWNode(child)) {\n                            if (child.rendered) {\n                                child = child.rendered[0];\n                            }\n                            else if (oldChildren[nextIndex]) {\n                                child = oldChildren[nextIndex];\n                                nextIndex++;\n                            }\n                            else {\n                                break;\n                            }\n                        }\n                        else {\n                            insertBefore = child.domNode;\n                        }\n                    }\n                }\n                createDom(newChild, parentVNode, insertBefore, projectionOptions, parentInstance);\n                nodeAdded(newChild, transitions);\n                var indexToCheck_1 = newIndex;\n                projectionOptions.afterRenderCallbacks.push(function () {\n                    checkDistinguishable(newChildren, indexToCheck_1, parentInstance);\n                });\n            }\n        }\n        newIndex++;\n    };\n    while (newIndex < newChildrenLength) {\n        _loop_1();\n    }\n    if (oldChildrenLength > oldIndex) {\n        var _loop_3 = function () {\n            var oldChild = oldChildren[i];\n            var indexToCheck = i;\n            projectionOptions.afterRenderCallbacks.push(function () {\n                callOnDetach(oldChild, parentInstance);\n                checkDistinguishable(oldChildren, indexToCheck, parentInstance);\n            });\n            nodeToRemove(oldChildren[i], transitions, projectionOptions);\n        };\n        // Remove child fragments\n        for (i = oldIndex; i < oldChildrenLength; i++) {\n            _loop_3();\n        }\n    }\n    return textUpdated;\n}\nfunction addChildren(parentVNode, children, projectionOptions, parentInstance, insertBefore, childNodes) {\n    if (insertBefore === void 0) { insertBefore = undefined; }\n    if (children === undefined) {\n        return;\n    }\n    if (projectionOptions.merge && childNodes === undefined) {\n        childNodes = array_1.from(parentVNode.domNode.childNodes);\n    }\n    projectionOptions = tslib_1.__assign({}, projectionOptions, { depth: projectionOptions.depth + 1 });\n    for (var i = 0; i < children.length; i++) {\n        var child = children[i];\n        if (d_1.isVNode(child)) {\n            if (projectionOptions.merge && childNodes) {\n                var domElement = undefined;\n                while (child.domNode === undefined && childNodes.length > 0) {\n                    domElement = childNodes.shift();\n                    if (domElement && domElement.tagName === (child.tag.toUpperCase() || undefined)) {\n                        child.domNode = domElement;\n                    }\n                }\n            }\n            createDom(child, parentVNode, insertBefore, projectionOptions, parentInstance);\n        }\n        else {\n            createDom(child, parentVNode, insertBefore, projectionOptions, parentInstance, childNodes);\n        }\n    }\n}\nfunction initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions) {\n    addChildren(dnode, dnode.children, projectionOptions, parentInstance, undefined);\n    if (typeof dnode.deferredPropertiesCallback === 'function' && dnode.inserted === undefined) {\n        addDeferredProperties(dnode, projectionOptions);\n    }\n    setProperties(domNode, dnode.properties, projectionOptions);\n    if (dnode.properties.key !== null && dnode.properties.key !== undefined) {\n        var instanceData = exports.widgetInstanceMap.get(parentInstance);\n        instanceData.nodeHandler.add(domNode, \"\" + dnode.properties.key);\n    }\n    dnode.inserted = true;\n}\nfunction createDom(dnode, parentVNode, insertBefore, projectionOptions, parentInstance, childNodes) {\n    var domNode;\n    if (d_1.isWNode(dnode)) {\n        var widgetConstructor = dnode.widgetConstructor;\n        var parentInstanceData = exports.widgetInstanceMap.get(parentInstance);\n        if (!Registry_1.isWidgetBaseConstructor(widgetConstructor)) {\n            var item = parentInstanceData.registry().get(widgetConstructor);\n            if (item === null) {\n                return;\n            }\n            widgetConstructor = item;\n        }\n        var instance_1 = new widgetConstructor();\n        dnode.instance = instance_1;\n        var instanceData_1 = exports.widgetInstanceMap.get(instance_1);\n        instanceData_1.invalidate = function () {\n            instanceData_1.dirty = true;\n            if (instanceData_1.rendering === false) {\n                var renderQueue = renderQueueMap.get(projectionOptions.projectorInstance);\n                renderQueue.push({ instance: instance_1, depth: projectionOptions.depth });\n                scheduleRender(projectionOptions);\n            }\n        };\n        instanceData_1.rendering = true;\n        instance_1.__setCoreProperties__(dnode.coreProperties);\n        instance_1.__setChildren__(dnode.children);\n        instance_1.__setProperties__(dnode.properties);\n        instanceData_1.rendering = false;\n        var rendered = instance_1.__render__();\n        if (rendered) {\n            var filteredRendered = filterAndDecorateChildren(rendered, instance_1);\n            dnode.rendered = filteredRendered;\n            addChildren(parentVNode, filteredRendered, projectionOptions, instance_1, insertBefore, childNodes);\n        }\n        instanceMap.set(instance_1, { dnode: dnode, parentVNode: parentVNode });\n        instanceData_1.nodeHandler.addRoot();\n        projectionOptions.afterRenderCallbacks.push(function () {\n            instanceData_1.onAttach();\n        });\n    }\n    else {\n        if (projectionOptions.merge && projectionOptions.mergeElement !== undefined) {\n            domNode = dnode.domNode = projectionOptions.mergeElement;\n            projectionOptions.mergeElement = undefined;\n            initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions);\n            return;\n        }\n        var doc = parentVNode.domNode.ownerDocument;\n        if (!dnode.tag && typeof dnode.text === 'string') {\n            if (dnode.domNode !== undefined && dnode.domNode.parentNode) {\n                var newDomNode = dnode.domNode.ownerDocument.createTextNode(dnode.text);\n                dnode.domNode.parentNode.replaceChild(newDomNode, dnode.domNode);\n                dnode.domNode = newDomNode;\n            }\n            else {\n                domNode = dnode.domNode = doc.createTextNode(dnode.text);\n                if (insertBefore !== undefined) {\n                    parentVNode.domNode.insertBefore(domNode, insertBefore);\n                }\n                else {\n                    parentVNode.domNode.appendChild(domNode);\n                }\n            }\n        }\n        else {\n            if (dnode.domNode === undefined) {\n                if (dnode.tag === 'svg') {\n                    projectionOptions = tslib_1.__assign({}, projectionOptions, { namespace: NAMESPACE_SVG });\n                }\n                if (projectionOptions.namespace !== undefined) {\n                    domNode = dnode.domNode = doc.createElementNS(projectionOptions.namespace, dnode.tag);\n                }\n                else {\n                    domNode = dnode.domNode = dnode.domNode || doc.createElement(dnode.tag);\n                }\n            }\n            else {\n                domNode = dnode.domNode;\n            }\n            initPropertiesAndChildren(domNode, dnode, parentInstance, projectionOptions);\n            if (insertBefore !== undefined) {\n                parentVNode.domNode.insertBefore(domNode, insertBefore);\n            }\n            else if (domNode.parentNode !== parentVNode.domNode) {\n                parentVNode.domNode.appendChild(domNode);\n            }\n        }\n    }\n}\nfunction updateDom(previous, dnode, projectionOptions, parentVNode, parentInstance) {\n    if (d_1.isWNode(dnode)) {\n        var instance = previous.instance;\n        if (instance) {\n            var _a = instanceMap.get(instance), parentVNode_1 = _a.parentVNode, node = _a.dnode;\n            var previousRendered = node ? node.rendered : previous.rendered;\n            var instanceData = exports.widgetInstanceMap.get(instance);\n            instanceData.rendering = true;\n            instance.__setCoreProperties__(dnode.coreProperties);\n            instance.__setChildren__(dnode.children);\n            instance.__setProperties__(dnode.properties);\n            instanceData.rendering = false;\n            dnode.instance = instance;\n            instanceMap.set(instance, { dnode: dnode, parentVNode: parentVNode_1 });\n            if (instanceData.dirty === true) {\n                var rendered = instance.__render__();\n                dnode.rendered = filterAndDecorateChildren(rendered, instance);\n                updateChildren(parentVNode_1, previousRendered, dnode.rendered, instance, projectionOptions);\n            }\n            else {\n                dnode.rendered = previousRendered;\n            }\n            instanceData.nodeHandler.addRoot();\n        }\n        else {\n            createDom(dnode, parentVNode, undefined, projectionOptions, parentInstance);\n        }\n    }\n    else {\n        if (previous === dnode) {\n            return false;\n        }\n        var domNode = (dnode.domNode = previous.domNode);\n        var textUpdated = false;\n        var updated = false;\n        if (!dnode.tag && typeof dnode.text === 'string') {\n            if (dnode.text !== previous.text) {\n                var newDomNode = domNode.ownerDocument.createTextNode(dnode.text);\n                domNode.parentNode.replaceChild(newDomNode, domNode);\n                dnode.domNode = newDomNode;\n                textUpdated = true;\n                return textUpdated;\n            }\n        }\n        else {\n            if (dnode.tag && dnode.tag.lastIndexOf('svg', 0) === 0) {\n                projectionOptions = tslib_1.__assign({}, projectionOptions, { namespace: NAMESPACE_SVG });\n            }\n            if (previous.children !== dnode.children) {\n                var children = filterAndDecorateChildren(dnode.children, parentInstance);\n                dnode.children = children;\n                updated =\n                    updateChildren(dnode, previous.children, children, parentInstance, projectionOptions) || updated;\n            }\n            updated = updateProperties(domNode, previous.properties, dnode.properties, projectionOptions) || updated;\n            if (dnode.properties.key !== null && dnode.properties.key !== undefined) {\n                var instanceData = exports.widgetInstanceMap.get(parentInstance);\n                instanceData.nodeHandler.add(domNode, \"\" + dnode.properties.key);\n            }\n        }\n        if (updated && dnode.properties && dnode.properties.updateAnimation) {\n            dnode.properties.updateAnimation(domNode, dnode.properties, previous.properties);\n        }\n    }\n}\nfunction addDeferredProperties(vnode, projectionOptions) {\n    // transfer any properties that have been passed - as these must be decorated properties\n    vnode.decoratedDeferredProperties = vnode.properties;\n    var properties = vnode.deferredPropertiesCallback(!!vnode.inserted);\n    vnode.properties = tslib_1.__assign({}, properties, vnode.decoratedDeferredProperties);\n    projectionOptions.deferredRenderCallbacks.push(function () {\n        var properties = tslib_1.__assign({}, vnode.deferredPropertiesCallback(!!vnode.inserted), vnode.decoratedDeferredProperties);\n        updateProperties(vnode.domNode, vnode.properties, properties, projectionOptions);\n        vnode.properties = properties;\n    });\n}\nfunction runDeferredRenderCallbacks(projectionOptions) {\n    if (projectionOptions.deferredRenderCallbacks.length) {\n        if (projectionOptions.sync) {\n            while (projectionOptions.deferredRenderCallbacks.length) {\n                var callback = projectionOptions.deferredRenderCallbacks.shift();\n                callback && callback();\n            }\n        }\n        else {\n            global_1.default.requestAnimationFrame(function () {\n                while (projectionOptions.deferredRenderCallbacks.length) {\n                    var callback = projectionOptions.deferredRenderCallbacks.shift();\n                    callback && callback();\n                }\n            });\n        }\n    }\n}\nfunction runAfterRenderCallbacks(projectionOptions) {\n    if (projectionOptions.sync) {\n        while (projectionOptions.afterRenderCallbacks.length) {\n            var callback = projectionOptions.afterRenderCallbacks.shift();\n            callback && callback();\n        }\n    }\n    else {\n        if (global_1.default.requestIdleCallback) {\n            global_1.default.requestIdleCallback(function () {\n                while (projectionOptions.afterRenderCallbacks.length) {\n                    var callback = projectionOptions.afterRenderCallbacks.shift();\n                    callback && callback();\n                }\n            });\n        }\n        else {\n            setTimeout(function () {\n                while (projectionOptions.afterRenderCallbacks.length) {\n                    var callback = projectionOptions.afterRenderCallbacks.shift();\n                    callback && callback();\n                }\n            });\n        }\n    }\n}\nfunction scheduleRender(projectionOptions) {\n    if (projectionOptions.sync) {\n        render(projectionOptions);\n    }\n    else if (projectionOptions.renderScheduled === undefined) {\n        projectionOptions.renderScheduled = global_1.default.requestAnimationFrame(function () {\n            render(projectionOptions);\n        });\n    }\n}\nfunction render(projectionOptions) {\n    projectionOptions.renderScheduled = undefined;\n    var renderQueue = renderQueueMap.get(projectionOptions.projectorInstance);\n    var renders = tslib_1.__spread(renderQueue);\n    renderQueueMap.set(projectionOptions.projectorInstance, []);\n    renders.sort(function (a, b) { return a.depth - b.depth; });\n    while (renders.length) {\n        var instance = renders.shift().instance;\n        var _a = instanceMap.get(instance), parentVNode = _a.parentVNode, dnode = _a.dnode;\n        var instanceData = exports.widgetInstanceMap.get(instance);\n        updateDom(dnode, toInternalWNode(instance, instanceData), projectionOptions, parentVNode, instance);\n    }\n    runAfterRenderCallbacks(projectionOptions);\n    runDeferredRenderCallbacks(projectionOptions);\n}\nexports.dom = {\n    append: function (parentNode, instance, projectionOptions) {\n        if (projectionOptions === void 0) { projectionOptions = {}; }\n        var instanceData = exports.widgetInstanceMap.get(instance);\n        var finalProjectorOptions = getProjectionOptions(projectionOptions, instance);\n        finalProjectorOptions.rootNode = parentNode;\n        var parentVNode = toParentVNode(finalProjectorOptions.rootNode);\n        var node = toInternalWNode(instance, instanceData);\n        var renderQueue = [];\n        instanceMap.set(instance, { dnode: node, parentVNode: parentVNode });\n        renderQueueMap.set(finalProjectorOptions.projectorInstance, renderQueue);\n        instanceData.invalidate = function () {\n            instanceData.dirty = true;\n            if (instanceData.rendering === false) {\n                var renderQueue_1 = renderQueueMap.get(finalProjectorOptions.projectorInstance);\n                renderQueue_1.push({ instance: instance, depth: finalProjectorOptions.depth });\n                scheduleRender(finalProjectorOptions);\n            }\n        };\n        updateDom(node, node, finalProjectorOptions, parentVNode, instance);\n        finalProjectorOptions.afterRenderCallbacks.push(function () {\n            instanceData.onAttach();\n        });\n        runDeferredRenderCallbacks(finalProjectorOptions);\n        runAfterRenderCallbacks(finalProjectorOptions);\n        return {\n            domNode: finalProjectorOptions.rootNode\n        };\n    },\n    create: function (instance, projectionOptions) {\n        return this.append(document.createElement('div'), instance, projectionOptions);\n    },\n    merge: function (element, instance, projectionOptions) {\n        if (projectionOptions === void 0) { projectionOptions = {}; }\n        projectionOptions.merge = true;\n        projectionOptions.mergeElement = element;\n        return this.append(element.parentNode, instance, projectionOptions);\n    }\n};\n"
         },
         {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu-item/MenuItem!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu-item/MenuItem!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 47,
+          "index2": 49,
+          "size": 493,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "vendor"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu-item/MenuItem\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
+          "id": "./node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "name": "./node_modules/imports-loader?widgetFactory=src/menu/Menu!./node_modules/@dojo/cli-build-widget/template/custom-element.js",
+          "index": 0,
+          "index2": 46,
+          "size": 484,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "vendor"
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "/*** IMPORTS FROM imports-loader ***/\nvar widgetFactory = require(\"src/menu/Menu\");\n\nvar registerCustomElement = require('@dojo/widget-core/registerCustomElement').default;\n\nvar defaultExport = widgetFactory.default;\nvar descriptor;\n\nif (defaultExport) {\n\tif (defaultExport.prototype && defaultExport.prototype.__customElementDescriptor) {\n\t\tdescriptor = function() { return defaultExport.prototype.__customElementDescriptor };\n\t}\n}\n\ndescriptor && registerCustomElement(descriptor);\n\n"
+        },
+        {
           "id": "./node_modules/pepjs/dist/pep.js",
           "identifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/pepjs/dist/pep.js",
           "name": "./node_modules/pepjs/dist/pep.js",
@@ -2535,7 +2535,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -2573,7 +2573,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/has/has.js",
@@ -2620,7 +2620,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/timers-browserify/main.js",
@@ -2658,7 +2658,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/queue.js",
@@ -2696,7 +2696,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -2806,19 +2806,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
-              "module": "./node_modules/@dojo/widget-core/Registry.js",
-              "moduleName": "./node_modules/@dojo/widget-core/Registry.js",
+              "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/vdom.js",
+              "module": "./node_modules/@dojo/widget-core/vdom.js",
+              "moduleName": "./node_modules/@dojo/widget-core/vdom.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/vdom.js",
-              "module": "./node_modules/@dojo/widget-core/vdom.js",
-              "moduleName": "./node_modules/@dojo/widget-core/vdom.js",
+              "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
+              "module": "./node_modules/@dojo/widget-core/Registry.js",
+              "moduleName": "./node_modules/@dojo/widget-core/Registry.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2878,19 +2878,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/core/Evented.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-              "module": "./node_modules/@dojo/core/Evented.js",
-              "moduleName": "./node_modules/@dojo/core/Evented.js",
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "moduleId": "./node_modules/@dojo/core/Evented.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+              "module": "./node_modules/@dojo/core/Evented.js",
+              "moduleName": "./node_modules/@dojo/core/Evented.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2941,7 +2941,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "widget-core"
+            "vendor"
           ],
           "assets": [],
           "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/global.js",
@@ -3012,7 +3012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -3050,7 +3050,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -3115,7 +3115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
@@ -3153,7 +3153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3218,7 +3218,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
@@ -3265,7 +3265,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -3339,7 +3339,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
@@ -3386,7 +3386,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/d.js",
@@ -3442,15 +3442,6 @@
           "loc": "3:0-19"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
-          "type": "cjs require",
-          "userRequest": "./Symbol",
-          "loc": "6:0-19"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/object.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
           "module": "./node_modules/@dojo/shim/object.js",
@@ -3458,6 +3449,15 @@
           "type": "cjs require",
           "userRequest": "./Symbol",
           "loc": "5:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./Symbol",
+          "loc": "6:0-19"
         }
       ],
       "usedExports": true,
@@ -3478,7 +3478,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -3543,7 +3543,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3590,7 +3590,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -3673,15 +3673,6 @@
           "loc": "5:15-35"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
-          "type": "cjs require",
-          "userRequest": "./global",
-          "loc": "4:15-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/object.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
           "module": "./node_modules/@dojo/shim/object.js",
@@ -3689,6 +3680,15 @@
           "type": "cjs require",
           "userRequest": "./global",
           "loc": "3:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./global",
+          "loc": "4:15-34"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -3727,7 +3727,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -3783,7 +3783,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -3821,7 +3821,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
@@ -3877,7 +3877,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/iterator.js",
@@ -3915,7 +3915,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -3962,15 +3962,6 @@
           "loc": "7:12-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
-          "type": "cjs require",
-          "userRequest": "./support/has",
-          "loc": "7:12-36"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/object.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
           "module": "./node_modules/@dojo/shim/object.js",
@@ -3978,6 +3969,15 @@
           "type": "cjs require",
           "userRequest": "./support/has",
           "loc": "4:12-36"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./support/has",
+          "loc": "7:12-36"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -4016,7 +4016,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
@@ -4054,7 +4054,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/array.js",
@@ -4110,7 +4110,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4148,7 +4148,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4186,7 +4186,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4251,7 +4251,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4289,7 +4289,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4354,7 +4354,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -4392,7 +4392,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -4430,7 +4430,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4522,7 +4522,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -4560,7 +4560,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/decorators/inject.js",
@@ -4598,7 +4598,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4645,7 +4645,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4683,7 +4683,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4757,7 +4757,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Themed.js",
@@ -4795,7 +4795,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4842,7 +4842,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -4880,7 +4880,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-1!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_dojo!/Users/Anthony/development/dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
@@ -4927,7 +4927,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/imports-loader/index.js?widgetFactory=src/menu/Menu!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/cli-build-widget/template/custom-element.js",
@@ -4974,7 +4974,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/customElements.js",
@@ -5012,7 +5012,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/WidgetBase.js",
@@ -5059,7 +5059,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "src/menu-item/MenuItem"
+        "vendor"
       ],
       "assets": [],
       "issuer": null,
@@ -5087,7 +5087,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "src/menu/Menu"
+        "vendor"
       ],
       "assets": [],
       "issuer": null,
@@ -5115,7 +5115,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/mixins/Projector.js",
@@ -5153,7 +5153,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/has/has.js",
@@ -5200,7 +5200,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/timers-browserify/main.js",
@@ -5238,7 +5238,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/queue.js",
@@ -5276,7 +5276,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/registerCustomElement.js",
@@ -5386,19 +5386,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
-          "module": "./node_modules/@dojo/widget-core/Registry.js",
-          "moduleName": "./node_modules/@dojo/widget-core/Registry.js",
+          "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/vdom.js",
+          "module": "./node_modules/@dojo/widget-core/vdom.js",
+          "moduleName": "./node_modules/@dojo/widget-core/vdom.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/vdom.js",
-          "module": "./node_modules/@dojo/widget-core/vdom.js",
-          "moduleName": "./node_modules/@dojo/widget-core/vdom.js",
+          "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Registry.js",
+          "module": "./node_modules/@dojo/widget-core/Registry.js",
+          "moduleName": "./node_modules/@dojo/widget-core/Registry.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5458,19 +5458,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/core/Evented.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-          "module": "./node_modules/@dojo/core/Evented.js",
-          "moduleName": "./node_modules/@dojo/core/Evented.js",
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "moduleId": "./node_modules/@dojo/core/Evented.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+          "module": "./node_modules/@dojo/core/Evented.js",
+          "moduleName": "./node_modules/@dojo/core/Evented.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5521,7 +5521,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "widget-core"
+        "vendor"
       ],
       "assets": [],
       "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/global.js",
