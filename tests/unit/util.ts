@@ -57,18 +57,4 @@ describe('util', () => {
 			assert.isFalse(fs.writeFileSync.calledWith(path.join(process.cwd(), '.dojorc')));
 		});
 	});
-
-	describe('getChunkPriorities', () => {
-		it('should prioritize chunk names according to their specified order', () => {
-			const { getChunkPriorities } = mockModule.getModuleUnderTest();
-			const priorities = getChunkPriorities(['first', 'second', 'third']);
-			assert.deepEqual(priorities, {
-				'widget-core': 0,
-				runtime: 1,
-				first: 2,
-				second: 3,
-				third: 4
-			});
-		});
-	});
 });
