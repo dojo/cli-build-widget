@@ -11,6 +11,12 @@ const appRootDir = path.join(__dirname, '..', '..', '..', 'test-app');
 const platform = os.platform().startsWith('win') ? 'windows' : 'unix';
 
 function normalise(value: string) {
+	const matches = value.match(/"webpack:\/\/\/webpack\/bootstrap ([a-z0-9]+)"/);
+	if (matches) {
+		const bootstrapRegExp = new RegExp(matches[1], 'g');
+		value = value.replace(bootstrapRegExp, '');
+	}
+
 	return value
 		.split('# sourceMappingURL')[0]
 		.replace(/\r\n/g, '\n')
