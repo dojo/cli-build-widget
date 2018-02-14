@@ -3,23 +3,31 @@ import * as webpack from 'webpack';
 import devConfigFactory from './dev.config';
 import distConfigFactory from './dist.config';
 import testConfigFactory from './test.config';
+import { getElementName } from './util';
 
 export interface EnvOptions {
 	mode?: 'dev' | 'dist' | 'test';
 }
 
-function webpackConfig(env: EnvOptions = {}): webpack.Configuration {
+function webpackConfig(env: EnvOptions = {}): webpack.Configuration[] {
 	const { mode = 'dist' } = env;
-	const rc = require('./build-options.json');
-	let config: webpack.Configuration;
+	let { elements = [], ...rc } = require('./build-options.json');
+	let configs: webpack.Configuration[];
+	elements = elements.map((element: any) => {
+		return {
+			name: getElementName(element),
+			path: element
+		};
+	});
+
 	if (mode === 'dev') {
-		config = devConfigFactory(rc);
+		configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
 	} else if (mode === 'test') {
-		config = testConfigFactory(rc);
+		configs = [testConfigFactory({ ...rc, elements })];
 	} else {
-		config = distConfigFactory(rc);
+		configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
 	}
-	return config;
+	return configs;
 }
 
 module.exports = webpackConfig;
