@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "bd3d57768733bac3715a",
-  "time": 19993,
+  "time": 11818,
   "publicPath": "",
   "assetsByChunkName": {
     "menu-item": [
@@ -56,13 +56,6 @@
       "chunkNames": [
         "menu-item"
       ],
-      "emitted": true
-    },
-    {
-      "name": "manifest.json",
-      "size": 182,
-      "chunks": [],
-      "chunkNames": [],
       "emitted": true
     }
   ],
@@ -515,15 +508,6 @@
               "loc": "6:15-43"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./Symbol",
-              "loc": "7:0-19"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -531,6 +515,15 @@
               "type": "cjs require",
               "userRequest": "./Symbol",
               "loc": "8:0-19"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./Symbol",
+              "loc": "7:0-19"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/iterator.js",
@@ -737,15 +730,6 @@
               "loc": "4:15-34"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./global",
-              "loc": "4:15-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -753,6 +737,15 @@
               "type": "cjs require",
               "userRequest": "./global",
               "loc": "5:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./global",
+              "loc": "4:15-34"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/number.js",
@@ -847,15 +840,6 @@
               "loc": "5:17-38"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./iterator",
-              "loc": "5:17-38"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -863,6 +847,15 @@
               "type": "cjs require",
               "userRequest": "./iterator",
               "loc": "4:17-38"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./iterator",
+              "loc": "5:17-38"
             }
           ],
           "usedExports": true,
@@ -1044,15 +1037,6 @@
               "loc": "3:12-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./support/has",
-              "loc": "6:12-36"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -1060,6 +1044,15 @@
               "type": "cjs require",
               "userRequest": "./support/has",
               "loc": "7:12-36"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./support/has",
+              "loc": "6:12-36"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/Promise.js",
@@ -2486,19 +2479,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleId": "./node_modules/@dojo/shim/Map.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
+              "module": "./node_modules/@dojo/shim/Map.js",
+              "moduleName": "./node_modules/@dojo/shim/Map.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Map.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
-              "module": "./node_modules/@dojo/shim/Map.js",
-              "moduleName": "./node_modules/@dojo/shim/Map.js",
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -3136,15 +3129,6 @@
           "loc": "6:15-43"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./Symbol",
-          "loc": "7:0-19"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3152,6 +3136,15 @@
           "type": "cjs require",
           "userRequest": "./Symbol",
           "loc": "8:0-19"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./Symbol",
+          "loc": "7:0-19"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/iterator.js",
@@ -3358,15 +3351,6 @@
           "loc": "4:15-34"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./global",
-          "loc": "4:15-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3374,6 +3358,15 @@
           "type": "cjs require",
           "userRequest": "./global",
           "loc": "5:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./global",
+          "loc": "4:15-34"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/number.js",
@@ -3468,15 +3461,6 @@
           "loc": "5:17-38"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./iterator",
-          "loc": "5:17-38"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3484,6 +3468,15 @@
           "type": "cjs require",
           "userRequest": "./iterator",
           "loc": "4:17-38"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./iterator",
+          "loc": "5:17-38"
         }
       ],
       "usedExports": true,
@@ -3665,15 +3658,6 @@
           "loc": "3:12-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./support/has",
-          "loc": "6:12-36"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3681,6 +3665,15 @@
           "type": "cjs require",
           "userRequest": "./support/has",
           "loc": "7:12-36"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./support/has",
+          "loc": "6:12-36"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/Promise.js",
@@ -5107,19 +5100,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleId": "./node_modules/@dojo/shim/Map.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
+          "module": "./node_modules/@dojo/shim/Map.js",
+          "moduleName": "./node_modules/@dojo/shim/Map.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Map.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
-          "module": "./node_modules/@dojo/shim/Map.js",
-          "moduleName": "./node_modules/@dojo/shim/Map.js",
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"

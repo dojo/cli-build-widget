@@ -147,7 +147,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: { onlyCompileBundledFiles: true, instance: jsonpIdent }
+							options: { onlyCompileBundledFiles: true, instance: jsonpIdent, transpileOnly: true }
 						}
 					])
 				},

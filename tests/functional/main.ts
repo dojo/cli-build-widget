@@ -25,18 +25,17 @@ function normalise(value: string) {
 }
 
 function assertOutput(mode: string, widget: string) {
-	const fixtureManifest = require(path.join(appRootDir, 'fixtures', platform, mode, widget, 'manifest'));
-	const outputManifest = require(path.join(appRootDir, 'output', mode, widget, 'manifest'));
-	const fixtureFileIdentifiers = Object.keys(fixtureManifest);
-	const outputFileIdentifiers = Object.keys(outputManifest);
-	assert.deepEqual(outputFileIdentifiers, fixtureFileIdentifiers);
-	fixtureFileIdentifiers.forEach(id => {
-		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, widget, fixtureManifest[id]);
-		const outputFilePath = path.join(appRootDir, 'output', mode, widget, outputManifest[id]);
+	let files = [`${widget}-1.0.0.css`, `${widget}-1.0.0.js`];
+	if (mode === 'dist') {
+		files = [...files, ...[`${widget}-1.0.0.css.map`, `${widget}-1.0.0.js.map`]];
+	}
+	files.forEach(file => {
+		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, widget, file);
+		const outputFilePath = path.join(appRootDir, 'output', mode, widget, file);
 		const fixtureContents = fs.readFileSync(fixtureFilePath, 'utf8');
 		const outputContents = fs.readFileSync(outputFilePath, 'utf8');
 
-		assert.strictEqual(normalise(outputContents), normalise(fixtureContents), id);
+		assert.strictEqual(normalise(outputContents), normalise(fixtureContents), file);
 	});
 }
 

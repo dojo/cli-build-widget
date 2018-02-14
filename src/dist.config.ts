@@ -3,7 +3,6 @@ import webpack = require('webpack');
 import * as path from 'path';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
-import * as ManifestPlugin from 'webpack-manifest-plugin';
 import * as WebpackChunkHash from 'webpack-chunk-hash';
 import { existsSync } from 'fs';
 
@@ -20,7 +19,6 @@ function webpackConfig(args: any): webpack.Configuration {
 
 	config.plugins = [
 		...plugins,
-		new ManifestPlugin(),
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'static',
 			openAnalyzer: false,

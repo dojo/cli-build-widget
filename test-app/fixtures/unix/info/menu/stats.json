@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "8ab517b5809d650ef374",
-  "time": 20177,
+  "time": 11678,
   "publicPath": "",
   "assetsByChunkName": {
     "menu": [
@@ -56,13 +56,6 @@
       "chunkNames": [
         "menu"
       ],
-      "emitted": true
-    },
-    {
-      "name": "manifest.json",
-      "size": 142,
-      "chunks": [],
-      "chunkNames": [],
       "emitted": true
     }
   ],
@@ -153,22 +146,13 @@
             "menu"
           ],
           "assets": [],
-          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-          "issuerId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "issuerName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
+          "issuerId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+          "issuerName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "type": "cjs require",
-              "userRequest": "@dojo/core/Evented",
-              "loc": "4:16-45"
-            },
             {
               "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -177,6 +161,15 @@
               "type": "cjs require",
               "userRequest": "@dojo/core/Evented",
               "loc": "5:16-45"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "type": "cjs require",
+              "userRequest": "@dojo/core/Evented",
+              "loc": "4:16-45"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
@@ -385,15 +378,6 @@
               "loc": "4:12-37"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "type": "cjs require",
-              "userRequest": "@dojo/shim/Map",
-              "loc": "5:12-37"
-            },
-            {
               "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
               "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -401,6 +385,15 @@
               "type": "cjs require",
               "userRequest": "@dojo/shim/Map",
               "loc": "4:12-37"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "type": "cjs require",
+              "userRequest": "@dojo/shim/Map",
+              "loc": "5:12-37"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
@@ -515,15 +508,6 @@
               "loc": "6:15-43"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./Symbol",
-              "loc": "7:0-19"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -531,6 +515,15 @@
               "type": "cjs require",
               "userRequest": "./Symbol",
               "loc": "8:0-19"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./Symbol",
+              "loc": "7:0-19"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/iterator.js",
@@ -542,15 +535,6 @@
               "loc": "3:0-19"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
-              "type": "cjs require",
-              "userRequest": "./Symbol",
-              "loc": "6:0-19"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/object.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
               "module": "./node_modules/@dojo/shim/object.js",
@@ -558,6 +542,15 @@
               "type": "cjs require",
               "userRequest": "./Symbol",
               "loc": "5:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./Symbol",
+              "loc": "6:0-19"
             }
           ],
           "usedExports": true,
@@ -737,15 +730,6 @@
               "loc": "4:15-34"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./global",
-              "loc": "4:15-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -753,6 +737,15 @@
               "type": "cjs require",
               "userRequest": "./global",
               "loc": "5:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./global",
+              "loc": "4:15-34"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/number.js",
@@ -773,15 +766,6 @@
               "loc": "5:15-35"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
-              "type": "cjs require",
-              "userRequest": "./global",
-              "loc": "4:15-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/object.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
               "module": "./node_modules/@dojo/shim/object.js",
@@ -789,6 +773,15 @@
               "type": "cjs require",
               "userRequest": "./global",
               "loc": "3:15-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./global",
+              "loc": "4:15-34"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -847,15 +840,6 @@
               "loc": "5:17-38"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./iterator",
-              "loc": "5:17-38"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -863,6 +847,15 @@
               "type": "cjs require",
               "userRequest": "./iterator",
               "loc": "4:17-38"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "./iterator",
+              "loc": "5:17-38"
             }
           ],
           "usedExports": true,
@@ -1044,15 +1037,6 @@
               "loc": "3:12-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-              "type": "cjs require",
-              "userRequest": "./support/has",
-              "loc": "6:12-36"
-            },
-            {
               "moduleId": "./node_modules/@dojo/shim/Map.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
               "module": "./node_modules/@dojo/shim/Map.js",
@@ -1062,13 +1046,13 @@
               "loc": "7:12-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
               "type": "cjs require",
               "userRequest": "./support/has",
-              "loc": "7:12-36"
+              "loc": "6:12-36"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/object.js",
@@ -1078,6 +1062,15 @@
               "type": "cjs require",
               "userRequest": "./support/has",
               "loc": "4:12-36"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "type": "cjs require",
+              "userRequest": "./support/has",
+              "loc": "7:12-36"
             },
             {
               "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -2423,19 +2416,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
+              "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+              "moduleName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
-              "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
-              "moduleName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+              "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+              "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+              "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2459,10 +2452,10 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/core/lang.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
-              "module": "./node_modules/@dojo/core/lang.js",
-              "moduleName": "./node_modules/@dojo/core/lang.js",
+              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Injector.js",
+              "module": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2477,19 +2470,10 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Injector.js",
-              "module": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
-              "type": "cjs require",
-              "userRequest": "tslib",
-              "loc": "3:14-30"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-              "module": "./node_modules/@dojo/shim/WeakMap.js",
-              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleId": "./node_modules/@dojo/core/lang.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
+              "module": "./node_modules/@dojo/core/lang.js",
+              "moduleName": "./node_modules/@dojo/core/lang.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2504,6 +2488,15 @@
               "loc": "3:14-30"
             },
             {
+              "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+              "module": "./node_modules/@dojo/shim/WeakMap.js",
+              "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+              "type": "cjs require",
+              "userRequest": "tslib",
+              "loc": "3:14-30"
+            },
+            {
               "moduleId": "./node_modules/@dojo/shim/support/has.js",
               "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
               "module": "./node_modules/@dojo/shim/support/has.js",
@@ -2513,19 +2506,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/shim/Promise.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-              "module": "./node_modules/@dojo/shim/Promise.js",
-              "moduleName": "./node_modules/@dojo/shim/Promise.js",
+              "moduleId": "./node_modules/@dojo/core/Evented.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+              "module": "./node_modules/@dojo/core/Evented.js",
+              "moduleName": "./node_modules/@dojo/core/Evented.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/core/Evented.js",
-              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-              "module": "./node_modules/@dojo/core/Evented.js",
-              "moduleName": "./node_modules/@dojo/core/Evented.js",
+              "moduleId": "./node_modules/@dojo/shim/Promise.js",
+              "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+              "module": "./node_modules/@dojo/shim/Promise.js",
+              "moduleName": "./node_modules/@dojo/shim/Promise.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2774,22 +2767,13 @@
         "menu"
       ],
       "assets": [],
-      "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-      "issuerId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-      "issuerName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+      "issuer": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
+      "issuerId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+      "issuerName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "type": "cjs require",
-          "userRequest": "@dojo/core/Evented",
-          "loc": "4:16-45"
-        },
         {
           "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -2798,6 +2782,15 @@
           "type": "cjs require",
           "userRequest": "@dojo/core/Evented",
           "loc": "5:16-45"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "type": "cjs require",
+          "userRequest": "@dojo/core/Evented",
+          "loc": "4:16-45"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
@@ -3006,15 +2999,6 @@
           "loc": "4:12-37"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "type": "cjs require",
-          "userRequest": "@dojo/shim/Map",
-          "loc": "5:12-37"
-        },
-        {
           "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
           "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
@@ -3022,6 +3006,15 @@
           "type": "cjs require",
           "userRequest": "@dojo/shim/Map",
           "loc": "4:12-37"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "type": "cjs require",
+          "userRequest": "@dojo/shim/Map",
+          "loc": "5:12-37"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/Registry.js",
@@ -3136,15 +3129,6 @@
           "loc": "6:15-43"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./Symbol",
-          "loc": "7:0-19"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3152,6 +3136,15 @@
           "type": "cjs require",
           "userRequest": "./Symbol",
           "loc": "8:0-19"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./Symbol",
+          "loc": "7:0-19"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/iterator.js",
@@ -3163,15 +3156,6 @@
           "loc": "3:0-19"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
-          "type": "cjs require",
-          "userRequest": "./Symbol",
-          "loc": "6:0-19"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/object.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
           "module": "./node_modules/@dojo/shim/object.js",
@@ -3179,6 +3163,15 @@
           "type": "cjs require",
           "userRequest": "./Symbol",
           "loc": "5:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./Symbol",
+          "loc": "6:0-19"
         }
       ],
       "usedExports": true,
@@ -3358,15 +3351,6 @@
           "loc": "4:15-34"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./global",
-          "loc": "4:15-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3374,6 +3358,15 @@
           "type": "cjs require",
           "userRequest": "./global",
           "loc": "5:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./global",
+          "loc": "4:15-34"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/number.js",
@@ -3394,15 +3387,6 @@
           "loc": "5:15-35"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
-          "type": "cjs require",
-          "userRequest": "./global",
-          "loc": "4:15-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/object.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/object.js",
           "module": "./node_modules/@dojo/shim/object.js",
@@ -3410,6 +3394,15 @@
           "type": "cjs require",
           "userRequest": "./global",
           "loc": "3:15-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./global",
+          "loc": "4:15-34"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -3468,15 +3461,6 @@
           "loc": "5:17-38"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./iterator",
-          "loc": "5:17-38"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3484,6 +3468,15 @@
           "type": "cjs require",
           "userRequest": "./iterator",
           "loc": "4:17-38"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "./iterator",
+          "loc": "5:17-38"
         }
       ],
       "usedExports": true,
@@ -3665,15 +3658,6 @@
           "loc": "3:12-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
-          "type": "cjs require",
-          "userRequest": "./support/has",
-          "loc": "6:12-36"
-        },
-        {
           "moduleId": "./node_modules/@dojo/shim/Map.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Map.js",
           "module": "./node_modules/@dojo/shim/Map.js",
@@ -3683,13 +3667,13 @@
           "loc": "7:12-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
           "type": "cjs require",
           "userRequest": "./support/has",
-          "loc": "7:12-36"
+          "loc": "6:12-36"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/object.js",
@@ -3699,6 +3683,15 @@
           "type": "cjs require",
           "userRequest": "./support/has",
           "loc": "4:12-36"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "type": "cjs require",
+          "userRequest": "./support/has",
+          "loc": "7:12-36"
         },
         {
           "moduleId": "./node_modules/@dojo/shim/string.js",
@@ -5044,19 +5037,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
-          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
-          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
+          "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+          "moduleName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/RegistryHandler.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/RegistryHandler.js",
-          "module": "./node_modules/@dojo/widget-core/RegistryHandler.js",
-          "moduleName": "./node_modules/@dojo/widget-core/RegistryHandler.js",
+          "moduleId": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/NodeHandler.js",
+          "module": "./node_modules/@dojo/widget-core/NodeHandler.js",
+          "moduleName": "./node_modules/@dojo/widget-core/NodeHandler.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5080,10 +5073,10 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/core/lang.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
-          "module": "./node_modules/@dojo/core/lang.js",
-          "moduleName": "./node_modules/@dojo/core/lang.js",
+          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Injector.js",
+          "module": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5098,19 +5091,10 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/widget-core/Injector.js",
-          "module": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
-          "type": "cjs require",
-          "userRequest": "tslib",
-          "loc": "3:14-30"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
-          "module": "./node_modules/@dojo/shim/WeakMap.js",
-          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleId": "./node_modules/@dojo/core/lang.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/lang.js",
+          "module": "./node_modules/@dojo/core/lang.js",
+          "moduleName": "./node_modules/@dojo/core/lang.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5125,6 +5109,15 @@
           "loc": "3:14-30"
         },
         {
+          "moduleId": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/WeakMap.js",
+          "module": "./node_modules/@dojo/shim/WeakMap.js",
+          "moduleName": "./node_modules/@dojo/shim/WeakMap.js",
+          "type": "cjs require",
+          "userRequest": "tslib",
+          "loc": "3:14-30"
+        },
+        {
           "moduleId": "./node_modules/@dojo/shim/support/has.js",
           "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/support/has.js",
           "module": "./node_modules/@dojo/shim/support/has.js",
@@ -5134,19 +5127,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/shim/Promise.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
-          "module": "./node_modules/@dojo/shim/Promise.js",
-          "moduleName": "./node_modules/@dojo/shim/Promise.js",
+          "moduleId": "./node_modules/@dojo/core/Evented.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
+          "module": "./node_modules/@dojo/core/Evented.js",
+          "moduleName": "./node_modules/@dojo/core/Evented.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/core/Evented.js",
-          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/core/Evented.js",
-          "module": "./node_modules/@dojo/core/Evented.js",
-          "moduleName": "./node_modules/@dojo/core/Evented.js",
+          "moduleId": "./node_modules/@dojo/shim/Promise.js",
+          "moduleIdentifier": "/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/source-map-loader-cli/index.js??ref--0!/Users/Anthony/development/dojo2/cli-build-widget/test-app/node_modules/@dojo/shim/Promise.js",
+          "module": "./node_modules/@dojo/shim/Promise.js",
+          "moduleName": "./node_modules/@dojo/shim/Promise.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
