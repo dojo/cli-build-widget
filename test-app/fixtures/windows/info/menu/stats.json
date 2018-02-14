@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "8106c9104d55e1c5b6dc",
-  "time": 13484,
+  "time": 9594,
   "publicPath": "",
   "assetsByChunkName": {
     "menu": [
@@ -56,13 +56,6 @@
       "chunkNames": [
         "menu"
       ],
-      "emitted": true
-    },
-    {
-      "name": "manifest.json",
-      "size": 142,
-      "chunks": [],
-      "chunkNames": [],
       "emitted": true
     }
   ],
@@ -1409,15 +1402,6 @@
               "loc": "7:19-42"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
-              "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-              "type": "cjs require",
-              "userRequest": "./../WidgetBase",
-              "loc": "4:19-45"
-            },
-            {
               "moduleId": "./src/menu/Menu.ts",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
               "module": "./src/menu/Menu.ts",
@@ -1425,6 +1409,15 @@
               "type": "cjs require",
               "userRequest": "@dojo/widget-core/WidgetBase",
               "loc": "7:19-58"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
+              "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+              "type": "cjs require",
+              "userRequest": "./../WidgetBase",
+              "loc": "4:19-45"
             }
           ],
           "usedExports": true,
@@ -1541,6 +1534,15 @@
               "loc": "8:10-24"
             },
             {
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
+              "type": "cjs require",
+              "userRequest": "@dojo/widget-core/d",
+              "loc": "4:10-40"
+            },
+            {
               "moduleId": "./node_modules/@dojo/widget-core/WidgetBase.js",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
               "module": "./node_modules/@dojo/widget-core/WidgetBase.js",
@@ -1566,15 +1568,6 @@
               "type": "cjs require",
               "userRequest": "./../d",
               "loc": "8:10-27"
-            },
-            {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
-              "type": "cjs require",
-              "userRequest": "@dojo/widget-core/d",
-              "loc": "4:10-40"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
@@ -1759,22 +1752,13 @@
             "menu"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
-          "issuerId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-          "issuerName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+          "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+          "issuerId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "issuerName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
-              "module": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-              "moduleName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-              "type": "cjs require",
-              "userRequest": "./handleDecorator",
-              "loc": "3:24-52"
-            },
             {
               "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -1783,6 +1767,15 @@
               "type": "cjs require",
               "userRequest": "./../decorators/handleDecorator",
               "loc": "6:24-66"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
+              "module": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+              "moduleName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+              "type": "cjs require",
+              "userRequest": "./handleDecorator",
+              "loc": "3:24-52"
             },
             {
               "moduleId": "./node_modules/@dojo/widget-core/decorators/inject.js",
@@ -2360,19 +2353,19 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
-              "module": "./node_modules/@dojo/widget-core/customElements.js",
-              "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
+              "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
+              "module": "./node_modules/@dojo/widget-core/customElements.js",
+              "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2409,6 +2402,15 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
               "module": "./node_modules/@dojo/widget-core/mixins/Projector.js",
               "moduleName": "./node_modules/@dojo/widget-core/mixins/Projector.js",
+              "type": "cjs require",
+              "userRequest": "tslib",
+              "loc": "3:14-30"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2468,10 +2470,10 @@
               "loc": "3:14-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-              "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-              "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
+              "module": "./node_modules/@dojo/widget-core/Injector.js",
+              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -2499,15 +2501,6 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
               "module": "./node_modules/@dojo/shim/support/has.js",
               "moduleName": "./node_modules/@dojo/shim/support/has.js",
-              "type": "cjs require",
-              "userRequest": "tslib",
-              "loc": "3:14-30"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
-              "module": "./node_modules/@dojo/widget-core/Injector.js",
-              "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
               "type": "cjs require",
               "userRequest": "tslib",
               "loc": "3:14-30"
@@ -4030,15 +4023,6 @@
           "loc": "7:19-42"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
-          "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
-          "type": "cjs require",
-          "userRequest": "./../WidgetBase",
-          "loc": "4:19-45"
-        },
-        {
           "moduleId": "./src/menu/Menu.ts",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
           "module": "./src/menu/Menu.ts",
@@ -4046,6 +4030,15 @@
           "type": "cjs require",
           "userRequest": "@dojo/widget-core/WidgetBase",
           "loc": "7:19-58"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\util\\DomWrapper.js",
+          "module": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "moduleName": "./node_modules/@dojo/widget-core/util/DomWrapper.js",
+          "type": "cjs require",
+          "userRequest": "./../WidgetBase",
+          "loc": "4:19-45"
         }
       ],
       "usedExports": true,
@@ -4162,6 +4155,15 @@
           "loc": "8:10-24"
         },
         {
+          "moduleId": "./src/menu/Menu.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+          "module": "./src/menu/Menu.ts",
+          "moduleName": "./src/menu/Menu.ts",
+          "type": "cjs require",
+          "userRequest": "@dojo/widget-core/d",
+          "loc": "4:10-40"
+        },
+        {
           "moduleId": "./node_modules/@dojo/widget-core/WidgetBase.js",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\WidgetBase.js",
           "module": "./node_modules/@dojo/widget-core/WidgetBase.js",
@@ -4187,15 +4189,6 @@
           "type": "cjs require",
           "userRequest": "./../d",
           "loc": "8:10-27"
-        },
-        {
-          "moduleId": "./src/menu/Menu.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-          "module": "./src/menu/Menu.ts",
-          "moduleName": "./src/menu/Menu.ts",
-          "type": "cjs require",
-          "userRequest": "@dojo/widget-core/d",
-          "loc": "4:10-40"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/vdom.js",
@@ -4380,22 +4373,13 @@
         "menu"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
-      "issuerId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-      "issuerName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+      "issuer": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+      "issuerId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+      "issuerName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
-          "module": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-          "moduleName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
-          "type": "cjs require",
-          "userRequest": "./handleDecorator",
-          "loc": "3:24-52"
-        },
         {
           "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
@@ -4404,6 +4388,15 @@
           "type": "cjs require",
           "userRequest": "./../decorators/handleDecorator",
           "loc": "6:24-66"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\decorators\\afterRender.js",
+          "module": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+          "moduleName": "./node_modules/@dojo/widget-core/decorators/afterRender.js",
+          "type": "cjs require",
+          "userRequest": "./handleDecorator",
+          "loc": "3:24-52"
         },
         {
           "moduleId": "./node_modules/@dojo/widget-core/decorators/inject.js",
@@ -4981,19 +4974,19 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
-          "module": "./node_modules/@dojo/widget-core/customElements.js",
-          "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
+          "moduleId": "./src/menu/Menu.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+          "module": "./src/menu/Menu.ts",
+          "moduleName": "./src/menu/Menu.ts",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./src/menu/Menu.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-          "module": "./src/menu/Menu.ts",
-          "moduleName": "./src/menu/Menu.ts",
+          "moduleId": "./node_modules/@dojo/widget-core/customElements.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\customElements.js",
+          "module": "./node_modules/@dojo/widget-core/customElements.js",
+          "moduleName": "./node_modules/@dojo/widget-core/customElements.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5030,6 +5023,15 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Projector.js",
           "module": "./node_modules/@dojo/widget-core/mixins/Projector.js",
           "moduleName": "./node_modules/@dojo/widget-core/mixins/Projector.js",
+          "type": "cjs require",
+          "userRequest": "tslib",
+          "loc": "3:14-30"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
+          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5089,10 +5091,10 @@
           "loc": "3:14-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\mixins\\Themed.js",
-          "module": "./node_modules/@dojo/widget-core/mixins/Themed.js",
-          "moduleName": "./node_modules/@dojo/widget-core/mixins/Themed.js",
+          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
+          "module": "./node_modules/@dojo/widget-core/Injector.js",
+          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
@@ -5120,15 +5122,6 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\shim\\support\\has.js",
           "module": "./node_modules/@dojo/shim/support/has.js",
           "moduleName": "./node_modules/@dojo/shim/support/has.js",
-          "type": "cjs require",
-          "userRequest": "tslib",
-          "loc": "3:14-30"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleIdentifier": "C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js!C:\\Users\\IEUser\\cli-build-widget\\test-app\\node_modules\\@dojo\\widget-core\\Injector.js",
-          "module": "./node_modules/@dojo/widget-core/Injector.js",
-          "moduleName": "./node_modules/@dojo/widget-core/Injector.js",
           "type": "cjs require",
           "userRequest": "tslib",
           "loc": "3:14-30"
