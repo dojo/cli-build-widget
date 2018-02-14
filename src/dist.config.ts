@@ -16,7 +16,7 @@ const packageJson = existsSync(packageJsonPath) ? require(packageJsonPath) : {};
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
-	const location = path.join('dist', args.elements[0].name);
+	const location = path.join('dist', args.element.name);
 
 	config.plugins = [
 		...plugins,
@@ -26,8 +26,8 @@ function webpackConfig(args: any): webpack.Configuration {
 			openAnalyzer: false,
 			reportType: 'sunburst',
 			generateStatsFile: true,
-			reportFilename: path.join('..', 'info', args.elements[0].name, 'report.html'),
-			statsFilename: path.join('..', 'info', args.elements[0].name, 'stats.json')
+			reportFilename: path.join('..', '..', 'info', args.element.name, 'report.html'),
+			statsFilename: path.join('..', '..', 'info', args.element.name, 'stats.json')
 		}),
 		new UglifyJsPlugin({ sourceMap: true, cache: true }),
 		new WebpackChunkHash(),
@@ -37,7 +37,7 @@ function webpackConfig(args: any): webpack.Configuration {
 	config.plugins = config.plugins.map(plugin => {
 		if (plugin instanceof ExtractTextPlugin) {
 			return new ExtractTextPlugin({
-				filename: `[name]-${packageJson.version}.bundle.css`,
+				filename: `[name]-${packageJson.version}.css`,
 				allChunks: true
 			});
 		}

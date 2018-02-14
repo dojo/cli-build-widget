@@ -7,7 +7,7 @@ import * as ManifestPlugin from 'webpack-manifest-plugin';
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
-	const location = path.join('dev', args.elements[0].name);
+	const location = path.join('dev', args.element.name);
 
 	config.plugins = [
 		...plugins,

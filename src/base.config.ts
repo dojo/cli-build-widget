@@ -76,10 +76,11 @@ Copyright [JS Foundation](https://js.foundation/) & contributors
 [New BSD license](https://github.com/dojo/meta/blob/master/LICENSE)
 All rights reserved
 `;
-
 export default function webpackConfigFactory(args: any): WebpackConfiguration {
+	const elements = args.element ? [args.element] : args.elements;
+	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
 	const config: webpack.Configuration = {
-		entry: args.elements.reduce((entry: any, element: any) => {
+		entry: elements.reduce((entry: any, element: any) => {
 			entry[element.name] = [
 				`imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
@@ -87,9 +88,9 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 		}, {}),
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: `[name]-${packageJson.version}.bundle.js`,
-			filename: `[name]-${packageJson.version}.bundle.js`,
-			jsonpFunction: getJsonpFunctionName(`-${packageName}-custom-elements`),
+			chunkFilename: `[name]-${packageJson.version}.js`,
+			filename: `[name]-${packageJson.version}.js`,
+			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output')
 		},
@@ -127,7 +128,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 					include: allPaths,
 					test: /.*\.ts?$/,
 					enforce: 'pre',
-					loader: '@dojo/webpack-contrib/css-module-dts-loader?type=ts&instanceName=0_dojo'
+					loader: `@dojo/webpack-contrib/css-module-dts-loader?type=ts&instanceName=0_${jsonpIdent}`
 				},
 				{
 					include: allPaths,
@@ -146,7 +147,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: { onlyCompileBundledFiles: true, instance: 'dojo' }
+							options: { onlyCompileBundledFiles: true, instance: jsonpIdent }
 						}
 					])
 				},

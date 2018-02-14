@@ -11,7 +11,7 @@ import devConfigFactory from './dev.config';
 import testConfigFactory from './test.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
-import { moveBuildOptions } from './util';
+import { moveBuildOptions, getElementName } from './util';
 
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
@@ -191,14 +191,21 @@ const command: Command = {
 		});
 	},
 	run(helper: Helper, args: any) {
-		const { elements, ...rc } = (helper.configuration.get() || {}) as any;
+		console.log = () => {};
+		let { elements, ...rc } = (helper.configuration.get() || {}) as any;
+		elements = elements.map((element: any) => {
+			return {
+				name: getElementName(element),
+				path: element
+			};
+		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...{ elements: [element] } }));
+			configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
 		} else if (args.mode === 'test') {
 			configs = [testConfigFactory({ ...rc, elements })];
 		} else {
-			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...{ elements: [element] } }));
+			configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
 		}
 
 		if (args.serve) {
