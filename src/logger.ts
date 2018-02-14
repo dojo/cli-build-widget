@@ -1,8 +1,6 @@
-import * as fs from 'fs';
 import * as path from 'path';
 import * as logUpdate from 'log-update';
 import * as logSymbols from 'log-symbols';
-import * as gzipSize from 'gzip-size';
 import * as typescript from 'typescript';
 import * as jsonFile from 'jsonfile';
 import chalk from 'chalk';
@@ -12,26 +10,22 @@ const columns = require('cli-columns');
 const stripAnsi = require('strip-ansi');
 const version = jsonFile.readFileSync(path.join(pkgDir.sync(), 'package.json')).version;
 
-export default function logger(stats: any, config: any, runningMessage: string = '') {
-	const assets = stats.assets
-		.map((asset: any) => {
-			const size = (asset.size / 1000).toFixed(2);
-			const assetInfo = `${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
-			const contentFilePath = path.join(config.output.path, asset.name);
+export default function logger(stats: any, configs: any[], runningMessage: string = '') {
+	const chunks: any[] = [];
+	const assets = stats.children
+		.map((child: any) => {
+			chunks.push(
+				child.chunks.map(function(chunk: any) {
+					return `${chunk.names[0]}`;
+				})
+			);
 
-			if (!fs.existsSync(contentFilePath)) {
-				return assetInfo;
-			}
-
-			const content = fs.readFileSync(contentFilePath, 'utf-8');
-			const compressedSize = (gzipSize.sync(content) / 1000).toFixed(2);
-			return `${assetInfo} / ${chalk.blue(`(${compressedSize}kb gz)`)}`;
+			return child.assets.map((asset: any) => {
+				const size = (asset.size / 1000).toFixed(2);
+				return `${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
+			});
 		})
 		.filter((output: string) => output);
-
-	const chunks = stats.chunks.map((chunk: any) => {
-		return `${chunk.names[0]}`;
-	});
 
 	let errors = '';
 	let warnings = '';
@@ -68,7 +62,7 @@ ${chalk.yellow('chunks:')}
 ${columns(chunks)}
 ${chalk.yellow('assets:')}
 ${columns(assets)}
-${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${config.output.path}`))}`)}
+${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${configs[0].output.path}`))}`)}
 
 ${signOff}
 	`);
