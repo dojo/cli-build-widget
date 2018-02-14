@@ -26,13 +26,13 @@ function normalise(value: string) {
 
 function assertOutput(mode: string, widget: string) {
 	const fixtureManifest = require(path.join(appRootDir, 'fixtures', platform, mode, widget, 'manifest'));
-	const outputManifest = require(path.join(appRootDir, 'output', mode, 'manifest'));
+	const outputManifest = require(path.join(appRootDir, 'output', mode, widget, 'manifest'));
 	const fixtureFileIdentifiers = Object.keys(fixtureManifest);
 	const outputFileIdentifiers = Object.keys(outputManifest);
 	assert.deepEqual(outputFileIdentifiers, fixtureFileIdentifiers);
 	fixtureFileIdentifiers.forEach(id => {
-		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, fixtureManifest[id]);
-		const outputFilePath = path.join(appRootDir, 'output', mode, outputManifest[id]);
+		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, widget, fixtureManifest[id]);
+		const outputFilePath = path.join(appRootDir, 'output', mode, widget, outputManifest[id]);
 		const fixtureContents = fs.readFileSync(fixtureFilePath, 'utf8');
 		const outputContents = fs.readFileSync(outputFilePath, 'utf8');
 

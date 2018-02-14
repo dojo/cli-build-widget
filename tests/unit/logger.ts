@@ -6,6 +6,7 @@ import * as logSymbols from 'log-symbols';
 import chalk from 'chalk';
 import * as sinon from 'sinon';
 import MockModule from '../support/MockModule';
+import { SinonStub } from 'sinon';
 
 const stripAnsi = require('strip-ansi');
 const columns = require('cli-columns');
@@ -15,40 +16,42 @@ let mockModule: MockModule;
 function assertOutput(isServing = false) {
 	const logger = mockModule.getModuleUnderTest().default;
 	const runningMessage = isServing ? 'running...' : undefined;
-	logger(
-		{
-			hash: 'hash',
-			assets: [
-				{
-					name: 'assetOne.js',
-					size: 1000
+	const stats = {
+		hash: 'hash',
+		children: [
+			{
+				entrypoints: {
+					entry: {}
 				},
-				{
-					name: 'assetOne.js',
-					size: 1000
-				}
-			],
-			chunks: [
-				{
-					names: ['chunkOne']
-				}
-			],
-			errors: [],
-			warnings: []
-		},
-		{
-			output: {
-				path: path.join(__dirname, '..', 'fixtures')
+				assets: [
+					{
+						name: 'assetOne.js',
+						size: 1000
+					}
+				],
+				chunks: [
+					{
+						names: ['chunkOne']
+					}
+				],
+				errors: [],
+				warnings: []
 			}
-		},
+		]
+	};
+	logger(
+		stats,
+		[
+			{
+				output: {
+					path: path.join(__dirname, '..', 'fixtures')
+				}
+			}
+		],
 		runningMessage
 	);
 
-	let assetOne = `assetOne.js ${chalk.yellow('(1.00kb)')}`;
-	if (!isServing) {
-		assetOne += ` / ${chalk.blue('(0.04kb gz)')}`;
-	}
-
+	let assetOne = `entry/assetOne.js ${chalk.yellow('(1.00kb)')}`;
 	let signOff = chalk.green('The build completed successfully.');
 	if (runningMessage) {
 		signOff += `\n\n${runningMessage}`;
@@ -64,13 +67,13 @@ ${''}${''}
 ${chalk.yellow('chunks:')}
 ${columns(['chunkOne'])}
 ${chalk.yellow('assets:')}
-${columns([assetOne, assetOne])}
+${columns([assetOne])}
 ${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${path.join(__dirname, '..', 'fixtures')}`))}`)}
 
 ${signOff}
 	`;
-	const mockedLogUpdate = mockModule.getMock('log-update').ctor;
-	assert.isTrue(mockedLogUpdate.calledWith(expectedLog));
+	const mockedLogUpdate: SinonStub = mockModule.getMock('log-update').ctor;
+	assert.strictEqual(mockedLogUpdate.firstCall.args[0], expectedLog);
 }
 
 describe('logger', () => {
@@ -103,33 +106,36 @@ describe('logger', () => {
 		const errors: any = ['error'];
 		const warnings: any = ['warning'];
 		const logger = mockModule.getModuleUnderTest().default;
-		logger(
-			{
-				hash: 'hash',
-				assets: [
-					{
-						name: 'assetOne.js',
-						size: 1000
+		const stats = {
+			hash: 'hash',
+			children: [
+				{
+					entrypoints: {
+						entry: {}
 					},
-					{
-						name: 'assetOne.js',
-						size: 1000
-					}
-				],
-				chunks: [
-					{
-						names: ['chunkOne']
-					}
-				],
-				errors,
-				warnings
-			},
+					assets: [
+						{
+							name: 'assetOne.js',
+							size: 1000
+						}
+					],
+					chunks: [
+						{
+							names: ['chunkOne']
+						}
+					],
+					errors,
+					warnings
+				}
+			]
+		};
+		logger(stats, [
 			{
 				output: {
 					path: path.join(__dirname, '..', 'fixtures')
 				}
 			}
-		);
+		]);
 
 		const expectedErrors = `
 ${chalk.yellow('errors:')}
@@ -151,10 +157,7 @@ ${expectedErrors}${expectedWarnings}
 ${chalk.yellow('chunks:')}
 ${columns(['chunkOne'])}
 ${chalk.yellow('assets:')}
-${columns([
-			`assetOne.js ${chalk.yellow('(1.00kb)')} / ${chalk.blue('(0.04kb gz)')}`,
-			`assetOne.js ${chalk.yellow('(1.00kb)')} / ${chalk.blue('(0.04kb gz)')}`
-		])}
+${columns([`entry/assetOne.js ${chalk.yellow('(1.00kb)')}`])}
 ${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${path.join(__dirname, '..', 'fixtures')}`))}`)}
 
 ${chalk.red('The build completed with errors.')}

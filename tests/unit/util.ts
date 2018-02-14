@@ -3,6 +3,7 @@ const { assert } = intern.getPlugin('chai');
 import * as path from 'path';
 
 import MockModule from '../support/MockModule';
+import { getElementName } from '../../src/util';
 
 const key = 'build-app';
 const rc = { [key]: { bundles: {} } };
@@ -55,6 +56,16 @@ describe('util', () => {
 
 			assert.isTrue(fs.writeFileSync.calledWith(path.join('/tmp', 'build-options.json'), buildOptions));
 			assert.isFalse(fs.writeFileSync.calledWith(path.join(process.cwd(), '.dojorc')));
+		});
+	});
+
+	describe('get element name', () => {
+		it('parses element name', () => {
+			assert.strictEqual('custom-element', getElementName('src/customElement'));
+		});
+
+		it('parses element name with upper case first character', () => {
+			assert.strictEqual('my-custom-element', getElementName('src/name/MyCustomElement'));
 		});
 	});
 });

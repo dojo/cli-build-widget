@@ -23,7 +23,7 @@ export default function logger(stats: any, configs: any[], runningMessage: strin
 		.map((child: any) => {
 			const entry = Object.keys(child.entrypoints)[0];
 			chunks.push(
-				child.chunks.map(function(chunk: any) {
+				child.chunks.map((chunk: any) => {
 					return `${chunk.names[0]}`;
 				})
 			);

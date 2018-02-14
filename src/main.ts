@@ -69,18 +69,18 @@ function buildNpmDependencies(): any {
 	}
 }
 
-function fileWatch(config: webpack.Configuration[], args: any): Promise<void> {
-	const compiler = createWatchCompiler(config);
+function fileWatch(configs: webpack.Configuration[], args: any): Promise<void> {
+	const compiler = createWatchCompiler(configs);
 
 	return new Promise<void>((resolve, reject) => {
-		const watchOptions = config[0].watchOptions as webpack.Compiler.WatchOptions;
+		const watchOptions = configs[0].watchOptions as webpack.Compiler.WatchOptions;
 		compiler.watch(watchOptions, (err, stats) => {
 			if (err) {
 				reject(err);
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}` : 'watching...';
-				logger(stats.toJson(), config, runningMessage);
+				logger(stats.toJson(), configs, runningMessage);
 			}
 			resolve();
 		});
@@ -192,7 +192,7 @@ const command: Command = {
 	},
 	run(helper: Helper, args: any) {
 		console.log = () => {};
-		let { elements, ...rc } = (helper.configuration.get() || {}) as any;
+		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
 		elements = elements.map((element: any) => {
 			return {
 				name: getElementName(element),
@@ -206,6 +206,11 @@ const command: Command = {
 			configs = [testConfigFactory({ ...rc, elements })];
 		} else {
 			configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
+		}
+
+		if (configs.length === 0) {
+			console.warn('No elements specified in the .dojorc');
+			return Promise.resolve();
 		}
 
 		if (args.serve) {
