@@ -1,8 +1,14 @@
 {
 	"build-widget": {
 		"elements": [
-			"src/menu/Menu",
-			"src/menu-item/MenuItem"
+			{
+				"name": "menu",
+				"path": "src/menu/Menu"
+			},
+			{
+				"name": "menu-item",
+				"path": "src/menu-item/MenuItem"
+			}
 		]
 	}
 }

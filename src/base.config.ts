@@ -79,9 +79,9 @@ All rights reserved
 
 export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const config: webpack.Configuration = {
-		entry: args.elements.reduce((entry: any, element: string) => {
-			entry[element] = [
-				`imports-loader?widgetFactory=${element}!${path.join(__dirname, 'template', 'custom-element.js')}`
+		entry: args.elements.reduce((entry: any, element: any) => {
+			entry[element.name] = [
+				`imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
 			return entry;
 		}, {}),

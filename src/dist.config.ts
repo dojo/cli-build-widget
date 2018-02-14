@@ -1,7 +1,6 @@
 import baseConfigFactory from './base.config';
 import webpack = require('webpack');
 import * as path from 'path';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ManifestPlugin from 'webpack-manifest-plugin';
@@ -17,6 +16,7 @@ const packageJson = existsSync(packageJsonPath) ? require(packageJsonPath) : {};
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
+	const location = path.join('dist', args.elements[0].name);
 
 	config.plugins = [
 		...plugins,
@@ -26,23 +26,12 @@ function webpackConfig(args: any): webpack.Configuration {
 			openAnalyzer: false,
 			reportType: 'sunburst',
 			generateStatsFile: true,
-			reportFilename: '../info/report.html',
-			statsFilename: '../info/stats.json'
-		}),
-		new HtmlWebpackPlugin({
-			inject: true,
-			template: 'src/index.html'
+			reportFilename: path.join('..', 'info', args.elements[0].name, 'report.html'),
+			statsFilename: path.join('..', 'info', args.elements[0].name, 'stats.json')
 		}),
 		new UglifyJsPlugin({ sourceMap: true, cache: true }),
 		new WebpackChunkHash(),
-		new CleanWebpackPlugin(['dist'], { root: output.path, verbose: false }),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor',
-			filename: `${packageJson.name}-vendor-${packageJson.version}.js`,
-			minChunks: function(module: any) {
-				return module.context && module.context.includes('node_modules');
-			}
-		})
+		new CleanWebpackPlugin([location], { root: output.path, verbose: false })
 	];
 
 	config.plugins = config.plugins.map(plugin => {
@@ -57,7 +46,7 @@ function webpackConfig(args: any): webpack.Configuration {
 
 	config.output = {
 		...output,
-		path: path.join(output.path!, 'dist')
+		path: path.join(output.path!, location)
 	};
 
 	return config;

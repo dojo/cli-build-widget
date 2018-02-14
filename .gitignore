@@ -7,6 +7,7 @@
 .baseDir.ts
 .tscache
 coverage/
+/.vscode
 coverage-unmapped.json
 coverage-final.json
 coverage-final.lcov

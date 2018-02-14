@@ -12,38 +12,52 @@ const version = jsonFile.readFileSync(path.join(pkgDir.sync(), 'package.json')).
 
 export default function logger(stats: any, configs: any[], runningMessage: string = '') {
 	const chunks: any[] = [];
+	let errorMsg = '';
+	let warningMsg = '';
+	let errors: string[] = [];
+	let warnings: string[] = [];
+	let warningCount = 0;
+	let errorCount = 0;
+	let signOff = chalk.green('The build completed successfully.');
 	const assets = stats.children
 		.map((child: any) => {
+			const entry = Object.keys(child.entrypoints)[0];
 			chunks.push(
 				child.chunks.map(function(chunk: any) {
 					return `${chunk.names[0]}`;
 				})
 			);
 
+			if (child.warnings.length) {
+				warnings = [...warnings, ...child.warnings];
+				warningCount = warningCount + child.warnings.length;
+			}
+
+			if (child.errors.length) {
+				errors = [...errors, ...child.errors];
+				errorCount = errorCount + child.errors.length;
+			}
+
 			return child.assets.map((asset: any) => {
 				const size = (asset.size / 1000).toFixed(2);
-				return `${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
+				return `${entry}/${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
 			});
 		})
 		.filter((output: string) => output);
 
-	let errors = '';
-	let warnings = '';
-	let signOff = chalk.green('The build completed successfully.');
-
-	if (stats.warnings.length) {
+	if (warningCount) {
 		signOff = chalk.yellow('The build completed with warnings.');
-		warnings = `
+		warningMsg = `
 ${chalk.yellow('warnings:')}
-${chalk.gray(stats.warnings.map((warning: string) => stripAnsi(warning)))}
+${chalk.gray(warnings.map((warning: string) => stripAnsi(warning)) as any)}
 `;
 	}
 
-	if (stats.errors.length) {
+	if (errorCount) {
 		signOff = chalk.red('The build completed with errors.');
-		errors = `
+		errorMsg = `
 ${chalk.yellow('errors:')}
-${chalk.red(stats.errors.map((error: string) => stripAnsi(error)))}
+${chalk.red(errors.map((error: string) => stripAnsi(error)) as any)}
 `;
 	}
 
@@ -55,9 +69,9 @@ ${chalk.red(stats.errors.map((error: string) => stripAnsi(error)))}
 ${logSymbols.info} cli-build-widget: ${version}
 ${logSymbols.info} typescript: ${typescript.version}
 ${logSymbols.success} hash: ${stats.hash}
-${logSymbols.error} errors: ${stats.errors.length}
-${logSymbols.warning} warnings: ${stats.warnings.length}
-${errors}${warnings}
+${logSymbols.error} errors: ${errorCount}
+${logSymbols.warning} warnings: ${warningCount}
+${errorMsg}${warningMsg}
 ${chalk.yellow('chunks:')}
 ${columns(chunks)}
 ${chalk.yellow('assets:')}

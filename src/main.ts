@@ -191,16 +191,14 @@ const command: Command = {
 		});
 	},
 	run(helper: Helper, args: any) {
-		console.log = () => {};
-		const rc = helper.configuration.get() || {};
-		console.log(rc);
+		const { elements, ...rc } = (helper.configuration.get() || {}) as any;
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = [devConfigFactory(rc)];
+			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...{ elements: [element] } }));
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory(rc)];
+			configs = [testConfigFactory({ ...rc, elements })];
 		} else {
-			configs = [distConfigFactory(rc)];
+			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...{ elements: [element] } }));
 		}
 
 		if (args.serve) {
