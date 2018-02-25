@@ -82,6 +82,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const config: webpack.Configuration = {
 		entry: elements.reduce((entry: any, element: any) => {
 			entry[element.name] = [
+				'@dojo/shim/browser',
 				`imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
 			return entry;
