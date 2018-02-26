@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import MockModule from '../support/MockModule';
 
 let mockModule: MockModule;
-let mockLogger: any;
+let mockLogger: SinonStub;
 let mockSpinner: any;
 let mockDevConfig: any;
 let mockDistConfig: any;
@@ -22,7 +22,7 @@ function getMockConfiguration(config: any = {}) {
 	return {
 		configuration: {
 			get() {
-				return { ...config };
+				return { ...config, elements: ['element'] };
 			}
 		}
 	};
@@ -101,7 +101,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		main.run(getMockConfiguration(), { mode: 'dev' }).then(() => {
 			assert.isTrue(mockDevConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', 'dev config'));
+			assert.isTrue(mockLogger.calledWith('stats', ['dev config']));
 		});
 	});
 
@@ -109,7 +109,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		return main.run(getMockConfiguration(), { mode: 'dist' }).then(() => {
 			assert.isTrue(mockDistConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', 'dist config'));
+			assert.isTrue(mockLogger.calledWith('stats', ['dist config']));
 		});
 	});
 
@@ -117,7 +117,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		return main.run(getMockConfiguration(), { mode: 'test' }).then(() => {
 			assert.isTrue(mockTestConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', 'test config'));
+			assert.isTrue(mockLogger.calledWith('stats', ['test config']));
 		});
 	});
 
@@ -201,7 +201,7 @@ describe('command', () => {
 			});
 
 			return main.run(getMockConfiguration(), { watch: true }).then(() => {
-				assert.isTrue(mockLogger.calledWith('stats', 'dist config', 'watching...'));
+				assert.isTrue(mockLogger.calledWith('stats', ['dist config'], 'watching...'));
 			});
 		});
 
@@ -371,7 +371,7 @@ describe('command', () => {
 				})
 				.then(() => {
 					assert.isTrue(
-						mockLogger.calledWith('stats', { entry, output, plugins, watchOptions }, 'Listening on port 3000...')
+						mockLogger.calledWith('stats', [{ entry, output, plugins, watchOptions }], 'Listening on port 3000...')
 					);
 				});
 		});

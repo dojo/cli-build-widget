@@ -1,8 +1,6 @@
-import * as fs from 'fs';
 import * as path from 'path';
 import * as logUpdate from 'log-update';
 import * as logSymbols from 'log-symbols';
-import * as gzipSize from 'gzip-size';
 import * as typescript from 'typescript';
 import * as jsonFile from 'jsonfile';
 import chalk from 'chalk';
@@ -12,44 +10,54 @@ const columns = require('cli-columns');
 const stripAnsi = require('strip-ansi');
 const version = jsonFile.readFileSync(path.join(pkgDir.sync(), 'package.json')).version;
 
-export default function logger(stats: any, config: any, runningMessage: string = '') {
-	const assets = stats.assets
-		.map((asset: any) => {
-			const size = (asset.size / 1000).toFixed(2);
-			const assetInfo = `${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
-			const contentFilePath = path.join(config.output.path, asset.name);
+export default function logger(stats: any, configs: any[], runningMessage: string = '') {
+	const chunks: any[] = [];
+	let errorMsg = '';
+	let warningMsg = '';
+	let errors: string[] = [];
+	let warnings: string[] = [];
+	let warningCount = 0;
+	let errorCount = 0;
+	let signOff = chalk.green('The build completed successfully.');
+	const assets = stats.children
+		.map((child: any) => {
+			const entry = Object.keys(child.entrypoints)[0];
+			chunks.push(
+				child.chunks.map((chunk: any) => {
+					return `${chunk.names[0]}`;
+				})
+			);
 
-			if (!fs.existsSync(contentFilePath)) {
-				return assetInfo;
+			if (child.warnings.length) {
+				warnings = [...warnings, ...child.warnings];
+				warningCount = warningCount + child.warnings.length;
 			}
 
-			const content = fs.readFileSync(contentFilePath, 'utf-8');
-			const compressedSize = (gzipSize.sync(content) / 1000).toFixed(2);
-			return `${assetInfo} / ${chalk.blue(`(${compressedSize}kb gz)`)}`;
+			if (child.errors.length) {
+				errors = [...errors, ...child.errors];
+				errorCount = errorCount + child.errors.length;
+			}
+
+			return child.assets.map((asset: any) => {
+				const size = (asset.size / 1000).toFixed(2);
+				return `${entry}/${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
+			});
 		})
 		.filter((output: string) => output);
 
-	const chunks = stats.chunks.map((chunk: any) => {
-		return `${chunk.names[0]}`;
-	});
-
-	let errors = '';
-	let warnings = '';
-	let signOff = chalk.green('The build completed successfully.');
-
-	if (stats.warnings.length) {
+	if (warningCount) {
 		signOff = chalk.yellow('The build completed with warnings.');
-		warnings = `
+		warningMsg = `
 ${chalk.yellow('warnings:')}
-${chalk.gray(stats.warnings.map((warning: string) => stripAnsi(warning)))}
+${chalk.gray(warnings.map((warning: string) => stripAnsi(warning)) as any)}
 `;
 	}
 
-	if (stats.errors.length) {
+	if (errorCount) {
 		signOff = chalk.red('The build completed with errors.');
-		errors = `
+		errorMsg = `
 ${chalk.yellow('errors:')}
-${chalk.red(stats.errors.map((error: string) => stripAnsi(error)))}
+${chalk.red(errors.map((error: string) => stripAnsi(error)) as any)}
 `;
 	}
 
@@ -61,14 +69,14 @@ ${chalk.red(stats.errors.map((error: string) => stripAnsi(error)))}
 ${logSymbols.info} cli-build-widget: ${version}
 ${logSymbols.info} typescript: ${typescript.version}
 ${logSymbols.success} hash: ${stats.hash}
-${logSymbols.error} errors: ${stats.errors.length}
-${logSymbols.warning} warnings: ${stats.warnings.length}
-${errors}${warnings}
+${logSymbols.error} errors: ${errorCount}
+${logSymbols.warning} warnings: ${warningCount}
+${errorMsg}${warningMsg}
 ${chalk.yellow('chunks:')}
 ${columns(chunks)}
 ${chalk.yellow('assets:')}
 ${columns(assets)}
-${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${config.output.path}`))}`)}
+${chalk.yellow(`output at: ${chalk.cyan(chalk.underline(`file:///${configs[0].output.path}`))}`)}
 
 ${signOff}
 	`);

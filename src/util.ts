@@ -23,6 +23,22 @@ function clearBuildOptions(key: string): Config {
 	return {};
 }
 
+export function getElementName(elementPath: string): string {
+	const pathSegments = elementPath.split('/');
+	let elementName = pathSegments[pathSegments.length - 1];
+	const matches = elementName.match(/([A-Z])/g);
+	if (!matches) {
+		return elementName;
+	}
+	for (let i = 0, n = matches.length; i < n; i++) {
+		elementName = elementName.replace(new RegExp(matches[i]), '-' + matches[i].toLowerCase());
+	}
+	if (elementName.slice(0, 1) === '-') {
+		elementName = elementName.slice(1);
+	}
+	return elementName;
+}
+
 /**
  * Extract the rc data for the provided key to a temporary file and remove it from the dojorc.
  * This utility is necessary given that "eject" is treated as a full command (see

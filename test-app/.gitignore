@@ -1,3 +1,4 @@
 /output
+/_build
 /src/**/*.css.d.ts
 /node_modules

@@ -24,21 +24,18 @@ function normalise(value: string) {
 		.replace(/([A-Za-z0-9\-_]+)\.[a-z0-9]+\.bundle/, '$1.[HASH].bundle');
 }
 
-function assertOutput(mode: string) {
-	const fixtureManifest = require(path.join(appRootDir, 'fixtures', platform, mode, 'manifest'));
-	const outputManifest = require(path.join(appRootDir, 'output', mode, 'manifest'));
-	const fixtureFileIdentifiers = Object.keys(fixtureManifest);
-	const outputFileIdentifiers = Object.keys(outputManifest);
-	assert.deepEqual(outputFileIdentifiers, fixtureFileIdentifiers);
-	fixtureFileIdentifiers.forEach(id => {
-		if (id !== 'runtime.js.map' && id !== 'widget-core.js.map') {
-			const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, fixtureManifest[id]);
-			const outputFilePath = path.join(appRootDir, 'output', mode, outputManifest[id]);
-			const fixtureContents = fs.readFileSync(fixtureFilePath, 'utf8');
-			const outputContents = fs.readFileSync(outputFilePath, 'utf8');
+function assertOutput(mode: string, widget: string) {
+	let files = [`${widget}-1.0.0.css`, `${widget}-1.0.0.js`];
+	if (mode === 'dist') {
+		files = [...files, ...[`${widget}-1.0.0.css.map`, `${widget}-1.0.0.js.map`]];
+	}
+	files.forEach(file => {
+		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, widget, file);
+		const outputFilePath = path.join(appRootDir, 'output', mode, widget, file);
+		const fixtureContents = fs.readFileSync(fixtureFilePath, 'utf8');
+		const outputContents = fs.readFileSync(outputFilePath, 'utf8');
 
-			assert.strictEqual(normalise(outputContents), normalise(fixtureContents), id);
-		}
+		assert.strictEqual(normalise(outputContents), normalise(fixtureContents), file);
 	});
 }
 
@@ -59,12 +56,14 @@ describe('functional build tests', () => {
 
 	it('correctly builds with dist configuration', () => {
 		execa.shellSync('npm run build-dist', { cwd: appRootDir });
-		assertOutput('dist');
+		assertOutput('dist', 'menu');
+		assertOutput('dist', 'menu-item');
 	});
 
 	it('correctly builds with dev configuration', () => {
 		execa.shellSync('npm run build-dev', { cwd: appRootDir });
-		assertOutput('dev');
+		assertOutput('dev', 'menu');
+		assertOutput('dev', 'menu-item');
 	});
 
 	it('correctly builds with test configuration', () => {

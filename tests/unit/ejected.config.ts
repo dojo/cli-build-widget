@@ -3,7 +3,7 @@ const { assert } = intern.getPlugin('chai');
 import { stub } from 'sinon';
 import MockModule from '../support/MockModule';
 
-const configJson: any = { bundles: {} };
+const configJson: any = { elements: ['element'] };
 let mockModule: MockModule;
 let mockDevConfig: any;
 let mockDistConfig: any;
@@ -34,20 +34,20 @@ describe('ejected config', () => {
 		const config = mockModule.getModuleUnderTest();
 		config({ mode: 'dev' });
 		assert.isTrue(mockDevConfig.calledOnce);
-		assert.isTrue(mockDevConfig.calledWith(configJson));
+		assert.isTrue(mockDevConfig.calledWith({ element: { name: 'element', path: 'element' } }));
 	});
 
 	it('can run dist mode', () => {
 		const config = mockModule.getModuleUnderTest();
 		config();
 		assert.isTrue(mockDistConfig.calledOnce);
-		assert.isTrue(mockDistConfig.calledWith(configJson));
+		assert.isTrue(mockDistConfig.calledWith({ element: { name: 'element', path: 'element' } }));
 	});
 
 	it('can run test mode', () => {
 		const config = mockModule.getModuleUnderTest();
 		config({ mode: 'test' });
 		assert.isTrue(mockTestConfig.calledOnce);
-		assert.isTrue(mockTestConfig.calledWith(configJson));
+		assert.isTrue(mockTestConfig.calledWith({ elements: [{ name: 'element', path: 'element' }] }));
 	});
 });

@@ -11,19 +11,19 @@ import devConfigFactory from './dev.config';
 import testConfigFactory from './test.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
-import { moveBuildOptions } from './util';
+import { moveBuildOptions, getElementName } from './util';
 
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
 const webpackMiddleware = require('webpack-dev-middleware');
 
-function createCompiler(config: webpack.Configuration) {
+function createCompiler(config: webpack.Configuration[]) {
 	const compiler = webpack(config);
 	fixMultipleWatchTrigger(compiler);
 	return compiler;
 }
 
-function createWatchCompiler(config: webpack.Configuration) {
+function createWatchCompiler(config: webpack.Configuration[]) {
 	const compiler = createCompiler(config);
 	const spinner = ora('building').start();
 	compiler.plugin('invalid', () => {
@@ -36,7 +36,7 @@ function createWatchCompiler(config: webpack.Configuration) {
 	return compiler;
 }
 
-function build(config: webpack.Configuration, args: any) {
+function build(config: webpack.Configuration[], args: any) {
 	const compiler = createCompiler(config);
 	const spinner = ora('building').start();
 	return new Promise<void>((resolve, reject) => {
@@ -69,39 +69,42 @@ function buildNpmDependencies(): any {
 	}
 }
 
-function fileWatch(config: webpack.Configuration, args: any): Promise<void> {
-	const compiler = createWatchCompiler(config);
+function fileWatch(configs: webpack.Configuration[], args: any): Promise<void> {
+	const compiler = createWatchCompiler(configs);
 
 	return new Promise<void>((resolve, reject) => {
-		const watchOptions = config.watchOptions as webpack.Compiler.WatchOptions;
+		const watchOptions = configs[0].watchOptions as webpack.Compiler.WatchOptions;
 		compiler.watch(watchOptions, (err, stats) => {
 			if (err) {
 				reject(err);
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}` : 'watching...';
-				logger(stats.toJson(), config, runningMessage);
+				logger(stats.toJson(), configs, runningMessage);
 			}
 			resolve();
 		});
 	});
 }
 
-function memoryWatch(config: webpack.Configuration, args: any, app: express.Application): Promise<void> {
-	const entry = config.entry as any;
-	const plugins = config.plugins as webpack.Plugin[];
+function memoryWatch(configs: webpack.Configuration[], args: any, app: express.Application): Promise<void> {
 	const timeout = 20 * 1000;
 
-	plugins.push(new webpack.HotModuleReplacementPlugin(), new webpack.NoEmitOnErrorsPlugin());
-	Object.keys(entry).forEach(name => {
-		entry[name].unshift(`webpack-hot-middleware/client?timeout=${timeout}&reload=true`);
+	configs.forEach(config => {
+		config.plugins!.push(new webpack.HotModuleReplacementPlugin(), new webpack.NoEmitOnErrorsPlugin());
 	});
 
-	const watchOptions = config.watchOptions as webpack.Compiler.WatchOptions;
-	const compiler = createWatchCompiler(config);
+	configs.forEach((config: any) => {
+		Object.keys(config.entry).forEach(name => {
+			config.entry[name].unshift(`webpack-hot-middleware/client?timeout=${timeout}&reload=true`);
+		});
+	});
+
+	const watchOptions = configs[0].watchOptions as webpack.Compiler.WatchOptions;
+	const compiler = createWatchCompiler(configs);
 
 	compiler.plugin('done', stats => {
-		logger(stats.toJson(), config, `Listening on port ${args.port}...`);
+		logger(stats.toJson(), configs, `Listening on port ${args.port}...`);
 	});
 
 	app.use(
@@ -119,28 +122,30 @@ function memoryWatch(config: webpack.Configuration, args: any, app: express.Appl
 	return Promise.resolve();
 }
 
-function serve(config: webpack.Configuration, args: any): Promise<void> {
+function serve(configs: webpack.Configuration[], args: any): Promise<void> {
 	const app = express();
 
 	if (args.watch !== 'memory') {
-		const outputDir = (config.output && config.output.path) || process.cwd();
-		app.use(express.static(outputDir));
+		configs.forEach(config => {
+			const outputDir = (config.output && config.output.path) || process.cwd();
+			app.use(express.static(outputDir));
+		});
 	}
 
 	return Promise.resolve()
 		.then(() => {
 			if (args.watch === 'memory' && args.mode === 'dev') {
-				return memoryWatch(config, args, app);
+				return memoryWatch(configs, args, app);
 			}
 
 			if (args.watch) {
 				if (args.watch === 'memory') {
 					console.warn('Memory watch requires `--mode=dev`. Using file watch instead...');
 				}
-				return fileWatch(config, args);
+				return fileWatch(configs, args);
 			}
 
-			return build(config, args);
+			return build(configs, args);
 		})
 		.then(() => {
 			return new Promise<void>((resolve, reject) => {
@@ -187,28 +192,39 @@ const command: Command = {
 	},
 	run(helper: Helper, args: any) {
 		console.log = () => {};
-		const rc = helper.configuration.get() || {};
-		let config: webpack.Configuration;
+		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
+		elements = elements.map((element: any) => {
+			return {
+				name: getElementName(element),
+				path: element
+			};
+		});
+		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			config = devConfigFactory(rc);
+			configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
 		} else if (args.mode === 'test') {
-			config = testConfigFactory(rc);
+			configs = [testConfigFactory({ ...rc, elements })];
 		} else {
-			config = distConfigFactory(rc);
+			configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
+		}
+
+		if (configs.length === 0) {
+			console.warn('No elements specified in the .dojorc');
+			return Promise.resolve();
 		}
 
 		if (args.serve) {
-			return serve(config, args);
+			return serve(configs, args);
 		}
 
 		if (args.watch) {
 			if (args.watch === 'memory') {
 				console.warn('Memory watch requires the dev server. Using file watch instead...');
 			}
-			return fileWatch(config, args);
+			return fileWatch(configs, args);
 		}
 
-		return build(config, args);
+		return build(configs, args);
 	},
 	eject(helper: Helper): EjectOutput {
 		return {
