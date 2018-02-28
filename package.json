@@ -79,7 +79,6 @@
   },
   "dependencies": {
     "@dojo/has": "0.1.2",
-    "@dojo/shim": "0.2.6",
     "@dojo/webpack-contrib": "0.2.0",
     "@theintern/istanbul-loader": "1.0.0-beta.1",
     "chalk": "2.3.0",
