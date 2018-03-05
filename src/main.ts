@@ -183,6 +183,18 @@ const command: Command = {
 			type: 'boolean'
 		});
 
+		options('elements', {
+			describe: 'custom elements to build',
+			alias: 'e',
+			type: 'array'
+		});
+
+		options('legacy', {
+			describe: 'Build custom elements with legacy support',
+			alias: 'l',
+			type: 'boolean'
+		});
+
 		options('port', {
 			describe: 'used in conjunction with the serve option to specify the webserver port',
 			alias: 'p',
@@ -193,6 +205,10 @@ const command: Command = {
 	run(helper: Helper, args: any) {
 		console.log = () => {};
 		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
+		const { elements: commandLineElements, ...commandLineArgs } = args;
+		if (commandLineElements) {
+			elements = commandLineElements;
+		}
 		elements = elements.map((element: any) => {
 			return {
 				name: getElementName(element),
@@ -201,11 +217,11 @@ const command: Command = {
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
+			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...commandLineArgs, element }));
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, elements })];
+			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements })];
 		} else {
-			configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
+			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...commandLineArgs, element }));
 		}
 
 		if (configs.length === 0) {
