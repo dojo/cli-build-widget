@@ -219,7 +219,7 @@ const command: Command = {
 		if (args.mode === 'dev') {
 			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...commandLineArgs, element }));
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements })];
+			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
 		} else {
 			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...commandLineArgs, element }));
 		}
