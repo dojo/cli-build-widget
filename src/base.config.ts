@@ -79,6 +79,10 @@ All rights reserved
 export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const elements = args.element ? [args.element] : args.elements;
 	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
+	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
+	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
+	const features = args.legacy ? args.features : ['chrome'];
+
 	const config: webpack.Configuration = {
 		entry: elements.reduce((entry: any, element: any) => {
 			entry[element.name] = [
@@ -96,7 +100,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 		},
 		resolve: {
 			modules: [basePath, path.join(basePath, 'node_modules')],
-			extensions: ['.ts', '.tsx', '.js']
+			extensions
 		},
 		devtool: 'source-map',
 		watchOptions: { ignored: /node_modules/ },
@@ -140,23 +144,34 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 					include: allPaths,
 					test: /.*\.ts(x)?$/,
 					use: removeEmpty([
-						args.features && {
+						features && {
 							loader: '@dojo/webpack-contrib/static-build-loader',
-							options: { features: args.features }
+							options: { features }
 						},
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: { onlyCompileBundledFiles: true, instance: jsonpIdent, transpileOnly: true }
+							options: { onlyCompileBundledFiles: true, instance: jsonpIdent, transpileOnly: true, compilerOptions }
+						}
+					])
+				},
+				{
+					test: /\.mjs$/,
+					use: removeEmpty([
+						{
+							loader: '@dojo/webpack-contrib/static-build-loader',
+							options: {
+								features
+							}
 						}
 					])
 				},
 				{
 					test: /\.js?$/,
 					use: removeEmpty([
-						args.features && {
+						features && {
 							loader: '@dojo/webpack-contrib/static-build-loader',
-							options: { features: args.features }
+							options: { features }
 						},
 						'umd-compat-loader'
 					])

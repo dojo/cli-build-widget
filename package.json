@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "@dojo/has": "0.1.2",
-    "@dojo/webpack-contrib": "0.2.0",
+    "@dojo/webpack-contrib": "0.2.2",
     "@theintern/istanbul-loader": "1.0.0-beta.1",
     "chalk": "2.3.0",
     "clean-webpack-plugin": "0.1.17",
