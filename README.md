@@ -34,6 +34,12 @@ npm install @dojo/cli-build-widget
 
 `@dojo/cli-build-widget` is an optional command for the [`@dojo/cli`](https://github.com/dojo/cli).
 
+By default widgets are built using an evergreen configuration, meaning that the build process:
+
+* Preferring `.mjs` modules over `.js` modules
+* Using `{ target: 'es6', module: 'esnext' }` Typescript compiler options
+* Elides features based on the `chrome` flag from [`dojo/webpack-contrib`](https://github.com/dojo/webpack-contrib#available-features)
+
 ### Project Structure
 
 A custom elements project is expected to have the following directory and file structure:
@@ -46,14 +52,11 @@ src/
 	custom-element-child/
 		customElementChild.m.css
 		CustomElementChild.ts
-	index.html
 tests/
 	unit/
 	functional/
 .dojorc
 ```
-
-The `index.html` file is meant to be used as an example page for viewing the custom element in a browser. The generated JavaScript and CSS files for each widget will be injected into the `index.html` file in the order specified in the `.dojorc` ([see below](#configuration)).
 
 ### Building
 
@@ -97,6 +100,18 @@ dojo build -w # start a file-based watch
 dojo build -s -w=memory -m=dev # build to an in-memory file system with HMR
 ```
 
+### Elements
+
+The path for elements to build can be provided using the repeating options `--elements` or `-e`:
+
+```bash
+dojo build -e src/custom-element-child/CustomElementChild -e src/custom-element-parent/CustomElementParent
+```
+
+### Legacy
+
+To build custom elements for legacy environments use the `--legacy` or `-l` flag. For custom elements built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js).
+
 ### Eject
 
 Ejecting `@dojo/cli-build-widget` will produce the following files under the `config/build-widget` directory:
@@ -120,9 +135,9 @@ Custom element projects use a `.dojorc` file at the project root to control vari
 
 #### `elements`: string[]
 
-Contains paths _relative to the project root_ to the custom elements that should be built. As noted above, the generated JS and CSS will be injected into the `src/index.html` in the order specified in the `elements` array. For example, with the following configuration the custom elements located at `src/menu-item/MenuItem.ts` and `src/menu/Menu.ts` will be built to `output/{mode}/menu-item/MenuItem.js` and `output/{mode}/menu/Menu.js`, respectively:
+Contains paths _relative to the project root_ to the custom elements that should be built.
 
-```
+```json
 {
 	"build-widget": {
 		"elements": [
