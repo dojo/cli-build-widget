@@ -36,8 +36,8 @@ npm install @dojo/cli-build-widget
 
 By default widgets are built using an evergreen configuration, meaning that the build process:
 
-* Preferring `.mjs` modules over `.js` modules
-* Using `{ target: 'es6', module: 'esnext' }` Typescript compiler options
+* Prefers `.mjs` modules over `.js` modules
+* Uses `{ target: 'es6', module: 'esnext' }` Typescript compiler options
 * Elides features based on the `chrome` flag from [`dojo/webpack-contrib`](https://github.com/dojo/webpack-contrib#available-features)
 
 ### Project Structure
@@ -110,7 +110,7 @@ dojo build -e src/custom-element-child/CustomElementChild -e src/custom-element-
 
 ### Legacy
 
-To build custom elements for legacy environments use the `--legacy` or `-l` flag. For custom elements built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js).
+To build custom elements for legacy environments use the `--legacy` or `-l` flag. Custom elements built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js).
 
 ### Eject
 
