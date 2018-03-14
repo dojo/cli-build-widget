@@ -163,7 +163,8 @@ function serve(configs: webpack.Configuration[], args: any): Promise<void> {
 const CONFIG_DEFAULTS = {
 	legacy: false,
 	port: 9999,
-	mode: 'dist'
+	mode: 'dist',
+	serve: false
 };
 
 function filterCommandLineArgs(commandLineArgs: any) {
@@ -207,7 +208,8 @@ const command: Command = {
 		options('serve', {
 			describe: 'start a webserver',
 			alias: 's',
-			type: 'boolean'
+			type: 'boolean',
+			default: undefined
 		});
 
 		options('elements', {

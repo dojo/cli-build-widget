@@ -170,6 +170,7 @@ describe('command', () => {
 						legacy: false,
 						port: 9999,
 						mode: 'dist',
+						serve: false,
 						element: {
 							name: 'element',
 							path: 'element'
@@ -185,7 +186,7 @@ describe('command', () => {
 				legacy: true,
 				port: 9876,
 				mode: 'dev',
-				watch: true,
+				watch: 'memory',
 				serve: true,
 				elements: ['helloworld']
 			};
@@ -196,7 +197,7 @@ describe('command', () => {
 						legacy: true,
 						port: 9876,
 						mode: 'dev',
-						watch: true,
+						watch: 'memory',
 						serve: true,
 						element: {
 							name: 'helloworld',
@@ -213,7 +214,7 @@ describe('command', () => {
 				legacy: true,
 				port: 9876,
 				mode: 'dev',
-				watch: true,
+				watch: 'memory',
 				serve: true,
 				elements: ['helloworld']
 			};
@@ -231,7 +232,7 @@ describe('command', () => {
 							legacy: false,
 							port: 9876,
 							mode: 'dist',
-							watch: true,
+							watch: 'memory',
 							serve: true,
 							element: {
 								name: 'foo',
@@ -244,7 +245,7 @@ describe('command', () => {
 							legacy: false,
 							port: 9876,
 							mode: 'dist',
-							watch: true,
+							watch: 'memory',
 							serve: true,
 							element: {
 								name: 'bar',
