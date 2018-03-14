@@ -22,7 +22,7 @@ function getMockConfiguration(config: any = {}) {
 	return {
 		configuration: {
 			get() {
-				return { ...config, elements: ['element'] };
+				return { ...config, ...config.elements ? {} : { elements: ['element'] } };
 			}
 		}
 	};
@@ -91,7 +91,7 @@ describe('command', () => {
 			optionsStub.calledWith('mode', {
 				describe: 'the output mode',
 				alias: 'm',
-				default: 'dist',
+				default: undefined,
 				choices: ['dist', 'dev', 'test']
 			})
 		);
@@ -157,6 +157,103 @@ describe('command', () => {
 			assert.isTrue(mockModule.getMock('ora').ctor.calledWith('building'));
 			assert.isTrue(mockSpinner.start.called);
 			assert.isTrue(mockSpinner.stop.called);
+		});
+	});
+
+	describe('configuration', () => {
+		it('default options used when no options passed via command line or .dojorc', () => {
+			const main = mockModule.getModuleUnderTest().default;
+
+			return main.run(getMockConfiguration(), {}).then(() => {
+				assert.isTrue(
+					mockDistConfig.calledWith({
+						legacy: false,
+						port: 9999,
+						mode: 'dist',
+						serve: false,
+						element: {
+							name: 'element',
+							path: 'element'
+						}
+					})
+				);
+			});
+		});
+
+		it('should support all options being passed via the .dojorc', () => {
+			const main = mockModule.getModuleUnderTest().default;
+			const rcConfig = {
+				legacy: true,
+				port: 9876,
+				mode: 'dev',
+				watch: 'memory',
+				serve: true,
+				elements: ['helloworld']
+			};
+
+			return main.run(getMockConfiguration(rcConfig), {}).then(() => {
+				assert.isTrue(
+					mockDevConfig.calledWith({
+						legacy: true,
+						port: 9876,
+						mode: 'dev',
+						watch: 'memory',
+						serve: true,
+						element: {
+							name: 'helloworld',
+							path: 'helloworld'
+						}
+					})
+				);
+			});
+		});
+
+		it('commandLine options should override options provided by .dojorc', () => {
+			const main = mockModule.getModuleUnderTest().default;
+			const rcConfig = {
+				legacy: true,
+				port: 9876,
+				mode: 'dev',
+				watch: 'memory',
+				serve: true,
+				elements: ['helloworld']
+			};
+
+			return main
+				.run(getMockConfiguration(rcConfig), {
+					elements: ['foo', 'bar'],
+					mode: 'dist',
+					watch: undefined,
+					legacy: false
+				})
+				.then(() => {
+					assert.isTrue(
+						mockDistConfig.firstCall.calledWith({
+							legacy: false,
+							port: 9876,
+							mode: 'dist',
+							watch: 'memory',
+							serve: true,
+							element: {
+								name: 'foo',
+								path: 'foo'
+							}
+						})
+					);
+					assert.isTrue(
+						mockDistConfig.secondCall.calledWith({
+							legacy: false,
+							port: 9876,
+							mode: 'dist',
+							watch: 'memory',
+							serve: true,
+							element: {
+								name: 'bar',
+								path: 'bar'
+							}
+						})
+					);
+				});
 		});
 	});
 
