@@ -160,6 +160,33 @@ function serve(configs: webpack.Configuration[], args: any): Promise<void> {
 		});
 }
 
+const CONFIG_DEFAULTS = {
+	legacy: false,
+	port: 9999,
+	mode: 'dist'
+};
+
+function filterCommandLineArgs(commandLineArgs: any) {
+	return Object.keys(commandLineArgs).reduce(
+		(result, key) => {
+			if (commandLineArgs[key] !== undefined) {
+				result[key] = commandLineArgs[key];
+			}
+			return result;
+		},
+		{} as any
+	);
+}
+
+function createElementsConfig(elements: any[]): any[] {
+	return elements.map((element: any) => {
+		return {
+			name: getElementName(element),
+			path: element
+		};
+	});
+}
+
 const command: Command = {
 	group: 'build',
 	name: 'widget',
@@ -168,8 +195,8 @@ const command: Command = {
 		options('mode', {
 			describe: 'the output mode',
 			alias: 'm',
-			default: 'dist',
-			choices: ['dist', 'dev', 'test']
+			choices: ['dist', 'dev', 'test'],
+			default: undefined
 		});
 
 		options('watch', {
@@ -192,55 +219,53 @@ const command: Command = {
 		options('legacy', {
 			describe: 'Build custom elements with legacy support',
 			alias: 'l',
-			type: 'boolean'
+			type: 'boolean',
+			default: undefined
 		});
 
 		options('port', {
 			describe: 'used in conjunction with the serve option to specify the webserver port',
 			alias: 'p',
-			default: 9999,
-			type: 'number'
+			type: 'number',
+			default: undefined
 		});
 	},
 	run(helper: Helper, args: any) {
 		console.log = () => {};
 		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
-		const { elements: commandLineElements, ...commandLineArgs } = args;
-		if (commandLineElements) {
-			elements = commandLineElements;
-		}
-		elements = elements.map((element: any) => {
-			return {
-				name: getElementName(element),
-				path: element
-			};
-		});
-		let configs: webpack.Configuration[];
-		if (args.mode === 'dev') {
-			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...commandLineArgs, element }));
-		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
+		let { elements: commandLineElements, ...commandLineArgs } = args;
+
+		elements = createElementsConfig(commandLineElements || elements);
+		commandLineArgs = filterCommandLineArgs(commandLineArgs);
+
+		let webpackConfigs: webpack.Configuration[];
+		let buildConfig: any = { ...CONFIG_DEFAULTS, ...rc, ...commandLineArgs };
+
+		if (buildConfig.mode === 'dev') {
+			webpackConfigs = elements.map((element: any) => devConfigFactory({ ...buildConfig, element }));
+		} else if (buildConfig.mode === 'test') {
+			webpackConfigs = [testConfigFactory({ ...buildConfig, elements, legacy: true })];
 		} else {
-			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...commandLineArgs, element }));
+			webpackConfigs = elements.map((element: any) => distConfigFactory({ ...buildConfig, element }));
 		}
 
-		if (configs.length === 0) {
+		if (webpackConfigs.length === 0) {
 			console.warn('No elements specified in the .dojorc');
 			return Promise.resolve();
 		}
 
 		if (args.serve) {
-			return serve(configs, args);
+			return serve(webpackConfigs, args);
 		}
 
 		if (args.watch) {
 			if (args.watch === 'memory') {
 				console.warn('Memory watch requires the dev server. Using file watch instead...');
 			}
-			return fileWatch(configs, args);
+			return fileWatch(webpackConfigs, args);
 		}
 
-		return build(configs, args);
+		return build(webpackConfigs, args);
 	},
 	eject(helper: Helper): EjectOutput {
 		return {
