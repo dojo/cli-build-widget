@@ -6,6 +6,7 @@ import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { WebpackConfiguration } from './interfaces';
 import * as loaderUtils from 'loader-utils';
 
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const slash = require('slash');
 
@@ -112,7 +113,8 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 				filename: (getPath: any) => getPath(`[name]-${packageJson.version}.css`)
 			} as any),
 			new webpack.NamedChunksPlugin(),
-			new webpack.NamedModulesPlugin()
+			new webpack.NamedModulesPlugin(),
+			args.index === 1 && new ForkTsCheckerWebpackPlugin({ silent: true })
 		]),
 		module: {
 			rules: removeEmpty([
