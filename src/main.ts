@@ -217,11 +217,15 @@ const command: Command = {
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...commandLineArgs, element }));
+			configs = elements.map((element: any, index: number) =>
+				devConfigFactory({ ...rc, ...commandLineArgs, index, element })
+			);
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
+			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true, index: 1 })];
 		} else {
-			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...commandLineArgs, element }));
+			configs = elements.map((element: any, index: number) =>
+				distConfigFactory({ ...rc, ...commandLineArgs, index, element })
+			);
 		}
 
 		if (configs.length === 0) {
