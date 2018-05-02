@@ -35,8 +35,7 @@
     ]
   },
   "devDependencies": {
-    "@dojo/cli": "0.6.1",
-    "@dojo/loader": "0.1.0",
+    "@dojo/cli": "2.0.0",
     "@types/chalk": "2.2.0",
     "@types/clean-webpack-plugin": "0.1.0",
     "@types/execa": "0.8.0",
@@ -57,6 +56,7 @@
     "@types/rimraf": "2.0.2",
     "@types/sinon": "4.0.0",
     "@types/strip-ansi": "3.0.0",
+    "@types/tapable": "^0.2.5",
     "@types/webpack": "3.8.1",
     "@types/webpack-chunk-hash": "0.4.0",
     "@types/yargs": "8.0.2",
@@ -78,8 +78,8 @@
     "typescript": "2.6.1"
   },
   "dependencies": {
-    "@dojo/has": "0.1.2",
-    "@dojo/webpack-contrib": "0.2.2",
+    "@dojo/has": "2.0.0",
+    "@dojo/webpack-contrib": "2.0.0",
     "@theintern/istanbul-loader": "1.0.0-beta.1",
     "chalk": "2.3.0",
     "clean-webpack-plugin": "0.1.17",
