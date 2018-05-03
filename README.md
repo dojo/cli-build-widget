@@ -7,8 +7,6 @@
 
 The official CLI command for building Dojo 2 custom elements.
 
-*WARNING* This is currently _alpha_ software. This is not yet production ready, so you should use at your own risk.
-
 - [Usage](#usage)
 - [Features](#features)
   - [Project Structure](#project-structure)
