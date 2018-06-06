@@ -29,7 +29,12 @@ function webpackConfig(args: any): webpack.Configuration {
 		}),
 		new UglifyJsPlugin({ sourceMap: true, cache: true }),
 		new WebpackChunkHash(),
-		new CleanWebpackPlugin([location], { root: output.path, verbose: false })
+		new CleanWebpackPlugin([location], { root: output.path, verbose: false }),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: '"production"'
+			}
+		})
 	];
 
 	config.plugins = config.plugins.map(plugin => {
