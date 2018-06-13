@@ -6,12 +6,12 @@
  * All rights reserved
  * 
  */
-.sUmUi4Sh {
+.menuItem-m__root__sUmUi {
 	height: 100%;
 	display: inline-block;
 }
 
-._2Mk6Rdqa {
+.menuItem-m__item__2Mk6R {
 	color: #fff;
 	text-decoration: none;
 	margin: 0 6.4px;
@@ -30,7 +30,7 @@
 	cursor: pointer;
 }
 
-._2Mk6Rdqa::after {
+.menuItem-m__item__2Mk6R::after {
 	display: block;
 	content: "";
 	background: #fff;
@@ -46,7 +46,7 @@
 	        transform: translateY(3px);
 }
 
-._1-f3ItOh::after {
+.menuItem-m__selected__1-f3I::after {
 	-webkit-transform: translateY(0);
 	        transform: translateY(0);
 }
