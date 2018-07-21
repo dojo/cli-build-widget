@@ -6,5 +6,9 @@
 	"suites": [
 		"./dist/dev/tests/unit/all.js",
 		"./dist/dev/tests/functional/all.js"
+	],
+	"coverage": [
+		"./dist/dev/src/**/*.js",
+		"!./dist/dev/src/template/**/*"
 	]
 }

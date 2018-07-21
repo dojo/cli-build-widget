@@ -33,9 +33,7 @@
     "package": "dojo-package",
     "precommit": "lint-staged",
     "prettier": "prettier --write \"{src,tests}/**/*.{ts,tsx}\"",
-    "test:ci": "run-p --race serve test",
-    "test": "run-s lint build artifact:package artifact:install build intern",
-    "serve": "http-server -p 9999 -c-1 --silent",
+    "test": "run-s lint build artifact:package artifact:install intern",
     "uploadCoverage": "codecov --file=coverage/coverage.json",
     "watch:ts": "dojo-tsc-watcher -p tsconfig.json -- dojo-package",
     "watch": "run-p watch:ts \"build:static:** -- --watch\""
@@ -46,7 +44,6 @@
       "git add"
     ]
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@dojo/cli": "^3.0.0-alpha.1",
     "@dojo/scripts": "^3.0.0-alpha.6",
