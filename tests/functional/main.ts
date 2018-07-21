@@ -6,7 +6,7 @@ import * as rimraf from 'rimraf';
 import * as execa from 'execa';
 import * as os from 'os';
 
-const appRootDir = path.join(__dirname, '..', '..', '..', 'test-app');
+const appRootDir = path.join(__dirname, '..', '..', '..', '..', 'test-app');
 
 const platform = os.platform().startsWith('win') ? 'windows' : 'unix';
 

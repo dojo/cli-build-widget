@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "ea035e8f5bc7b3c31aa9",
-  "time": 5019,
+  "time": 4903,
   "publicPath": "",
   "assetsByChunkName": {
     "menu-item": [
@@ -1614,15 +1614,6 @@
               "loc": "5:0-29"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "type": "harmony import",
-              "userRequest": "./d",
-              "loc": "4:0-24"
-            },
-            {
               "moduleId": "./src/menu-item/MenuItem.ts",
               "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu-item!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
               "module": "./src/menu-item/MenuItem.ts",
@@ -1630,6 +1621,15 @@
               "type": "harmony import",
               "userRequest": "@dojo/framework/widget-core/d",
               "loc": "2:0-50"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "type": "harmony import",
+              "userRequest": "./d",
+              "loc": "4:0-24"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -1969,15 +1969,6 @@
               "loc": "1:0-52"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-              "type": "harmony import",
-              "userRequest": "./handleDecorator",
-              "loc": "1:0-52"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
               "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
@@ -1991,6 +1982,15 @@
               "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
               "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+              "type": "harmony import",
+              "userRequest": "./handleDecorator",
+              "loc": "1:0-52"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
               "type": "harmony import",
               "userRequest": "./handleDecorator",
               "loc": "1:0-52"
@@ -2452,19 +2452,19 @@
               "loc": "1:0-33"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
               "type": "harmony import",
               "userRequest": "tslib",
               "loc": "1:0-33"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+              "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
               "type": "harmony import",
               "userRequest": "tslib",
               "loc": "1:0-33"
@@ -4230,15 +4230,6 @@
           "loc": "5:0-29"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "type": "harmony import",
-          "userRequest": "./d",
-          "loc": "4:0-24"
-        },
-        {
           "moduleId": "./src/menu-item/MenuItem.ts",
           "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu-item!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/src/menu-item/MenuItem.ts",
           "module": "./src/menu-item/MenuItem.ts",
@@ -4246,6 +4237,15 @@
           "type": "harmony import",
           "userRequest": "@dojo/framework/widget-core/d",
           "loc": "2:0-50"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "type": "harmony import",
+          "userRequest": "./d",
+          "loc": "4:0-24"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -4515,15 +4515,6 @@
           "loc": "1:0-52"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-          "type": "harmony import",
-          "userRequest": "./handleDecorator",
-          "loc": "1:0-52"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
           "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
@@ -4537,6 +4528,15 @@
           "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
           "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+          "type": "harmony import",
+          "userRequest": "./handleDecorator",
+          "loc": "1:0-52"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
           "type": "harmony import",
           "userRequest": "./handleDecorator",
           "loc": "1:0-52"
@@ -4998,19 +4998,19 @@
           "loc": "1:0-33"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
           "type": "harmony import",
           "userRequest": "tslib",
           "loc": "1:0-33"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+          "moduleIdentifier": "/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/bryan/Projects/dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
           "type": "harmony import",
           "userRequest": "tslib",
           "loc": "1:0-33"
