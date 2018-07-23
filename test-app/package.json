@@ -12,17 +12,12 @@
     "build-test": "dojo build --mode test"
   },
   "dependencies": {
-    "@dojo/cli": "2.0.0",
-    "@dojo/shim": "2.0.0",
-    "@dojo/core": "2.0.0",
-    "@dojo/i18n": "2.0.0",
-    "@dojo/widget-core": "2.0.0",
-    "tslib": "1.8.0",
+    "@dojo/framework": "^3.0.0-alpha.1",
+    "tslib": "~1.8.0",
     "typescript": "2.6.2"
   },
   "devDependencies": {
-    "@dojo/test-extras": "2.0.0",
     "shx": "0.2.2",
-    "intern": "4.1.5"
+    "intern": "4.2.2"
   }
 }

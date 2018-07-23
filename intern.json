@@ -1,14 +1,14 @@
 {
-  "suites": [
-    "./_build/tests/unit/all.js",
-    "./_build/tests/functional/all.js"
-  ],
-
-  "coverage": [
-    "./_build/src/**/*.js"
-  ],
-
-  "configs": {
-    "local": {}
-  }
+	"extends": "./node_modules/@dojo/scripts/intern/base.json",
+	"capabilities+": {
+		"name": "@dojo/cli-build-widget"
+	},
+	"suites": [
+		"./dist/dev/tests/unit/all.js",
+		"./dist/dev/tests/functional/all.js"
+	],
+	"coverage": [
+		"./dist/dev/src/**/*.js",
+		"!./dist/dev/src/template/**/*"
+	]
 }

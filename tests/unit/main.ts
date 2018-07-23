@@ -396,7 +396,7 @@ describe('command', () => {
 			ejectOptions.copy.files = ejectOptions.copy.files.filter((file: string) => !rcPattern.test(file));
 			assert.deepEqual(ejectOptions, {
 				copy: {
-					path: join(basePath, '_build/src'),
+					path: join(basePath, 'dist/dev/src'),
 					files: [
 						'./base.config.js',
 						'./dev.config.js',
