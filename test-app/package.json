@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "clean-dts": "shx rm -rf src/menu/menu.m.css.d.ts src/menu-item/menuItem.m.css.d.ts",
-    "install-build-widget": "npm install --no-save ../tarballs/dojo-webpack-contrib-3.0.0.tgz ../dist/dojo-cli-build-widget.tgz",
+    "install-build-widget": "npm install --no-save ../dist/dojo-cli-build-widget.tgz",
     "generate-fixtures": "shx rm -rf output & npm run clean-dts & dojo build && npm run clean-dts && dojo build --mode dev && npm run clean-dts && dojo build --mode test",
     "generate-unix-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/unix/",
     "generate-windows-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/windows/",
