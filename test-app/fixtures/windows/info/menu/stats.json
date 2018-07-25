@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "b1d790cff3d2b119c671",
-  "time": 8609,
+  "hash": "25429b1c11f2b3d5854d",
+  "time": 9860,
   "publicPath": "",
   "assetsByChunkName": {
     "menu": [
@@ -16,7 +16,7 @@
   "assets": [
     {
       "name": "menu-1.0.0.js",
-      "size": 55200,
+      "size": 55322,
       "chunks": [
         "menu"
       ],
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-1.0.0.js.map",
-      "size": 275436,
+      "size": 275759,
       "chunks": [
         "menu"
       ],
@@ -80,7 +80,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 195469,
+      "size": 195639,
       "names": [
         "menu"
       ],
@@ -90,7 +90,7 @@
         "menu-1.0.0.js.map",
         "menu-1.0.0.css.map"
       ],
-      "hash": "6bc5a4dfa19a710d3acf",
+      "hash": "6d3f3c266a38001e92f1",
       "parents": [],
       "modules": [
         {
@@ -151,22 +151,13 @@
             "menu"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-          "issuerId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "issuerName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
+          "issuerId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
+          "issuerName": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "../core/Evented",
-              "loc": "2:0-42"
-            },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
@@ -175,6 +166,15 @@
               "type": "harmony import",
               "userRequest": "../core/Evented",
               "loc": "4:0-42"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "../core/Evented",
+              "loc": "2:0-42"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
@@ -275,7 +275,7 @@
           "name": "./node_modules/@dojo/framework/has/has.mjs",
           "index": 7,
           "index2": 3,
-          "size": 6500,
+          "size": 6518,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -325,7 +325,7 @@
           ],
           "optimizationBailout": [],
           "depth": 5,
-          "source": "function isFeatureTestThenable(value) {\r\n    return value && value.then;\r\n}\r\n/**\r\n * A cache of results of feature tests\r\n */\r\nexport const testCache = {};\r\n/**\r\n * A cache of the un-resolved feature tests\r\n */\r\nexport const testFunctions = {};\r\n/**\r\n * A cache of unresolved thenables (probably promises)\r\n * @type {{}}\r\n */\r\nconst testThenables = {};\r\n/**\r\n * A reference to the global scope (`window` in a browser, `global` in NodeJS)\r\n */\r\nconst globalScope = (function () {\r\n    /* istanbul ignore else */\r\n    if (typeof window !== 'undefined') {\r\n        // Browsers\r\n        return window;\r\n    }\r\n    else if (typeof global !== 'undefined') {\r\n        // Node\r\n        return global;\r\n    }\r\n    else if (typeof self !== 'undefined') {\r\n        // Web workers\r\n        return self;\r\n    }\r\n    /* istanbul ignore next */\r\n    return {};\r\n})();\r\n/* Grab the staticFeatures if there are available */\r\nconst { staticFeatures } = globalScope.DojoHasEnvironment || {};\r\n/* Cleaning up the DojoHasEnviornment */\r\nif ('DojoHasEnvironment' in globalScope) {\r\n    delete globalScope.DojoHasEnvironment;\r\n}\r\n/**\r\n * Custom type guard to narrow the `staticFeatures` to either a map or a function that\r\n * returns a map.\r\n *\r\n * @param value The value to guard for\r\n */\r\nfunction isStaticFeatureFunction(value) {\r\n    return typeof value === 'function';\r\n}\r\n/**\r\n * The cache of asserted features that were available in the global scope when the\r\n * module loaded\r\n */\r\nconst staticCache = staticFeatures\r\n    ? isStaticFeatureFunction(staticFeatures) ? staticFeatures.apply(globalScope) : staticFeatures\r\n    : {}; /* Providing an empty cache, if none was in the environment\r\n\r\n/**\r\n* AMD plugin function.\r\n*\r\n* Conditional loads modules based on a has feature test value.\r\n*\r\n* @param resourceId Gives the resolved module id to load.\r\n* @param require The loader require function with respect to the module that contained the plugin resource in its\r\n*                dependency list.\r\n* @param load Callback to loader that consumes result of plugin demand.\r\n*/\r\nexport function load(resourceId, require, load, config) {\r\n    resourceId ? require([resourceId], load) : load();\r\n}\r\n/**\r\n * AMD plugin function.\r\n *\r\n * Resolves resourceId into a module id based on possibly-nested tenary expression that branches on has feature test\r\n * value(s).\r\n *\r\n * @param resourceId The id of the module\r\n * @param normalize Resolves a relative module id into an absolute module id\r\n */\r\nexport function normalize(resourceId, normalize) {\r\n    const tokens = resourceId.match(/[\\?:]|[^:\\?]*/g) || [];\r\n    let i = 0;\r\n    function get(skip) {\r\n        const term = tokens[i++];\r\n        if (term === ':') {\r\n            // empty string module name, resolves to null\r\n            return null;\r\n        }\r\n        else {\r\n            // postfixed with a ? means it is a feature to branch on, the term is the name of the feature\r\n            if (tokens[i++] === '?') {\r\n                if (!skip && has(term)) {\r\n                    // matched the feature, get the first value from the options\r\n                    return get();\r\n                }\r\n                else {\r\n                    // did not match, get the second value, passing over the first\r\n                    get(true);\r\n                    return get(skip);\r\n                }\r\n            }\r\n            // a module\r\n            return term;\r\n        }\r\n    }\r\n    const id = get();\r\n    return id && normalize(id);\r\n}\r\n/**\r\n * Check if a feature has already been registered\r\n *\r\n * @param feature the name of the feature\r\n */\r\nexport function exists(feature) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    return Boolean(normalizedFeature in staticCache || normalizedFeature in testCache || testFunctions[normalizedFeature]);\r\n}\r\n/**\r\n * Register a new test for a named feature.\r\n *\r\n * @example\r\n * has.add('dom-addeventlistener', !!document.addEventListener);\r\n *\r\n * @example\r\n * has.add('touch-events', function () {\r\n *    return 'ontouchstart' in document\r\n * });\r\n *\r\n * @param feature the name of the feature\r\n * @param value the value reported of the feature, or a function that will be executed once on first test\r\n * @param overwrite if an existing value should be overwritten. Defaults to false.\r\n */\r\nexport function add(feature, value, overwrite = false) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (exists(normalizedFeature) && !overwrite && !(normalizedFeature in staticCache)) {\r\n        throw new TypeError(`Feature \"${feature}\" exists and overwrite not true.`);\r\n    }\r\n    if (typeof value === 'function') {\r\n        testFunctions[normalizedFeature] = value;\r\n    }\r\n    else if (isFeatureTestThenable(value)) {\r\n        testThenables[feature] = value.then((resolvedValue) => {\r\n            testCache[feature] = resolvedValue;\r\n            delete testThenables[feature];\r\n        }, () => {\r\n            delete testThenables[feature];\r\n        });\r\n    }\r\n    else {\r\n        testCache[normalizedFeature] = value;\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n}\r\n/**\r\n * Return the current value of a named feature.\r\n *\r\n * @param feature The name (if a string) or identifier (if an integer) of the feature to test.\r\n */\r\nexport default function has(feature) {\r\n    let result;\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (normalizedFeature in staticCache) {\r\n        result = staticCache[normalizedFeature];\r\n    }\r\n    else if (testFunctions[normalizedFeature]) {\r\n        result = testCache[normalizedFeature] = testFunctions[normalizedFeature].call(null);\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n    else if (normalizedFeature in testCache) {\r\n        result = testCache[normalizedFeature];\r\n    }\r\n    else if (feature in testThenables) {\r\n        return false;\r\n    }\r\n    else {\r\n        throw new TypeError(`Attempt to detect unregistered has feature \"${feature}\"`);\r\n    }\r\n    return result;\r\n}\r\n/*\r\n * Out of the box feature tests\r\n */\r\n/* Environments */\r\n/* Used as a value to provide a debug only code path */\r\nadd('debug', true);\r\n/* Detects if the environment is \"browser like\" */\r\nadd('host-browser', typeof document !== 'undefined' && typeof location !== 'undefined');\r\n/* Detects if the environment appears to be NodeJS */\r\nadd('host-node', function () {\r\n    if (typeof process === 'object' && process.versions && process.versions.node) {\r\n        return process.versions.node;\r\n    }\r\n});\r\n//# sourceMappingURL=has.mjs.map"
+          "source": "function isFeatureTestThenable(value) {\r\n    return value && value.then;\r\n}\r\n/**\r\n * A cache of results of feature tests\r\n */\r\nexport const testCache = {};\r\n/**\r\n * A cache of the un-resolved feature tests\r\n */\r\nexport const testFunctions = {};\r\n/**\r\n * A cache of unresolved thenables (probably promises)\r\n * @type {{}}\r\n */\r\nconst testThenables = {};\r\n/**\r\n * A reference to the global scope (`window` in a browser, `global` in NodeJS)\r\n */\r\nconst globalScope = (function () {\r\n    /* istanbul ignore else */\r\n    if (typeof window !== 'undefined') {\r\n        // Browsers\r\n        return window;\r\n    }\r\n    else if (typeof global !== 'undefined') {\r\n        // Node\r\n        return global;\r\n    }\r\n    else if (typeof self !== 'undefined') {\r\n        // Web workers\r\n        return self;\r\n    }\r\n    /* istanbul ignore next */\r\n    return {};\r\n})();\r\n/* Grab the staticFeatures if there are available */\r\nconst { staticFeatures } = globalScope.DojoHasEnvironment || {};\r\n/* Cleaning up the DojoHasEnviornment */\r\nif ('DojoHasEnvironment' in globalScope) {\r\n    delete globalScope.DojoHasEnvironment;\r\n}\r\n/**\r\n * Custom type guard to narrow the `staticFeatures` to either a map or a function that\r\n * returns a map.\r\n *\r\n * @param value The value to guard for\r\n */\r\nfunction isStaticFeatureFunction(value) {\r\n    return typeof value === 'function';\r\n}\r\n/**\r\n * The cache of asserted features that were available in the global scope when the\r\n * module loaded\r\n */\r\nconst staticCache = staticFeatures\r\n    ? isStaticFeatureFunction(staticFeatures)\r\n        ? staticFeatures.apply(globalScope)\r\n        : staticFeatures\r\n    : {}; /* Providing an empty cache, if none was in the environment\r\n\r\n/**\r\n* AMD plugin function.\r\n*\r\n* Conditional loads modules based on a has feature test value.\r\n*\r\n* @param resourceId Gives the resolved module id to load.\r\n* @param require The loader require function with respect to the module that contained the plugin resource in its\r\n*                dependency list.\r\n* @param load Callback to loader that consumes result of plugin demand.\r\n*/\r\nexport function load(resourceId, require, load, config) {\r\n    resourceId ? require([resourceId], load) : load();\r\n}\r\n/**\r\n * AMD plugin function.\r\n *\r\n * Resolves resourceId into a module id based on possibly-nested tenary expression that branches on has feature test\r\n * value(s).\r\n *\r\n * @param resourceId The id of the module\r\n * @param normalize Resolves a relative module id into an absolute module id\r\n */\r\nexport function normalize(resourceId, normalize) {\r\n    const tokens = resourceId.match(/[\\?:]|[^:\\?]*/g) || [];\r\n    let i = 0;\r\n    function get(skip) {\r\n        const term = tokens[i++];\r\n        if (term === ':') {\r\n            // empty string module name, resolves to null\r\n            return null;\r\n        }\r\n        else {\r\n            // postfixed with a ? means it is a feature to branch on, the term is the name of the feature\r\n            if (tokens[i++] === '?') {\r\n                if (!skip && has(term)) {\r\n                    // matched the feature, get the first value from the options\r\n                    return get();\r\n                }\r\n                else {\r\n                    // did not match, get the second value, passing over the first\r\n                    get(true);\r\n                    return get(skip);\r\n                }\r\n            }\r\n            // a module\r\n            return term;\r\n        }\r\n    }\r\n    const id = get();\r\n    return id && normalize(id);\r\n}\r\n/**\r\n * Check if a feature has already been registered\r\n *\r\n * @param feature the name of the feature\r\n */\r\nexport function exists(feature) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    return Boolean(normalizedFeature in staticCache || normalizedFeature in testCache || testFunctions[normalizedFeature]);\r\n}\r\n/**\r\n * Register a new test for a named feature.\r\n *\r\n * @example\r\n * has.add('dom-addeventlistener', !!document.addEventListener);\r\n *\r\n * @example\r\n * has.add('touch-events', function () {\r\n *    return 'ontouchstart' in document\r\n * });\r\n *\r\n * @param feature the name of the feature\r\n * @param value the value reported of the feature, or a function that will be executed once on first test\r\n * @param overwrite if an existing value should be overwritten. Defaults to false.\r\n */\r\nexport function add(feature, value, overwrite = false) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (exists(normalizedFeature) && !overwrite && !(normalizedFeature in staticCache)) {\r\n        throw new TypeError(`Feature \"${feature}\" exists and overwrite not true.`);\r\n    }\r\n    if (typeof value === 'function') {\r\n        testFunctions[normalizedFeature] = value;\r\n    }\r\n    else if (isFeatureTestThenable(value)) {\r\n        testThenables[feature] = value.then((resolvedValue) => {\r\n            testCache[feature] = resolvedValue;\r\n            delete testThenables[feature];\r\n        }, () => {\r\n            delete testThenables[feature];\r\n        });\r\n    }\r\n    else {\r\n        testCache[normalizedFeature] = value;\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n}\r\n/**\r\n * Return the current value of a named feature.\r\n *\r\n * @param feature The name (if a string) or identifier (if an integer) of the feature to test.\r\n */\r\nexport default function has(feature) {\r\n    let result;\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (normalizedFeature in staticCache) {\r\n        result = staticCache[normalizedFeature];\r\n    }\r\n    else if (testFunctions[normalizedFeature]) {\r\n        result = testCache[normalizedFeature] = testFunctions[normalizedFeature].call(null);\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n    else if (normalizedFeature in testCache) {\r\n        result = testCache[normalizedFeature];\r\n    }\r\n    else if (feature in testThenables) {\r\n        return false;\r\n    }\r\n    else {\r\n        throw new TypeError(`Attempt to detect unregistered has feature \"${feature}\"`);\r\n    }\r\n    return result;\r\n}\r\n/*\r\n * Out of the box feature tests\r\n */\r\n/* Environments */\r\n/* Used as a value to provide a debug only code path */\r\nadd('debug', true);\r\n/* Detects if the environment is \"browser like\" */\r\nadd('host-browser', typeof document !== 'undefined' && typeof location !== 'undefined');\r\n/* Detects if the environment appears to be NodeJS */\r\nadd('host-node', function () {\r\n    if (typeof process === 'object' && process.versions && process.versions.node) {\r\n        return process.versions.node;\r\n    }\r\n});\r\n//# sourceMappingURL=has.mjs.map"
         },
         {
           "id": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -359,15 +359,6 @@
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "../shim/Map",
-              "loc": "1:0-34"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -375,6 +366,15 @@
               "type": "harmony import",
               "userRequest": "../shim/Map",
               "loc": "2:0-30"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "../shim/Map",
+              "loc": "1:0-34"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
@@ -537,15 +537,6 @@
               "loc": "1:0-18"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "type": "harmony import",
-              "userRequest": "./Symbol",
-              "loc": "3:0-18"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
               "module": "./node_modules/@dojo/framework/shim/object.mjs",
@@ -553,6 +544,15 @@
               "type": "harmony import",
               "userRequest": "./Symbol",
               "loc": "3:0-36"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "type": "harmony import",
+              "userRequest": "./Symbol",
+              "loc": "3:0-18"
             }
           ],
           "usedExports": [
@@ -599,15 +599,6 @@
               "loc": "2:0-38"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\inject.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-              "type": "harmony import",
-              "userRequest": "../../shim/WeakMap",
-              "loc": "1:0-41"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\vdom.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -615,6 +606,15 @@
               "type": "harmony import",
               "userRequest": "../shim/WeakMap",
               "loc": "5:0-38"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\inject.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+              "type": "harmony import",
+              "userRequest": "../../shim/WeakMap",
+              "loc": "1:0-41"
             }
           ],
           "usedExports": [
@@ -753,15 +753,6 @@
               "loc": "2:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/number.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\number.mjs",
-              "module": "./node_modules/@dojo/framework/shim/number.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/number.mjs",
-              "type": "harmony import",
-              "userRequest": "./global",
-              "loc": "1:0-30"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\vdom.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -769,6 +760,15 @@
               "type": "harmony import",
               "userRequest": "../shim/global",
               "loc": "1:0-36"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/number.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\number.mjs",
+              "module": "./node_modules/@dojo/framework/shim/number.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/number.mjs",
+              "type": "harmony import",
+              "userRequest": "./global",
+              "loc": "1:0-30"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/support/has.mjs",
@@ -780,19 +780,19 @@
               "loc": "2:0-31"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
+              "module": "./node_modules/@dojo/framework/shim/object.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/object.mjs",
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
-              "module": "./node_modules/@dojo/framework/shim/object.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/object.mjs",
+              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "1:0-30"
@@ -1008,7 +1008,7 @@
           "name": "./node_modules/@dojo/framework/shim/string.mjs",
           "index": 17,
           "index2": 9,
-          "size": 12714,
+          "size": 12716,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -1056,7 +1056,7 @@
           ],
           "optimizationBailout": [],
           "depth": 5,
-          "source": "import global from './global';\r\nimport has from './support/has';\r\nimport { wrapNative } from './support/util';\r\n/**\r\n * The minimum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MIN = 0xd800;\r\n/**\r\n * The maximum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MAX = 0xdbff;\r\n/**\r\n * The minimum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MIN = 0xdc00;\r\n/**\r\n * The maximum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MAX = 0xdfff;\r\n/* ES6 static methods */\r\n/**\r\n * Return the String value whose elements are, in order, the elements in the List elements.\r\n * If length is 0, the empty string is returned.\r\n * @param codePoints The code points to generate the string\r\n */\r\nexport let fromCodePoint;\r\n/**\r\n * `raw` is intended for use as a tag function of a Tagged Template String. When called\r\n * as such the first argument will be a well formed template call site object and the rest\r\n * parameter will contain the substitution values.\r\n * @param template A well-formed template string call site representation.\r\n * @param substitutions A set of substitution values.\r\n */\r\nexport let raw;\r\n/* ES6 instance methods */\r\n/**\r\n * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point\r\n * value of the UTF-16 encoded code point starting at the string element at position pos in\r\n * the String resulting from converting this object to a String.\r\n * If there is no element at that position, the result is undefined.\r\n * If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.\r\n */\r\nexport let codePointAt;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * endPosition – length(this). Otherwise returns false.\r\n */\r\nexport let endsWith;\r\n/**\r\n * Returns true if searchString appears as a substring of the result of converting this\r\n * object to a String, at one or more positions that are\r\n * greater than or equal to position; otherwise, returns false.\r\n * @param target The target string\r\n * @param searchString search string\r\n * @param position If position is undefined, 0 is assumed, so as to search all of the String.\r\n */\r\nexport let includes;\r\n/**\r\n * Returns the String value result of normalizing the string into the normalization form\r\n * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.\r\n * @param target The target string\r\n * @param form Applicable values: \"NFC\", \"NFD\", \"NFKC\", or \"NFKD\", If not specified default\r\n * is \"NFC\"\r\n */\r\nexport let normalize;\r\n/**\r\n * Returns a String value that is made from count copies appended together. If count is 0,\r\n * T is the empty String is returned.\r\n * @param count number of copies to append\r\n */\r\nexport let repeat;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * position. Otherwise returns false.\r\n */\r\nexport let startsWith;\r\n/* ES7 instance methods */\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the end (right) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padEnd;\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the start (left) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padStart;\r\nif (true && true) {\r\n    fromCodePoint = global.String.fromCodePoint;\r\n    raw = global.String.raw;\r\n    codePointAt = wrapNative(global.String.prototype.codePointAt);\r\n    endsWith = wrapNative(global.String.prototype.endsWith);\r\n    includes = wrapNative(global.String.prototype.includes);\r\n    normalize = wrapNative(global.String.prototype.normalize);\r\n    repeat = wrapNative(global.String.prototype.repeat);\r\n    startsWith = wrapNative(global.String.prototype.startsWith);\r\n}\r\nelse {\r\n    /**\r\n     * Validates that text is defined, and normalizes position (based on the given default if the input is NaN).\r\n     * Used by startsWith, includes, and endsWith.\r\n     *\r\n     * @return Normalized position.\r\n     */\r\n    const normalizeSubstringArgs = function (name, text, search, position, isEnd = false) {\r\n        if (text == null) {\r\n            throw new TypeError('string.' + name + ' requires a valid string to search against.');\r\n        }\r\n        const length = text.length;\r\n        position = position !== position ? (isEnd ? length : 0) : position;\r\n        return [text, String(search), Math.min(Math.max(position, 0), length)];\r\n    };\r\n    fromCodePoint = function fromCodePoint(...codePoints) {\r\n        // Adapted from https://github.com/mathiasbynens/String.fromCodePoint\r\n        const length = arguments.length;\r\n        if (!length) {\r\n            return '';\r\n        }\r\n        const fromCharCode = String.fromCharCode;\r\n        const MAX_SIZE = 0x4000;\r\n        let codeUnits = [];\r\n        let index = -1;\r\n        let result = '';\r\n        while (++index < length) {\r\n            let codePoint = Number(arguments[index]);\r\n            // Code points must be finite integers within the valid range\r\n            let isValid = isFinite(codePoint) && Math.floor(codePoint) === codePoint && codePoint >= 0 && codePoint <= 0x10ffff;\r\n            if (!isValid) {\r\n                throw RangeError('string.fromCodePoint: Invalid code point ' + codePoint);\r\n            }\r\n            if (codePoint <= 0xffff) {\r\n                // BMP code point\r\n                codeUnits.push(codePoint);\r\n            }\r\n            else {\r\n                // Astral code point; split in surrogate halves\r\n                // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n                codePoint -= 0x10000;\r\n                let highSurrogate = (codePoint >> 10) + HIGH_SURROGATE_MIN;\r\n                let lowSurrogate = codePoint % 0x400 + LOW_SURROGATE_MIN;\r\n                codeUnits.push(highSurrogate, lowSurrogate);\r\n            }\r\n            if (index + 1 === length || codeUnits.length > MAX_SIZE) {\r\n                result += fromCharCode.apply(null, codeUnits);\r\n                codeUnits.length = 0;\r\n            }\r\n        }\r\n        return result;\r\n    };\r\n    raw = function raw(callSite, ...substitutions) {\r\n        let rawStrings = callSite.raw;\r\n        let result = '';\r\n        let numSubstitutions = substitutions.length;\r\n        if (callSite == null || callSite.raw == null) {\r\n            throw new TypeError('string.raw requires a valid callSite object with a raw value');\r\n        }\r\n        for (let i = 0, length = rawStrings.length; i < length; i++) {\r\n            result += rawStrings[i] + (i < numSubstitutions && i < length - 1 ? substitutions[i] : '');\r\n        }\r\n        return result;\r\n    };\r\n    codePointAt = function codePointAt(text, position = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.codePointAt\r\n        if (text == null) {\r\n            throw new TypeError('string.codePointAt requries a valid string.');\r\n        }\r\n        const length = text.length;\r\n        if (position !== position) {\r\n            position = 0;\r\n        }\r\n        if (position < 0 || position >= length) {\r\n            return undefined;\r\n        }\r\n        // Get the first code unit\r\n        const first = text.charCodeAt(position);\r\n        if (first >= HIGH_SURROGATE_MIN && first <= HIGH_SURROGATE_MAX && length > position + 1) {\r\n            // Start of a surrogate pair (high surrogate and there is a next code unit); check for low surrogate\r\n            // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n            const second = text.charCodeAt(position + 1);\r\n            if (second >= LOW_SURROGATE_MIN && second <= LOW_SURROGATE_MAX) {\r\n                return (first - HIGH_SURROGATE_MIN) * 0x400 + second - LOW_SURROGATE_MIN + 0x10000;\r\n            }\r\n        }\r\n        return first;\r\n    };\r\n    endsWith = function endsWith(text, search, endPosition) {\r\n        if (endPosition == null) {\r\n            endPosition = text.length;\r\n        }\r\n        [text, search, endPosition] = normalizeSubstringArgs('endsWith', text, search, endPosition, true);\r\n        const start = endPosition - search.length;\r\n        if (start < 0) {\r\n            return false;\r\n        }\r\n        return text.slice(start, endPosition) === search;\r\n    };\r\n    includes = function includes(text, search, position = 0) {\r\n        [text, search, position] = normalizeSubstringArgs('includes', text, search, position);\r\n        return text.indexOf(search, position) !== -1;\r\n    };\r\n    repeat = function repeat(text, count = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.repeat\r\n        if (text == null) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (count !== count) {\r\n            count = 0;\r\n        }\r\n        if (count < 0 || count === Infinity) {\r\n            throw new RangeError('string.repeat requires a non-negative finite count.');\r\n        }\r\n        let result = '';\r\n        while (count) {\r\n            if (count % 2) {\r\n                result += text;\r\n            }\r\n            if (count > 1) {\r\n                text += text;\r\n            }\r\n            count >>= 1;\r\n        }\r\n        return result;\r\n    };\r\n    startsWith = function startsWith(text, search, position = 0) {\r\n        search = String(search);\r\n        [text, search, position] = normalizeSubstringArgs('startsWith', text, search, position);\r\n        const end = position + search.length;\r\n        if (end > text.length) {\r\n            return false;\r\n        }\r\n        return text.slice(position, end) === search;\r\n    };\r\n}\r\nif (true) {\r\n    padEnd = wrapNative(global.String.prototype.padEnd);\r\n    padStart = wrapNative(global.String.prototype.padStart);\r\n}\r\nelse {\r\n    padEnd = function padEnd(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padEnd requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText +=\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length);\r\n        }\r\n        return strText;\r\n    };\r\n    padStart = function padStart(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padStart requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText =\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length) +\r\n                    strText;\r\n        }\r\n        return strText;\r\n    };\r\n}\r\n//# sourceMappingURL=string.mjs.map"
+          "source": "import global from './global';\r\nimport has from './support/has';\r\nimport { wrapNative } from './support/util';\r\n/**\r\n * The minimum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MIN = 0xd800;\r\n/**\r\n * The maximum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MAX = 0xdbff;\r\n/**\r\n * The minimum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MIN = 0xdc00;\r\n/**\r\n * The maximum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MAX = 0xdfff;\r\n/* ES6 static methods */\r\n/**\r\n * Return the String value whose elements are, in order, the elements in the List elements.\r\n * If length is 0, the empty string is returned.\r\n * @param codePoints The code points to generate the string\r\n */\r\nexport let fromCodePoint;\r\n/**\r\n * `raw` is intended for use as a tag function of a Tagged Template String. When called\r\n * as such the first argument will be a well formed template call site object and the rest\r\n * parameter will contain the substitution values.\r\n * @param template A well-formed template string call site representation.\r\n * @param substitutions A set of substitution values.\r\n */\r\nexport let raw;\r\n/* ES6 instance methods */\r\n/**\r\n * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point\r\n * value of the UTF-16 encoded code point starting at the string element at position pos in\r\n * the String resulting from converting this object to a String.\r\n * If there is no element at that position, the result is undefined.\r\n * If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.\r\n */\r\nexport let codePointAt;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * endPosition – length(this). Otherwise returns false.\r\n */\r\nexport let endsWith;\r\n/**\r\n * Returns true if searchString appears as a substring of the result of converting this\r\n * object to a String, at one or more positions that are\r\n * greater than or equal to position; otherwise, returns false.\r\n * @param target The target string\r\n * @param searchString search string\r\n * @param position If position is undefined, 0 is assumed, so as to search all of the String.\r\n */\r\nexport let includes;\r\n/**\r\n * Returns the String value result of normalizing the string into the normalization form\r\n * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.\r\n * @param target The target string\r\n * @param form Applicable values: \"NFC\", \"NFD\", \"NFKC\", or \"NFKD\", If not specified default\r\n * is \"NFC\"\r\n */\r\nexport let normalize;\r\n/**\r\n * Returns a String value that is made from count copies appended together. If count is 0,\r\n * T is the empty String is returned.\r\n * @param count number of copies to append\r\n */\r\nexport let repeat;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * position. Otherwise returns false.\r\n */\r\nexport let startsWith;\r\n/* ES7 instance methods */\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the end (right) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padEnd;\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the start (left) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padStart;\r\nif (true && true) {\r\n    fromCodePoint = global.String.fromCodePoint;\r\n    raw = global.String.raw;\r\n    codePointAt = wrapNative(global.String.prototype.codePointAt);\r\n    endsWith = wrapNative(global.String.prototype.endsWith);\r\n    includes = wrapNative(global.String.prototype.includes);\r\n    normalize = wrapNative(global.String.prototype.normalize);\r\n    repeat = wrapNative(global.String.prototype.repeat);\r\n    startsWith = wrapNative(global.String.prototype.startsWith);\r\n}\r\nelse {\r\n    /**\r\n     * Validates that text is defined, and normalizes position (based on the given default if the input is NaN).\r\n     * Used by startsWith, includes, and endsWith.\r\n     *\r\n     * @return Normalized position.\r\n     */\r\n    const normalizeSubstringArgs = function (name, text, search, position, isEnd = false) {\r\n        if (text == null) {\r\n            throw new TypeError('string.' + name + ' requires a valid string to search against.');\r\n        }\r\n        const length = text.length;\r\n        position = position !== position ? (isEnd ? length : 0) : position;\r\n        return [text, String(search), Math.min(Math.max(position, 0), length)];\r\n    };\r\n    fromCodePoint = function fromCodePoint(...codePoints) {\r\n        // Adapted from https://github.com/mathiasbynens/String.fromCodePoint\r\n        const length = arguments.length;\r\n        if (!length) {\r\n            return '';\r\n        }\r\n        const fromCharCode = String.fromCharCode;\r\n        const MAX_SIZE = 0x4000;\r\n        let codeUnits = [];\r\n        let index = -1;\r\n        let result = '';\r\n        while (++index < length) {\r\n            let codePoint = Number(arguments[index]);\r\n            // Code points must be finite integers within the valid range\r\n            let isValid = isFinite(codePoint) && Math.floor(codePoint) === codePoint && codePoint >= 0 && codePoint <= 0x10ffff;\r\n            if (!isValid) {\r\n                throw RangeError('string.fromCodePoint: Invalid code point ' + codePoint);\r\n            }\r\n            if (codePoint <= 0xffff) {\r\n                // BMP code point\r\n                codeUnits.push(codePoint);\r\n            }\r\n            else {\r\n                // Astral code point; split in surrogate halves\r\n                // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n                codePoint -= 0x10000;\r\n                let highSurrogate = (codePoint >> 10) + HIGH_SURROGATE_MIN;\r\n                let lowSurrogate = (codePoint % 0x400) + LOW_SURROGATE_MIN;\r\n                codeUnits.push(highSurrogate, lowSurrogate);\r\n            }\r\n            if (index + 1 === length || codeUnits.length > MAX_SIZE) {\r\n                result += fromCharCode.apply(null, codeUnits);\r\n                codeUnits.length = 0;\r\n            }\r\n        }\r\n        return result;\r\n    };\r\n    raw = function raw(callSite, ...substitutions) {\r\n        let rawStrings = callSite.raw;\r\n        let result = '';\r\n        let numSubstitutions = substitutions.length;\r\n        if (callSite == null || callSite.raw == null) {\r\n            throw new TypeError('string.raw requires a valid callSite object with a raw value');\r\n        }\r\n        for (let i = 0, length = rawStrings.length; i < length; i++) {\r\n            result += rawStrings[i] + (i < numSubstitutions && i < length - 1 ? substitutions[i] : '');\r\n        }\r\n        return result;\r\n    };\r\n    codePointAt = function codePointAt(text, position = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.codePointAt\r\n        if (text == null) {\r\n            throw new TypeError('string.codePointAt requries a valid string.');\r\n        }\r\n        const length = text.length;\r\n        if (position !== position) {\r\n            position = 0;\r\n        }\r\n        if (position < 0 || position >= length) {\r\n            return undefined;\r\n        }\r\n        // Get the first code unit\r\n        const first = text.charCodeAt(position);\r\n        if (first >= HIGH_SURROGATE_MIN && first <= HIGH_SURROGATE_MAX && length > position + 1) {\r\n            // Start of a surrogate pair (high surrogate and there is a next code unit); check for low surrogate\r\n            // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n            const second = text.charCodeAt(position + 1);\r\n            if (second >= LOW_SURROGATE_MIN && second <= LOW_SURROGATE_MAX) {\r\n                return (first - HIGH_SURROGATE_MIN) * 0x400 + second - LOW_SURROGATE_MIN + 0x10000;\r\n            }\r\n        }\r\n        return first;\r\n    };\r\n    endsWith = function endsWith(text, search, endPosition) {\r\n        if (endPosition == null) {\r\n            endPosition = text.length;\r\n        }\r\n        [text, search, endPosition] = normalizeSubstringArgs('endsWith', text, search, endPosition, true);\r\n        const start = endPosition - search.length;\r\n        if (start < 0) {\r\n            return false;\r\n        }\r\n        return text.slice(start, endPosition) === search;\r\n    };\r\n    includes = function includes(text, search, position = 0) {\r\n        [text, search, position] = normalizeSubstringArgs('includes', text, search, position);\r\n        return text.indexOf(search, position) !== -1;\r\n    };\r\n    repeat = function repeat(text, count = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.repeat\r\n        if (text == null) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (count !== count) {\r\n            count = 0;\r\n        }\r\n        if (count < 0 || count === Infinity) {\r\n            throw new RangeError('string.repeat requires a non-negative finite count.');\r\n        }\r\n        let result = '';\r\n        while (count) {\r\n            if (count % 2) {\r\n                result += text;\r\n            }\r\n            if (count > 1) {\r\n                text += text;\r\n            }\r\n            count >>= 1;\r\n        }\r\n        return result;\r\n    };\r\n    startsWith = function startsWith(text, search, position = 0) {\r\n        search = String(search);\r\n        [text, search, position] = normalizeSubstringArgs('startsWith', text, search, position);\r\n        const end = position + search.length;\r\n        if (end > text.length) {\r\n            return false;\r\n        }\r\n        return text.slice(position, end) === search;\r\n    };\r\n}\r\nif (true) {\r\n    padEnd = wrapNative(global.String.prototype.padEnd);\r\n    padStart = wrapNative(global.String.prototype.padStart);\r\n}\r\nelse {\r\n    padEnd = function padEnd(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padEnd requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText +=\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length);\r\n        }\r\n        return strText;\r\n    };\r\n    padStart = function padStart(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padStart requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText =\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length) +\r\n                    strText;\r\n        }\r\n        return strText;\r\n    };\r\n}\r\n//# sourceMappingURL=string.mjs.map"
         },
         {
           "id": "./node_modules/@dojo/framework/shim/support/has.mjs",
@@ -1064,7 +1064,7 @@
           "name": "./node_modules/@dojo/framework/shim/support/has.mjs",
           "index": 6,
           "index2": 5,
-          "size": 6316,
+          "size": 6466,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -1117,15 +1117,6 @@
               "loc": "1:0-32"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "type": "harmony import",
-              "userRequest": "./support/has",
-              "loc": "4:0-32"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
               "module": "./node_modules/@dojo/framework/shim/object.mjs",
@@ -1133,6 +1124,15 @@
               "type": "harmony import",
               "userRequest": "./support/has",
               "loc": "2:0-32"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "type": "harmony import",
+              "userRequest": "./support/has",
+              "loc": "4:0-32"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
@@ -1165,7 +1165,7 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "import has, { add } from '../../has/has';\r\nimport global from '../global';\r\nexport default has;\r\nexport * from '../../has/has';\r\n/* ECMAScript 6 and 7 Features */\r\n/* Array */\r\nadd('es6-array', () => {\r\n    return (['from', 'of'].every((key) => key in global.Array) &&\r\n        ['findIndex', 'find', 'copyWithin'].every((key) => key in global.Array.prototype));\r\n}, true);\r\nadd('es6-array-fill', () => {\r\n    if ('fill' in global.Array.prototype) {\r\n        /* Some versions of Safari do not properly implement this */\r\n        return [1].fill(9, Number.POSITIVE_INFINITY)[0] === 1;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es7-array', () => 'includes' in global.Array.prototype, true);\r\n/* Map */\r\nadd('es6-map', () => {\r\n    if (typeof global.Map === 'function') {\r\n        /*\r\n    IE11 and older versions of Safari are missing critical ES6 Map functionality\r\n    We wrap this in a try/catch because sometimes the Map constructor exists, but does not\r\n    take arguments (iOS 8.4)\r\n     */\r\n        try {\r\n            const map = new global.Map([[0, 1]]);\r\n            return map.has(0) &&\r\n                typeof map.keys === 'function' &&\r\n                true &&\r\n                typeof map.values === 'function' &&\r\n                typeof map.entries === 'function';\r\n        }\r\n        catch (e) {\r\n            /* istanbul ignore next: not testing on iOS at the moment */\r\n            return false;\r\n        }\r\n    }\r\n    return false;\r\n}, true);\r\n/* Math */\r\nadd('es6-math', () => {\r\n    return [\r\n        'clz32',\r\n        'sign',\r\n        'log10',\r\n        'log2',\r\n        'log1p',\r\n        'expm1',\r\n        'cosh',\r\n        'sinh',\r\n        'tanh',\r\n        'acosh',\r\n        'asinh',\r\n        'atanh',\r\n        'trunc',\r\n        'fround',\r\n        'cbrt',\r\n        'hypot'\r\n    ].every((name) => typeof global.Math[name] === 'function');\r\n}, true);\r\nadd('es6-math-imul', () => {\r\n    if ('imul' in global.Math) {\r\n        /* Some versions of Safari on ios do not properly implement this */\r\n        return Math.imul(0xffffffff, 5) === -5;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Object */\r\nadd('es6-object', () => {\r\n    return true &&\r\n        ['assign', 'is', 'getOwnPropertySymbols', 'setPrototypeOf'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\nadd('es2017-object', () => {\r\n    return ['values', 'entries', 'getOwnPropertyDescriptors'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\n/* Observable */\r\nadd('es-observable', () => typeof global.Observable !== 'undefined', true);\r\n/* Promise */\r\nadd('es6-promise', () => typeof global.Promise !== 'undefined' && true, true);\r\n/* Set */\r\nadd('es6-set', () => {\r\n    if (typeof global.Set === 'function') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Set functionality */\r\n        const set = new global.Set([1]);\r\n        return set.has(1) && 'keys' in set && typeof set.keys === 'function' && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* String */\r\nadd('es6-string', () => {\r\n    return ([\r\n        /* static methods */\r\n        'fromCodePoint'\r\n    ].every((key) => typeof global.String[key] === 'function') &&\r\n        [\r\n            /* instance methods */\r\n            'codePointAt',\r\n            'normalize',\r\n            'repeat',\r\n            'startsWith',\r\n            'endsWith',\r\n            'includes'\r\n        ].every((key) => typeof global.String.prototype[key] === 'function'));\r\n}, true);\r\nadd('es6-string-raw', () => {\r\n    function getCallSite(callSite, ...substitutions) {\r\n        const result = [...callSite];\r\n        result.raw = callSite.raw;\r\n        return result;\r\n    }\r\n    if ('raw' in global.String) {\r\n        let b = 1;\r\n        let callSite = getCallSite `a\\n${b}`;\r\n        callSite.raw = ['a\\\\n'];\r\n        const supportsTrunc = global.String.raw(callSite, 42) === 'a:\\\\n';\r\n        return supportsTrunc;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es2017-string', () => {\r\n    return ['padStart', 'padEnd'].every((key) => typeof global.String.prototype[key] === 'function');\r\n}, true);\r\n/* Symbol */\r\nadd('es6-symbol', () => typeof global.Symbol !== 'undefined' && typeof Symbol() === 'symbol', true);\r\n/* WeakMap */\r\nadd('es6-weakmap', () => {\r\n    if (typeof global.WeakMap !== 'undefined') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Map functionality */\r\n        const key1 = {};\r\n        const key2 = {};\r\n        const map = new global.WeakMap([[key1, 1]]);\r\n        Object.freeze(key1);\r\n        return map.get(key1) === 1 && map.set(key2, 2) === map && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Miscellaneous features */\r\nadd('microtasks', () => true || false || true, true);\r\nadd('postmessage', () => {\r\n    // If window is undefined, and we have postMessage, it probably means we're in a web worker. Web workers have\r\n    // post message but it doesn't work how we expect it to, so it's best just to pretend it doesn't exist.\r\n    return typeof global.window !== 'undefined' && typeof global.postMessage === 'function';\r\n}, true);\r\nadd('raf', () => typeof global.requestAnimationFrame === 'function', true);\r\nadd('setimmediate', () => typeof global.setImmediate !== 'undefined', true);\r\n/* DOM Features */\r\nadd('dom-mutationobserver', () => {\r\n    if (true && Boolean(global.MutationObserver || global.WebKitMutationObserver)) {\r\n        // IE11 has an unreliable MutationObserver implementation where setProperty() does not\r\n        // generate a mutation event, observers can crash, and the queue does not drain\r\n        // reliably. The following feature test was adapted from\r\n        // https://gist.github.com/t10ko/4aceb8c71681fdb275e33efe5e576b14\r\n        const example = document.createElement('div');\r\n        /* tslint:disable-next-line:variable-name */\r\n        const HostMutationObserver = global.MutationObserver || global.WebKitMutationObserver;\r\n        const observer = new HostMutationObserver(function () { });\r\n        observer.observe(example, { attributes: true });\r\n        example.style.setProperty('display', 'block');\r\n        return Boolean(observer.takeRecords().length);\r\n    }\r\n    return false;\r\n}, true);\r\nadd('dom-webanimation', () => true && global.Animation !== undefined && global.KeyframeEffect !== undefined, true);\r\n//# sourceMappingURL=has.mjs.map"
+          "source": "import has, { add } from '../../has/has';\r\nimport global from '../global';\r\nexport default has;\r\nexport * from '../../has/has';\r\n/* ECMAScript 6 and 7 Features */\r\n/* Array */\r\nadd('es6-array', () => {\r\n    return (['from', 'of'].every((key) => key in global.Array) &&\r\n        ['findIndex', 'find', 'copyWithin'].every((key) => key in global.Array.prototype));\r\n}, true);\r\nadd('es6-array-fill', () => {\r\n    if ('fill' in global.Array.prototype) {\r\n        /* Some versions of Safari do not properly implement this */\r\n        return [1].fill(9, Number.POSITIVE_INFINITY)[0] === 1;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es7-array', () => 'includes' in global.Array.prototype, true);\r\n/* Map */\r\nadd('es6-map', () => {\r\n    if (typeof global.Map === 'function') {\r\n        /*\r\n    IE11 and older versions of Safari are missing critical ES6 Map functionality\r\n    We wrap this in a try/catch because sometimes the Map constructor exists, but does not\r\n    take arguments (iOS 8.4)\r\n     */\r\n        try {\r\n            const map = new global.Map([[0, 1]]);\r\n            return map.has(0) &&\r\n                typeof map.keys === 'function' &&\r\n                true &&\r\n                typeof map.values === 'function' &&\r\n                typeof map.entries === 'function';\r\n        }\r\n        catch (e) {\r\n            /* istanbul ignore next: not testing on iOS at the moment */\r\n            return false;\r\n        }\r\n    }\r\n    return false;\r\n}, true);\r\n/* Math */\r\nadd('es6-math', () => {\r\n    return [\r\n        'clz32',\r\n        'sign',\r\n        'log10',\r\n        'log2',\r\n        'log1p',\r\n        'expm1',\r\n        'cosh',\r\n        'sinh',\r\n        'tanh',\r\n        'acosh',\r\n        'asinh',\r\n        'atanh',\r\n        'trunc',\r\n        'fround',\r\n        'cbrt',\r\n        'hypot'\r\n    ].every((name) => typeof global.Math[name] === 'function');\r\n}, true);\r\nadd('es6-math-imul', () => {\r\n    if ('imul' in global.Math) {\r\n        /* Some versions of Safari on ios do not properly implement this */\r\n        return Math.imul(0xffffffff, 5) === -5;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Object */\r\nadd('es6-object', () => {\r\n    return true &&\r\n        ['assign', 'is', 'getOwnPropertySymbols', 'setPrototypeOf'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\nadd('es2017-object', () => {\r\n    return ['values', 'entries', 'getOwnPropertyDescriptors'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\n/* Observable */\r\nadd('es-observable', () => typeof global.Observable !== 'undefined', true);\r\n/* Promise */\r\nadd('es6-promise', () => typeof global.Promise !== 'undefined' && true, true);\r\n/* Set */\r\nadd('es6-set', () => {\r\n    if (typeof global.Set === 'function') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Set functionality */\r\n        const set = new global.Set([1]);\r\n        return set.has(1) && 'keys' in set && typeof set.keys === 'function' && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* String */\r\nadd('es6-string', () => {\r\n    return ([\r\n        /* static methods */\r\n        'fromCodePoint'\r\n    ].every((key) => typeof global.String[key] === 'function') &&\r\n        [\r\n            /* instance methods */\r\n            'codePointAt',\r\n            'normalize',\r\n            'repeat',\r\n            'startsWith',\r\n            'endsWith',\r\n            'includes'\r\n        ].every((key) => typeof global.String.prototype[key] === 'function'));\r\n}, true);\r\nadd('es6-string-raw', () => {\r\n    function getCallSite(callSite, ...substitutions) {\r\n        const result = [...callSite];\r\n        result.raw = callSite.raw;\r\n        return result;\r\n    }\r\n    if ('raw' in global.String) {\r\n        let b = 1;\r\n        let callSite = getCallSite `a\\n${b}`;\r\n        callSite.raw = ['a\\\\n'];\r\n        const supportsTrunc = global.String.raw(callSite, 42) === 'a:\\\\n';\r\n        return supportsTrunc;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es2017-string', () => {\r\n    return ['padStart', 'padEnd'].every((key) => typeof global.String.prototype[key] === 'function');\r\n}, true);\r\n/* Symbol */\r\nadd('es6-symbol', () => typeof global.Symbol !== 'undefined' && typeof Symbol() === 'symbol', true);\r\n/* WeakMap */\r\nadd('es6-weakmap', () => {\r\n    if (typeof global.WeakMap !== 'undefined') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Map functionality */\r\n        const key1 = {};\r\n        const key2 = {};\r\n        const map = new global.WeakMap([[key1, 1]]);\r\n        Object.freeze(key1);\r\n        return map.get(key1) === 1 && map.set(key2, 2) === map && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Miscellaneous features */\r\nadd('microtasks', () => true || false || true, true);\r\nadd('postmessage', () => {\r\n    // If window is undefined, and we have postMessage, it probably means we're in a web worker. Web workers have\r\n    // post message but it doesn't work how we expect it to, so it's best just to pretend it doesn't exist.\r\n    return typeof global.window !== 'undefined' && typeof global.postMessage === 'function';\r\n}, true);\r\nadd('raf', () => typeof global.requestAnimationFrame === 'function', true);\r\nadd('setimmediate', () => typeof global.setImmediate !== 'undefined', true);\r\n/* DOM Features */\r\nadd('dom-mutationobserver', () => {\r\n    if (true && Boolean(global.MutationObserver || global.WebKitMutationObserver)) {\r\n        // IE11 has an unreliable MutationObserver implementation where setProperty() does not\r\n        // generate a mutation event, observers can crash, and the queue does not drain\r\n        // reliably. The following feature test was adapted from\r\n        // https://gist.github.com/t10ko/4aceb8c71681fdb275e33efe5e576b14\r\n        const example = document.createElement('div');\r\n        /* tslint:disable-next-line:variable-name */\r\n        const HostMutationObserver = global.MutationObserver || global.WebKitMutationObserver;\r\n        const observer = new HostMutationObserver(function () { });\r\n        observer.observe(example, { attributes: true });\r\n        example.style.setProperty('display', 'block');\r\n        return Boolean(observer.takeRecords().length);\r\n    }\r\n    return false;\r\n}, true);\r\nadd('dom-webanimation', () => true && global.Animation !== undefined && global.KeyframeEffect !== undefined, true);\r\nadd('abort-controller', () => typeof global.AbortController !== 'undefined');\r\nadd('abort-signal', () => typeof global.AbortSignal !== 'undefined');\r\n//# sourceMappingURL=has.mjs.map"
         },
         {
           "id": "./node_modules/@dojo/framework/shim/support/queue.mjs",
@@ -1390,15 +1390,6 @@
               "loc": "9:0-71"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "./Registry",
-              "loc": "3:0-38"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
@@ -1406,6 +1397,15 @@
               "type": "harmony import",
               "userRequest": "./Registry",
               "loc": "1:0-46"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "./Registry",
+              "loc": "3:0-38"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -1943,22 +1943,13 @@
             "menu"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
-          "issuerId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "issuerName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
+          "issuerId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+          "issuerName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-              "type": "harmony import",
-              "userRequest": "./../decorators/handleDecorator",
-              "loc": "4:0-66"
-            },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
@@ -1969,10 +1960,28 @@
               "loc": "1:0-52"
             },
             {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "type": "harmony import",
+              "userRequest": "./../decorators/handleDecorator",
+              "loc": "4:0-66"
+            },
+            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\afterRender.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
               "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+              "type": "harmony import",
+              "userRequest": "./handleDecorator",
+              "loc": "1:0-52"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
               "type": "harmony import",
               "userRequest": "./handleDecorator",
               "loc": "1:0-52"
@@ -1991,15 +2000,6 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
               "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-              "type": "harmony import",
-              "userRequest": "./handleDecorator",
-              "loc": "1:0-52"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
               "type": "harmony import",
               "userRequest": "./handleDecorator",
               "loc": "1:0-52"
@@ -2443,15 +2443,6 @@
               "loc": "1:0-33"
             },
             {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
-              "type": "harmony import",
-              "userRequest": "tslib",
-              "loc": "1:0-33"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Projector.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -2465,6 +2456,15 @@
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
               "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+              "type": "harmony import",
+              "userRequest": "tslib",
+              "loc": "1:0-33"
+            },
+            {
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
               "type": "harmony import",
               "userRequest": "tslib",
               "loc": "1:0-33"
@@ -2697,22 +2697,13 @@
         "menu"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-      "issuerId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-      "issuerName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
+      "issuerId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
+      "issuerName": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "../core/Evented",
-          "loc": "2:0-42"
-        },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
@@ -2721,6 +2712,15 @@
           "type": "harmony import",
           "userRequest": "../core/Evented",
           "loc": "4:0-42"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "../core/Evented",
+          "loc": "2:0-42"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
@@ -2821,7 +2821,7 @@
       "name": "./node_modules/@dojo/framework/has/has.mjs",
       "index": 7,
       "index2": 3,
-      "size": 6500,
+      "size": 6518,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2871,7 +2871,7 @@
       ],
       "optimizationBailout": [],
       "depth": 5,
-      "source": "function isFeatureTestThenable(value) {\r\n    return value && value.then;\r\n}\r\n/**\r\n * A cache of results of feature tests\r\n */\r\nexport const testCache = {};\r\n/**\r\n * A cache of the un-resolved feature tests\r\n */\r\nexport const testFunctions = {};\r\n/**\r\n * A cache of unresolved thenables (probably promises)\r\n * @type {{}}\r\n */\r\nconst testThenables = {};\r\n/**\r\n * A reference to the global scope (`window` in a browser, `global` in NodeJS)\r\n */\r\nconst globalScope = (function () {\r\n    /* istanbul ignore else */\r\n    if (typeof window !== 'undefined') {\r\n        // Browsers\r\n        return window;\r\n    }\r\n    else if (typeof global !== 'undefined') {\r\n        // Node\r\n        return global;\r\n    }\r\n    else if (typeof self !== 'undefined') {\r\n        // Web workers\r\n        return self;\r\n    }\r\n    /* istanbul ignore next */\r\n    return {};\r\n})();\r\n/* Grab the staticFeatures if there are available */\r\nconst { staticFeatures } = globalScope.DojoHasEnvironment || {};\r\n/* Cleaning up the DojoHasEnviornment */\r\nif ('DojoHasEnvironment' in globalScope) {\r\n    delete globalScope.DojoHasEnvironment;\r\n}\r\n/**\r\n * Custom type guard to narrow the `staticFeatures` to either a map or a function that\r\n * returns a map.\r\n *\r\n * @param value The value to guard for\r\n */\r\nfunction isStaticFeatureFunction(value) {\r\n    return typeof value === 'function';\r\n}\r\n/**\r\n * The cache of asserted features that were available in the global scope when the\r\n * module loaded\r\n */\r\nconst staticCache = staticFeatures\r\n    ? isStaticFeatureFunction(staticFeatures) ? staticFeatures.apply(globalScope) : staticFeatures\r\n    : {}; /* Providing an empty cache, if none was in the environment\r\n\r\n/**\r\n* AMD plugin function.\r\n*\r\n* Conditional loads modules based on a has feature test value.\r\n*\r\n* @param resourceId Gives the resolved module id to load.\r\n* @param require The loader require function with respect to the module that contained the plugin resource in its\r\n*                dependency list.\r\n* @param load Callback to loader that consumes result of plugin demand.\r\n*/\r\nexport function load(resourceId, require, load, config) {\r\n    resourceId ? require([resourceId], load) : load();\r\n}\r\n/**\r\n * AMD plugin function.\r\n *\r\n * Resolves resourceId into a module id based on possibly-nested tenary expression that branches on has feature test\r\n * value(s).\r\n *\r\n * @param resourceId The id of the module\r\n * @param normalize Resolves a relative module id into an absolute module id\r\n */\r\nexport function normalize(resourceId, normalize) {\r\n    const tokens = resourceId.match(/[\\?:]|[^:\\?]*/g) || [];\r\n    let i = 0;\r\n    function get(skip) {\r\n        const term = tokens[i++];\r\n        if (term === ':') {\r\n            // empty string module name, resolves to null\r\n            return null;\r\n        }\r\n        else {\r\n            // postfixed with a ? means it is a feature to branch on, the term is the name of the feature\r\n            if (tokens[i++] === '?') {\r\n                if (!skip && has(term)) {\r\n                    // matched the feature, get the first value from the options\r\n                    return get();\r\n                }\r\n                else {\r\n                    // did not match, get the second value, passing over the first\r\n                    get(true);\r\n                    return get(skip);\r\n                }\r\n            }\r\n            // a module\r\n            return term;\r\n        }\r\n    }\r\n    const id = get();\r\n    return id && normalize(id);\r\n}\r\n/**\r\n * Check if a feature has already been registered\r\n *\r\n * @param feature the name of the feature\r\n */\r\nexport function exists(feature) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    return Boolean(normalizedFeature in staticCache || normalizedFeature in testCache || testFunctions[normalizedFeature]);\r\n}\r\n/**\r\n * Register a new test for a named feature.\r\n *\r\n * @example\r\n * has.add('dom-addeventlistener', !!document.addEventListener);\r\n *\r\n * @example\r\n * has.add('touch-events', function () {\r\n *    return 'ontouchstart' in document\r\n * });\r\n *\r\n * @param feature the name of the feature\r\n * @param value the value reported of the feature, or a function that will be executed once on first test\r\n * @param overwrite if an existing value should be overwritten. Defaults to false.\r\n */\r\nexport function add(feature, value, overwrite = false) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (exists(normalizedFeature) && !overwrite && !(normalizedFeature in staticCache)) {\r\n        throw new TypeError(`Feature \"${feature}\" exists and overwrite not true.`);\r\n    }\r\n    if (typeof value === 'function') {\r\n        testFunctions[normalizedFeature] = value;\r\n    }\r\n    else if (isFeatureTestThenable(value)) {\r\n        testThenables[feature] = value.then((resolvedValue) => {\r\n            testCache[feature] = resolvedValue;\r\n            delete testThenables[feature];\r\n        }, () => {\r\n            delete testThenables[feature];\r\n        });\r\n    }\r\n    else {\r\n        testCache[normalizedFeature] = value;\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n}\r\n/**\r\n * Return the current value of a named feature.\r\n *\r\n * @param feature The name (if a string) or identifier (if an integer) of the feature to test.\r\n */\r\nexport default function has(feature) {\r\n    let result;\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (normalizedFeature in staticCache) {\r\n        result = staticCache[normalizedFeature];\r\n    }\r\n    else if (testFunctions[normalizedFeature]) {\r\n        result = testCache[normalizedFeature] = testFunctions[normalizedFeature].call(null);\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n    else if (normalizedFeature in testCache) {\r\n        result = testCache[normalizedFeature];\r\n    }\r\n    else if (feature in testThenables) {\r\n        return false;\r\n    }\r\n    else {\r\n        throw new TypeError(`Attempt to detect unregistered has feature \"${feature}\"`);\r\n    }\r\n    return result;\r\n}\r\n/*\r\n * Out of the box feature tests\r\n */\r\n/* Environments */\r\n/* Used as a value to provide a debug only code path */\r\nadd('debug', true);\r\n/* Detects if the environment is \"browser like\" */\r\nadd('host-browser', typeof document !== 'undefined' && typeof location !== 'undefined');\r\n/* Detects if the environment appears to be NodeJS */\r\nadd('host-node', function () {\r\n    if (typeof process === 'object' && process.versions && process.versions.node) {\r\n        return process.versions.node;\r\n    }\r\n});\r\n//# sourceMappingURL=has.mjs.map"
+      "source": "function isFeatureTestThenable(value) {\r\n    return value && value.then;\r\n}\r\n/**\r\n * A cache of results of feature tests\r\n */\r\nexport const testCache = {};\r\n/**\r\n * A cache of the un-resolved feature tests\r\n */\r\nexport const testFunctions = {};\r\n/**\r\n * A cache of unresolved thenables (probably promises)\r\n * @type {{}}\r\n */\r\nconst testThenables = {};\r\n/**\r\n * A reference to the global scope (`window` in a browser, `global` in NodeJS)\r\n */\r\nconst globalScope = (function () {\r\n    /* istanbul ignore else */\r\n    if (typeof window !== 'undefined') {\r\n        // Browsers\r\n        return window;\r\n    }\r\n    else if (typeof global !== 'undefined') {\r\n        // Node\r\n        return global;\r\n    }\r\n    else if (typeof self !== 'undefined') {\r\n        // Web workers\r\n        return self;\r\n    }\r\n    /* istanbul ignore next */\r\n    return {};\r\n})();\r\n/* Grab the staticFeatures if there are available */\r\nconst { staticFeatures } = globalScope.DojoHasEnvironment || {};\r\n/* Cleaning up the DojoHasEnviornment */\r\nif ('DojoHasEnvironment' in globalScope) {\r\n    delete globalScope.DojoHasEnvironment;\r\n}\r\n/**\r\n * Custom type guard to narrow the `staticFeatures` to either a map or a function that\r\n * returns a map.\r\n *\r\n * @param value The value to guard for\r\n */\r\nfunction isStaticFeatureFunction(value) {\r\n    return typeof value === 'function';\r\n}\r\n/**\r\n * The cache of asserted features that were available in the global scope when the\r\n * module loaded\r\n */\r\nconst staticCache = staticFeatures\r\n    ? isStaticFeatureFunction(staticFeatures)\r\n        ? staticFeatures.apply(globalScope)\r\n        : staticFeatures\r\n    : {}; /* Providing an empty cache, if none was in the environment\r\n\r\n/**\r\n* AMD plugin function.\r\n*\r\n* Conditional loads modules based on a has feature test value.\r\n*\r\n* @param resourceId Gives the resolved module id to load.\r\n* @param require The loader require function with respect to the module that contained the plugin resource in its\r\n*                dependency list.\r\n* @param load Callback to loader that consumes result of plugin demand.\r\n*/\r\nexport function load(resourceId, require, load, config) {\r\n    resourceId ? require([resourceId], load) : load();\r\n}\r\n/**\r\n * AMD plugin function.\r\n *\r\n * Resolves resourceId into a module id based on possibly-nested tenary expression that branches on has feature test\r\n * value(s).\r\n *\r\n * @param resourceId The id of the module\r\n * @param normalize Resolves a relative module id into an absolute module id\r\n */\r\nexport function normalize(resourceId, normalize) {\r\n    const tokens = resourceId.match(/[\\?:]|[^:\\?]*/g) || [];\r\n    let i = 0;\r\n    function get(skip) {\r\n        const term = tokens[i++];\r\n        if (term === ':') {\r\n            // empty string module name, resolves to null\r\n            return null;\r\n        }\r\n        else {\r\n            // postfixed with a ? means it is a feature to branch on, the term is the name of the feature\r\n            if (tokens[i++] === '?') {\r\n                if (!skip && has(term)) {\r\n                    // matched the feature, get the first value from the options\r\n                    return get();\r\n                }\r\n                else {\r\n                    // did not match, get the second value, passing over the first\r\n                    get(true);\r\n                    return get(skip);\r\n                }\r\n            }\r\n            // a module\r\n            return term;\r\n        }\r\n    }\r\n    const id = get();\r\n    return id && normalize(id);\r\n}\r\n/**\r\n * Check if a feature has already been registered\r\n *\r\n * @param feature the name of the feature\r\n */\r\nexport function exists(feature) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    return Boolean(normalizedFeature in staticCache || normalizedFeature in testCache || testFunctions[normalizedFeature]);\r\n}\r\n/**\r\n * Register a new test for a named feature.\r\n *\r\n * @example\r\n * has.add('dom-addeventlistener', !!document.addEventListener);\r\n *\r\n * @example\r\n * has.add('touch-events', function () {\r\n *    return 'ontouchstart' in document\r\n * });\r\n *\r\n * @param feature the name of the feature\r\n * @param value the value reported of the feature, or a function that will be executed once on first test\r\n * @param overwrite if an existing value should be overwritten. Defaults to false.\r\n */\r\nexport function add(feature, value, overwrite = false) {\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (exists(normalizedFeature) && !overwrite && !(normalizedFeature in staticCache)) {\r\n        throw new TypeError(`Feature \"${feature}\" exists and overwrite not true.`);\r\n    }\r\n    if (typeof value === 'function') {\r\n        testFunctions[normalizedFeature] = value;\r\n    }\r\n    else if (isFeatureTestThenable(value)) {\r\n        testThenables[feature] = value.then((resolvedValue) => {\r\n            testCache[feature] = resolvedValue;\r\n            delete testThenables[feature];\r\n        }, () => {\r\n            delete testThenables[feature];\r\n        });\r\n    }\r\n    else {\r\n        testCache[normalizedFeature] = value;\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n}\r\n/**\r\n * Return the current value of a named feature.\r\n *\r\n * @param feature The name (if a string) or identifier (if an integer) of the feature to test.\r\n */\r\nexport default function has(feature) {\r\n    let result;\r\n    const normalizedFeature = feature.toLowerCase();\r\n    if (normalizedFeature in staticCache) {\r\n        result = staticCache[normalizedFeature];\r\n    }\r\n    else if (testFunctions[normalizedFeature]) {\r\n        result = testCache[normalizedFeature] = testFunctions[normalizedFeature].call(null);\r\n        delete testFunctions[normalizedFeature];\r\n    }\r\n    else if (normalizedFeature in testCache) {\r\n        result = testCache[normalizedFeature];\r\n    }\r\n    else if (feature in testThenables) {\r\n        return false;\r\n    }\r\n    else {\r\n        throw new TypeError(`Attempt to detect unregistered has feature \"${feature}\"`);\r\n    }\r\n    return result;\r\n}\r\n/*\r\n * Out of the box feature tests\r\n */\r\n/* Environments */\r\n/* Used as a value to provide a debug only code path */\r\nadd('debug', true);\r\n/* Detects if the environment is \"browser like\" */\r\nadd('host-browser', typeof document !== 'undefined' && typeof location !== 'undefined');\r\n/* Detects if the environment appears to be NodeJS */\r\nadd('host-node', function () {\r\n    if (typeof process === 'object' && process.versions && process.versions.node) {\r\n        return process.versions.node;\r\n    }\r\n});\r\n//# sourceMappingURL=has.mjs.map"
     },
     {
       "id": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -2905,15 +2905,6 @@
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "../shim/Map",
-          "loc": "1:0-34"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\Registry.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -2921,6 +2912,15 @@
           "type": "harmony import",
           "userRequest": "../shim/Map",
           "loc": "2:0-30"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "../shim/Map",
+          "loc": "1:0-34"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
@@ -3083,15 +3083,6 @@
           "loc": "1:0-18"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "type": "harmony import",
-          "userRequest": "./Symbol",
-          "loc": "3:0-18"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
           "module": "./node_modules/@dojo/framework/shim/object.mjs",
@@ -3099,6 +3090,15 @@
           "type": "harmony import",
           "userRequest": "./Symbol",
           "loc": "3:0-36"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "type": "harmony import",
+          "userRequest": "./Symbol",
+          "loc": "3:0-18"
         }
       ],
       "usedExports": [
@@ -3145,15 +3145,6 @@
           "loc": "2:0-38"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\inject.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
-          "type": "harmony import",
-          "userRequest": "../../shim/WeakMap",
-          "loc": "1:0-41"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\vdom.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -3161,6 +3152,15 @@
           "type": "harmony import",
           "userRequest": "../shim/WeakMap",
           "loc": "5:0-38"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\inject.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/inject.mjs",
+          "type": "harmony import",
+          "userRequest": "../../shim/WeakMap",
+          "loc": "1:0-41"
         }
       ],
       "usedExports": [
@@ -3369,15 +3369,6 @@
           "loc": "2:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/number.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\number.mjs",
-          "module": "./node_modules/@dojo/framework/shim/number.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/number.mjs",
-          "type": "harmony import",
-          "userRequest": "./global",
-          "loc": "1:0-30"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\vdom.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -3385,6 +3376,15 @@
           "type": "harmony import",
           "userRequest": "../shim/global",
           "loc": "1:0-36"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/number.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\number.mjs",
+          "module": "./node_modules/@dojo/framework/shim/number.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/number.mjs",
+          "type": "harmony import",
+          "userRequest": "./global",
+          "loc": "1:0-30"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/support/has.mjs",
@@ -3396,19 +3396,19 @@
           "loc": "2:0-31"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
+          "module": "./node_modules/@dojo/framework/shim/object.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/object.mjs",
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
-          "module": "./node_modules/@dojo/framework/shim/object.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/object.mjs",
+          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "1:0-30"
@@ -3624,7 +3624,7 @@
       "name": "./node_modules/@dojo/framework/shim/string.mjs",
       "index": 17,
       "index2": 9,
-      "size": 12714,
+      "size": 12716,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3672,7 +3672,7 @@
       ],
       "optimizationBailout": [],
       "depth": 5,
-      "source": "import global from './global';\r\nimport has from './support/has';\r\nimport { wrapNative } from './support/util';\r\n/**\r\n * The minimum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MIN = 0xd800;\r\n/**\r\n * The maximum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MAX = 0xdbff;\r\n/**\r\n * The minimum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MIN = 0xdc00;\r\n/**\r\n * The maximum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MAX = 0xdfff;\r\n/* ES6 static methods */\r\n/**\r\n * Return the String value whose elements are, in order, the elements in the List elements.\r\n * If length is 0, the empty string is returned.\r\n * @param codePoints The code points to generate the string\r\n */\r\nexport let fromCodePoint;\r\n/**\r\n * `raw` is intended for use as a tag function of a Tagged Template String. When called\r\n * as such the first argument will be a well formed template call site object and the rest\r\n * parameter will contain the substitution values.\r\n * @param template A well-formed template string call site representation.\r\n * @param substitutions A set of substitution values.\r\n */\r\nexport let raw;\r\n/* ES6 instance methods */\r\n/**\r\n * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point\r\n * value of the UTF-16 encoded code point starting at the string element at position pos in\r\n * the String resulting from converting this object to a String.\r\n * If there is no element at that position, the result is undefined.\r\n * If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.\r\n */\r\nexport let codePointAt;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * endPosition – length(this). Otherwise returns false.\r\n */\r\nexport let endsWith;\r\n/**\r\n * Returns true if searchString appears as a substring of the result of converting this\r\n * object to a String, at one or more positions that are\r\n * greater than or equal to position; otherwise, returns false.\r\n * @param target The target string\r\n * @param searchString search string\r\n * @param position If position is undefined, 0 is assumed, so as to search all of the String.\r\n */\r\nexport let includes;\r\n/**\r\n * Returns the String value result of normalizing the string into the normalization form\r\n * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.\r\n * @param target The target string\r\n * @param form Applicable values: \"NFC\", \"NFD\", \"NFKC\", or \"NFKD\", If not specified default\r\n * is \"NFC\"\r\n */\r\nexport let normalize;\r\n/**\r\n * Returns a String value that is made from count copies appended together. If count is 0,\r\n * T is the empty String is returned.\r\n * @param count number of copies to append\r\n */\r\nexport let repeat;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * position. Otherwise returns false.\r\n */\r\nexport let startsWith;\r\n/* ES7 instance methods */\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the end (right) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padEnd;\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the start (left) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padStart;\r\nif (true && true) {\r\n    fromCodePoint = global.String.fromCodePoint;\r\n    raw = global.String.raw;\r\n    codePointAt = wrapNative(global.String.prototype.codePointAt);\r\n    endsWith = wrapNative(global.String.prototype.endsWith);\r\n    includes = wrapNative(global.String.prototype.includes);\r\n    normalize = wrapNative(global.String.prototype.normalize);\r\n    repeat = wrapNative(global.String.prototype.repeat);\r\n    startsWith = wrapNative(global.String.prototype.startsWith);\r\n}\r\nelse {\r\n    /**\r\n     * Validates that text is defined, and normalizes position (based on the given default if the input is NaN).\r\n     * Used by startsWith, includes, and endsWith.\r\n     *\r\n     * @return Normalized position.\r\n     */\r\n    const normalizeSubstringArgs = function (name, text, search, position, isEnd = false) {\r\n        if (text == null) {\r\n            throw new TypeError('string.' + name + ' requires a valid string to search against.');\r\n        }\r\n        const length = text.length;\r\n        position = position !== position ? (isEnd ? length : 0) : position;\r\n        return [text, String(search), Math.min(Math.max(position, 0), length)];\r\n    };\r\n    fromCodePoint = function fromCodePoint(...codePoints) {\r\n        // Adapted from https://github.com/mathiasbynens/String.fromCodePoint\r\n        const length = arguments.length;\r\n        if (!length) {\r\n            return '';\r\n        }\r\n        const fromCharCode = String.fromCharCode;\r\n        const MAX_SIZE = 0x4000;\r\n        let codeUnits = [];\r\n        let index = -1;\r\n        let result = '';\r\n        while (++index < length) {\r\n            let codePoint = Number(arguments[index]);\r\n            // Code points must be finite integers within the valid range\r\n            let isValid = isFinite(codePoint) && Math.floor(codePoint) === codePoint && codePoint >= 0 && codePoint <= 0x10ffff;\r\n            if (!isValid) {\r\n                throw RangeError('string.fromCodePoint: Invalid code point ' + codePoint);\r\n            }\r\n            if (codePoint <= 0xffff) {\r\n                // BMP code point\r\n                codeUnits.push(codePoint);\r\n            }\r\n            else {\r\n                // Astral code point; split in surrogate halves\r\n                // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n                codePoint -= 0x10000;\r\n                let highSurrogate = (codePoint >> 10) + HIGH_SURROGATE_MIN;\r\n                let lowSurrogate = codePoint % 0x400 + LOW_SURROGATE_MIN;\r\n                codeUnits.push(highSurrogate, lowSurrogate);\r\n            }\r\n            if (index + 1 === length || codeUnits.length > MAX_SIZE) {\r\n                result += fromCharCode.apply(null, codeUnits);\r\n                codeUnits.length = 0;\r\n            }\r\n        }\r\n        return result;\r\n    };\r\n    raw = function raw(callSite, ...substitutions) {\r\n        let rawStrings = callSite.raw;\r\n        let result = '';\r\n        let numSubstitutions = substitutions.length;\r\n        if (callSite == null || callSite.raw == null) {\r\n            throw new TypeError('string.raw requires a valid callSite object with a raw value');\r\n        }\r\n        for (let i = 0, length = rawStrings.length; i < length; i++) {\r\n            result += rawStrings[i] + (i < numSubstitutions && i < length - 1 ? substitutions[i] : '');\r\n        }\r\n        return result;\r\n    };\r\n    codePointAt = function codePointAt(text, position = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.codePointAt\r\n        if (text == null) {\r\n            throw new TypeError('string.codePointAt requries a valid string.');\r\n        }\r\n        const length = text.length;\r\n        if (position !== position) {\r\n            position = 0;\r\n        }\r\n        if (position < 0 || position >= length) {\r\n            return undefined;\r\n        }\r\n        // Get the first code unit\r\n        const first = text.charCodeAt(position);\r\n        if (first >= HIGH_SURROGATE_MIN && first <= HIGH_SURROGATE_MAX && length > position + 1) {\r\n            // Start of a surrogate pair (high surrogate and there is a next code unit); check for low surrogate\r\n            // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n            const second = text.charCodeAt(position + 1);\r\n            if (second >= LOW_SURROGATE_MIN && second <= LOW_SURROGATE_MAX) {\r\n                return (first - HIGH_SURROGATE_MIN) * 0x400 + second - LOW_SURROGATE_MIN + 0x10000;\r\n            }\r\n        }\r\n        return first;\r\n    };\r\n    endsWith = function endsWith(text, search, endPosition) {\r\n        if (endPosition == null) {\r\n            endPosition = text.length;\r\n        }\r\n        [text, search, endPosition] = normalizeSubstringArgs('endsWith', text, search, endPosition, true);\r\n        const start = endPosition - search.length;\r\n        if (start < 0) {\r\n            return false;\r\n        }\r\n        return text.slice(start, endPosition) === search;\r\n    };\r\n    includes = function includes(text, search, position = 0) {\r\n        [text, search, position] = normalizeSubstringArgs('includes', text, search, position);\r\n        return text.indexOf(search, position) !== -1;\r\n    };\r\n    repeat = function repeat(text, count = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.repeat\r\n        if (text == null) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (count !== count) {\r\n            count = 0;\r\n        }\r\n        if (count < 0 || count === Infinity) {\r\n            throw new RangeError('string.repeat requires a non-negative finite count.');\r\n        }\r\n        let result = '';\r\n        while (count) {\r\n            if (count % 2) {\r\n                result += text;\r\n            }\r\n            if (count > 1) {\r\n                text += text;\r\n            }\r\n            count >>= 1;\r\n        }\r\n        return result;\r\n    };\r\n    startsWith = function startsWith(text, search, position = 0) {\r\n        search = String(search);\r\n        [text, search, position] = normalizeSubstringArgs('startsWith', text, search, position);\r\n        const end = position + search.length;\r\n        if (end > text.length) {\r\n            return false;\r\n        }\r\n        return text.slice(position, end) === search;\r\n    };\r\n}\r\nif (true) {\r\n    padEnd = wrapNative(global.String.prototype.padEnd);\r\n    padStart = wrapNative(global.String.prototype.padStart);\r\n}\r\nelse {\r\n    padEnd = function padEnd(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padEnd requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText +=\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length);\r\n        }\r\n        return strText;\r\n    };\r\n    padStart = function padStart(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padStart requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText =\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length) +\r\n                    strText;\r\n        }\r\n        return strText;\r\n    };\r\n}\r\n//# sourceMappingURL=string.mjs.map"
+      "source": "import global from './global';\r\nimport has from './support/has';\r\nimport { wrapNative } from './support/util';\r\n/**\r\n * The minimum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MIN = 0xd800;\r\n/**\r\n * The maximum location of high surrogates\r\n */\r\nexport const HIGH_SURROGATE_MAX = 0xdbff;\r\n/**\r\n * The minimum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MIN = 0xdc00;\r\n/**\r\n * The maximum location of low surrogates\r\n */\r\nexport const LOW_SURROGATE_MAX = 0xdfff;\r\n/* ES6 static methods */\r\n/**\r\n * Return the String value whose elements are, in order, the elements in the List elements.\r\n * If length is 0, the empty string is returned.\r\n * @param codePoints The code points to generate the string\r\n */\r\nexport let fromCodePoint;\r\n/**\r\n * `raw` is intended for use as a tag function of a Tagged Template String. When called\r\n * as such the first argument will be a well formed template call site object and the rest\r\n * parameter will contain the substitution values.\r\n * @param template A well-formed template string call site representation.\r\n * @param substitutions A set of substitution values.\r\n */\r\nexport let raw;\r\n/* ES6 instance methods */\r\n/**\r\n * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point\r\n * value of the UTF-16 encoded code point starting at the string element at position pos in\r\n * the String resulting from converting this object to a String.\r\n * If there is no element at that position, the result is undefined.\r\n * If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.\r\n */\r\nexport let codePointAt;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * endPosition – length(this). Otherwise returns false.\r\n */\r\nexport let endsWith;\r\n/**\r\n * Returns true if searchString appears as a substring of the result of converting this\r\n * object to a String, at one or more positions that are\r\n * greater than or equal to position; otherwise, returns false.\r\n * @param target The target string\r\n * @param searchString search string\r\n * @param position If position is undefined, 0 is assumed, so as to search all of the String.\r\n */\r\nexport let includes;\r\n/**\r\n * Returns the String value result of normalizing the string into the normalization form\r\n * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.\r\n * @param target The target string\r\n * @param form Applicable values: \"NFC\", \"NFD\", \"NFKC\", or \"NFKD\", If not specified default\r\n * is \"NFC\"\r\n */\r\nexport let normalize;\r\n/**\r\n * Returns a String value that is made from count copies appended together. If count is 0,\r\n * T is the empty String is returned.\r\n * @param count number of copies to append\r\n */\r\nexport let repeat;\r\n/**\r\n * Returns true if the sequence of elements of searchString converted to a String is the\r\n * same as the corresponding elements of this object (converted to a String) starting at\r\n * position. Otherwise returns false.\r\n */\r\nexport let startsWith;\r\n/* ES7 instance methods */\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the end (right) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padEnd;\r\n/**\r\n * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.\r\n * The padding is applied from the start (left) of the current string.\r\n *\r\n * @param target The target string\r\n * @param maxLength The length of the resulting string once the current string has been padded.\r\n *        If this parameter is smaller than the current string's length, the current string will be returned as it is.\r\n *\r\n * @param fillString The string to pad the current string with.\r\n *        If this string is too long, it will be truncated and the left-most part will be applied.\r\n *        The default value for this parameter is \" \" (U+0020).\r\n */\r\nexport let padStart;\r\nif (true && true) {\r\n    fromCodePoint = global.String.fromCodePoint;\r\n    raw = global.String.raw;\r\n    codePointAt = wrapNative(global.String.prototype.codePointAt);\r\n    endsWith = wrapNative(global.String.prototype.endsWith);\r\n    includes = wrapNative(global.String.prototype.includes);\r\n    normalize = wrapNative(global.String.prototype.normalize);\r\n    repeat = wrapNative(global.String.prototype.repeat);\r\n    startsWith = wrapNative(global.String.prototype.startsWith);\r\n}\r\nelse {\r\n    /**\r\n     * Validates that text is defined, and normalizes position (based on the given default if the input is NaN).\r\n     * Used by startsWith, includes, and endsWith.\r\n     *\r\n     * @return Normalized position.\r\n     */\r\n    const normalizeSubstringArgs = function (name, text, search, position, isEnd = false) {\r\n        if (text == null) {\r\n            throw new TypeError('string.' + name + ' requires a valid string to search against.');\r\n        }\r\n        const length = text.length;\r\n        position = position !== position ? (isEnd ? length : 0) : position;\r\n        return [text, String(search), Math.min(Math.max(position, 0), length)];\r\n    };\r\n    fromCodePoint = function fromCodePoint(...codePoints) {\r\n        // Adapted from https://github.com/mathiasbynens/String.fromCodePoint\r\n        const length = arguments.length;\r\n        if (!length) {\r\n            return '';\r\n        }\r\n        const fromCharCode = String.fromCharCode;\r\n        const MAX_SIZE = 0x4000;\r\n        let codeUnits = [];\r\n        let index = -1;\r\n        let result = '';\r\n        while (++index < length) {\r\n            let codePoint = Number(arguments[index]);\r\n            // Code points must be finite integers within the valid range\r\n            let isValid = isFinite(codePoint) && Math.floor(codePoint) === codePoint && codePoint >= 0 && codePoint <= 0x10ffff;\r\n            if (!isValid) {\r\n                throw RangeError('string.fromCodePoint: Invalid code point ' + codePoint);\r\n            }\r\n            if (codePoint <= 0xffff) {\r\n                // BMP code point\r\n                codeUnits.push(codePoint);\r\n            }\r\n            else {\r\n                // Astral code point; split in surrogate halves\r\n                // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n                codePoint -= 0x10000;\r\n                let highSurrogate = (codePoint >> 10) + HIGH_SURROGATE_MIN;\r\n                let lowSurrogate = (codePoint % 0x400) + LOW_SURROGATE_MIN;\r\n                codeUnits.push(highSurrogate, lowSurrogate);\r\n            }\r\n            if (index + 1 === length || codeUnits.length > MAX_SIZE) {\r\n                result += fromCharCode.apply(null, codeUnits);\r\n                codeUnits.length = 0;\r\n            }\r\n        }\r\n        return result;\r\n    };\r\n    raw = function raw(callSite, ...substitutions) {\r\n        let rawStrings = callSite.raw;\r\n        let result = '';\r\n        let numSubstitutions = substitutions.length;\r\n        if (callSite == null || callSite.raw == null) {\r\n            throw new TypeError('string.raw requires a valid callSite object with a raw value');\r\n        }\r\n        for (let i = 0, length = rawStrings.length; i < length; i++) {\r\n            result += rawStrings[i] + (i < numSubstitutions && i < length - 1 ? substitutions[i] : '');\r\n        }\r\n        return result;\r\n    };\r\n    codePointAt = function codePointAt(text, position = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.codePointAt\r\n        if (text == null) {\r\n            throw new TypeError('string.codePointAt requries a valid string.');\r\n        }\r\n        const length = text.length;\r\n        if (position !== position) {\r\n            position = 0;\r\n        }\r\n        if (position < 0 || position >= length) {\r\n            return undefined;\r\n        }\r\n        // Get the first code unit\r\n        const first = text.charCodeAt(position);\r\n        if (first >= HIGH_SURROGATE_MIN && first <= HIGH_SURROGATE_MAX && length > position + 1) {\r\n            // Start of a surrogate pair (high surrogate and there is a next code unit); check for low surrogate\r\n            // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae\r\n            const second = text.charCodeAt(position + 1);\r\n            if (second >= LOW_SURROGATE_MIN && second <= LOW_SURROGATE_MAX) {\r\n                return (first - HIGH_SURROGATE_MIN) * 0x400 + second - LOW_SURROGATE_MIN + 0x10000;\r\n            }\r\n        }\r\n        return first;\r\n    };\r\n    endsWith = function endsWith(text, search, endPosition) {\r\n        if (endPosition == null) {\r\n            endPosition = text.length;\r\n        }\r\n        [text, search, endPosition] = normalizeSubstringArgs('endsWith', text, search, endPosition, true);\r\n        const start = endPosition - search.length;\r\n        if (start < 0) {\r\n            return false;\r\n        }\r\n        return text.slice(start, endPosition) === search;\r\n    };\r\n    includes = function includes(text, search, position = 0) {\r\n        [text, search, position] = normalizeSubstringArgs('includes', text, search, position);\r\n        return text.indexOf(search, position) !== -1;\r\n    };\r\n    repeat = function repeat(text, count = 0) {\r\n        // Adapted from https://github.com/mathiasbynens/String.prototype.repeat\r\n        if (text == null) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (count !== count) {\r\n            count = 0;\r\n        }\r\n        if (count < 0 || count === Infinity) {\r\n            throw new RangeError('string.repeat requires a non-negative finite count.');\r\n        }\r\n        let result = '';\r\n        while (count) {\r\n            if (count % 2) {\r\n                result += text;\r\n            }\r\n            if (count > 1) {\r\n                text += text;\r\n            }\r\n            count >>= 1;\r\n        }\r\n        return result;\r\n    };\r\n    startsWith = function startsWith(text, search, position = 0) {\r\n        search = String(search);\r\n        [text, search, position] = normalizeSubstringArgs('startsWith', text, search, position);\r\n        const end = position + search.length;\r\n        if (end > text.length) {\r\n            return false;\r\n        }\r\n        return text.slice(position, end) === search;\r\n    };\r\n}\r\nif (true) {\r\n    padEnd = wrapNative(global.String.prototype.padEnd);\r\n    padStart = wrapNative(global.String.prototype.padStart);\r\n}\r\nelse {\r\n    padEnd = function padEnd(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padEnd requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText +=\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length);\r\n        }\r\n        return strText;\r\n    };\r\n    padStart = function padStart(text, maxLength, fillString = ' ') {\r\n        if (text === null || text === undefined) {\r\n            throw new TypeError('string.repeat requires a valid string.');\r\n        }\r\n        if (maxLength === Infinity) {\r\n            throw new RangeError('string.padStart requires a non-negative finite count.');\r\n        }\r\n        if (maxLength === null || maxLength === undefined || maxLength < 0) {\r\n            maxLength = 0;\r\n        }\r\n        let strText = String(text);\r\n        const padding = maxLength - strText.length;\r\n        if (padding > 0) {\r\n            strText =\r\n                repeat(fillString, Math.floor(padding / fillString.length)) +\r\n                    fillString.slice(0, padding % fillString.length) +\r\n                    strText;\r\n        }\r\n        return strText;\r\n    };\r\n}\r\n//# sourceMappingURL=string.mjs.map"
     },
     {
       "id": "./node_modules/@dojo/framework/shim/support/has.mjs",
@@ -3680,7 +3680,7 @@
       "name": "./node_modules/@dojo/framework/shim/support/has.mjs",
       "index": 6,
       "index2": 5,
-      "size": 6316,
+      "size": 6466,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3733,15 +3733,6 @@
           "loc": "1:0-32"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "type": "harmony import",
-          "userRequest": "./support/has",
-          "loc": "4:0-32"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/object.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\object.mjs",
           "module": "./node_modules/@dojo/framework/shim/object.mjs",
@@ -3749,6 +3740,15 @@
           "type": "harmony import",
           "userRequest": "./support/has",
           "loc": "2:0-32"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "type": "harmony import",
+          "userRequest": "./support/has",
+          "loc": "4:0-32"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
@@ -3781,7 +3781,7 @@
       ],
       "optimizationBailout": [],
       "depth": 4,
-      "source": "import has, { add } from '../../has/has';\r\nimport global from '../global';\r\nexport default has;\r\nexport * from '../../has/has';\r\n/* ECMAScript 6 and 7 Features */\r\n/* Array */\r\nadd('es6-array', () => {\r\n    return (['from', 'of'].every((key) => key in global.Array) &&\r\n        ['findIndex', 'find', 'copyWithin'].every((key) => key in global.Array.prototype));\r\n}, true);\r\nadd('es6-array-fill', () => {\r\n    if ('fill' in global.Array.prototype) {\r\n        /* Some versions of Safari do not properly implement this */\r\n        return [1].fill(9, Number.POSITIVE_INFINITY)[0] === 1;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es7-array', () => 'includes' in global.Array.prototype, true);\r\n/* Map */\r\nadd('es6-map', () => {\r\n    if (typeof global.Map === 'function') {\r\n        /*\r\n    IE11 and older versions of Safari are missing critical ES6 Map functionality\r\n    We wrap this in a try/catch because sometimes the Map constructor exists, but does not\r\n    take arguments (iOS 8.4)\r\n     */\r\n        try {\r\n            const map = new global.Map([[0, 1]]);\r\n            return map.has(0) &&\r\n                typeof map.keys === 'function' &&\r\n                true &&\r\n                typeof map.values === 'function' &&\r\n                typeof map.entries === 'function';\r\n        }\r\n        catch (e) {\r\n            /* istanbul ignore next: not testing on iOS at the moment */\r\n            return false;\r\n        }\r\n    }\r\n    return false;\r\n}, true);\r\n/* Math */\r\nadd('es6-math', () => {\r\n    return [\r\n        'clz32',\r\n        'sign',\r\n        'log10',\r\n        'log2',\r\n        'log1p',\r\n        'expm1',\r\n        'cosh',\r\n        'sinh',\r\n        'tanh',\r\n        'acosh',\r\n        'asinh',\r\n        'atanh',\r\n        'trunc',\r\n        'fround',\r\n        'cbrt',\r\n        'hypot'\r\n    ].every((name) => typeof global.Math[name] === 'function');\r\n}, true);\r\nadd('es6-math-imul', () => {\r\n    if ('imul' in global.Math) {\r\n        /* Some versions of Safari on ios do not properly implement this */\r\n        return Math.imul(0xffffffff, 5) === -5;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Object */\r\nadd('es6-object', () => {\r\n    return true &&\r\n        ['assign', 'is', 'getOwnPropertySymbols', 'setPrototypeOf'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\nadd('es2017-object', () => {\r\n    return ['values', 'entries', 'getOwnPropertyDescriptors'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\n/* Observable */\r\nadd('es-observable', () => typeof global.Observable !== 'undefined', true);\r\n/* Promise */\r\nadd('es6-promise', () => typeof global.Promise !== 'undefined' && true, true);\r\n/* Set */\r\nadd('es6-set', () => {\r\n    if (typeof global.Set === 'function') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Set functionality */\r\n        const set = new global.Set([1]);\r\n        return set.has(1) && 'keys' in set && typeof set.keys === 'function' && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* String */\r\nadd('es6-string', () => {\r\n    return ([\r\n        /* static methods */\r\n        'fromCodePoint'\r\n    ].every((key) => typeof global.String[key] === 'function') &&\r\n        [\r\n            /* instance methods */\r\n            'codePointAt',\r\n            'normalize',\r\n            'repeat',\r\n            'startsWith',\r\n            'endsWith',\r\n            'includes'\r\n        ].every((key) => typeof global.String.prototype[key] === 'function'));\r\n}, true);\r\nadd('es6-string-raw', () => {\r\n    function getCallSite(callSite, ...substitutions) {\r\n        const result = [...callSite];\r\n        result.raw = callSite.raw;\r\n        return result;\r\n    }\r\n    if ('raw' in global.String) {\r\n        let b = 1;\r\n        let callSite = getCallSite `a\\n${b}`;\r\n        callSite.raw = ['a\\\\n'];\r\n        const supportsTrunc = global.String.raw(callSite, 42) === 'a:\\\\n';\r\n        return supportsTrunc;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es2017-string', () => {\r\n    return ['padStart', 'padEnd'].every((key) => typeof global.String.prototype[key] === 'function');\r\n}, true);\r\n/* Symbol */\r\nadd('es6-symbol', () => typeof global.Symbol !== 'undefined' && typeof Symbol() === 'symbol', true);\r\n/* WeakMap */\r\nadd('es6-weakmap', () => {\r\n    if (typeof global.WeakMap !== 'undefined') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Map functionality */\r\n        const key1 = {};\r\n        const key2 = {};\r\n        const map = new global.WeakMap([[key1, 1]]);\r\n        Object.freeze(key1);\r\n        return map.get(key1) === 1 && map.set(key2, 2) === map && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Miscellaneous features */\r\nadd('microtasks', () => true || false || true, true);\r\nadd('postmessage', () => {\r\n    // If window is undefined, and we have postMessage, it probably means we're in a web worker. Web workers have\r\n    // post message but it doesn't work how we expect it to, so it's best just to pretend it doesn't exist.\r\n    return typeof global.window !== 'undefined' && typeof global.postMessage === 'function';\r\n}, true);\r\nadd('raf', () => typeof global.requestAnimationFrame === 'function', true);\r\nadd('setimmediate', () => typeof global.setImmediate !== 'undefined', true);\r\n/* DOM Features */\r\nadd('dom-mutationobserver', () => {\r\n    if (true && Boolean(global.MutationObserver || global.WebKitMutationObserver)) {\r\n        // IE11 has an unreliable MutationObserver implementation where setProperty() does not\r\n        // generate a mutation event, observers can crash, and the queue does not drain\r\n        // reliably. The following feature test was adapted from\r\n        // https://gist.github.com/t10ko/4aceb8c71681fdb275e33efe5e576b14\r\n        const example = document.createElement('div');\r\n        /* tslint:disable-next-line:variable-name */\r\n        const HostMutationObserver = global.MutationObserver || global.WebKitMutationObserver;\r\n        const observer = new HostMutationObserver(function () { });\r\n        observer.observe(example, { attributes: true });\r\n        example.style.setProperty('display', 'block');\r\n        return Boolean(observer.takeRecords().length);\r\n    }\r\n    return false;\r\n}, true);\r\nadd('dom-webanimation', () => true && global.Animation !== undefined && global.KeyframeEffect !== undefined, true);\r\n//# sourceMappingURL=has.mjs.map"
+      "source": "import has, { add } from '../../has/has';\r\nimport global from '../global';\r\nexport default has;\r\nexport * from '../../has/has';\r\n/* ECMAScript 6 and 7 Features */\r\n/* Array */\r\nadd('es6-array', () => {\r\n    return (['from', 'of'].every((key) => key in global.Array) &&\r\n        ['findIndex', 'find', 'copyWithin'].every((key) => key in global.Array.prototype));\r\n}, true);\r\nadd('es6-array-fill', () => {\r\n    if ('fill' in global.Array.prototype) {\r\n        /* Some versions of Safari do not properly implement this */\r\n        return [1].fill(9, Number.POSITIVE_INFINITY)[0] === 1;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es7-array', () => 'includes' in global.Array.prototype, true);\r\n/* Map */\r\nadd('es6-map', () => {\r\n    if (typeof global.Map === 'function') {\r\n        /*\r\n    IE11 and older versions of Safari are missing critical ES6 Map functionality\r\n    We wrap this in a try/catch because sometimes the Map constructor exists, but does not\r\n    take arguments (iOS 8.4)\r\n     */\r\n        try {\r\n            const map = new global.Map([[0, 1]]);\r\n            return map.has(0) &&\r\n                typeof map.keys === 'function' &&\r\n                true &&\r\n                typeof map.values === 'function' &&\r\n                typeof map.entries === 'function';\r\n        }\r\n        catch (e) {\r\n            /* istanbul ignore next: not testing on iOS at the moment */\r\n            return false;\r\n        }\r\n    }\r\n    return false;\r\n}, true);\r\n/* Math */\r\nadd('es6-math', () => {\r\n    return [\r\n        'clz32',\r\n        'sign',\r\n        'log10',\r\n        'log2',\r\n        'log1p',\r\n        'expm1',\r\n        'cosh',\r\n        'sinh',\r\n        'tanh',\r\n        'acosh',\r\n        'asinh',\r\n        'atanh',\r\n        'trunc',\r\n        'fround',\r\n        'cbrt',\r\n        'hypot'\r\n    ].every((name) => typeof global.Math[name] === 'function');\r\n}, true);\r\nadd('es6-math-imul', () => {\r\n    if ('imul' in global.Math) {\r\n        /* Some versions of Safari on ios do not properly implement this */\r\n        return Math.imul(0xffffffff, 5) === -5;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Object */\r\nadd('es6-object', () => {\r\n    return true &&\r\n        ['assign', 'is', 'getOwnPropertySymbols', 'setPrototypeOf'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\nadd('es2017-object', () => {\r\n    return ['values', 'entries', 'getOwnPropertyDescriptors'].every((name) => typeof global.Object[name] === 'function');\r\n}, true);\r\n/* Observable */\r\nadd('es-observable', () => typeof global.Observable !== 'undefined', true);\r\n/* Promise */\r\nadd('es6-promise', () => typeof global.Promise !== 'undefined' && true, true);\r\n/* Set */\r\nadd('es6-set', () => {\r\n    if (typeof global.Set === 'function') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Set functionality */\r\n        const set = new global.Set([1]);\r\n        return set.has(1) && 'keys' in set && typeof set.keys === 'function' && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* String */\r\nadd('es6-string', () => {\r\n    return ([\r\n        /* static methods */\r\n        'fromCodePoint'\r\n    ].every((key) => typeof global.String[key] === 'function') &&\r\n        [\r\n            /* instance methods */\r\n            'codePointAt',\r\n            'normalize',\r\n            'repeat',\r\n            'startsWith',\r\n            'endsWith',\r\n            'includes'\r\n        ].every((key) => typeof global.String.prototype[key] === 'function'));\r\n}, true);\r\nadd('es6-string-raw', () => {\r\n    function getCallSite(callSite, ...substitutions) {\r\n        const result = [...callSite];\r\n        result.raw = callSite.raw;\r\n        return result;\r\n    }\r\n    if ('raw' in global.String) {\r\n        let b = 1;\r\n        let callSite = getCallSite `a\\n${b}`;\r\n        callSite.raw = ['a\\\\n'];\r\n        const supportsTrunc = global.String.raw(callSite, 42) === 'a:\\\\n';\r\n        return supportsTrunc;\r\n    }\r\n    return false;\r\n}, true);\r\nadd('es2017-string', () => {\r\n    return ['padStart', 'padEnd'].every((key) => typeof global.String.prototype[key] === 'function');\r\n}, true);\r\n/* Symbol */\r\nadd('es6-symbol', () => typeof global.Symbol !== 'undefined' && typeof Symbol() === 'symbol', true);\r\n/* WeakMap */\r\nadd('es6-weakmap', () => {\r\n    if (typeof global.WeakMap !== 'undefined') {\r\n        /* IE11 and older versions of Safari are missing critical ES6 Map functionality */\r\n        const key1 = {};\r\n        const key2 = {};\r\n        const map = new global.WeakMap([[key1, 1]]);\r\n        Object.freeze(key1);\r\n        return map.get(key1) === 1 && map.set(key2, 2) === map && true;\r\n    }\r\n    return false;\r\n}, true);\r\n/* Miscellaneous features */\r\nadd('microtasks', () => true || false || true, true);\r\nadd('postmessage', () => {\r\n    // If window is undefined, and we have postMessage, it probably means we're in a web worker. Web workers have\r\n    // post message but it doesn't work how we expect it to, so it's best just to pretend it doesn't exist.\r\n    return typeof global.window !== 'undefined' && typeof global.postMessage === 'function';\r\n}, true);\r\nadd('raf', () => typeof global.requestAnimationFrame === 'function', true);\r\nadd('setimmediate', () => typeof global.setImmediate !== 'undefined', true);\r\n/* DOM Features */\r\nadd('dom-mutationobserver', () => {\r\n    if (true && Boolean(global.MutationObserver || global.WebKitMutationObserver)) {\r\n        // IE11 has an unreliable MutationObserver implementation where setProperty() does not\r\n        // generate a mutation event, observers can crash, and the queue does not drain\r\n        // reliably. The following feature test was adapted from\r\n        // https://gist.github.com/t10ko/4aceb8c71681fdb275e33efe5e576b14\r\n        const example = document.createElement('div');\r\n        /* tslint:disable-next-line:variable-name */\r\n        const HostMutationObserver = global.MutationObserver || global.WebKitMutationObserver;\r\n        const observer = new HostMutationObserver(function () { });\r\n        observer.observe(example, { attributes: true });\r\n        example.style.setProperty('display', 'block');\r\n        return Boolean(observer.takeRecords().length);\r\n    }\r\n    return false;\r\n}, true);\r\nadd('dom-webanimation', () => true && global.Animation !== undefined && global.KeyframeEffect !== undefined, true);\r\nadd('abort-controller', () => typeof global.AbortController !== 'undefined');\r\nadd('abort-signal', () => typeof global.AbortSignal !== 'undefined');\r\n//# sourceMappingURL=has.mjs.map"
     },
     {
       "id": "./node_modules/@dojo/framework/shim/support/queue.mjs",
@@ -4006,15 +4006,6 @@
           "loc": "9:0-71"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "./Registry",
-          "loc": "3:0-38"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
@@ -4022,6 +4013,15 @@
           "type": "harmony import",
           "userRequest": "./Registry",
           "loc": "1:0-46"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "./Registry",
+          "loc": "3:0-38"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -4489,22 +4489,13 @@
         "menu"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
-      "issuerId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-      "issuerName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
+      "issuerId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+      "issuerName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
-          "type": "harmony import",
-          "userRequest": "./../decorators/handleDecorator",
-          "loc": "4:0-66"
-        },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
@@ -4515,10 +4506,28 @@
           "loc": "1:0-52"
         },
         {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "type": "harmony import",
+          "userRequest": "./../decorators/handleDecorator",
+          "loc": "4:0-66"
+        },
+        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\afterRender.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
           "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
+          "type": "harmony import",
+          "userRequest": "./handleDecorator",
+          "loc": "1:0-52"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
           "type": "harmony import",
           "userRequest": "./handleDecorator",
           "loc": "1:0-52"
@@ -4537,15 +4546,6 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
           "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-          "type": "harmony import",
-          "userRequest": "./handleDecorator",
-          "loc": "1:0-52"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
           "type": "harmony import",
           "userRequest": "./handleDecorator",
           "loc": "1:0-52"
@@ -4989,15 +4989,6 @@
           "loc": "1:0-33"
         },
         {
-          "moduleId": "./src/menu/Menu.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
-          "module": "./src/menu/Menu.ts",
-          "moduleName": "./src/menu/Menu.ts",
-          "type": "harmony import",
-          "userRequest": "tslib",
-          "loc": "1:0-33"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Projector.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -5011,6 +5002,15 @@
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
           "moduleName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "type": "harmony import",
+          "userRequest": "tslib",
+          "loc": "1:0-33"
+        },
+        {
+          "moduleId": "./src/menu/Menu.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu\\Menu.ts",
+          "module": "./src/menu/Menu.ts",
+          "moduleName": "./src/menu/Menu.ts",
           "type": "harmony import",
           "userRequest": "tslib",
           "loc": "1:0-33"
