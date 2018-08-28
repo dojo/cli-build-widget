@@ -6,6 +6,7 @@ import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { WebpackConfiguration } from './interfaces';
 import * as loaderUtils from 'loader-utils';
 
+const postcssPresetEnv = require('postcss-preset-env');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const slash = require('slash');
 
@@ -82,6 +83,16 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
 	const features = args.legacy ? args.features : ['chrome'];
+
+	const postcssPresetConfig = {
+		browsers: args.legacy ? ['last 2 versions', 'ie >= 10'] : ['last 2 versions'],
+		features: {
+			'nesting-rules': true
+		},
+		autoprefixer: {
+			grid: args.legacy
+		}
+	};
 
 	const config: webpack.Configuration = {
 		entry: elements.reduce((entry: any, element: any) => {
@@ -218,16 +229,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 								loader: 'postcss-loader?sourceMap',
 								options: {
 									ident: 'postcss',
-									plugins: [
-										require('postcss-import')(),
-										require('postcss-cssnext')({
-											features: {
-												autoprefixer: {
-													browsers: ['last 2 versions', 'ie >= 10']
-												}
-											}
-										})
-									]
+									plugins: [require('postcss-import')(), postcssPresetEnv(postcssPresetConfig)]
 								}
 							}
 						]
