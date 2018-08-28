@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "235112b757288f86dd7b",
-  "time": 10570,
+  "hash": "4b16d9fb77f1b39529b8",
+  "time": 8355,
   "publicPath": "",
   "assetsByChunkName": {
     "menu": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-1.0.0.js.map",
-      "size": 269681,
+      "size": 269563,
       "chunks": [
         "menu"
       ],
@@ -80,7 +80,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 192613,
+      "size": 192497,
       "names": [
         "menu"
       ],
@@ -90,7 +90,7 @@
         "menu-1.0.0.js.map",
         "menu-1.0.0.css.map"
       ],
-      "hash": "2fc4c1554cf2207ee07f",
+      "hash": "6c6f733a47ed1d204e92",
       "parents": [],
       "modules": [
         {
@@ -501,15 +501,6 @@
               "loc": "1:0-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "type": "harmony import",
-              "userRequest": "./Symbol",
-              "loc": "5:0-18"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
               "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -517,6 +508,15 @@
               "type": "harmony import",
               "userRequest": "./Symbol",
               "loc": "4:0-18"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "type": "harmony import",
+              "userRequest": "./Symbol",
+              "loc": "5:0-18"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -691,7 +691,7 @@
           "name": "./node_modules/@dojo/framework/shim/global.mjs",
           "index": 10,
           "index2": 4,
-          "size": 581,
+          "size": 465,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -726,15 +726,6 @@
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "type": "harmony import",
-              "userRequest": "./global",
-              "loc": "2:0-30"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
               "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -742,6 +733,15 @@
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "1:0-30"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "type": "harmony import",
+              "userRequest": "./global",
+              "loc": "2:0-30"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -824,7 +824,7 @@
           ],
           "optimizationBailout": [],
           "depth": 3,
-          "source": "const globalObject = (function () {\n    if (typeof global !== 'undefined') {\n        // global spec defines a reference to the global object called 'global'\n        // https://github.com/tc39/proposal-global\n        // `global` is also defined in NodeJS\n        return global;\n    }\n    else if (typeof window !== 'undefined') {\n        // window is defined in browsers\n        return window;\n    }\n    else if (typeof self !== 'undefined') {\n        // self is defined in WebWorkers\n        return self;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
+          "source": "const globalObject = (function () {\n    // the only reliable means to get the global object is\n    // `Function('return this')()`\n    // However, this causes CSP violations in Chrome apps.\n    if (typeof self !== 'undefined') {\n        return self;\n    }\n    if (typeof window !== 'undefined') {\n        return window;\n    }\n    if (typeof global !== 'undefined') {\n        return global;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
         },
         {
           "id": "./node_modules/@dojo/framework/shim/iterator.mjs",
@@ -858,15 +858,6 @@
               "loc": "2:0-53"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "type": "harmony import",
-              "userRequest": "./iterator",
-              "loc": "1:0-55"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
               "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -874,6 +865,15 @@
               "type": "harmony import",
               "userRequest": "./iterator",
               "loc": "2:0-41"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "type": "harmony import",
+              "userRequest": "./iterator",
+              "loc": "1:0-55"
             }
           ],
           "usedExports": false,
@@ -1090,15 +1090,6 @@
               "loc": "4:0-32"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-              "type": "harmony import",
-              "userRequest": "./support/has",
-              "loc": "4:0-32"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
               "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -1106,6 +1097,15 @@
               "type": "harmony import",
               "userRequest": "./support/has",
               "loc": "3:0-32"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+              "type": "harmony import",
+              "userRequest": "./support/has",
+              "loc": "4:0-32"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -1614,15 +1614,6 @@
               "loc": "5:0-29"
             },
             {
-              "moduleId": "./src/menu/Menu.ts",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
-              "module": "./src/menu/Menu.ts",
-              "moduleName": "./src/menu/Menu.ts",
-              "type": "harmony import",
-              "userRequest": "@dojo/framework/widget-core/d",
-              "loc": "2:0-50"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
@@ -1630,6 +1621,15 @@
               "type": "harmony import",
               "userRequest": "./d",
               "loc": "4:0-24"
+            },
+            {
+              "moduleId": "./src/menu/Menu.ts",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
+              "module": "./src/menu/Menu.ts",
+              "moduleName": "./src/menu/Menu.ts",
+              "type": "harmony import",
+              "userRequest": "@dojo/framework/widget-core/d",
+              "loc": "2:0-50"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -3047,15 +3047,6 @@
           "loc": "1:0-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "type": "harmony import",
-          "userRequest": "./Symbol",
-          "loc": "5:0-18"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
           "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -3063,6 +3054,15 @@
           "type": "harmony import",
           "userRequest": "./Symbol",
           "loc": "4:0-18"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "type": "harmony import",
+          "userRequest": "./Symbol",
+          "loc": "5:0-18"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -3307,7 +3307,7 @@
       "name": "./node_modules/@dojo/framework/shim/global.mjs",
       "index": 10,
       "index2": 4,
-      "size": 581,
+      "size": 465,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3342,15 +3342,6 @@
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "type": "harmony import",
-          "userRequest": "./global",
-          "loc": "2:0-30"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
           "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -3358,6 +3349,15 @@
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "1:0-30"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "type": "harmony import",
+          "userRequest": "./global",
+          "loc": "2:0-30"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -3440,7 +3440,7 @@
       ],
       "optimizationBailout": [],
       "depth": 3,
-      "source": "const globalObject = (function () {\n    if (typeof global !== 'undefined') {\n        // global spec defines a reference to the global object called 'global'\n        // https://github.com/tc39/proposal-global\n        // `global` is also defined in NodeJS\n        return global;\n    }\n    else if (typeof window !== 'undefined') {\n        // window is defined in browsers\n        return window;\n    }\n    else if (typeof self !== 'undefined') {\n        // self is defined in WebWorkers\n        return self;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
+      "source": "const globalObject = (function () {\n    // the only reliable means to get the global object is\n    // `Function('return this')()`\n    // However, this causes CSP violations in Chrome apps.\n    if (typeof self !== 'undefined') {\n        return self;\n    }\n    if (typeof window !== 'undefined') {\n        return window;\n    }\n    if (typeof global !== 'undefined') {\n        return global;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
     },
     {
       "id": "./node_modules/@dojo/framework/shim/iterator.mjs",
@@ -3474,15 +3474,6 @@
           "loc": "2:0-53"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "type": "harmony import",
-          "userRequest": "./iterator",
-          "loc": "1:0-55"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
           "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -3490,6 +3481,15 @@
           "type": "harmony import",
           "userRequest": "./iterator",
           "loc": "2:0-41"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "type": "harmony import",
+          "userRequest": "./iterator",
+          "loc": "1:0-55"
         }
       ],
       "usedExports": false,
@@ -3706,15 +3706,6 @@
           "loc": "4:0-32"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
-          "type": "harmony import",
-          "userRequest": "./support/has",
-          "loc": "4:0-32"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
           "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
@@ -3722,6 +3713,15 @@
           "type": "harmony import",
           "userRequest": "./support/has",
           "loc": "3:0-32"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Map.mjs",
+          "type": "harmony import",
+          "userRequest": "./support/has",
+          "loc": "4:0-32"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -4230,15 +4230,6 @@
           "loc": "5:0-29"
         },
         {
-          "moduleId": "./src/menu/Menu.ts",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
-          "module": "./src/menu/Menu.ts",
-          "moduleName": "./src/menu/Menu.ts",
-          "type": "harmony import",
-          "userRequest": "@dojo/framework/widget-core/d",
-          "loc": "2:0-50"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
@@ -4246,6 +4237,15 @@
           "type": "harmony import",
           "userRequest": "./d",
           "loc": "4:0-24"
+        },
+        {
+          "moduleId": "./src/menu/Menu.ts",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
+          "module": "./src/menu/Menu.ts",
+          "moduleName": "./src/menu/Menu.ts",
+          "type": "harmony import",
+          "userRequest": "@dojo/framework/widget-core/d",
+          "loc": "2:0-50"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",

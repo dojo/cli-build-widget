@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "def39c52200eef25fc7a",
-  "time": 10620,
+  "hash": "abb6b84699b757b2229a",
+  "time": 8479,
   "publicPath": "",
   "assetsByChunkName": {
     "menu-item": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-item-1.0.0.js.map",
-      "size": 269482,
+      "size": 269364,
       "chunks": [
         "menu-item"
       ],
@@ -80,7 +80,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 192315,
+      "size": 192199,
       "names": [
         "menu-item"
       ],
@@ -90,7 +90,7 @@
         "menu-item-1.0.0.js.map",
         "menu-item-1.0.0.css.map"
       ],
-      "hash": "2de0ce1720364571682a",
+      "hash": "883d8f8b98d57da4d03d",
       "parents": [],
       "modules": [
         {
@@ -691,7 +691,7 @@
           "name": "./node_modules/@dojo/framework/shim/global.mjs",
           "index": 10,
           "index2": 4,
-          "size": 581,
+          "size": 465,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -824,7 +824,7 @@
           ],
           "optimizationBailout": [],
           "depth": 3,
-          "source": "const globalObject = (function () {\n    if (typeof global !== 'undefined') {\n        // global spec defines a reference to the global object called 'global'\n        // https://github.com/tc39/proposal-global\n        // `global` is also defined in NodeJS\n        return global;\n    }\n    else if (typeof window !== 'undefined') {\n        // window is defined in browsers\n        return window;\n    }\n    else if (typeof self !== 'undefined') {\n        // self is defined in WebWorkers\n        return self;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
+          "source": "const globalObject = (function () {\n    // the only reliable means to get the global object is\n    // `Function('return this')()`\n    // However, this causes CSP violations in Chrome apps.\n    if (typeof self !== 'undefined') {\n        return self;\n    }\n    if (typeof window !== 'undefined') {\n        return window;\n    }\n    if (typeof global !== 'undefined') {\n        return global;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
         },
         {
           "id": "./node_modules/@dojo/framework/shim/iterator.mjs",
@@ -1390,15 +1390,6 @@
               "loc": "9:0-71"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "./Registry",
-              "loc": "3:0-38"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/diff.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
@@ -1406,6 +1397,15 @@
               "type": "harmony import",
               "userRequest": "./Registry",
               "loc": "1:0-46"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "./Registry",
+              "loc": "3:0-38"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -3307,7 +3307,7 @@
       "name": "./node_modules/@dojo/framework/shim/global.mjs",
       "index": 10,
       "index2": 4,
-      "size": 581,
+      "size": 465,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3440,7 +3440,7 @@
       ],
       "optimizationBailout": [],
       "depth": 3,
-      "source": "const globalObject = (function () {\n    if (typeof global !== 'undefined') {\n        // global spec defines a reference to the global object called 'global'\n        // https://github.com/tc39/proposal-global\n        // `global` is also defined in NodeJS\n        return global;\n    }\n    else if (typeof window !== 'undefined') {\n        // window is defined in browsers\n        return window;\n    }\n    else if (typeof self !== 'undefined') {\n        // self is defined in WebWorkers\n        return self;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
+      "source": "const globalObject = (function () {\n    // the only reliable means to get the global object is\n    // `Function('return this')()`\n    // However, this causes CSP violations in Chrome apps.\n    if (typeof self !== 'undefined') {\n        return self;\n    }\n    if (typeof window !== 'undefined') {\n        return window;\n    }\n    if (typeof global !== 'undefined') {\n        return global;\n    }\n})();\nexport default globalObject;\n//# sourceMappingURL=global.mjs.map"
     },
     {
       "id": "./node_modules/@dojo/framework/shim/iterator.mjs",
@@ -4006,15 +4006,6 @@
           "loc": "9:0-71"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "./Registry",
-          "loc": "3:0-38"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/diff.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
@@ -4022,6 +4013,15 @@
           "type": "harmony import",
           "userRequest": "./Registry",
           "loc": "1:0-46"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "./Registry",
+          "loc": "3:0-38"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
