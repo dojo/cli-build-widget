@@ -7,6 +7,7 @@
     "generate-fixtures": "shx rm -rf output & npm run clean-dts & dojo build && npm run clean-dts && dojo build --mode dev && npm run clean-dts && dojo build --mode test",
     "generate-unix-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/unix/",
     "generate-windows-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/windows/",
+    "build-legacy": "dojo build --mode dev --legacy",
     "build-dist": "dojo build --mode dist",
     "build-dev": "dojo build --mode dev",
     "build-test": "dojo build --mode test"

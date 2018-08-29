@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.8.1",
-  "hash": "4b16d9fb77f1b39529b8",
-  "time": 8355,
+  "hash": "2fbe31c7d175ff78f9e7",
+  "time": 7783,
   "publicPath": "",
   "assetsByChunkName": {
     "menu": [
@@ -27,7 +27,7 @@
     },
     {
       "name": "menu-1.0.0.css",
-      "size": 392,
+      "size": 449,
       "chunks": [
         "menu"
       ],
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-1.0.0.js.map",
-      "size": 269563,
+      "size": 276091,
       "chunks": [
         "menu"
       ],
@@ -49,7 +49,7 @@
     },
     {
       "name": "menu-1.0.0.css.map",
-      "size": 462,
+      "size": 548,
       "chunks": [
         "menu"
       ],
@@ -501,15 +501,6 @@
               "loc": "1:0-36"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "type": "harmony import",
-              "userRequest": "./Symbol",
-              "loc": "4:0-18"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
               "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -517,6 +508,15 @@
               "type": "harmony import",
               "userRequest": "./Symbol",
               "loc": "5:0-18"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "type": "harmony import",
+              "userRequest": "./Symbol",
+              "loc": "4:0-18"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -726,15 +726,6 @@
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "type": "harmony import",
-              "userRequest": "./global",
-              "loc": "1:0-30"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
               "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -742,6 +733,15 @@
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "2:0-30"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "type": "harmony import",
+              "userRequest": "./global",
+              "loc": "1:0-30"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -858,15 +858,6 @@
               "loc": "2:0-53"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "type": "harmony import",
-              "userRequest": "./iterator",
-              "loc": "2:0-41"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
               "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -874,6 +865,15 @@
               "type": "harmony import",
               "userRequest": "./iterator",
               "loc": "1:0-55"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "type": "harmony import",
+              "userRequest": "./iterator",
+              "loc": "2:0-41"
             }
           ],
           "usedExports": false,
@@ -1090,15 +1090,6 @@
               "loc": "4:0-32"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-              "type": "harmony import",
-              "userRequest": "./support/has",
-              "loc": "3:0-32"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
               "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -1106,6 +1097,15 @@
               "type": "harmony import",
               "userRequest": "./support/has",
               "loc": "4:0-32"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+              "type": "harmony import",
+              "userRequest": "./support/has",
+              "loc": "3:0-32"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -1614,15 +1614,6 @@
               "loc": "5:0-29"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-              "type": "harmony import",
-              "userRequest": "./d",
-              "loc": "4:0-24"
-            },
-            {
               "moduleId": "./src/menu/Menu.ts",
               "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
               "module": "./src/menu/Menu.ts",
@@ -1630,6 +1621,15 @@
               "type": "harmony import",
               "userRequest": "@dojo/framework/widget-core/d",
               "loc": "2:0-50"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+              "type": "harmony import",
+              "userRequest": "./d",
+              "loc": "4:0-24"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -3047,15 +3047,6 @@
           "loc": "1:0-36"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "type": "harmony import",
-          "userRequest": "./Symbol",
-          "loc": "4:0-18"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
           "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -3063,6 +3054,15 @@
           "type": "harmony import",
           "userRequest": "./Symbol",
           "loc": "5:0-18"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "type": "harmony import",
+          "userRequest": "./Symbol",
+          "loc": "4:0-18"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -3342,15 +3342,6 @@
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "type": "harmony import",
-          "userRequest": "./global",
-          "loc": "1:0-30"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
           "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -3358,6 +3349,15 @@
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "2:0-30"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "type": "harmony import",
+          "userRequest": "./global",
+          "loc": "1:0-30"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -3474,15 +3474,6 @@
           "loc": "2:0-53"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "type": "harmony import",
-          "userRequest": "./iterator",
-          "loc": "2:0-41"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
           "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -3490,6 +3481,15 @@
           "type": "harmony import",
           "userRequest": "./iterator",
           "loc": "1:0-55"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "type": "harmony import",
+          "userRequest": "./iterator",
+          "loc": "2:0-41"
         }
       ],
       "usedExports": false,
@@ -3706,15 +3706,6 @@
           "loc": "4:0-32"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
-          "type": "harmony import",
-          "userRequest": "./support/has",
-          "loc": "3:0-32"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/Map.mjs",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/Map.mjs",
           "module": "./node_modules/@dojo/framework/shim/Map.mjs",
@@ -3722,6 +3713,15 @@
           "type": "harmony import",
           "userRequest": "./support/has",
           "loc": "4:0-32"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "module": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/WeakMap.mjs",
+          "type": "harmony import",
+          "userRequest": "./support/has",
+          "loc": "3:0-32"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/Symbol.mjs",
@@ -4230,15 +4230,6 @@
           "loc": "5:0-29"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
-          "type": "harmony import",
-          "userRequest": "./d",
-          "loc": "4:0-24"
-        },
-        {
           "moduleId": "./src/menu/Menu.ts",
           "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--3-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/umd-compat-loader/index.js??ref--3-1!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/ts-loader/index.js??ref--3-2!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/css-module-dts-loader/index.js?type=ts&instanceName=0_menu!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/Menu.ts",
           "module": "./src/menu/Menu.ts",
@@ -4246,6 +4237,15 @@
           "type": "harmony import",
           "userRequest": "@dojo/framework/widget-core/d",
           "loc": "2:0-50"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "moduleIdentifier": "/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/webpack-contrib/static-build-loader/index.js??ref--4-0!/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
+          "type": "harmony import",
+          "userRequest": "./d",
+          "loc": "4:0-24"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Projector.mjs",
@@ -5196,12 +5196,12 @@
           "initial": true,
           "entry": true,
           "extraAsync": false,
-          "size": 3129,
+          "size": 3277,
           "names": [],
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "900d251017f389bd926b",
+          "hash": "8d6b737cc7da3a9a44e1",
           "parents": [],
           "modules": [
             {
@@ -5210,7 +5210,7 @@
               "name": "./node_modules/@dojo/webpack-contrib/css-module-decorator-loader!./node_modules/css-loader?{\"modules\":true,\"sourceMap\":true,\"importLoaders\":1,\"localIdentName\":\"[hash:base64:8]\"}!./node_modules/postcss-loader/lib?{\"ident\":\"postcss\",\"plugins\":[null,null]}!./node_modules/@dojo/webpack-contrib/css-module-dts-loader?type=css!./src/menu/menu.m.css",
               "index": 0,
               "index2": 1,
-              "size": 869,
+              "size": 1017,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -5230,7 +5230,7 @@
               "providedExports": null,
               "optimizationBailout": [],
               "depth": 0,
-              "source": "exports = module.exports = require(\"../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \"._3bA6jdSn {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: #1d1f20;\\n}\\n\\n._1eoGfqku {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/menu.m.css\"],\"names\":[],\"mappings\":\"AAAA;CACC,YAAY;CACZ,OAAO;CACP,aAAa;CACb,aAAa;CACb,0BAA0B;CAC1B;;AAED;CACC,aAAa;CACb,eAAe;CACf\",\"file\":\"menu.m.css\",\"sourcesContent\":[\".root {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: #1d1f20;\\n}\\n\\n.menuContainer {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\" _key\": \"test-app/menu\",\n\t\"root\": \"_3bA6jdSn\",\n\t\"menuContainer\": \"_1eoGfqku\"\n};"
+              "source": "exports = module.exports = require(\"../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \":root {\\n\\t--background-color: #1d1f20;\\n}\\n\\n._3bA6jdSn {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: var(--background-color);\\n}\\n\\n._1eoGfqku {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/menu.m.css\"],\"names\":[],\"mappings\":\"AAAA;CACC,4BAA4B;CAC5B;;AAED;CACC,YAAY;CACZ,OAAO;CACP,aAAa;CACb,aAAa;CACb,0CAA0C;CAC1C;;AAED;CACC,aAAa;CACb,eAAe;CACf\",\"file\":\"menu.m.css\",\"sourcesContent\":[\":root {\\n\\t--background-color: #1d1f20;\\n}\\n\\n.root {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: var(--background-color);\\n}\\n\\n.menuContainer {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\" _key\": \"test-app/menu\",\n\t\"root\": \"_3bA6jdSn\",\n\t\"menuContainer\": \"_1eoGfqku\"\n};"
             },
             {
               "id": "./node_modules/css-loader/lib/css-base.js",
@@ -5291,7 +5291,7 @@
           "name": "./node_modules/@dojo/webpack-contrib/css-module-decorator-loader!./node_modules/css-loader?{\"modules\":true,\"sourceMap\":true,\"importLoaders\":1,\"localIdentName\":\"[hash:base64:8]\"}!./node_modules/postcss-loader/lib?{\"ident\":\"postcss\",\"plugins\":[null,null]}!./node_modules/@dojo/webpack-contrib/css-module-dts-loader?type=css!./src/menu/menu.m.css",
           "index": 0,
           "index2": 1,
-          "size": 869,
+          "size": 1017,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -5311,7 +5311,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \"._3bA6jdSn {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: #1d1f20;\\n}\\n\\n._1eoGfqku {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/menu.m.css\"],\"names\":[],\"mappings\":\"AAAA;CACC,YAAY;CACZ,OAAO;CACP,aAAa;CACb,aAAa;CACb,0BAA0B;CAC1B;;AAED;CACC,aAAa;CACb,eAAe;CACf\",\"file\":\"menu.m.css\",\"sourcesContent\":[\".root {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: #1d1f20;\\n}\\n\\n.menuContainer {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\" _key\": \"test-app/menu\",\n\t\"root\": \"_3bA6jdSn\",\n\t\"menuContainer\": \"_1eoGfqku\"\n};"
+          "source": "exports = module.exports = require(\"../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \":root {\\n\\t--background-color: #1d1f20;\\n}\\n\\n._3bA6jdSn {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: var(--background-color);\\n}\\n\\n._1eoGfqku {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/rorymulligan/Desktop/Dojo2/cli-build-widget/test-app/src/menu/menu.m.css\"],\"names\":[],\"mappings\":\"AAAA;CACC,4BAA4B;CAC5B;;AAED;CACC,YAAY;CACZ,OAAO;CACP,aAAa;CACb,aAAa;CACb,0CAA0C;CAC1C;;AAED;CACC,aAAa;CACb,eAAe;CACf\",\"file\":\"menu.m.css\",\"sourcesContent\":[\":root {\\n\\t--background-color: #1d1f20;\\n}\\n\\n.root {\\n\\twidth: 100%;\\n\\ttop: 0;\\n\\theight: 48px;\\n\\tz-index: 100;\\n\\tbackground-color: var(--background-color);\\n}\\n\\n.menuContainer {\\n\\theight: 100%;\\n\\tmargin: 0 auto;\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\nexports.locals = {\" _key\": \"test-app/menu\",\n\t\"root\": \"_3bA6jdSn\",\n\t\"menuContainer\": \"_1eoGfqku\"\n};"
         },
         {
           "id": "./node_modules/css-loader/lib/css-base.js",

@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "abb6b84699b757b2229a",
-  "time": 8479,
+  "time": 7595,
   "publicPath": "",
   "assetsByChunkName": {
     "menu-item": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-item-1.0.0.js.map",
-      "size": 269364,
+      "size": 275897,
       "chunks": [
         "menu-item"
       ],

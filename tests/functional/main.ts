@@ -54,6 +54,24 @@ describe('functional build tests', () => {
 		clean();
 	});
 
+	it('transforms css properties in legacy builds', () => {
+		execa.shellSync('npm run build-legacy', { cwd: appRootDir });
+
+		const outputFilePath = path.join(appRootDir, 'output', 'dev', 'menu', 'menu-1.0.0.css');
+		const css = fs.readFileSync(outputFilePath, 'utf8');
+
+		assert.isTrue(css.match(/\sbackground-color: #1d1f20;/) !== null);
+	});
+
+	it('does not transform css properties in evergreen builds', () => {
+		execa.shellSync('npm run build-dev', { cwd: appRootDir });
+
+		const outputFilePath = path.join(appRootDir, 'output', 'dev', 'menu', 'menu-1.0.0.css');
+		const css = fs.readFileSync(outputFilePath, 'utf8');
+
+		assert.isTrue(css.match(/\sbackground-color: #1d1f20;/) === null);
+	});
+
 	it('correctly builds with dist configuration', () => {
 		execa.shellSync('npm run build-dist', { cwd: appRootDir });
 		assertOutput('dist', 'menu');
