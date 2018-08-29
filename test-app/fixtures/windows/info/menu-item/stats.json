@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.8.1",
   "hash": "7ca3ec2dab856220f68e",
-  "time": 11625,
+  "time": 16953,
   "publicPath": "",
   "assetsByChunkName": {
     "menu-item": [
@@ -38,7 +38,7 @@
     },
     {
       "name": "menu-item-1.0.0.js.map",
-      "size": 275418,
+      "size": 281951,
       "chunks": [
         "menu-item"
       ],
@@ -151,22 +151,13 @@
             "menu-item"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-          "issuerId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "issuerName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+          "issuerId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+          "issuerName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "../core/Evented",
-              "loc": "1:0-42"
-            },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
@@ -175,6 +166,15 @@
               "type": "harmony import",
               "userRequest": "../core/Evented",
               "loc": "2:0-42"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "../core/Evented",
+              "loc": "1:0-42"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -359,15 +359,6 @@
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-              "type": "harmony import",
-              "userRequest": "../shim/Map",
-              "loc": "2:0-30"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
@@ -375,6 +366,15 @@
               "type": "harmony import",
               "userRequest": "../shim/Map",
               "loc": "1:0-34"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+              "type": "harmony import",
+              "userRequest": "../shim/Map",
+              "loc": "2:0-30"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -789,19 +789,19 @@
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
+              "module": "./node_modules/@dojo/framework/shim/string.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/string.mjs",
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "1:0-30"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
-              "module": "./node_modules/@dojo/framework/shim/string.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/string.mjs",
+              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
               "type": "harmony import",
               "userRequest": "./global",
               "loc": "1:0-30"
@@ -1126,15 +1126,6 @@
               "loc": "2:0-32"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-              "type": "harmony import",
-              "userRequest": "./support/has",
-              "loc": "4:0-32"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
               "module": "./node_modules/@dojo/framework/shim/string.mjs",
@@ -1142,6 +1133,15 @@
               "type": "harmony import",
               "userRequest": "./support/has",
               "loc": "2:0-32"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+              "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+              "type": "harmony import",
+              "userRequest": "./support/has",
+              "loc": "4:0-32"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/shim/support/queue.mjs",
@@ -1390,13 +1390,13 @@
               "loc": "9:0-71"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\customElement.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+              "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/diff.mjs",
               "type": "harmony import",
-              "userRequest": "../Registry",
-              "loc": "2:0-35"
+              "userRequest": "./Registry",
+              "loc": "1:0-46"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
@@ -1417,13 +1417,13 @@
               "loc": "4:0-53"
             },
             {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\customElement.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
               "type": "harmony import",
-              "userRequest": "./Registry",
-              "loc": "1:0-46"
+              "userRequest": "../Registry",
+              "loc": "2:0-35"
             }
           ],
           "usedExports": [
@@ -1614,15 +1614,6 @@
               "loc": "5:0-29"
             },
             {
-              "moduleId": "./src/menu-item/MenuItem.ts",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu-item!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
-              "module": "./src/menu-item/MenuItem.ts",
-              "moduleName": "./src/menu-item/MenuItem.ts",
-              "type": "harmony import",
-              "userRequest": "@dojo/framework/widget-core/d",
-              "loc": "2:0-50"
-            },
-            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\WidgetBase.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
@@ -1639,6 +1630,15 @@
               "type": "harmony import",
               "userRequest": "./../d",
               "loc": "5:0-27"
+            },
+            {
+              "moduleId": "./src/menu-item/MenuItem.ts",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu-item!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
+              "module": "./src/menu-item/MenuItem.ts",
+              "moduleName": "./src/menu-item/MenuItem.ts",
+              "type": "harmony import",
+              "userRequest": "@dojo/framework/widget-core/d",
+              "loc": "2:0-50"
             },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -1943,22 +1943,13 @@
             "menu-item"
           ],
           "assets": [],
-          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
-          "issuerId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-          "issuerName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+          "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
+          "issuerId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+          "issuerName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
           "failed": false,
           "errors": 0,
           "warnings": 0,
           "reasons": [
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-              "type": "harmony import",
-              "userRequest": "./handleDecorator",
-              "loc": "1:0-52"
-            },
             {
               "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
@@ -1969,28 +1960,19 @@
               "loc": "4:0-66"
             },
             {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+              "type": "harmony import",
+              "userRequest": "./handleDecorator",
+              "loc": "1:0-52"
+            },
+            {
               "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
               "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\afterRender.mjs",
               "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
               "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-              "type": "harmony import",
-              "userRequest": "./handleDecorator",
-              "loc": "1:0-52"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-              "type": "harmony import",
-              "userRequest": "./handleDecorator",
-              "loc": "1:0-52"
-            },
-            {
-              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
-              "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
               "type": "harmony import",
               "userRequest": "./handleDecorator",
               "loc": "1:0-52"
@@ -2003,6 +1985,24 @@
               "type": "harmony import",
               "userRequest": "./handleDecorator",
               "loc": "2:0-52"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+              "type": "harmony import",
+              "userRequest": "./handleDecorator",
+              "loc": "1:0-52"
+            },
+            {
+              "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+              "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
+              "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+              "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+              "type": "harmony import",
+              "userRequest": "./handleDecorator",
+              "loc": "1:0-52"
             }
           ],
           "usedExports": [
@@ -2697,22 +2697,13 @@
         "menu-item"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-      "issuerId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-      "issuerName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
+      "issuerId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
+      "issuerName": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "../core/Evented",
-          "loc": "1:0-42"
-        },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
@@ -2721,6 +2712,15 @@
           "type": "harmony import",
           "userRequest": "../core/Evented",
           "loc": "2:0-42"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "../core/Evented",
+          "loc": "1:0-42"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -2905,15 +2905,6 @@
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
-          "type": "harmony import",
-          "userRequest": "../shim/Map",
-          "loc": "2:0-30"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\RegistryHandler.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
@@ -2921,6 +2912,15 @@
           "type": "harmony import",
           "userRequest": "../shim/Map",
           "loc": "1:0-34"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\NodeHandler.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/NodeHandler.mjs",
+          "type": "harmony import",
+          "userRequest": "../shim/Map",
+          "loc": "2:0-30"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/Registry.mjs",
@@ -3405,19 +3405,19 @@
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
+          "module": "./node_modules/@dojo/framework/shim/string.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/string.mjs",
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "1:0-30"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
-          "module": "./node_modules/@dojo/framework/shim/string.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/string.mjs",
+          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
           "type": "harmony import",
           "userRequest": "./global",
           "loc": "1:0-30"
@@ -3742,15 +3742,6 @@
           "loc": "2:0-32"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
-          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
-          "type": "harmony import",
-          "userRequest": "./support/has",
-          "loc": "4:0-32"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/shim/string.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\string.mjs",
           "module": "./node_modules/@dojo/framework/shim/string.mjs",
@@ -3758,6 +3749,15 @@
           "type": "harmony import",
           "userRequest": "./support/has",
           "loc": "2:0-32"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\shim\\Promise.mjs",
+          "module": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "moduleName": "./node_modules/@dojo/framework/shim/Promise.mjs",
+          "type": "harmony import",
+          "userRequest": "./support/has",
+          "loc": "4:0-32"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/shim/support/queue.mjs",
@@ -4006,13 +4006,13 @@
           "loc": "9:0-71"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\customElement.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+          "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/diff.mjs",
           "type": "harmony import",
-          "userRequest": "../Registry",
-          "loc": "2:0-35"
+          "userRequest": "./Registry",
+          "loc": "1:0-46"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/RegistryHandler.mjs",
@@ -4033,13 +4033,13 @@
           "loc": "4:0-53"
         },
         {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/diff.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\diff.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/diff.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/diff.mjs",
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\customElement.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/customElement.mjs",
           "type": "harmony import",
-          "userRequest": "./Registry",
-          "loc": "1:0-46"
+          "userRequest": "../Registry",
+          "loc": "2:0-35"
         }
       ],
       "usedExports": [
@@ -4230,15 +4230,6 @@
           "loc": "5:0-29"
         },
         {
-          "moduleId": "./src/menu-item/MenuItem.ts",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu-item!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
-          "module": "./src/menu-item/MenuItem.ts",
-          "moduleName": "./src/menu-item/MenuItem.ts",
-          "type": "harmony import",
-          "userRequest": "@dojo/framework/widget-core/d",
-          "loc": "2:0-50"
-        },
-        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\WidgetBase.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/WidgetBase.mjs",
@@ -4255,6 +4246,15 @@
           "type": "harmony import",
           "userRequest": "./../d",
           "loc": "5:0-27"
+        },
+        {
+          "moduleId": "./src/menu-item/MenuItem.ts",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--3-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\umd-compat-loader\\index.js??ref--3-1!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\ts-loader\\index.js??ref--3-2!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\css-module-dts-loader\\index.js?type=ts&instanceName=0_menu-item!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\src\\menu-item\\MenuItem.ts",
+          "module": "./src/menu-item/MenuItem.ts",
+          "moduleName": "./src/menu-item/MenuItem.ts",
+          "type": "harmony import",
+          "userRequest": "@dojo/framework/widget-core/d",
+          "loc": "2:0-50"
         },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/vdom.mjs",
@@ -4489,22 +4489,13 @@
         "menu-item"
       ],
       "assets": [],
-      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
-      "issuerId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-      "issuerName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+      "issuer": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
+      "issuerId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
+      "issuerName": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
-          "type": "harmony import",
-          "userRequest": "./handleDecorator",
-          "loc": "1:0-52"
-        },
         {
           "moduleId": "./node_modules/@dojo/framework/widget-core/mixins/Themed.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\mixins\\Themed.mjs",
@@ -4515,28 +4506,19 @@
           "loc": "4:0-66"
         },
         {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\alwaysRender.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/alwaysRender.mjs",
+          "type": "harmony import",
+          "userRequest": "./handleDecorator",
+          "loc": "1:0-52"
+        },
+        {
           "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
           "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\afterRender.mjs",
           "module": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
           "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/afterRender.mjs",
-          "type": "harmony import",
-          "userRequest": "./handleDecorator",
-          "loc": "1:0-52"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
-          "type": "harmony import",
-          "userRequest": "./handleDecorator",
-          "loc": "1:0-52"
-        },
-        {
-          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
-          "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
-          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
           "type": "harmony import",
           "userRequest": "./handleDecorator",
           "loc": "1:0-52"
@@ -4549,6 +4531,24 @@
           "type": "harmony import",
           "userRequest": "./handleDecorator",
           "loc": "2:0-52"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\diffProperty.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/diffProperty.mjs",
+          "type": "harmony import",
+          "userRequest": "./handleDecorator",
+          "loc": "1:0-52"
+        },
+        {
+          "moduleId": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+          "moduleIdentifier": "C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\webpack-contrib\\static-build-loader\\index.js??ref--4-0!C:\\Users\\IEUser\\Desktop\\cli-build-widget\\test-app\\node_modules\\@dojo\\framework\\widget-core\\decorators\\beforeProperties.mjs",
+          "module": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+          "moduleName": "./node_modules/@dojo/framework/widget-core/decorators/beforeProperties.mjs",
+          "type": "harmony import",
+          "userRequest": "./handleDecorator",
+          "loc": "1:0-52"
         }
       ],
       "usedExports": [
