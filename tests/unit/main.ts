@@ -45,6 +45,7 @@ describe('command', () => {
 			'log-update',
 			'ora',
 			'webpack',
+			'postcss-import',
 			'webpack-mild-compile',
 			'webpack-dev-middleware',
 			'webpack-hot-middleware',
