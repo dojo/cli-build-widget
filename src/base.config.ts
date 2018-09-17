@@ -77,6 +77,16 @@ Copyright [JS Foundation](https://js.foundation/) & contributors
 [New BSD license](https://github.com/dojo/meta/blob/master/LICENSE)
 All rights reserved
 `;
+
+interface CssStyle {
+	walkDecls(processor: (decl: { value: string }) => void): void;
+}
+function colorToColorMod(style: CssStyle) {
+	style.walkDecls(decl => {
+		decl.value = decl.value.replace('color(', 'color-mod(');
+	});
+}
+
 export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	const elements = args.element ? [args.element] : args.elements;
 	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
@@ -86,7 +96,11 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 
 	const postcssPresetConfig = {
 		browsers: args.legacy ? ['last 2 versions', 'ie >= 10'] : ['last 2 versions'],
+		insertBefore: {
+			'color-mod-function': colorToColorMod
+		},
 		features: {
+			'color-mod-function': true,
 			'nesting-rules': true
 		},
 		autoprefixer: {
