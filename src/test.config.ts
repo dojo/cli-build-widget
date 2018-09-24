@@ -10,6 +10,7 @@ const basePath = process.cwd();
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output, module } = config;
+	const instrumenterOptions = args.legacy ? {} : { esModules: true };
 	config.entry = () => {
 		const unit = globby
 			.sync([`${basePath}/tests/unit/**/*.ts`])
@@ -63,7 +64,8 @@ function webpackConfig(args: any): webpack.Configuration {
 	module.rules.push({
 		test: /src[\\\/].*\.ts(x)?$/,
 		use: {
-			loader: '@theintern/istanbul-loader'
+			loader: 'istanbul-instrumenter-loader',
+			options: instrumenterOptions
 		},
 		enforce: 'post'
 	});
