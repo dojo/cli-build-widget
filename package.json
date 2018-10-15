@@ -47,7 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@dojo/cli": "~3.0.0",
+    "@dojo/cli": "^4.0.0",
     "@dojo/scripts": "~3.0.1",
     "@types/clean-webpack-plugin": "0.1.0",
     "@types/execa": "0.8.0",
@@ -67,7 +67,7 @@
     "@types/rimraf": "2.0.2",
     "@types/sinon": "~4.3.3",
     "@types/strip-ansi": "3.0.0",
-    "@types/tapable": "^0.2.5",
+    "@types/tapable": "0.2.4",
     "@types/webpack": "3.8.1",
     "@types/webpack-chunk-hash": "0.4.0",
     "@types/yargs": "^10.0.0",
@@ -85,8 +85,8 @@
     "sinon": "~4.5.0"
   },
   "dependencies": {
-    "@dojo/framework": "next",
-    "@dojo/webpack-contrib": "next",
+    "@dojo/framework": "^4.0.0",
+    "@dojo/webpack-contrib": "^4.0.0",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "0.1.17",
     "cli-columns": "3.1.2",
