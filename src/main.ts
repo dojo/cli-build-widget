@@ -19,18 +19,20 @@ const webpackMiddleware = require('webpack-dev-middleware');
 
 function createCompiler(config: webpack.Configuration[]) {
 	const compiler = webpack(config);
-	fixMultipleWatchTrigger(compiler);
+	compiler.compilers.forEach(childCompiler => {
+		fixMultipleWatchTrigger(childCompiler);
+	});
 	return compiler;
 }
 
 function createWatchCompiler(config: webpack.Configuration[]) {
 	const compiler = createCompiler(config);
 	const spinner = ora('building').start();
-	compiler.plugin('invalid', () => {
+	(compiler as any).hooks.invalid.tap('invalid', () => {
 		logUpdate('');
 		spinner.start();
 	});
-	compiler.plugin('done', () => {
+	(compiler as any).hooks.done.tap('done', () => {
 		spinner.stop();
 	});
 	return compiler;
@@ -103,8 +105,8 @@ function memoryWatch(configs: webpack.Configuration[], args: any, app: express.A
 	const watchOptions = configs[0].watchOptions as webpack.Compiler.WatchOptions;
 	const compiler = createWatchCompiler(configs);
 
-	compiler.plugin('done', stats => {
-		logger(stats.toJson(), configs, `Listening on port ${args.port}...`);
+	(compiler as any).hooks.done.tap('@dojo/cli-build-widget', (stats: webpack.Stats) => {
+		logger(stats.toJson({ warningsFilter }), configs, `Listening on port ${args.port}...`);
 	});
 
 	app.use(
@@ -158,6 +160,10 @@ function serve(configs: webpack.Configuration[], args: any): Promise<void> {
 				});
 			});
 		});
+}
+
+function warningsFilter(warning: string) {
+	return warning.includes('[mini-css-extract-plugin]\nConflicting order between');
 }
 
 const command: Command = {

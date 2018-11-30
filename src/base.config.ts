@@ -1,14 +1,13 @@
-import * as webpack from 'webpack';
-import * as path from 'path';
-import { existsSync } from 'fs';
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
-import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
-import { WebpackConfiguration } from './interfaces';
+import { existsSync } from 'fs';
 import * as loaderUtils from 'loader-utils';
+import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import * as path from 'path';
+import * as webpack from 'webpack';
 
 const postcssPresetEnv = require('postcss-preset-env');
-const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const slash = require('slash');
+const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 
 const basePath = process.cwd();
 const srcPath = path.join(basePath, 'src');
@@ -56,11 +55,8 @@ function getLocalIdent(
 	options: any
 ) {
 	if (!options.context) {
-		if (loaderContext.options && typeof loaderContext.options.context === 'string') {
-			options.context = loaderContext.options.context;
-		} else {
-			options.context = loaderContext.context;
-		}
+		const { context, rootContext } = loaderContext;
+		options.context = typeof rootContext === 'string' ? rootContext : context;
 	}
 	const request = slash(path.relative(options.context, loaderContext.resourcePath));
 	options.content = `${options.hashPrefix}${request}+${localName}`;
@@ -87,7 +83,7 @@ function colorToColorMod(style: CssStyle) {
 	});
 }
 
-export default function webpackConfigFactory(args: any): WebpackConfiguration {
+export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const elements = args.element ? [args.element] : args.elements;
 	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
@@ -109,6 +105,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 	};
 
 	const config: webpack.Configuration = {
+		mode: 'development',
 		entry: elements.reduce((entry: any, element: any) => {
 			entry[element.name] = [
 				`imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
@@ -127,17 +124,32 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 			modules: [basePath, path.join(basePath, 'node_modules')],
 			extensions
 		},
-		devtool: 'source-map',
+		optimization: {
+			splitChunks: {
+				cacheGroups: elements.reduce((groups: { [key: string]: webpack.Options.CacheGroupsOptions }, element: any) => {
+					function recursiveIssuer(m: any): string | boolean {
+						return m.issuer ? recursiveIssuer(m.issuer) : m.name ? m.name : false;
+					}
+					groups[`${element.name}Styles`] = {
+						name: element.name,
+						test: (m: any, c: any, entry = element.name) =>
+							m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+						chunks: 'all',
+						enforce: true
+					};
+					return groups;
+				}, {})
+			}
+		},
 		watchOptions: { ignored: /node_modules/ },
 		plugins: removeEmpty([
 			new CssModulePlugin(basePath),
 			new webpack.BannerPlugin(banner),
 			new IgnorePlugin(/request\/providers\/node/),
-			new ExtractTextPlugin({
-				filename: (getPath: any) => getPath(`[name]-${packageJson.version}.css`)
-			} as any),
-			new webpack.NamedChunksPlugin(),
-			new webpack.NamedModulesPlugin()
+			new MiniCssExtractPlugin({
+				filename: `[name]-${packageJson.version}.css`,
+				sourceMap: true
+			} as any)
 		]),
 		module: {
 			rules: removeEmpty([
@@ -181,6 +193,10 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 					])
 				},
 				{
+					// We cannot trust that all `mjs` modules use the correct import format for all dependencies
+					// (e.g., do not use `import from` for cjs modules). Setting the type to `javascript/auto` allows
+					// incorrect imports to continue working.
+					type: 'javascript/auto',
 					test: /\.mjs$/,
 					use: removeEmpty([
 						{
@@ -212,10 +228,7 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 				{
 					test: /\.css$/,
 					exclude: allPaths,
-					use: ExtractTextPlugin.extract({
-						fallback: ['style-loader'],
-						use: ['css-loader?sourceMap']
-					})
+					use: [MiniCssExtractPlugin.loader, 'css-loader?sourceMap']
 				},
 				{
 					test: /\.m\.css.js$/,
@@ -225,33 +238,31 @@ export default function webpackConfigFactory(args: any): WebpackConfiguration {
 				{
 					include: allPaths,
 					test: /.*\.css?$/,
-					use: ExtractTextPlugin.extract({
-						fallback: ['style-loader'],
-						use: [
-							'@dojo/webpack-contrib/css-module-decorator-loader',
-							{
-								loader: 'css-loader',
-								options: {
-									modules: true,
-									sourceMap: true,
-									importLoaders: 1,
-									localIdentName: '[name]__[local]__[hash:base64:5]',
-									getLocalIdent
-								}
-							},
-							{
-								loader: 'postcss-loader?sourceMap',
-								options: {
-									ident: 'postcss',
-									plugins: [require('postcss-import')(), postcssPresetEnv(postcssPresetConfig)]
-								}
+					use: [
+						MiniCssExtractPlugin.loader,
+						'@dojo/webpack-contrib/css-module-decorator-loader',
+						{
+							loader: 'css-loader',
+							options: {
+								modules: true,
+								sourceMap: true,
+								importLoaders: 1,
+								localIdentName: '[name]__[local]__[hash:base64:5]',
+								getLocalIdent
 							}
-						]
-					})
+						},
+						{
+							loader: 'postcss-loader?sourceMap',
+							options: {
+								ident: 'postcss',
+								plugins: [require('postcss-import')(), postcssPresetEnv(postcssPresetConfig)]
+							}
+						}
+					]
 				}
 			])
 		}
 	};
 
-	return config as WebpackConfiguration;
+	return config;
 }
