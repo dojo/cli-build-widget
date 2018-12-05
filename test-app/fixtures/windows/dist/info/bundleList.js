@@ -1,0 +1,1 @@
+window.__bundleList = ["menu-item-1.0.0.js"]
