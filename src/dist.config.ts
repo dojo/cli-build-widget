@@ -1,10 +1,10 @@
+import BundleAnalyzerPlugin from '@dojo/webpack-contrib/webpack-bundle-analyzer/BundleAnalyzerPlugin';
 import baseConfigFactory from './base.config';
 import webpack = require('webpack');
 import * as path from 'path';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as WebpackChunkHash from 'webpack-chunk-hash';
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer-sunburst').BundleAnalyzerPlugin;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -34,10 +34,9 @@ function webpackConfig(args: any): webpack.Configuration {
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'static',
 			openAnalyzer: false,
-			reportType: 'sunburst',
 			generateStatsFile: true,
-			reportFilename: path.join('..', '..', 'info', args.element.name, 'report.html'),
-			statsFilename: path.join('..', '..', 'info', args.element.name, 'stats.json')
+			reportFilename: '../info/report.html',
+			statsFilename: '../info/stats.json'
 		}),
 		new WebpackChunkHash(),
 		new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
