@@ -118,7 +118,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			filename: `[name]-${packageJson.version}.js`,
 			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
-			path: path.resolve('./output')
+			path: path.resolve('./output'),
+			pathinfo: false
 		},
 		resolve: {
 			modules: [basePath, path.join(basePath, 'node_modules')],
