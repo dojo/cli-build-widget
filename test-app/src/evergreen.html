@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>custom-element</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
+	<script src="./menu/menu-1.0.0.js"></script>
+	<script src="./menu-item/menu-item-1.0.0.js"></script>
+	<link rel="stylesheet" href="./menu/menu-1.0.0.css" />
+	<link rel="stylesheet" href="./menu-item/menu-item-1.0.0.css" />
+</head>
+<body>
+	<div class="menu-container">
+		<demo-menu id="menu">
+			<demo-menu-item id="a" title="Menu Item A"></demo-menu-item>
+			<demo-menu-item id="b" title="Menu Item B"></demo-menu-item>
+			<demo-menu-item id="c" title="Menu Item C"></demo-menu-item>
+		</demo-menu>
+	</div>
+	<p id="result"></p>
+	<script>
+		a.data = { foo: 'bar' };
+		b.data = { foo: 'baz' };
+		c.data = { foo: 'bat' };
+		menu.addEventListener('selected', function(event) {
+			const detail = event.detail;
+			result.textContent = detail[0].foo;
+		});
+	</script>
+</body>
+</html>

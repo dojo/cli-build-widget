@@ -1,3 +1,4 @@
+import has from '@dojo/framework/has/has';
 import { v } from '@dojo/framework/widget-core/d';
 import { customElement } from '@dojo/framework/widget-core/decorators/customElement';
 import { WidgetProperties, WNode } from '@dojo/framework/widget-core/interfaces';
@@ -41,7 +42,15 @@ export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem
 			return child;
 		});
 
-		return v('nav', { classes: this.theme(css.root) }, [
+		const navAttributes = { classes: this.theme(css.root) };
+		if (has('foo')) {
+			navAttributes['data-foo'] = 'true';
+		}
+		if (has('bar')) {
+			navAttributes['data-bar'] = 'true';
+		}
+
+		return v('nav', navAttributes, [
 			v(
 				'ol',
 				{

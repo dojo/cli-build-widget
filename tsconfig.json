@@ -13,7 +13,7 @@
 			"es2015.symbol.wellknown"
 		],
 		"target": "es2015",
-		"types": [ "intern" ]
+		"types": [ "intern", "cypress" ]
 	},
 	"include": [
 		"./src/**/*.ts",

@@ -1,1 +1,0 @@
-window.__bundleList = ["menu-1.0.0.js"]

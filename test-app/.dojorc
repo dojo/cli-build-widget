@@ -3,6 +3,10 @@
 		"elements": [
 			"src/menu/Menu",
 			"src/menu-item/MenuItem"
-		]
+		],
+		"features": {
+			"foo": true,
+			"bar": false
+		}
 	}
 }
