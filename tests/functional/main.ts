@@ -25,10 +25,7 @@ function normalise(value: string) {
 }
 
 function assertOutput(mode: string, widget: string) {
-	let files = [`${widget}-1.0.0.css`, `${widget}-1.0.0.js`];
-	if (mode === 'dist') {
-		files = [...files, ...[`${widget}-1.0.0.css.map`, `${widget}-1.0.0.js.map`]];
-	}
+	const files = [`${widget}-1.0.0.css`, `${widget}-1.0.0.js`];
 	files.forEach(file => {
 		const fixtureFilePath = path.join(appRootDir, 'fixtures', platform, mode, widget, file);
 		const outputFilePath = path.join(appRootDir, 'output', mode, widget, file);

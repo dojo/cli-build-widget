@@ -1,55 +1,50 @@
+import BundleAnalyzerPlugin from '@dojo/webpack-contrib/webpack-bundle-analyzer/BundleAnalyzerPlugin';
 import baseConfigFactory from './base.config';
 import webpack = require('webpack');
 import * as path from 'path';
-import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as WebpackChunkHash from 'webpack-chunk-hash';
-import { existsSync } from 'fs';
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer-sunburst').BundleAnalyzerPlugin;
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
-const packageJsonPath = path.join(process.cwd(), 'package.json');
-const packageJson = existsSync(packageJsonPath) ? require(packageJsonPath) : {};
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
 	const location = path.join('dist', args.element.name);
+	const outputPath = output!.path as string;
+
+	config.mode = 'production';
+
+	config.optimization = {
+		...config.optimization,
+		minimizer: [
+			new TerserPlugin({ sourceMap: true, cache: true }),
+			new OptimizeCssAssetsPlugin({
+				cssProcessor: require('cssnano'),
+				cssProcessorPluginOptions: {
+					preset: ['default', { calc: false }]
+				}
+			})
+		]
+	};
 
 	config.plugins = [
-		...plugins,
+		...plugins!,
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'static',
 			openAnalyzer: false,
-			reportType: 'sunburst',
 			generateStatsFile: true,
-			reportFilename: path.join('..', '..', 'info', args.element.name, 'report.html'),
-			statsFilename: path.join('..', '..', 'info', args.element.name, 'stats.json')
+			reportFilename: '../info/report.html',
+			statsFilename: '../info/stats.json'
 		}),
-		new UglifyJsPlugin({ sourceMap: true, cache: true }),
 		new WebpackChunkHash(),
-		new CleanWebpackPlugin([location], { root: output.path, verbose: false }),
-		new webpack.DefinePlugin({
-			'process.env': {
-				NODE_ENV: '"production"'
-			}
-		})
+		new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
 	];
-
-	config.plugins = config.plugins.map(plugin => {
-		if (plugin instanceof ExtractTextPlugin) {
-			return new ExtractTextPlugin({
-				filename: `[name]-${packageJson.version}.css`,
-				allChunks: true
-			});
-		}
-		return plugin;
-	});
 
 	config.output = {
 		...output,
-		path: path.join(output.path!, location)
+		path: path.join(outputPath, location)
 	};
 
 	return config;
