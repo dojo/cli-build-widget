@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"properties": {
+		"bundles": {
+			"type": "object",
+			"patternProperties": {
+                "^.*$": {
+                    "type": "array"
+                }
+            }
+        },
+        "features": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "type": ["boolean", "string", "number"]
+                }
+            }
+        },
+        "elements": {
+            "type": "array",
+            "items": { "type": "string" }
+        }
+	}
+}
