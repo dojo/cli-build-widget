@@ -12,6 +12,7 @@ import testConfigFactory from './test.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
 import { moveBuildOptions, getElementName } from './util';
+import { readFileSync } from 'fs';
 
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
@@ -271,6 +272,21 @@ const command: Command = {
 				devDependencies: { ...buildNpmDependencies() }
 			}
 		};
+	},
+	validate(helper: Helper) {
+		let schema;
+		try {
+			schema = JSON.parse(readFileSync(path.join(__dirname, 'schema.json')).toString());
+		} catch (error) {
+			return Promise.reject(Error('The dojorc schema for cli-build-widget could not be read: ' + error));
+		}
+		return helper.validation.validate({
+			commandGroup: command.group as string,
+			commandName: command.name,
+			commandSchema: schema,
+			commandConfig: helper.configuration.get(),
+			silentSuccess: true
+		});
 	}
 };
 export default command;
