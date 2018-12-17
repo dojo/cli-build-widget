@@ -173,8 +173,17 @@ We appreciate your interest! Please see the [Dojo 2 Meta Repository](https://git
 
 ### Installation
 
-To start working with this package, clone the repository and run `npm install`.
+To start working with this package, clone the repository and run:
 
+```
+npm install
+```
+
+In order to build the project, you can run all the build steps via:
+
+```
+npm run build
+```
 
 ### Scripts
 
