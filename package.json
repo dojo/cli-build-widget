@@ -68,7 +68,7 @@
     "@types/sinon": "~4.3.3",
     "@types/strip-ansi": "3.0.0",
     "@types/tapable": "1.0.4",
-    "@types/webpack": "4.4.19",
+    "@types/webpack": "4.4.23",
     "@types/webpack-chunk-hash": "0.4.2",
     "@types/yargs": "10.0.0",
     "codecov": "~3.0.4",
@@ -82,7 +82,8 @@
     "rimraf": "2.6.2",
     "shelljs": "0.7.8",
     "shx": "0.2.2",
-    "sinon": "~4.5.0"
+    "sinon": "~4.5.0",
+    "typescript": "~2.6.1"
   },
   "dependencies": {
     "@dojo/framework": "next",
