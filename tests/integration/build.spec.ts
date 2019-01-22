@@ -2,6 +2,7 @@ describe('build', () => {
 	function assertMenu(mode: string, legacy: boolean, id: string, resultText: string) {
 		const directory = legacy ? `${mode}-legacy` : `${mode}-evergreen`;
 		cy.visit(`/test-app/output/${directory}`);
+		cy.wait(1000); // Wait for the elements to become interactive
 
 		cy
 			.get('[data-foo]')
@@ -13,16 +14,8 @@ describe('build', () => {
 			.get(`#${id} button`)
 			.as('menuItem')
 			.should('have.text', `Menu Item ${id.toUpperCase()}`);
-		cy
-			.get('@menuItem')
-			.should('have.attr', 'aria-pressed')
-			.and('include', 'false');
-		cy.get('@menuItem').click();
-		cy
-			.get('@menuItem')
-			.should('have.attr', 'aria-pressed')
-			.and('include', 'true');
 
+		cy.get('@menuItem').click();
 		cy.get('#result').should('have.text', resultText);
 	}
 

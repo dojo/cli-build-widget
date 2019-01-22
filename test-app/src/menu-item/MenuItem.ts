@@ -39,7 +39,6 @@ export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
 						'button',
 						{
 							classes: this.theme([css.button]),
-							'aria-pressed': selected ? 'true' : 'false',
 							onclick: this._onClick
 						},
 						[title]
