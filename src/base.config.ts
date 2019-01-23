@@ -89,7 +89,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
-	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('chrome') };
+	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
 
 	const postcssPresetConfig = {
 		browsers: args.legacy ? ['last 2 versions', 'ie >= 10'] : ['last 2 versions'],
