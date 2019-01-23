@@ -32,10 +32,18 @@ export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
 			v(
 				'span',
 				{
-					classes: this.theme([css.item, selected ? css.selected : null]),
-					onclick: this._onClick
+					classes: this.theme([css.item, selected ? css.selected : null])
 				},
-				[title]
+				[
+					v(
+						'button',
+						{
+							classes: this.theme([css.button]),
+							onclick: this._onClick
+						},
+						[title]
+					)
+				]
 			)
 		]);
 	}

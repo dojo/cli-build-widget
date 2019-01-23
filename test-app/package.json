@@ -2,17 +2,16 @@
   "name": "test-app",
   "version": "1.0.0",
   "scripts": {
-    "clean-dts": "shx rm -rf src/menu/menu.m.css.d.ts src/menu-item/menuItem.m.css.d.ts",
     "install-build-widget": "npm install --no-save ../dist/dojo-cli-build-widget.tgz",
-    "generate-fixtures": "shx rm -rf output & npm run clean-dts & dojo build && npm run clean-dts && dojo build --mode dev && npm run clean-dts && dojo build --mode test",
-    "generate-unix-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/unix/",
-    "generate-windows-fixtures": "npm run generate-fixtures && shx cp -r output/* fixtures/windows/",
-    "build-dist": "dojo build --mode dist",
-    "build-dev": "dojo build --mode dev",
-    "build-test": "dojo build --mode test"
+    "build:dist": "dojo build --mode dist --legacy && shx mv output/dist output/dist-legacy && shx cp src/legacy.html output/dist-legacy/index.html",
+    "build:dist:evergreen": "dojo build --mode dist && shx mv output/dist output/dist-evergreen && shx cp src/evergreen.html output/dist-evergreen/index.html",
+    "build:dev": "dojo build --mode dev --legacy && shx mv output/dev output/dev-legacy && shx cp src/legacy.html output/dev-legacy/index.html",
+    "build:dev:evergreen": "dojo build --mode dev && shx mv output/dev output/dev-evergreen && shx cp src/evergreen.html output/dev-evergreen/index.html",
+    "build:test": "dojo build --mode test"
   },
   "dependencies": {
     "@dojo/framework": "~3.0.0",
+    "@webcomponents/custom-elements": "1.0.8",
     "tslib": "~1.8.0",
     "typescript": "2.6.2"
   },
