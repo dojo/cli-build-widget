@@ -49,8 +49,8 @@
     ]
   },
   "devDependencies": {
-    "@dojo/cli": "next",
-    "@dojo/scripts": "~3.0.1",
+    "@dojo/cli": "^5.0.0",
+    "@dojo/scripts": "~3.1.0",
     "@types/clean-webpack-plugin": "0.1.2",
     "@types/execa": "0.8.0",
     "@types/express": "4.11.0",
@@ -89,8 +89,8 @@
     "typescript": "~2.6.1"
   },
   "dependencies": {
-    "@dojo/framework": "next",
-    "@dojo/webpack-contrib": "next",
+    "@dojo/framework": "^5.0.0",
+    "@dojo/webpack-contrib": "^5.0.0",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
     "cli-columns": "3.1.2",
