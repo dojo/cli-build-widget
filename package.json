@@ -70,7 +70,7 @@
     "@types/sinon": "~4.3.3",
     "@types/strip-ansi": "3.0.0",
     "@types/tapable": "1.0.4",
-    "@types/webpack": "4.4.23",
+    "@types/webpack": "^4.4.24",
     "@types/webpack-chunk-hash": "0.4.2",
     "@types/yargs": "10.0.0",
     "codecov": "~3.0.4",
