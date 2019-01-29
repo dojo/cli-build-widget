@@ -83,10 +83,6 @@
                     "type": ["boolean", "string", "number"]
                 }
             }
-        },
-        "elements": {
-            "type": "array",
-            "items": { "type": "string" }
         }
 	}
 }
