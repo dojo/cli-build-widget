@@ -1,6 +1,5 @@
 import has from '@dojo/framework/has/has';
 import { v } from '@dojo/framework/widget-core/d';
-import { customElement } from '@dojo/framework/widget-core/decorators/customElement';
 import { WidgetProperties, WNode } from '@dojo/framework/widget-core/interfaces';
 import { theme, ThemedMixin } from '@dojo/framework/widget-core/mixins/Themed';
 import { WidgetBase } from '@dojo/framework/widget-core/WidgetBase';
@@ -12,10 +11,6 @@ interface MenuProperties extends WidgetProperties {
 	onSelected: (data: any) => void;
 }
 
-@customElement<MenuProperties>({
-	tag: 'demo-menu',
-	events: ['onSelected']
-})
 @theme(css)
 export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem>> {
 	private _selectedId: number;

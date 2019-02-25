@@ -1,4 +1,5 @@
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
+import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
 import { existsSync } from 'fs';
 import * as loaderUtils from 'loader-utils';
@@ -87,6 +88,7 @@ function colorToColorMod(style: CssStyle) {
 
 export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const elements = args.element ? [args.element] : args.elements;
+	const elementPrefix = args.prefix ? args.prefix : packageName || 'widget';
 	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
@@ -103,6 +105,21 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		},
 		autoprefixer: {
 			grid: args.legacy
+		}
+	};
+
+	const tsLoaderOptions: any = {
+		instance: jsonpIdent,
+		compilerOptions,
+		getCustomTransformers(program: any) {
+			return {
+				before: [
+					elementTransformer(program, {
+						elementPrefix,
+						customElementFiles: elements.map((element: any) => path.resolve(element.path))
+					})
+				]
+			};
 		}
 	};
 
@@ -174,11 +191,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: {
-								onlyCompileBundledFiles: true,
-								instance: jsonpIdent,
-								compilerOptions
-							}
+							options: tsLoaderOptions
 						}
 					])
 				},
