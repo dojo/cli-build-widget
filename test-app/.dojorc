@@ -9,5 +9,11 @@
 			"foo": true,
 			"bar": false
 		}
+	},
+	"build-app": {
+		"features": {
+			"foo": true,
+			"bar": false
+		}
 	}
 }

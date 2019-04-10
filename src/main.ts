@@ -49,7 +49,7 @@ function build(config: webpack.Configuration[], args: any) {
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}...` : '';
-				logger(stats.toJson(), config, runningMessage);
+				logger(stats.toJson(), config, args.target === 'lib', runningMessage);
 			}
 			resolve();
 		});
@@ -82,7 +82,7 @@ function fileWatch(configs: webpack.Configuration[], args: any): Promise<void> {
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}` : 'watching...';
-				logger(stats.toJson(), configs, runningMessage);
+				logger(stats.toJson(), configs, args.target === 'lib', runningMessage);
 			}
 			resolve();
 		});
@@ -106,7 +106,7 @@ function memoryWatch(configs: webpack.Configuration[], args: any, app: express.A
 	const compiler = createWatchCompiler(configs);
 
 	(compiler as any).hooks.done.tap('@dojo/cli-build-widget', (stats: webpack.Stats) => {
-		logger(stats.toJson({ warningsFilter }), configs, `Listening on port ${args.port}...`);
+		logger(stats.toJson({ warningsFilter }), configs, args.target === 'lib', `Listening on port ${args.port}...`);
 	});
 
 	app.use(
@@ -206,6 +206,13 @@ const command: Command = {
 			alias: 'p',
 			default: 9999,
 			type: 'number'
+		});
+
+		options('target', {
+			describe: 'the type of project',
+			alias: 't',
+			default: 'widget',
+			choices: ['widget', 'lib']
 		});
 	},
 	run(helper: Helper, args: any) {

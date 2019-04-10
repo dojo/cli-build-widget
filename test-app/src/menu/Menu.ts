@@ -1,13 +1,13 @@
 import has from '@dojo/framework/core/has';
 import { v } from '@dojo/framework/core/vdom';
-import { WidgetProperties, WNode } from '@dojo/framework/core/interfaces';
+import { DNode WidgetProperties, WNode } from '@dojo/framework/core/interfaces';
 import { theme, ThemedMixin } from '@dojo/framework/core/mixins/Themed';
 import { WidgetBase } from '@dojo/framework/core/WidgetBase';
 import { MenuItem, MenuItemProperties } from '../menu-item/MenuItem';
 
 import * as css from './menu.m.css';
 
-interface MenuProperties extends WidgetProperties {
+export interface MenuProperties extends WidgetProperties {
 	onSelected: (data: any) => void;
 }
 
@@ -21,7 +21,7 @@ export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem
 		this.invalidate();
 	}
 
-	protected render() {
+	protected render(): DNode {
 		const items = this.children.map((child, index) => {
 			if (child) {
 				const properties: Partial<MenuItemProperties> = {

@@ -42,4 +42,29 @@ describe('build', () => {
 		assertMenu('dev', true, 'b', 'baz');
 		assertMenu('dev', true, 'c', 'bat');
 	});
+
+	function assertLibMenu(id: string, resultText: string) {
+		cy.visit('/test-app/output/dist-lib-evergreen');
+		cy.wait(1000); // Wait for the elements to become interactive
+
+		cy
+			.get('[data-foo]')
+			.should('have.attr', 'data-foo')
+			.and('include', 'true');
+		cy.get('[data-bar]').should('not.exist');
+
+		cy
+			.get(`#menu-item-${id} button`)
+			.as('menuItem')
+			.should('have.text', `Menu Item ${id.toUpperCase()}`);
+
+		cy.get('@menuItem').click();
+		cy.get('#result').should('have.text', resultText);
+	}
+
+	it('evergreen lib dist', () => {
+		assertLibMenu('a', 'bar');
+		assertLibMenu('b', 'baz');
+		assertLibMenu('c', 'bat');
+	});
 });

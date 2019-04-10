@@ -5,3 +5,4 @@
 npm-debug.log
 yarn.lock
 /test-app/package-lock.json
+/test-app/src/widget-lib/
