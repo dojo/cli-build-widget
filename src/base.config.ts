@@ -6,6 +6,7 @@ import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const slash = require('slash');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
@@ -151,7 +152,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			new MiniCssExtractPlugin({
 				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
-			} as any)
+			} as any),
+			new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true })
 		]),
 		module: {
 			rules: removeEmpty([
@@ -187,10 +189,11 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 							loader: '@dojo/webpack-contrib/static-build-loader',
 							options: { features }
 						},
+						{ loader: 'thread-loader' },
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: { onlyCompileBundledFiles: true, instance: jsonpIdent, transpileOnly: true, compilerOptions }
+							options: { happyPackMode: true, onlyCompileBundledFiles: false, instance: jsonpIdent, transpileOnly: false, compilerOptions }
 						}
 					])
 				},
