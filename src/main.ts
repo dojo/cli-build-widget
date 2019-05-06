@@ -223,11 +223,11 @@ const command: Command = {
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = elements.map((element: any) => devConfigFactory({ ...rc, ...commandLineArgs, element }));
+			configs = [devConfigFactory({ ...rc, ...commandLineArgs, elements })];
 		} else if (args.mode === 'test') {
 			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
 		} else {
-			configs = elements.map((element: any) => distConfigFactory({ ...rc, ...commandLineArgs, element }));
+			configs = [distConfigFactory({ ...rc, ...commandLineArgs, elements })];
 		}
 
 		if (configs.length === 0) {
