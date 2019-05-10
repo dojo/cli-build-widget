@@ -1,6 +1,7 @@
 import BundleAnalyzerPlugin from '@dojo/webpack-contrib/webpack-bundle-analyzer/BundleAnalyzerPlugin';
 import baseConfigFactory from './base.config';
 import webpack = require('webpack');
+import * as path from 'path';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as WebpackChunkHash from 'webpack-chunk-hash';
 
@@ -39,6 +40,11 @@ function webpackConfig(args: any): webpack.Configuration {
 		new WebpackChunkHash(),
 		new CleanWebpackPlugin([outputPath], { root: outputPath, verbose: false })
 	];
+
+	config.output = {
+		...output,
+		path: path.join(outputPath, 'dist')
+	};
 
 	return config;
 }
