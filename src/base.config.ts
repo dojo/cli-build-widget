@@ -175,9 +175,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 						{
 							loader: 'ts-loader',
 							options: {
-								onlyCompileBundledFiles: false,
+								onlyCompileBundledFiles: true,
 								instance: jsonpIdent,
-								transpileOnly: false,
 								compilerOptions
 							}
 						}
