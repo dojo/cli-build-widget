@@ -116,8 +116,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		}, {}),
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: `[name]/[name]-${packageJson.version}.js`,
-			filename: `[name]/[name]-${packageJson.version}.js`,
+			chunkFilename: `[name]-${packageJson.version}.js`,
+			filename: `[name]-${packageJson.version}.js`,
 			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output'),
@@ -133,7 +133,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			new webpack.BannerPlugin(banner),
 			new IgnorePlugin(/request\/providers\/node/),
 			new MiniCssExtractPlugin({
-				filename: `[name]/[name]-${packageJson.version}.css`,
+				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
 			} as any)
 		]),
