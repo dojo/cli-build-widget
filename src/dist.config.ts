@@ -12,6 +12,7 @@ function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
 	const outputPath = output!.path as string;
+	const location = path.join(outputPath, 'dist');
 
 	config.mode = 'production';
 
@@ -38,12 +39,12 @@ function webpackConfig(args: any): webpack.Configuration {
 			statsFilename: '../info/stats.json'
 		}),
 		new WebpackChunkHash(),
-		new CleanWebpackPlugin([outputPath], { root: outputPath, verbose: false })
+		new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
 	];
 
 	config.output = {
 		...output,
-		path: path.join(outputPath, 'dist')
+		path: location
 	};
 
 	return config;
