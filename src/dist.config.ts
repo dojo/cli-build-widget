@@ -11,8 +11,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
 	const { plugins, output } = config;
-	const location = path.join('dist', args.element.name);
 	const outputPath = output!.path as string;
+	const location = path.join(outputPath, 'dist');
 
 	config.mode = 'production';
 
@@ -44,7 +44,7 @@ function webpackConfig(args: any): webpack.Configuration {
 
 	config.output = {
 		...output,
-		path: path.join(outputPath, location)
+		path: location
 	};
 
 	return config;

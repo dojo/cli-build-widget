@@ -42,7 +42,8 @@ export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem
 			return child;
 		});
 
-		const navAttributes = { classes: this.theme(css.root) };
+		const navAttributes: any = { classes: this.theme(css.root) };
+
 		if (has('foo')) {
 			navAttributes['data-foo'] = 'true';
 		}

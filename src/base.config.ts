@@ -78,6 +78,7 @@ All rights reserved
 interface CssStyle {
 	walkDecls(processor: (decl: { value: string }) => void): void;
 }
+
 function colorToColorMod(style: CssStyle) {
 	style.walkDecls(decl => {
 		decl.value = decl.value.replace('color(', 'color-mod(');
@@ -126,23 +127,6 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			modules: [basePath, path.join(basePath, 'node_modules')],
 			extensions
 		},
-		optimization: {
-			splitChunks: {
-				cacheGroups: elements.reduce((groups: { [key: string]: webpack.Options.CacheGroupsOptions }, element: any) => {
-					function recursiveIssuer(m: any): string | boolean {
-						return m.issuer ? recursiveIssuer(m.issuer) : m.name ? m.name : false;
-					}
-					groups[`${element.name}Styles`] = {
-						name: element.name,
-						test: (m: any, c: any, entry = element.name) =>
-							m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
-						chunks: 'all',
-						enforce: true
-					};
-					return groups;
-				}, {})
-			}
-		},
 		watchOptions: { ignored: /node_modules/ },
 		plugins: removeEmpty([
 			new CssModulePlugin(basePath),
@@ -190,7 +174,11 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 						getUMDCompatLoader({ bundles: args.bundles }),
 						{
 							loader: 'ts-loader',
-							options: { onlyCompileBundledFiles: true, instance: jsonpIdent, transpileOnly: true, compilerOptions }
+							options: {
+								onlyCompileBundledFiles: true,
+								instance: jsonpIdent,
+								compilerOptions
+							}
 						}
 					])
 				},
@@ -225,7 +213,12 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				},
 				{
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
-					loader: 'file-loader?hash=sha512&digest=hex&name=[hash:base64:8].[ext]'
+					loader: 'file-loader',
+					options: {
+						hash: 'sha512',
+						digest: 'hex',
+						name: '[hash:base64:8].[ext]'
+					}
 				},
 				{
 					test: /\.css$/,
