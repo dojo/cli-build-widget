@@ -10,7 +10,7 @@
     "build:test": "dojo build --mode test"
   },
   "dependencies": {
-    "@dojo/framework": "^6.0.0-alpha.1",
+    "@dojo/framework": "6.0.0-alpha.1",
     "@webcomponents/custom-elements": "1.0.8",
     "tslib": "~1.8.0",
     "typescript": "2.6.2"
