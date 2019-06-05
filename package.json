@@ -87,11 +87,11 @@
     "shelljs": "0.7.8",
     "shx": "0.2.2",
     "sinon": "~4.5.0",
-    "typescript": "~2.6.1"
+    "typescript": "3.4.5"
   },
   "dependencies": {
-    "@dojo/framework": "6.0.0-alpha.1",
-    "@dojo/webpack-contrib": "6.0.0-alpha.1",
+    "@dojo/framework": "6.0.0-alpha.2",
+    "@dojo/webpack-contrib": "6.0.0-alpha.3",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
     "cli-columns": "3.1.2",

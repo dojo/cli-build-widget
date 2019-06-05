@@ -282,14 +282,18 @@ describe('command', () => {
 		it('fails on error', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			listenStub.callsFake((port: string, callback: Function) => {
-				callback(true);
+				return {
+					on(_: any, callback: any) {
+						callback(new Error());
+					}
+				};
 			});
 			return main.run(getMockConfiguration(), { serve: true }).then(
 				() => {
 					throw new Error();
 				},
 				(e: Error) => {
-					assert.isTrue(e);
+					assert.isDefined(e);
 				}
 			);
 		});
