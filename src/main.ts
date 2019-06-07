@@ -151,13 +151,13 @@ function serve(configs: webpack.Configuration[], args: any): Promise<void> {
 		})
 		.then(() => {
 			return new Promise<void>((resolve, reject) => {
-				app.listen(args.port, (error: Error) => {
-					if (error) {
-						reject(error);
-					} else {
+				app
+					.listen(args.port, () => {
 						resolve();
-					}
-				});
+					})
+					.on('error', error => {
+						reject(error);
+					});
 			});
 		});
 }
