@@ -43,8 +43,10 @@ describe('build', () => {
 		assertMenu('dev', true, 'c', 'bat');
 	});
 
-	function assertLibMenu(id: string, resultText: string) {
-		cy.visit('/test-app/output/dist-lib-evergreen');
+	function assertLibMenu(mode: 'dev' | 'dist', legacy: boolean, index: number, resultText: string) {
+		const titles = ['A', 'B', 'C'].map(title => `Menu Item ${title}`);
+		const directory = legacy ? `${mode}-lib-legacy` : `${mode}-lib`;
+		cy.visit(`/test-lib-app/output/${directory}`);
 		cy.wait(1000); // Wait for the elements to become interactive
 
 		cy
@@ -54,17 +56,36 @@ describe('build', () => {
 		cy.get('[data-bar]').should('not.exist');
 
 		cy
-			.get(`#menu-item-${id} button`)
+			.get('li button')
+			.eq(index)
 			.as('menuItem')
-			.should('have.text', `Menu Item ${id.toUpperCase()}`);
+			.should('have.text', titles[index]);
 
 		cy.get('@menuItem').click();
 		cy.get('#result').should('have.text', resultText);
 	}
 
-	it('evergreen lib dist', () => {
-		assertLibMenu('a', 'bar');
-		assertLibMenu('b', 'baz');
-		assertLibMenu('c', 'bat');
+	it('lib: evergreen dist', () => {
+		assertLibMenu('dist', false, 0, 'bar');
+		assertLibMenu('dist', false, 1, 'baz');
+		assertLibMenu('dist', false, 2, 'bat');
+	});
+
+	it('lib: legacy dist', () => {
+		assertLibMenu('dist', true, 0, 'bar');
+		assertLibMenu('dist', true, 1, 'baz');
+		assertLibMenu('dist', true, 2, 'bat');
+	});
+
+	it('lib: evergreen dev', () => {
+		assertLibMenu('dev', false, 0, 'bar');
+		assertLibMenu('dev', false, 1, 'baz');
+		assertLibMenu('dev', false, 2, 'bat');
+	});
+
+	it('lib: legacy dev', () => {
+		assertLibMenu('dev', true, 0, 'bar');
+		assertLibMenu('dev', true, 1, 'baz');
+		assertLibMenu('dev', true, 2, 'bat');
 	});
 });

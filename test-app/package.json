@@ -8,10 +8,10 @@
     "build:dev": "dojo build widget --mode dev --legacy && shx mv output/dev output/dev-legacy && shx cp src/legacy.html output/dev-legacy/index.html",
     "build:dev:evergreen": "dojo build widget --mode dev && shx mv output/dev output/dev-evergreen && shx cp src/evergreen.html output/dev-evergreen/index.html",
     "build:test": "dojo build widget --mode test",
-    "build:lib:dist": "dojo build widget -t lib --legacy && shx mv output/dist src/widget-lib && npm run build:lib-app && rimraf src/widget-lib",
-    "build:lib:dist:evergreen": "dojo build widget -t lib && shx mv output/dist src/widget-lib && npm run build:lib-app && rimraf src/widget-lib",
-    "build:lib:dev": "dojo build widget -t lib -m dev --legacy && shx mv output/dev src/widget-lib && npm run build:lib-app && rimraf src/widget-lib",
-    "build:lib:dev:evergreen": "dojo build widget -t lib -m dev && shx mv output/dev src/widget-lib && npm run build:lib-app && rimraf src/widget-lib",
+    "build:lib:dist": "dojo build widget -t lib --legacy && shx mv output/dist output/dist-lib-legacy",
+    "build:lib:dist:evergreen": "dojo build widget -t lib && shx mv output/dist output/dist-lib",
+    "build:lib:dev": "dojo build widget -t lib -m dev --legacy && shx mv output/dev output/dev-lib-legacy",
+    "build:lib:dev:evergreen": "dojo build widget -t lib -m dev && shx mv output/dev output/dev-lib",
     "build:lib-app": "dojo build app && shx mv output/dist output/dist-lib-evergreen"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "typescript": "3.4.5"
   },
   "devDependencies": {
-    "@dojo/cli-build-app": "^5.0.0",
     "shx": "0.2.2",
     "intern": "4.2.2"
   }

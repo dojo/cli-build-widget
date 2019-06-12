@@ -1,6 +1,6 @@
 import has from '@dojo/framework/core/has';
 import { v } from '@dojo/framework/core/vdom';
-import { DNode WidgetProperties, WNode } from '@dojo/framework/core/interfaces';
+import { DNode, WidgetProperties, WNode } from '@dojo/framework/core/interfaces';
 import { theme, ThemedMixin } from '@dojo/framework/core/mixins/Themed';
 import { WidgetBase } from '@dojo/framework/core/WidgetBase';
 import { MenuItem, MenuItemProperties } from '../menu-item/MenuItem';

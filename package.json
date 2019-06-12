@@ -17,9 +17,13 @@
     "url": "https://github.com/dojo/cli-build-widget.git"
   },
   "scripts": {
-    "artifact:build": "cd test-app && npm run build:dist:evergreen && npm run build:dist && npm run build:dev:evergreen && npm run build:dev && cd ..",
+    "artifact:build": "npm run artifact:build:elements && npm run artifact:build:lib && npm run artifact:build:lib:app",
+    "artifact:build:elements": "cd test-app && npm run build:dist:evergreen && npm run build:dist && npm run build:dev:evergreen && npm run build:dev && cd ..",
     "artifact:build:lib": "cd test-app && npm run build:lib:dist:evergreen && npm run build:lib:dist && npm run build:lib:dev:evergreen && npm run build:lib:dev && cd ..",
-    "artifact:install": "cd test-app && shx rm -rf node_modules && npm i && npm run install-build-widget",
+    "artifact:build:lib:app": "cpx \"test-app/output/*-lib*/**\" test-lib-app/widget-lib-build && cd test-lib-app && npm run build && cd ..",
+    "artifact:install": "npm run artifact:install:widgets && npm run artifact:install:lib:app",
+    "artifact:install:widgets": "cd test-app && shx rm -rf node_modules && npm i && npm run install-build-widget",
+    "artifact:install:lib:app": "cd test-lib-app && shx rm -rf node_modules && npm i",
     "artifact:package": "cd dist && npm pack -q ./release && shx mv dojo-cli-build-widget-* dojo-cli-build-widget.tgz && cd ..",
     "build:static:dev": "cpx \"{src,tests}/**/*.{d.ts,html,md,json,js,css}\" dist/dev",
     "build:static:release": "cpx \"src/**/*.{d.ts,json,js}\" dist/release",
@@ -38,7 +42,7 @@
     "serve": "serve -p 9999",
     "test:ci": "run-p --race serve test",
     "test:cypress": "cypress run",
-    "test": "run-s clean build artifact:package artifact:install intern artifact:build artifact:build:lib test:cypress",
+    "test": "run-s clean build artifact:package artifact:install intern artifact:build test:cypress",
     "uploadCoverage": "codecov --file=coverage/coverage.json",
     "watch:ts": "dojo-tsc-watcher -p tsconfig.json -- dojo-package",
     "watch": "run-p watch:ts \"build:static:** -- --watch\""

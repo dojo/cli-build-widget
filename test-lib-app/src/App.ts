@@ -19,9 +19,9 @@ export default class App extends WidgetBase {
 					}
 				},
 				[
-					w(MenuItem, { id: 'menu-item-a', title: 'Menu Item A', data: 'bar' }),
-					w(MenuItem, { id: 'menu-item-b', title: 'Menu Item B', data: 'baz' }),
-					w(MenuItem, { id: 'menu-item-c', title: 'Menu Item C', data: 'bat' })
+					w(MenuItem, { title: 'Menu Item A', data: 'bar' }),
+					w(MenuItem, { title: 'Menu Item B', data: 'baz' }),
+					w(MenuItem, { title: 'Menu Item C', data: 'bat' })
 				]
 			)
 		]);

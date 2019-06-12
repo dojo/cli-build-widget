@@ -1,0 +1,8 @@
+{
+	"build-app": {
+		"features": {
+			"foo": true,
+			"bar": false
+		}
+	}
+}
