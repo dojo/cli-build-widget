@@ -13,7 +13,7 @@ function webpackConfig(args: any): webpack.Configuration {
 
 	config.plugins = removeEmpty([
 		...plugins!,
-		(args.target !== 'lib' || args.clean) && new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
+		args.target !== 'lib' && new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
 	]);
 
 	config.output = {

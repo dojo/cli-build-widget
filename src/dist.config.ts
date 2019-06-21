@@ -43,13 +43,10 @@ function webpackConfig(args: any): webpack.Configuration {
 				statsFilename: '../info/stats.json'
 			}),
 		args.target !== 'lib' && new WebpackChunkHash(),
-		(args.target !== 'lib' || args.clean) && new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
+		new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
 	]);
 
-	if (args.target === 'lib') {
-		config.devtool = 'source-map';
-	}
-
+	config.devtool = 'source-map';
 	config.output = {
 		...output,
 		path: location

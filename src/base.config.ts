@@ -23,10 +23,6 @@ const packageName = packageJson.name || '';
 const tsLintPath = path.join(basePath, 'tslint.json');
 const tsLint = existsSync(tsLintPath) ? require(tsLintPath) : false;
 
-const assetExtensions = ['gif', 'png', 'jpeg', 'jpg', 'svg', 'eot', 'ttf', 'woff', 'woff2'];
-const assetGlob = `src/**/*.{${assetExtensions.join(',')}}`;
-const assetPattern = new RegExp(`.*\\.(${assetExtensions.join('|')})$`, 'i');
-
 function getJsonpFunctionName(name: string) {
 	name = name
 		.replace(/[^a-z0-9_]/g, ' ')
@@ -117,6 +113,9 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 
 	const tsLoaderOptions: any = {
 		instance: jsonpIdent,
+		// ts-loader will, by default, use the `include`, `files`, and `exclude` options from `tsconfig`. Since
+		// library builds should include only the modules in the webpack build path.
+		onlyCompileBundledFiles: args.target === 'lib',
 		compilerOptions:
 			args.target === 'lib'
 				? {
@@ -171,7 +170,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			} as any),
 			args.target === 'lib' &&
 				new CopyWebpackPlugin(
-					['src/**/*.css.d.ts', assetGlob].map(from => ({
+					['src/**/*.css.d.ts'].map(from => ({
 						from,
 						transformPath: (target: string, absSource: string) => {
 							return absSource.replace(srcPath, '').replace(/^\//, '');
@@ -268,7 +267,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					loader: 'imports-loader?define=>false'
 				},
 				{
-					test: assetPattern,
+					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
 					options: {
 						hash: 'sha512',
@@ -290,7 +289,17 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					include: allPaths,
 					test: /.*\.css?$/,
 					use: [
-						MiniCssExtractPlugin.loader,
+						args.target === 'lib'
+							? {
+									loader: MiniCssExtractPlugin.loader,
+									options: {
+										publicPath: (resourcePath: string) => {
+											const outputPath = path.resolve(`./output/${args.mode || 'dist'}`);
+											return path.relative(path.dirname(resourcePath.replace(srcPath, outputPath)), outputPath) + '/';
+										}
+									}
+								}
+							: MiniCssExtractPlugin.loader,
 						'@dojo/webpack-contrib/css-module-decorator-loader',
 						{
 							loader: 'css-loader',
@@ -299,8 +308,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 								importLoaders: 1,
 								localIdentName: '[name]__[local]__[hash:base64:5]',
 								modules: true,
-								sourceMap: true,
-								url: args.target !== 'lib'
+								sourceMap: true
 							}
 						},
 						{
