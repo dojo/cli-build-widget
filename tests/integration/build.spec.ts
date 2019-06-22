@@ -46,7 +46,7 @@ describe('build', () => {
 	function assertLibMenu(mode: 'dev' | 'dist', legacy: boolean, index: number, resultText: string) {
 		const titles = ['A', 'B', 'C'].map(title => `Menu Item ${title}`);
 		const directory = legacy ? `${mode}-lib-legacy` : `${mode}-lib`;
-		cy.visit(`/test-lib-app/output/${directory}`);
+		cy.visit(`/test-lib-app/output/${directory}/`);
 		cy.wait(1000); // Wait for the elements to become interactive
 
 		cy
