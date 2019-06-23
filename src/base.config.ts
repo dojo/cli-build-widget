@@ -89,9 +89,9 @@ function colorToColorMod(style: CssStyle) {
 }
 
 export default function webpackConfigFactory(args: any): webpack.Configuration {
-	const elements = args.element ? [args.element] : args.elements;
+	const { widgets } = args;
 	const elementPrefix = args.prefix ? args.prefix : packageName || 'widget';
-	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
+	const jsonpIdent = 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
 	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
@@ -129,7 +129,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				before: [
 					elementTransformer(program, {
 						elementPrefix,
-						customElementFiles: elements.map((element: any) => path.resolve(element.path))
+						customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
 					})
 				]
 			};
@@ -138,11 +138,11 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 
 	const config: webpack.Configuration = {
 		mode: args.target === 'lib' ? 'none' : 'development',
-		entry: elements.reduce((entry: any, element: any) => {
-			entry[element.name] = [
+		entry: widgets.reduce((entry: any, widget: any) => {
+			entry[widget.name] = [
 				args.target === 'lib'
-					? element.path
-					: `imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
+					? widget.path
+					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
 			return entry;
 		}, {}),
@@ -182,14 +182,14 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					legacy: args.legacy,
 					inlineSourceMaps: false,
 					assetFilter: (() => {
-						const elementNames = elements.map((element: any) => element.name);
-						const getElementNameFromKey = (key: string) =>
+						const widgetNames = widgets.map((widget: any) => widget.name);
+						const getWidgetNameFromKey = (key: string) =>
 							key.replace(`-${packageJson.version}`, '').replace(/\.(js|css)\.map$/, '');
 						return (key: string) => {
 							if (key.endsWith('.map')) {
 								// Exclude sourcemaps that are generated for the entry paths, as those sourcemaps will be
 								// added separately to the widget directories.
-								return !elementNames.includes(getElementNameFromKey(key));
+								return !widgetNames.includes(getWidgetNameFromKey(key));
 							}
 							return key.endsWith('.d.ts') || !/\.(css|js)$/.test(key);
 						};

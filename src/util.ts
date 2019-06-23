@@ -23,20 +23,20 @@ function clearBuildOptions(key: string): Config {
 	return {};
 }
 
-export function getElementName(elementPath: string): string {
-	const pathSegments = elementPath.split('/');
-	let elementName = pathSegments[pathSegments.length - 1];
-	const matches = elementName.match(/([A-Z])/g);
+export function getWidgetName(widgetPath: string): string {
+	const pathSegments = widgetPath.split('/');
+	let widgetName = pathSegments[pathSegments.length - 1];
+	const matches = widgetName.match(/([A-Z])/g);
 	if (!matches) {
-		return elementName;
+		return widgetName;
 	}
 	for (let i = 0, n = matches.length; i < n; i++) {
-		elementName = elementName.replace(new RegExp(matches[i]), '-' + matches[i].toLowerCase());
+		widgetName = widgetName.replace(new RegExp(matches[i]), '-' + matches[i].toLowerCase());
 	}
-	if (elementName.slice(0, 1) === '-') {
-		elementName = elementName.slice(1);
+	if (widgetName.slice(0, 1) === '-') {
+		widgetName = widgetName.slice(1);
 	}
-	return elementName;
+	return widgetName;
 }
 
 /**

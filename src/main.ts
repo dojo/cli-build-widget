@@ -11,7 +11,7 @@ import devConfigFactory from './dev.config';
 import testConfigFactory from './test.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
-import { moveBuildOptions, getElementName } from './util';
+import { moveBuildOptions, getWidgetName } from './util';
 
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
@@ -169,7 +169,7 @@ function warningsFilter(warning: string) {
 const command: Command = {
 	group: 'build',
 	name: 'widget',
-	description: 'create a build of your custom element',
+	description: 'create a build of your widget(s) or widget library',
 	register(options: OptionsHelper) {
 		options('mode', {
 			describe: 'the output mode',
@@ -189,14 +189,14 @@ const command: Command = {
 			type: 'boolean'
 		});
 
-		options('elements', {
-			describe: 'custom elements to build',
+		options('widgets', {
+			describe: 'widgets to build',
 			alias: 'e',
 			type: 'array'
 		});
 
 		options('legacy', {
-			describe: 'Build custom elements with legacy support',
+			describe: 'Build widgets with legacy support',
 			alias: 'l',
 			type: 'boolean'
 		});
@@ -217,29 +217,30 @@ const command: Command = {
 	},
 	run(helper: Helper, args: any) {
 		console.log = () => {};
-		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
-		const { elements: commandLineElements, ...commandLineArgs } = args;
-		if (commandLineElements) {
-			elements = commandLineElements;
+		let { widgets = [], ...rc } = (helper.configuration.get() || {}) as any;
+		const { widgets: commandLineWidgets, ...commandLineArgs } = args;
+		if (commandLineWidgets) {
+			widgets = commandLineWidgets;
 		}
-		elements = elements.map((element: any) => {
+
+		if (widgets.length === 0) {
+			console.warn('No widgets specified in the .dojorc');
+			return Promise.resolve();
+		}
+
+		widgets = widgets.map((widget: any) => {
 			return {
-				name: getElementName(element),
-				path: element
+				name: getWidgetName(widget),
+				path: widget
 			};
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = [devConfigFactory({ ...rc, ...commandLineArgs, elements })];
+			configs = [devConfigFactory({ ...rc, ...commandLineArgs, widgets })];
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
+			configs = [testConfigFactory({ ...rc, ...commandLineArgs, widgets, legacy: true })];
 		} else {
-			configs = [distConfigFactory({ ...rc, ...commandLineArgs, elements })];
-		}
-
-		if (configs.length === 0) {
-			console.warn('No elements specified in the .dojorc');
-			return Promise.resolve();
+			configs = [distConfigFactory({ ...rc, ...commandLineArgs, widgets })];
 		}
 
 		if (args.serve) {

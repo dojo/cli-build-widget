@@ -24,7 +24,7 @@ function getMockConfiguration(config: any = {}) {
 	return {
 		configuration: {
 			get() {
-				return { ...config, elements: ['element'] };
+				return { ...config, widgets: ['widget'] };
 			}
 		}
 	};

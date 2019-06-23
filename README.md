@@ -60,7 +60,7 @@ tests/
 
 `@dojo/cli-build-widget` can be used to build either custom elements or a library of Dojo widgets. Library builds can be enabled with the `--target=lib` (or `-t lib`) flag. While custom element builds aim to provide a minimum set of files required to render an individual custom element in the browser, library builds simply 1) transpile TypeScript to `.mjs` and legacy `.js` files, 2) build, minimize, and generate `.d.ts` and `.js` files for CSS modules, 3) and copy font and image assets.
 
-When building a Dojo widgets library, any widget that should be included MUST either be imported into an optional `src/main.ts` file or specified in the `--elements` option (see both [Elements](#elements) and [Configuration](#configuration) below). When present, `src/main.ts` takes precedence.
+When building a Dojo widgets library, any widget that should be included MUST be specified in the `--widgets` option (see both [Widgets](#widgets) and [Configuration](#configuration) below). When present, `src/main.ts` takes precedence.
 
 There are two modes available to build Dojo custom elements or widget libraries: `dist` and `dev`. When building custom elements, a `test` mode is also provided. The mode required can be passed using the `--mode` flag:
 
@@ -106,17 +106,17 @@ dojo build -w # start a file-based watch
 dojo build -s -w=memory -m=dev # build to an in-memory file system with HMR
 ```
 
-### Elements
+### Widgets
 
-The path for elements/widgets to build can be provided using the repeating options `--elements` or `-e`:
+The path for widgets to build can be provided using the repeating option `--widgets`:
 
 ```bash
-dojo build -e src/custom-element-child/CustomElementChild -e src/custom-element-parent/CustomElementParent
+dojo build --widgets src/custom-element-child/CustomElementChild --widgets src/custom-element-parent/CustomElementParent
 ```
 
 ### Legacy
 
-To build custom elements for legacy environments use the `--legacy` or `-l` flag. Custom elements built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js). For library builds, both legacy and evergreen JavaScript files are output side-by-side.
+To build widgets for legacy environments use the `--legacy` or `-l` flag. Widgets built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js). For library builds, both legacy and evergreen JavaScript files are output side-by-side.
 
 ### Eject
 
@@ -128,6 +128,7 @@ Ejecting `@dojo/cli-build-widget` will produce the following files under the `co
 - `dev.config.js`: the configuration used during development.
 - `dist.config.js`: the production configuration.
 - `test.config.js`: the configuration used when running tests.
+- `template/custom-element.js`: A template that registers custom elements
 
 As already noted, the dojorc's `build-widget` options are moved to `config/build-widget/build-options.json` after ejecting. Further, the modes are specified using webpack's `env` flag (e.g., `--env.mode=dev`), defaulting to `dist`. You can run a build using webpack with:
 
@@ -137,16 +138,16 @@ node_modules/.bin/webpack --config=config/build-widget/ejected.config.js --env.m
 
 ### Configuration
 
-Custom element/widget library projects use a `.dojorc` file at the project root to control various aspects of development such as testing and building. This file is required to build the project, it MUST be valid JSON, and for custom element projects it MUST provide at least an `elements` array with the custom element paths. All other values are options. The following options can be used beneath the `"build-widget"` key:
+Custom element/widget library projects use a `.dojorc` file at the project root to control various aspects of development such as testing and building. This file is required to build the project, it MUST be valid JSON, and for widget projects it MUST provide at least a `widgets` array with the widget paths. All other values are options. The following options can be used beneath the `"build-widget"` key:
 
-#### `elements`: string[]
+#### `widgets`: string[]
 
-Contains paths _relative to the project root_ to the custom elements that should be built.
+Contains paths _relative to the project root_ to the widgets that should be built.
 
 ```json
 {
 	"build-widget": {
-		"elements": [
+		"widgets": [
 			"src/menu-item/MenuItem",
 			"src/menu/Menu"
 		]

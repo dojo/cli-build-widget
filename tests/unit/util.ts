@@ -3,7 +3,7 @@ const { assert } = intern.getPlugin('chai');
 import * as path from 'path';
 
 import MockModule from '../support/MockModule';
-import { getElementName } from '../../src/util';
+import { getWidgetName } from '../../src/util';
 
 const key = 'build-app';
 const rc = { [key]: { bundles: {} } };
@@ -59,13 +59,13 @@ describe('util', () => {
 		});
 	});
 
-	describe('get element name', () => {
-		it('parses element name', () => {
-			assert.strictEqual('custom-element', getElementName('src/customElement'));
+	describe('get widget name', () => {
+		it('parses widget name', () => {
+			assert.strictEqual('custom-element', getWidgetName('src/customElement'));
 		});
 
-		it('parses element name with upper case first character', () => {
-			assert.strictEqual('my-custom-element', getElementName('src/name/MyCustomElement'));
+		it('parses widget name with upper case first character', () => {
+			assert.strictEqual('my-custom-element', getWidgetName('src/name/MyCustomElement'));
 		});
 	});
 });
