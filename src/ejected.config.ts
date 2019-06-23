@@ -7,10 +7,11 @@ import { getElementName } from './util';
 
 export interface EnvOptions {
 	mode?: 'dev' | 'dist' | 'test';
+	target?: 'custom element' | 'lib';
 }
 
 function webpackConfig(env: EnvOptions = {}): webpack.Configuration[] {
-	const { mode = 'dist' } = env;
+	const { mode = 'dist', target = 'custom element' } = env;
 	let { elements = [], ...rc } = require('./build-options.json');
 	let configs: webpack.Configuration[];
 	elements = elements.map((element: any) => {
@@ -21,11 +22,11 @@ function webpackConfig(env: EnvOptions = {}): webpack.Configuration[] {
 	});
 
 	if (mode === 'dev') {
-		configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
+		configs = [devConfigFactory({ ...rc, elements, target })];
 	} else if (mode === 'test') {
-		configs = [testConfigFactory({ ...rc, elements })];
+		configs = [testConfigFactory({ ...rc, elements, target })];
 	} else {
-		configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
+		configs = [distConfigFactory({ ...rc, elements, target })];
 	}
 	return configs;
 }

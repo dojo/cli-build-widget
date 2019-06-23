@@ -211,8 +211,8 @@ const command: Command = {
 		options('target', {
 			describe: 'the type of project',
 			alias: 't',
-			default: 'widget',
-			choices: ['widget', 'lib']
+			default: 'custom element',
+			choices: ['custom element', 'lib']
 		});
 	},
 	run(helper: Helper, args: any) {
@@ -265,13 +265,14 @@ const command: Command = {
 					'./dev.config.js',
 					'./dist.config.js',
 					'./ejected.config.js',
+					'./template/custom-element.js',
 					'./test.config.js',
 					'./util.js'
 				]
 			},
 			hints: [
 				`to build run ${chalk.underline(
-					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test}'
+					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test} --env.target={"custom element"|lib}'
 				)}`
 			],
 			npm: {
