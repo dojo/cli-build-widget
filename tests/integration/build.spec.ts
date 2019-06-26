@@ -1,7 +1,7 @@
 describe('build', () => {
 	function assertMenu(mode: string, legacy: boolean, id: string, resultText: string) {
 		const directory = legacy ? `${mode}-legacy` : `${mode}-evergreen`;
-		cy.visit(`/test-app/output/${directory}/index.html`);
+		cy.visit(`/test-app/output/${directory}/`);
 		cy.wait(1000); // Wait for the elements to become interactive
 
 		cy
