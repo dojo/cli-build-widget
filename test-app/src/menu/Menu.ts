@@ -1,8 +1,8 @@
-import has from '@dojo/framework/has/has';
-import { v } from '@dojo/framework/widget-core/d';
-import { WidgetProperties, WNode } from '@dojo/framework/widget-core/interfaces';
-import { theme, ThemedMixin } from '@dojo/framework/widget-core/mixins/Themed';
-import { WidgetBase } from '@dojo/framework/widget-core/WidgetBase';
+import has from '@dojo/framework/core/has';
+import { v } from '@dojo/framework/core/vdom';
+import { WidgetProperties, WNode } from '@dojo/framework/core/interfaces';
+import { theme, ThemedMixin } from '@dojo/framework/core/mixins/Themed';
+import { WidgetBase } from '@dojo/framework/core/WidgetBase';
 import { MenuItem, MenuItemProperties } from '../menu-item/MenuItem';
 
 import * as css from './menu.m.css';
@@ -13,7 +13,7 @@ interface MenuProperties extends WidgetProperties {
 
 @theme(css)
 export class Menu extends ThemedMixin(WidgetBase)<MenuProperties, WNode<MenuItem>> {
-	private _selectedId: number;
+	private _selectedId: number | undefined;
 
 	private _onSelected(id: number, data: any) {
 		this._selectedId = id;
