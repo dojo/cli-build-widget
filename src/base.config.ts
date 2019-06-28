@@ -269,11 +269,19 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				{
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
-					options: {
-						hash: 'sha512',
-						digest: 'hex',
-						name: '[hash:base64:8].[ext]'
-					}
+					options:
+						args.target === 'lib'
+							? {
+									name: (file: string) => {
+										const fileDir = path.dirname(file.replace(srcPath, '')).replace(/^(\/|\\)/, '');
+										return `${fileDir}/[name].[ext]`;
+									}
+								}
+							: {
+									hash: 'sha512',
+									digest: 'hex',
+									name: '[hash:base64:8].[ext]'
+								}
 				},
 				{
 					test: /\.css$/,
