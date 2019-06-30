@@ -1,11 +1,11 @@
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { v, w } from '@dojo/framework/widget-core/d';
+import { v, w } from '@dojo/framework/core/vdom';
+import WidgetBase from '@dojo/framework/core/WidgetBase';
 
 import Menu from './widget-lib/menu/Menu';
 import MenuItem from './widget-lib/menu-item/MenuItem';
 
 export default class App extends WidgetBase {
-	private data: string;
+	private data: string = '';
 
 	protected render() {
 		return v('div', {}, [
