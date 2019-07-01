@@ -8,7 +8,6 @@ import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const slash = require('slash');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
@@ -168,15 +167,6 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
 			} as any),
-			args.target === 'lib' &&
-				new CopyWebpackPlugin(
-					['src/**/*.css.d.ts'].map(from => ({
-						from,
-						transformPath: (target: string, absSource: string) => {
-							return absSource.replace(srcPath, '').replace(/^\//, '');
-						}
-					}))
-				),
 			args.target === 'lib' &&
 				new EmitAllPlugin({
 					legacy: args.legacy,
