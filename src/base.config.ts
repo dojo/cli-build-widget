@@ -1,6 +1,6 @@
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
 import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
-import EmitAllPlugin from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
+import { emitAllFactory } from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
 import { existsSync } from 'fs';
 import * as loaderUtils from 'loader-utils';
@@ -95,6 +95,26 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
 	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
 
+	const emitAll =
+		args.target === 'lib' &&
+		emitAllFactory({
+			legacy: args.legacy,
+			inlineSourceMaps: false,
+			assetFilter: (() => {
+				const widgetNames = widgets.map((widget: any) => widget.name);
+				const getWidgetNameFromKey = (key: string) =>
+					key.replace(`-${packageJson.version}`, '').replace(/\.(js|css)\.map$/, '');
+				return (key: string) => {
+					if (key.endsWith('.map')) {
+						// Exclude sourcemaps that are generated for the entry paths, as those sourcemaps will be
+						// added separately to the widget directories.
+						return !widgetNames.includes(getWidgetNameFromKey(key));
+					}
+					return key.endsWith('.d.ts') || !/\.(css|js)$/.test(key);
+				};
+			})()
+		});
+
 	const postcssPresetConfig = {
 		browsers: args.legacy ? ['last 2 versions', 'ie >= 10'] : ['last 2 versions'],
 		insertBefore: {
@@ -125,12 +145,13 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
-				before: [
+				before: removeEmpty([
 					elementTransformer(program, {
 						elementPrefix,
 						customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
-					})
-				]
+					}),
+					emitAll && emitAll.transformer
+				])
 			};
 		}
 	};
@@ -167,24 +188,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
 			} as any),
-			args.target === 'lib' &&
-				new EmitAllPlugin({
-					legacy: args.legacy,
-					inlineSourceMaps: false,
-					assetFilter: (() => {
-						const widgetNames = widgets.map((widget: any) => widget.name);
-						const getWidgetNameFromKey = (key: string) =>
-							key.replace(`-${packageJson.version}`, '').replace(/\.(js|css)\.map$/, '');
-						return (key: string) => {
-							if (key.endsWith('.map')) {
-								// Exclude sourcemaps that are generated for the entry paths, as those sourcemaps will be
-								// added separately to the widget directories.
-								return !widgetNames.includes(getWidgetNameFromKey(key));
-							}
-							return key.endsWith('.d.ts') || !/\.(css|js)$/.test(key);
-						};
-					})()
-				})
+			emitAll && emitAll.plugin
 		]),
 		module: {
 			rules: removeEmpty([
