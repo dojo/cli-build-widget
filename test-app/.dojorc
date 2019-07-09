@@ -1,7 +1,7 @@
 {
 	"build-widget": {
 		"prefix": "demo",
-		"elements": [
+		"widgets": [
 			"src/menu/Menu",
 			"src/menu-item/MenuItem"
 		],

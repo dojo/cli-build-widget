@@ -1,12 +1,14 @@
 import BundleAnalyzerPlugin from '@dojo/webpack-contrib/webpack-bundle-analyzer/BundleAnalyzerPlugin';
-import baseConfigFactory from './base.config';
-import webpack = require('webpack');
-import * as path from 'path';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
+import * as path from 'path';
+import webpack = require('webpack');
 import * as WebpackChunkHash from 'webpack-chunk-hash';
+import baseConfigFactory from './base.config';
 
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+
+const removeEmpty = (items: any[]) => items.filter(item => item);
 
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
@@ -14,34 +16,37 @@ function webpackConfig(args: any): webpack.Configuration {
 	const outputPath = output!.path as string;
 	const location = path.join(outputPath, 'dist');
 
-	config.mode = 'production';
+	if (args.target !== 'lib') {
+		config.mode = 'production';
+		config.optimization = {
+			...config.optimization,
+			minimizer: [
+				new TerserPlugin({ sourceMap: true, cache: true }),
+				new OptimizeCssAssetsPlugin({
+					cssProcessor: require('cssnano'),
+					cssProcessorPluginOptions: {
+						preset: ['default', { calc: false }]
+					}
+				})
+			]
+		};
+	}
 
-	config.optimization = {
-		...config.optimization,
-		minimizer: [
-			new TerserPlugin({ sourceMap: true, cache: true }),
-			new OptimizeCssAssetsPlugin({
-				cssProcessor: require('cssnano'),
-				cssProcessorPluginOptions: {
-					preset: ['default', { calc: false }]
-				}
-			})
-		]
-	};
-
-	config.plugins = [
+	config.plugins = removeEmpty([
 		...plugins!,
-		new BundleAnalyzerPlugin({
-			analyzerMode: 'static',
-			openAnalyzer: false,
-			generateStatsFile: true,
-			reportFilename: '../info/report.html',
-			statsFilename: '../info/stats.json'
-		}),
-		new WebpackChunkHash(),
+		args.target !== 'lib' &&
+			new BundleAnalyzerPlugin({
+				analyzerMode: 'static',
+				openAnalyzer: false,
+				generateStatsFile: true,
+				reportFilename: '../info/report.html',
+				statsFilename: '../info/stats.json'
+			}),
+		args.target !== 'lib' && new WebpackChunkHash(),
 		new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
-	];
+	]);
 
+	config.devtool = 'source-map';
 	config.output = {
 		...output,
 		path: location

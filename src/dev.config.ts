@@ -1,7 +1,9 @@
-import baseConfigFactory from './base.config';
+import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
-import * as CleanWebpackPlugin from 'clean-webpack-plugin';
+import baseConfigFactory from './base.config';
+
+const removeEmpty = (items: any[]) => items.filter(item => item);
 
 function webpackConfig(args: any): webpack.Configuration {
 	const config = baseConfigFactory(args);
@@ -9,7 +11,10 @@ function webpackConfig(args: any): webpack.Configuration {
 	const outputPath = output!.path as string;
 	const location = path.join(outputPath, 'dev');
 
-	config.plugins = [...plugins!, new CleanWebpackPlugin([location], { root: outputPath, verbose: false })];
+	config.plugins = removeEmpty([
+		...plugins!,
+		args.target !== 'lib' && new CleanWebpackPlugin([location], { root: outputPath, verbose: false })
+	]);
 
 	config.output = {
 		...output,

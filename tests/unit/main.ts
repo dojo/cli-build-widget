@@ -24,7 +24,7 @@ function getMockConfiguration(config: any = {}) {
 	return {
 		configuration: {
 			get() {
-				return { ...config, elements: ['element'] };
+				return { ...config, widgets: ['widget'] };
 			}
 		}
 	};
@@ -108,7 +108,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		main.run(getMockConfiguration(), { mode: 'dev' }).then(() => {
 			assert.isTrue(mockDevConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', ['dev config']));
+			assert.isTrue(mockLogger.calledWith('stats', ['dev config'], false));
 		});
 	});
 
@@ -116,7 +116,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		return main.run(getMockConfiguration(), { mode: 'dist' }).then(() => {
 			assert.isTrue(mockDistConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', ['dist config']));
+			assert.isTrue(mockLogger.calledWith('stats', ['dist config'], false));
 		});
 	});
 
@@ -124,7 +124,7 @@ describe('command', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		return main.run(getMockConfiguration(), { mode: 'test' }).then(() => {
 			assert.isTrue(mockTestConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', ['test config']));
+			assert.isTrue(mockLogger.calledWith('stats', ['test config'], false));
 		});
 	});
 
@@ -206,7 +206,7 @@ describe('command', () => {
 			invalidHookStub.callsFake((name: string, callback: Function) => callback(filename));
 
 			return main.run(getMockConfiguration(), { watch: true }).then(() => {
-				assert.isTrue(mockLogger.calledWith('stats', ['dist config'], 'watching...'));
+				assert.isTrue(mockLogger.calledWith('stats', ['dist config'], false, 'watching...'));
 			});
 		});
 
@@ -374,7 +374,12 @@ describe('command', () => {
 				})
 				.then(() => {
 					assert.isTrue(
-						mockLogger.calledWith('stats', [{ entry, output, plugins, watchOptions }], 'Listening on port 3000...')
+						mockLogger.calledWith(
+							'stats',
+							[{ entry, output, plugins, watchOptions }],
+							false,
+							'Listening on port 3000...'
+						)
 					);
 				});
 		});
@@ -405,13 +410,14 @@ describe('command', () => {
 						'./dev.config.js',
 						'./dist.config.js',
 						'./ejected.config.js',
+						'./template/custom-element.js',
 						'./test.config.js',
 						'./util.js'
 					]
 				},
 				hints: [
 					`to build run ${chalk.underline(
-						'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test}'
+						'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test} --env.target={"custom element"|lib}'
 					)}`
 				],
 				npm: {

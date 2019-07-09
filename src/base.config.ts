@@ -1,5 +1,6 @@
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
 import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
+import { emitAllFactory } from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
 import { existsSync } from 'fs';
 import * as loaderUtils from 'loader-utils';
@@ -87,12 +88,32 @@ function colorToColorMod(style: CssStyle) {
 }
 
 export default function webpackConfigFactory(args: any): webpack.Configuration {
-	const elements = args.element ? [args.element] : args.elements;
+	const { widgets } = args;
 	const elementPrefix = args.prefix ? args.prefix : packageName || 'widget';
-	const jsonpIdent = args.element ? args.element.name : 'custom-elements';
+	const jsonpIdent = 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
 	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
+
+	const emitAll =
+		args.target === 'lib' &&
+		emitAllFactory({
+			legacy: args.legacy,
+			inlineSourceMaps: false,
+			assetFilter: (() => {
+				const widgetNames = widgets.map((widget: any) => widget.name);
+				const getWidgetNameFromKey = (key: string) =>
+					key.replace(`-${packageJson.version}`, '').replace(/\.(js|css)\.map$/, '');
+				return (key: string) => {
+					if (key.endsWith('.map')) {
+						// Exclude sourcemaps that are generated for the entry paths, as those sourcemaps will be
+						// added separately to the widget directories.
+						return !widgetNames.includes(getWidgetNameFromKey(key));
+					}
+					return key.endsWith('.d.ts') || !/\.(css|js)$/.test(key);
+				};
+			})()
+		});
 
 	const postcssPresetConfig = {
 		browsers: args.legacy ? ['last 2 versions', 'ie >= 10'] : ['last 2 versions'],
@@ -101,7 +122,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		},
 		features: {
 			'color-mod-function': true,
-			'nesting-rules': true
+			'nesting-rules': true,
+			'custom-properties': args.target === 'lib' ? { preserve: false } : undefined
 		},
 		autoprefixer: {
 			grid: args.legacy
@@ -110,31 +132,44 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 
 	const tsLoaderOptions: any = {
 		instance: jsonpIdent,
-		compilerOptions,
+		// ts-loader will, by default, use the `include`, `files`, and `exclude` options from `tsconfig`. Since
+		// library builds should include only the modules in the webpack build path.
+		onlyCompileBundledFiles: args.target === 'lib',
+		compilerOptions:
+			args.target === 'lib'
+				? {
+						...compilerOptions,
+						declaration: true,
+						outDir: path.resolve(`./output/${args.mode || 'dist'}`)
+					}
+				: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
-				before: [
+				before: removeEmpty([
 					elementTransformer(program, {
 						elementPrefix,
-						customElementFiles: elements.map((element: any) => path.resolve(element.path))
-					})
-				]
+						customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
+					}),
+					emitAll && emitAll.transformer
+				])
 			};
 		}
 	};
 
 	const config: webpack.Configuration = {
-		mode: 'development',
-		entry: elements.reduce((entry: any, element: any) => {
-			entry[element.name] = [
-				`imports-loader?widgetFactory=${element.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
+		mode: args.target === 'lib' ? 'none' : 'development',
+		entry: widgets.reduce((entry: any, widget: any) => {
+			entry[widget.name] = [
+				args.target === 'lib'
+					? widget.path
+					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
 			return entry;
 		}, {}),
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: `[name]-${packageJson.version}.js`,
-			filename: `[name]-${packageJson.version}.js`,
+			chunkFilename: args.target === 'lib' ? '[name].js' : `[name]-${packageJson.version}.js`,
+			filename: args.target === 'lib' ? '[name].js' : `[name]-${packageJson.version}.js`,
 			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output'),
@@ -152,7 +187,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			new MiniCssExtractPlugin({
 				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
-			} as any)
+			} as any),
+			emitAll && emitAll.plugin
 		]),
 		module: {
 			rules: removeEmpty([
@@ -227,11 +263,19 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				{
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
-					options: {
-						hash: 'sha512',
-						digest: 'hex',
-						name: '[hash:base64:8].[ext]'
-					}
+					options:
+						args.target === 'lib'
+							? {
+									name: (file: string) => {
+										const fileDir = path.dirname(file.replace(srcPath, '')).replace(/^(\/|\\)/, '');
+										return `${fileDir}/[name].[ext]`;
+									}
+								}
+							: {
+									hash: 'sha512',
+									digest: 'hex',
+									name: '[hash:base64:8].[ext]'
+								}
 				},
 				{
 					test: /\.css$/,
@@ -247,16 +291,26 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					include: allPaths,
 					test: /.*\.css?$/,
 					use: [
-						MiniCssExtractPlugin.loader,
+						args.target === 'lib'
+							? {
+									loader: MiniCssExtractPlugin.loader,
+									options: {
+										publicPath: (resourcePath: string) => {
+											const outputPath = path.resolve(`./output/${args.mode || 'dist'}`);
+											return path.relative(path.dirname(resourcePath.replace(srcPath, outputPath)), outputPath) + '/';
+										}
+									}
+								}
+							: MiniCssExtractPlugin.loader,
 						'@dojo/webpack-contrib/css-module-decorator-loader',
 						{
 							loader: 'css-loader',
 							options: {
-								modules: true,
-								sourceMap: true,
+								getLocalIdent,
 								importLoaders: 1,
 								localIdentName: '[name]__[local]__[hash:base64:5]',
-								getLocalIdent
+								modules: true,
+								sourceMap: true
 							}
 						},
 						{

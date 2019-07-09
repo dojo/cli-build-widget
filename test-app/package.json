@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "scripts": {
     "install-build-widget": "npm install --no-save ../dist/dojo-cli-build-widget.tgz",
-    "build:dist": "dojo build --mode dist --legacy && shx mv output/dist output/dist-legacy && shx cp src/legacy.html output/dist-legacy/index.html",
-    "build:dist:evergreen": "dojo build --mode dist && shx mv output/dist output/dist-evergreen && shx cp src/evergreen.html output/dist-evergreen/index.html",
-    "build:dev": "dojo build --mode dev --legacy && shx mv output/dev output/dev-legacy && shx cp src/legacy.html output/dev-legacy/index.html",
-    "build:dev:evergreen": "dojo build --mode dev && shx mv output/dev output/dev-evergreen && shx cp src/evergreen.html output/dev-evergreen/index.html",
-    "build:test": "dojo build --mode test"
+    "build:dist": "dojo build widget --mode dist --legacy && shx mv output/dist output/dist-legacy && shx cp src/legacy.html output/dist-legacy/index.html",
+    "build:dist:evergreen": "dojo build widget --mode dist && shx mv output/dist output/dist-evergreen && shx cp src/evergreen.html output/dist-evergreen/index.html",
+    "build:dev": "dojo build widget --mode dev --legacy && shx mv output/dev output/dev-legacy && shx cp src/legacy.html output/dev-legacy/index.html",
+    "build:dev:evergreen": "dojo build widget --mode dev && shx mv output/dev output/dev-evergreen && shx cp src/evergreen.html output/dev-evergreen/index.html",
+    "build:test": "dojo build widget --mode test",
+    "build:lib:dist": "dojo build widget -t lib --legacy && shx mv output/dist output/dist-lib-legacy",
+    "build:lib:dist:evergreen": "dojo build widget -t lib && shx mv output/dist output/dist-lib",
+    "build:lib:dev": "dojo build widget -t lib -m dev --legacy && shx mv output/dev output/dev-lib-legacy",
+    "build:lib:dev:evergreen": "dojo build widget -t lib -m dev && shx mv output/dev output/dev-lib",
+    "build:lib-app": "dojo build app && shx mv output/dist output/dist-lib-evergreen"
   },
   "dependencies": {
     "@dojo/framework": "6.0.0-alpha.7",

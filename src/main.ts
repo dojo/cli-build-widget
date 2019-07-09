@@ -11,7 +11,7 @@ import devConfigFactory from './dev.config';
 import testConfigFactory from './test.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
-import { moveBuildOptions, getElementName } from './util';
+import { moveBuildOptions, getWidgetName } from './util';
 
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
@@ -49,7 +49,7 @@ function build(config: webpack.Configuration[], args: any) {
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}...` : '';
-				logger(stats.toJson(), config, runningMessage);
+				logger(stats.toJson(), config, args.target === 'lib', runningMessage);
 			}
 			resolve();
 		});
@@ -82,7 +82,7 @@ function fileWatch(configs: webpack.Configuration[], args: any): Promise<void> {
 			}
 			if (stats) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}` : 'watching...';
-				logger(stats.toJson(), configs, runningMessage);
+				logger(stats.toJson(), configs, args.target === 'lib', runningMessage);
 			}
 			resolve();
 		});
@@ -106,7 +106,7 @@ function memoryWatch(configs: webpack.Configuration[], args: any, app: express.A
 	const compiler = createWatchCompiler(configs);
 
 	(compiler as any).hooks.done.tap('@dojo/cli-build-widget', (stats: webpack.Stats) => {
-		logger(stats.toJson({ warningsFilter }), configs, `Listening on port ${args.port}...`);
+		logger(stats.toJson({ warningsFilter }), configs, args.target === 'lib', `Listening on port ${args.port}...`);
 	});
 
 	app.use(
@@ -169,7 +169,7 @@ function warningsFilter(warning: string) {
 const command: Command = {
 	group: 'build',
 	name: 'widget',
-	description: 'create a build of your custom element',
+	description: 'create a build of your widget(s) or widget library',
 	register(options: OptionsHelper) {
 		options('mode', {
 			describe: 'the output mode',
@@ -189,14 +189,14 @@ const command: Command = {
 			type: 'boolean'
 		});
 
-		options('elements', {
-			describe: 'custom elements to build',
+		options('widgets', {
+			describe: 'widgets to build',
 			alias: 'e',
 			type: 'array'
 		});
 
 		options('legacy', {
-			describe: 'Build custom elements with legacy support',
+			describe: 'Build widgets with legacy support',
 			alias: 'l',
 			type: 'boolean'
 		});
@@ -207,32 +207,40 @@ const command: Command = {
 			default: 9999,
 			type: 'number'
 		});
+
+		options('target', {
+			describe: 'the type of project',
+			alias: 't',
+			default: 'custom element',
+			choices: ['custom element', 'lib']
+		});
 	},
 	run(helper: Helper, args: any) {
 		console.log = () => {};
-		let { elements = [], ...rc } = (helper.configuration.get() || {}) as any;
-		const { elements: commandLineElements, ...commandLineArgs } = args;
-		if (commandLineElements) {
-			elements = commandLineElements;
+		let { widgets = [], ...rc } = (helper.configuration.get() || {}) as any;
+		const { widgets: commandLineWidgets, ...commandLineArgs } = args;
+		if (commandLineWidgets) {
+			widgets = commandLineWidgets;
 		}
-		elements = elements.map((element: any) => {
+
+		if (widgets.length === 0) {
+			console.warn('No widgets specified in the .dojorc');
+			return Promise.resolve();
+		}
+
+		widgets = widgets.map((widget: any) => {
 			return {
-				name: getElementName(element),
-				path: element
+				name: getWidgetName(widget),
+				path: widget
 			};
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
-			configs = [devConfigFactory({ ...rc, ...commandLineArgs, elements })];
+			configs = [devConfigFactory({ ...rc, ...commandLineArgs, widgets })];
 		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, elements, legacy: true })];
+			configs = [testConfigFactory({ ...rc, ...commandLineArgs, widgets, legacy: true })];
 		} else {
-			configs = [distConfigFactory({ ...rc, ...commandLineArgs, elements })];
-		}
-
-		if (configs.length === 0) {
-			console.warn('No elements specified in the .dojorc');
-			return Promise.resolve();
+			configs = [distConfigFactory({ ...rc, ...commandLineArgs, widgets })];
 		}
 
 		if (args.serve) {
@@ -258,13 +266,14 @@ const command: Command = {
 					'./dev.config.js',
 					'./dist.config.js',
 					'./ejected.config.js',
+					'./template/custom-element.js',
 					'./test.config.js',
 					'./util.js'
 				]
 			},
 			hints: [
 				`to build run ${chalk.underline(
-					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test}'
+					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test} --env.target={"custom element"|lib}'
 				)}`
 			],
 			npm: {

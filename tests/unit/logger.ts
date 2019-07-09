@@ -13,7 +13,7 @@ const columns = require('cli-columns');
 
 let mockModule: MockModule;
 
-function assertOutput(isServing = false) {
+function assertOutput(isServing = false, isLibrary = false) {
 	const logger = mockModule.getModuleUnderTest().default;
 	const runningMessage = isServing ? 'running...' : undefined;
 	const stats = {
@@ -48,10 +48,12 @@ function assertOutput(isServing = false) {
 				}
 			}
 		],
+		isLibrary,
 		runningMessage
 	);
 
-	let assetOne = `entry/assetOne.js ${chalk.yellow('(1.00kb)')}`;
+	let assetOneName = isLibrary ? 'assetOne.js' : 'entry/assetOne.js';
+	let assetOne = `${assetOneName} ${chalk.yellow('(1.00kb)')}`;
 	let signOff = chalk.green('The build completed successfully.');
 	if (runningMessage) {
 		signOff += `\n\n${runningMessage}`;
@@ -164,5 +166,9 @@ ${chalk.red('The build completed with errors.')}
 	`;
 		const mockedLogUpdate = mockModule.getMock('log-update').ctor;
 		assert.isTrue(mockedLogUpdate.calledWith(expectedLog));
+	});
+
+	it('does not include the entry name for library builds', () => {
+		assertOutput(false, true);
 	});
 });

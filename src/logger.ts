@@ -10,7 +10,7 @@ const columns = require('cli-columns');
 const stripAnsi = require('strip-ansi');
 const version = jsonFile.readFileSync(path.join(pkgDir.sync(), 'package.json')).version;
 
-export default function logger(stats: any, configs: any[], runningMessage: string = '') {
+export default function logger(stats: any, configs: any[], isLibrary: boolean, runningMessage: string = '') {
 	const chunks: any[] = [];
 	let errorMsg = '';
 	let warningMsg = '';
@@ -40,7 +40,8 @@ export default function logger(stats: any, configs: any[], runningMessage: strin
 
 			return child.assets.map((asset: any) => {
 				const size = (asset.size / 1000).toFixed(2);
-				return `${entry}/${asset.name} ${chalk.yellow(`(${size}kb)`)}`;
+				const assetName = isLibrary ? asset.name.replace(/^\//, '') : `${entry}/${asset.name}`;
+				return `${assetName} ${chalk.yellow(`(${size}kb)`)}`;
 			});
 		})
 		.filter((output: string) => output);

@@ -3,29 +3,30 @@ import * as webpack from 'webpack';
 import devConfigFactory from './dev.config';
 import distConfigFactory from './dist.config';
 import testConfigFactory from './test.config';
-import { getElementName } from './util';
+import { getWidgetName } from './util';
 
 export interface EnvOptions {
 	mode?: 'dev' | 'dist' | 'test';
+	target?: 'custom element' | 'lib';
 }
 
 function webpackConfig(env: EnvOptions = {}): webpack.Configuration[] {
-	const { mode = 'dist' } = env;
-	let { elements = [], ...rc } = require('./build-options.json');
+	const { mode = 'dist', target = 'custom element' } = env;
+	let { widgets = [], ...rc } = require('./build-options.json');
 	let configs: webpack.Configuration[];
-	elements = elements.map((element: any) => {
+	widgets = widgets.map((widget: any) => {
 		return {
-			name: getElementName(element),
-			path: element
+			name: getWidgetName(widget),
+			path: widget
 		};
 	});
 
 	if (mode === 'dev') {
-		configs = elements.map((element: any) => devConfigFactory({ ...rc, element }));
+		configs = [devConfigFactory({ ...rc, widgets, target })];
 	} else if (mode === 'test') {
-		configs = [testConfigFactory({ ...rc, elements })];
+		configs = [testConfigFactory({ ...rc, widgets, target })];
 	} else {
-		configs = elements.map((element: any) => distConfigFactory({ ...rc, element }));
+		configs = [distConfigFactory({ ...rc, widgets, target })];
 	}
 	return configs;
 }

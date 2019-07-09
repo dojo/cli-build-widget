@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/dojo/cli-build-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/dojo/cli-build-widget)
 [![npm version](https://badge.fury.io/js/%40dojo%2Fcli-build-widget.svg)](https://badge.fury.io/js/%40dojo%2Fcli-build-widget)
 
-The official CLI command for building Dojo 2 custom elements.
+The official CLI command for building Dojo custom elements and widget libraries.
 
 - [Usage](#usage)
 - [Features](#features)
@@ -40,7 +40,7 @@ By default widgets are built using an evergreen configuration, meaning that the 
 
 ### Project Structure
 
-A custom elements project is expected to have the following directory and file structure:
+A custom elements or library project is expected to have the following directory and file structure:
 
 ```
 src/
@@ -58,15 +58,23 @@ tests/
 
 ### Building
 
-There are three modes available to build Dojo 2 custom elements: `dist`, `dev` and `test`. The mode required can be passed using the `--mode` flag:
+`@dojo/cli-build-widget` can be used to build either custom elements or a library of Dojo widgets. Library builds can be enabled with the `--target=lib` (or `-t lib`) flag. While custom element builds aim to provide a minimum set of files required to render an individual custom element in the browser, library builds simply 1) transpile TypeScript to `.mjs` and legacy `.js` files, 2) build, minimize, and generate `.d.ts` and `.js` files for CSS modules, 3) and copy font and image assets.
+
+When building a Dojo widgets library, any widget that should be included MUST be specified in the `--widgets` option (see both [Widgets](#widgets) and [Configuration](#configuration) below). When present, `src/main.ts` takes precedence.
+
+There are two modes available to build Dojo custom elements or widget libraries: `dist` and `dev`. When building custom elements, a `test` mode is also provided. The mode required can be passed using the `--mode` flag:
 
 ```bash
-dojo build widget --mode dist
+# For custom element builds
+dojo build --mode dist
+
+# For library builds
+dojo build --mode dist --target lib
 ```
 
-The built custom element files are written to the `output/{mode selected}` directory. The output mirrors the `src` directory, so if a custom element is located at `src/custom-element/CustomElement.s`, the built element will be output to `output/{mode}/custom-element/CustomElement.js`.
+The built files are written to the `output/{mode selected}` directory. The output mirrors the `src` directory, so if a custom element is located at `src/custom-element/CustomElement.s`, the built element will be output to `output/{mode}/custom-element/CustomElement.js`.
 
-Note: `dist` is the default mode and so can be run without any arguments, `dojo build widget`.
+Note: `dist` is the default mode and so can be run without any arguments, `dojo build`.
 
 #### Dist Mode
 
@@ -98,17 +106,17 @@ dojo build -w # start a file-based watch
 dojo build -s -w=memory -m=dev # build to an in-memory file system with HMR
 ```
 
-### Elements
+### Widgets
 
-The path for elements to build can be provided using the repeating options `--elements` or `-e`:
+The path for widgets to build can be provided using the repeating option `--widgets`:
 
 ```bash
-dojo build -e src/custom-element-child/CustomElementChild -e src/custom-element-parent/CustomElementParent
+dojo build --widgets src/custom-element-child/CustomElementChild --widgets src/custom-element-parent/CustomElementParent
 ```
 
 ### Legacy
 
-To build custom elements for legacy environments use the `--legacy` or `-l` flag. Custom elements built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js).
+To build widgets for legacy environments use the `--legacy` or `-l` flag. Widgets built with the legacy flag will need to include the polyfill for the [native shim](https://github.com/webcomponents/custom-elements/blob/master/src/native-shim.js). For library builds, both legacy and evergreen JavaScript files are output side-by-side.
 
 ### Eject
 
@@ -120,6 +128,7 @@ Ejecting `@dojo/cli-build-widget` will produce the following files under the `co
 - `dev.config.js`: the configuration used during development.
 - `dist.config.js`: the production configuration.
 - `test.config.js`: the configuration used when running tests.
+- `template/custom-element.js`: A template that registers custom elements
 
 As already noted, the dojorc's `build-widget` options are moved to `config/build-widget/build-options.json` after ejecting. Further, the modes are specified using webpack's `env` flag (e.g., `--env.mode=dev`), defaulting to `dist`. You can run a build using webpack with:
 
@@ -129,16 +138,16 @@ node_modules/.bin/webpack --config=config/build-widget/ejected.config.js --env.m
 
 ### Configuration
 
-Custom element projects use a `.dojorc` file at the project root to control various aspects of development such as testing and building. This file is required to build custom elements, it MUST be valid JSON, and it MUST provide at least an `elements` array with the custom element paths. All other values are options. The following options can be used beneath the `"build-widget"` key:
+Custom element/widget library projects use a `.dojorc` file at the project root to control various aspects of development such as testing and building. This file is required to build the project, it MUST be valid JSON, and for widget projects it MUST provide at least a `widgets` array with the widget paths. All other values are options. The following options can be used beneath the `"build-widget"` key:
 
-#### `elements`: string[]
+#### `widgets`: string[]
 
-Contains paths _relative to the project root_ to the custom elements that should be built.
+Contains paths _relative to the project root_ to the widgets that should be built.
 
 ```json
 {
 	"build-widget": {
-		"elements": [
+		"widgets": [
 			"src/menu-item/MenuItem",
 			"src/menu/Menu"
 		]
@@ -169,7 +178,7 @@ A map of [`has`](https://github.com/dojo/has/) features to boolean flags that ca
 
 ## How do I contribute?
 
-We appreciate your interest! Please see the [Dojo 2 Meta Repository](https://github.com/dojo/meta#readme) for the Contributing Guidelines. This repository uses [prettier](https://prettier.io/) for code style and is configured with a pre-commit hook to automatically fix formatting issues on staged `.ts` files before performing the commit.
+We appreciate your interest! Please see the [Dojo Meta Repository](https://github.com/dojo/meta#readme) for the Contributing Guidelines. This repository uses [prettier](https://prettier.io/) for code style and is configured with a pre-commit hook to automatically fix formatting issues on staged `.ts` files before performing the commit.
 
 ### Installation
 
@@ -226,4 +235,4 @@ npm test
 Once the test artifact has been installed, if there have been no changes to the command code `grunt test` can be used to repeat the tests.
 ## Licensing information
 
-© 2018 [JS Foundation](https://js.foundation/). [New BSD](http://opensource.org/licenses/BSD-3-Clause) license.
+© 2019 [JS Foundation](https://js.foundation/). [New BSD](http://opensource.org/licenses/BSD-3-Clause) license.

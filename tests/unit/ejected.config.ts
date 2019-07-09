@@ -3,7 +3,7 @@ const { assert } = intern.getPlugin('chai');
 import { stub } from 'sinon';
 import MockModule from '../support/MockModule';
 
-const configJson: any = { elements: ['element'] };
+const configJson: any = { widgets: ['widget'] };
 let mockModule: MockModule;
 let mockDevConfig: any;
 let mockDistConfig: any;
@@ -30,24 +30,55 @@ describe('ejected config', () => {
 		mockModule.destroy();
 	});
 
-	it('can run dev mode', () => {
-		const config = mockModule.getModuleUnderTest();
-		config({ mode: 'dev' });
-		assert.isTrue(mockDevConfig.calledOnce);
-		assert.isTrue(mockDevConfig.calledWith({ element: { name: 'element', path: 'element' } }));
+	describe('custom elements', () => {
+		it('can run dev mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config({ mode: 'dev' });
+			assert.isTrue(mockDevConfig.calledOnce);
+			assert.isTrue(
+				mockDevConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'custom element' })
+			);
+		});
+
+		it('can run dist mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config();
+			assert.isTrue(mockDistConfig.calledOnce);
+			assert.isTrue(
+				mockDistConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'custom element' })
+			);
+		});
+
+		it('can run test mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config({ mode: 'test' });
+			assert.isTrue(mockTestConfig.calledOnce);
+			assert.isTrue(
+				mockTestConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'custom element' })
+			);
+		});
 	});
 
-	it('can run dist mode', () => {
-		const config = mockModule.getModuleUnderTest();
-		config();
-		assert.isTrue(mockDistConfig.calledOnce);
-		assert.isTrue(mockDistConfig.calledWith({ element: { name: 'element', path: 'element' } }));
-	});
+	describe('widget libraries', () => {
+		it('can run dev mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config({ mode: 'dev', target: 'lib' });
+			assert.isTrue(mockDevConfig.calledOnce);
+			assert.isTrue(mockDevConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'lib' }));
+		});
 
-	it('can run test mode', () => {
-		const config = mockModule.getModuleUnderTest();
-		config({ mode: 'test' });
-		assert.isTrue(mockTestConfig.calledOnce);
-		assert.isTrue(mockTestConfig.calledWith({ elements: [{ name: 'element', path: 'element' }] }));
+		it('can run dist mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config({ target: 'lib' });
+			assert.isTrue(mockDistConfig.calledOnce);
+			assert.isTrue(mockDistConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'lib' }));
+		});
+
+		it('can run test mode', () => {
+			const config = mockModule.getModuleUnderTest();
+			config({ mode: 'test', target: 'lib' });
+			assert.isTrue(mockTestConfig.calledOnce);
+			assert.isTrue(mockTestConfig.calledWith({ widgets: [{ name: 'widget', path: 'widget' }], target: 'lib' }));
+		});
 	});
 });

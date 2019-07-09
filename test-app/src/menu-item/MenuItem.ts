@@ -1,5 +1,5 @@
 import { v } from '@dojo/framework/core/vdom';
-import { WidgetProperties } from '@dojo/framework/core/interfaces';
+import { DNode, WidgetProperties } from '@dojo/framework/core/interfaces';
 import { theme, ThemedMixin } from '@dojo/framework/core/mixins/Themed';
 import { WidgetBase } from '@dojo/framework/core/WidgetBase';
 
@@ -18,7 +18,7 @@ export class MenuItem extends ThemedMixin(WidgetBase)<MenuItemProperties> {
 		this.properties.onSelected && this.properties.onSelected(this.properties.data);
 	}
 
-	protected render() {
+	protected render(): DNode {
 		const { title, selected } = this.properties;
 
 		return v('li', { classes: this.theme(css.root) }, [
