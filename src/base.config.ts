@@ -146,10 +146,11 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		getCustomTransformers(program: any) {
 			return {
 				before: removeEmpty([
-					elementTransformer(program, {
-						elementPrefix,
-						customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
-					}),
+					args.target !== 'lib' &&
+						elementTransformer(program, {
+							elementPrefix,
+							customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
+						}),
 					emitAll && emitAll.transformer
 				])
 			};
