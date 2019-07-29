@@ -9,7 +9,7 @@
     "build:dev:evergreen": "shx mv widget-lib-build/dev-lib src/widget-lib && dojo build -m dev && shx mv output/dev output/dev-lib && rimraf src/widget-lib"
   },
   "dependencies": {
-    "@dojo/framework": "6.0.0-alpha.7",
+    "@dojo/framework": "6.0.0-alpha.15",
     "tslib": "~1.8.1"
   },
   "devDependencies": {
