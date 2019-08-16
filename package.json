@@ -54,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@dojo/cli": "^5.0.0",
+    "@dojo/cli": "6.0.0-alpha.2",
     "@dojo/scripts": "~3.1.0",
     "@types/clean-webpack-plugin": "0.1.2",
     "@types/execa": "0.8.0",
@@ -95,8 +95,8 @@
     "typescript": "3.4.5"
   },
   "dependencies": {
-    "@dojo/framework": "6.0.0-alpha.15",
-    "@dojo/webpack-contrib": "6.0.0-alpha.10",
+    "@dojo/framework": "6.0.0-alpha.18",
+    "@dojo/webpack-contrib": "6.0.0-alpha.12",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
     "cli-columns": "3.1.2",
