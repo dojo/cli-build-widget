@@ -247,7 +247,7 @@ const command: Command = {
 			if (typeof widget === 'string') {
 				widget = {
 					file: widget
-				}
+				};
 			}
 
 			if (args.target === 'lib') {
@@ -260,7 +260,7 @@ const command: Command = {
 			return {
 				name: widget.name,
 				path: widget.file
-			}
+			};
 		});
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
