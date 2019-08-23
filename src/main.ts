@@ -251,7 +251,7 @@ const command: Command = {
 				};
 			}
 			return {
-				file: widget,
+				file: widget.file,
 				name: getWidgetName(widget.file),
 				tag: widget.tag
 			};
