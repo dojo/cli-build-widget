@@ -149,7 +149,10 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					args.target !== 'lib' &&
 						elementTransformer(program, {
 							elementPrefix,
-							customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
+							customElementFiles: widgets.map((widget: any) => ({
+								file: path.resolve(widget.path),
+								tag: widget.tag
+							}))
 						}),
 					emitAll && emitAll.transformer
 				])
@@ -160,7 +163,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const config: webpack.Configuration = {
 		mode: args.target === 'lib' ? 'none' : 'development',
 		entry: widgets.reduce((entry: any, widget: any) => {
-			entry[widget.name] = [
+			entry[widget.tag || widget.name] = [
 				args.target === 'lib'
 					? widget.path
 					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`

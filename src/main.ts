@@ -166,6 +166,21 @@ function warningsFilter(warning: string) {
 	return warning.includes('[mini-css-extract-plugin]\nConflicting order between');
 }
 
+interface WidgetConfig {
+	file: string;
+	tag?: string;
+}
+
+interface BuildArgs {
+	mode: 'dist' | 'dev' | 'test';
+	target: 'lib' | 'custom element';
+	watch: 'file' | 'memory';
+	serve: boolean;
+	widgets: (string | WidgetConfig)[];
+	legacy: boolean;
+	port: number;
+}
+
 const command: Command = {
 	group: 'build',
 	name: 'widget',
@@ -215,7 +230,7 @@ const command: Command = {
 			choices: ['custom element', 'lib']
 		});
 	},
-	run(helper: Helper, args: any) {
+	run(helper: Helper, args: BuildArgs) {
 		console.log = () => {};
 		let { widgets = [], ...rc } = (helper.configuration.get() || {}) as any;
 		const { widgets: commandLineWidgets, ...commandLineArgs } = args;
@@ -228,10 +243,17 @@ const command: Command = {
 			return Promise.resolve();
 		}
 
-		widgets = widgets.map((widget: any) => {
+		widgets = widgets.map((widget: string | WidgetConfig) => {
+			if (typeof widget === 'string') {
+				return {
+					path: widget,
+					name: getWidgetName(widget)
+				};
+			}
 			return {
-				name: getWidgetName(widget),
-				path: widget
+				path: widget.file,
+				name: getWidgetName(widget.file),
+				tag: widget.tag
 			};
 		});
 		let configs: webpack.Configuration[];
