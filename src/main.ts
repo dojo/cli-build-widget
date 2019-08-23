@@ -246,12 +246,12 @@ const command: Command = {
 		widgets = widgets.map((widget: string | WidgetConfig) => {
 			if (typeof widget === 'string') {
 				return {
-					file: widget,
+					path: widget,
 					name: getWidgetName(widget)
 				};
 			}
 			return {
-				file: widget.file,
+				path: widget.file,
 				name: getWidgetName(widget.file),
 				tag: widget.tag
 			};
