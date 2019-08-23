@@ -151,7 +151,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 							elementPrefix,
 							customElementFiles: widgets.map((widget: any) => ({
 								file: path.resolve(widget.path),
-								tag: widget.widget.tag
+								tag: widget.tag
 							}))
 						}),
 					emitAll && emitAll.transformer
