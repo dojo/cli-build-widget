@@ -7,7 +7,6 @@ import * as loaderUtils from 'loader-utils';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
-import { getWidgetName } from './util';
 
 const postcssPresetEnv = require('postcss-preset-env');
 const slash = require('slash');
@@ -150,7 +149,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					args.target !== 'lib' &&
 						elementTransformer(program, {
 							elementPrefix,
-							customElementFiles: widgets.map((widget: any) => ({ file: path.resolve(widget.path), name: widget.name }))
+							customElementFiles: widgets.map((widget: any) => ({ file: path.resolve(widget.path), tag: widget.widget.tag }))
 						}),
 					emitAll && emitAll.transformer
 				])
@@ -161,7 +160,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const config: webpack.Configuration = {
 		mode: args.target === 'lib' ? 'none' : 'development',
 		entry: widgets.reduce((entry: any, widget: any) => {
-			entry[widget.name || getWidgetName(widget.path)] = [
+			entry[widget.tag || widget.name] = [
 				args.target === 'lib'
 					? widget.path
 					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`

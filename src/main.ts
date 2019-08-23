@@ -168,7 +168,7 @@ function warningsFilter(warning: string) {
 
 interface WidgetConfig {
 	file: string;
-	name?: string;
+	tag?: string;
 }
 
 interface BuildArgs {
@@ -245,21 +245,15 @@ const command: Command = {
 
 		widgets = widgets.map((widget: string | WidgetConfig) => {
 			if (typeof widget === 'string') {
-				widget = {
-					file: widget
-				};
-			}
-
-			if (args.target === 'lib') {
 				return {
-					name: getWidgetName(widget.file),
-					path: widget.file
+					file: widget,
+					name: getWidgetName(widget)
 				};
 			}
-
 			return {
-				name: widget.name,
-				path: widget.file
+					file: widget,
+					name: getWidgetName(widget.file),
+					tag: widget.tag
 			};
 		});
 		let configs: webpack.Configuration[];
