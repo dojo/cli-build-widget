@@ -251,9 +251,9 @@ const command: Command = {
 				};
 			}
 			return {
-					file: widget,
-					name: getWidgetName(widget.file),
-					tag: widget.tag
+				file: widget,
+				name: getWidgetName(widget.file),
+				tag: widget.tag
 			};
 		});
 		let configs: webpack.Configuration[];
