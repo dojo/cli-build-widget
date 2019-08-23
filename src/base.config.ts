@@ -149,7 +149,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					args.target !== 'lib' &&
 						elementTransformer(program, {
 							elementPrefix,
-							customElementFiles: widgets.map((widget: any) => path.resolve(widget.path))
+							customElementFiles: widgets.map((widget: any) => ({file: path.resolve(widget.path), name: widget.name }))
 						}),
 					emitAll && emitAll.transformer
 				])
