@@ -140,6 +140,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				? {
 						...compilerOptions,
 						declaration: true,
+						rootDir: path.resolve('./src'),
 						outDir: path.resolve(`./output/${args.mode || 'dist'}`)
 					}
 				: compilerOptions,
