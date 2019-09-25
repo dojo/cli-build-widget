@@ -3,8 +3,9 @@
 		"mode": {
 			"type": "string",
 			"enum": [
-				"brotli",
-				"gzip"
+				"dev",
+				"dist",
+				"test"
 			]
 		},
 		"watch": {
@@ -22,12 +23,6 @@
 		},
 		"legacy": {
 			"type": "boolean"
-		},
-		"elements": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
 		}
 	},
 	"type": "object",
@@ -62,11 +57,11 @@
 		"l": {
 			"$ref": "#/definitions/legacy"
 		},
-		"elements": {
-			"$ref": "#/definitions/elements"
-		},
-		"e": {
-			"$ref": "#/definitions/elements"
+		"widgets": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		},
 		"bundles": {
 			"type": "object",
