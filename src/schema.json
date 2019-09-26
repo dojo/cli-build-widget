@@ -64,7 +64,16 @@
 		"widgets": {
 			"type": "array",
 			"items": {
-				"type": "string"
+				"type": ["string", "object"],
+				"required": ["file"],
+				"properties": {
+					"file": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					}
+				}
 			}
 		},
 		"bundles": {
