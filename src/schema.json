@@ -26,6 +26,7 @@
 		}
 	},
 	"type": "object",
+	"additionalProperties": false,
 	"properties": {
 		"mode": {
 			"$ref": "#/definitions/mode"
@@ -56,6 +57,9 @@
 		},
 		"l": {
 			"$ref": "#/definitions/legacy"
+		},
+		"prefix": {
+			"type": "string"
 		},
 		"widgets": {
 			"type": "array",
