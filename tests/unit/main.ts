@@ -4,6 +4,9 @@ import { join } from 'path';
 import { SinonStub, stub } from 'sinon';
 import chalk from 'chalk';
 import MockModule from '../support/MockModule';
+import { existsSync, readFileSync } from 'fs';
+import { Helper } from '@dojo/cli/interfaces';
+import Ajv = require('ajv');
 
 let mockModule: MockModule;
 let mockLogger: SinonStub;
@@ -20,12 +23,18 @@ let invalidHookStub: SinonStub;
 let runStub: SinonStub;
 let watchStub: SinonStub;
 
-function getMockConfiguration(config: any = {}) {
+function getMockHelper(config: any = {}): Partial<Helper> {
 	return {
 		configuration: {
 			get() {
 				return { ...config, widgets: ['widget'] };
+			},
+			set() {
+				return {};
 			}
+		},
+		validation: {
+			validate: () => Promise.resolve(true)
 		}
 	};
 }
@@ -106,7 +115,7 @@ describe('command', () => {
 
 	it('can run dev mode', () => {
 		const main = mockModule.getModuleUnderTest().default;
-		main.run(getMockConfiguration(), { mode: 'dev' }).then(() => {
+		main.run(getMockHelper(), { mode: 'dev' }).then(() => {
 			assert.isTrue(mockDevConfig.called);
 			assert.isTrue(mockLogger.calledWith('stats', ['dev config'], false));
 		});
@@ -114,7 +123,7 @@ describe('command', () => {
 
 	it('can run dist mode', () => {
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), { mode: 'dist' }).then(() => {
+		return main.run(getMockHelper(), { mode: 'dist' }).then(() => {
 			assert.isTrue(mockDistConfig.called);
 			assert.isTrue(mockLogger.calledWith('stats', ['dist config'], false));
 		});
@@ -122,7 +131,7 @@ describe('command', () => {
 
 	it('can run test mode', () => {
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), { mode: 'test' }).then(() => {
+		return main.run(getMockHelper(), { mode: 'test' }).then(() => {
 			assert.isTrue(mockTestConfig.called);
 			assert.isTrue(mockLogger.calledWith('stats', ['test config'], false));
 		});
@@ -131,7 +140,7 @@ describe('command', () => {
 	it('logger not called if stats are not returned', () => {
 		stats = null;
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), { mode: 'test' }).then(() => {
+		return main.run(getMockHelper(), { mode: 'test' }).then(() => {
 			assert.isTrue(mockTestConfig.called);
 			assert.isTrue(mockLogger.notCalled);
 		});
@@ -140,7 +149,7 @@ describe('command', () => {
 	it('rejects if an error occurs', () => {
 		isError = true;
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), { mode: 'test' }).then(
+		return main.run(getMockHelper(), { mode: 'test' }).then(
 			() => {
 				throw new Error();
 			},
@@ -152,7 +161,7 @@ describe('command', () => {
 
 	it('console.log is silenced during run', () => {
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), {}).then(() => {
+		return main.run(getMockHelper(), {}).then(() => {
 			console.log('called');
 			assert.isTrue(consoleStub.notCalled);
 		});
@@ -160,7 +169,7 @@ describe('command', () => {
 
 	it('shows a building spinner on start', () => {
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockConfiguration(), {}).then(() => {
+		return main.run(getMockHelper(), {}).then(() => {
 			assert.isTrue(mockModule.getMock('ora').ctor.calledWith('building'));
 			assert.isTrue(mockSpinner.start.called);
 			assert.isTrue(mockSpinner.stop.called);
@@ -170,7 +179,7 @@ describe('command', () => {
 	describe('watch option', () => {
 		it('automatically rebuilds after file changes', () => {
 			const main = mockModule.getModuleUnderTest().default;
-			return main.run(getMockConfiguration(), { watch: true }).then(() => {
+			return main.run(getMockHelper(), { watch: true }).then(() => {
 				assert.isFalse(runStub.called);
 				assert.isTrue(watchStub.calledOnce);
 			});
@@ -179,7 +188,7 @@ describe('command', () => {
 		it('rejects if an error occurs', () => {
 			isError = true;
 			const main = mockModule.getModuleUnderTest().default;
-			return main.run(getMockConfiguration(), { watch: true }).then(
+			return main.run(getMockHelper(), { watch: true }).then(
 				() => {
 					throw new Error();
 				},
@@ -191,7 +200,7 @@ describe('command', () => {
 
 		it('shows a building spinner', () => {
 			const main = mockModule.getModuleUnderTest().default;
-			return main.run(getMockConfiguration(), { watch: true }).then(() => {
+			return main.run(getMockHelper(), { watch: true }).then(() => {
 				assert.isTrue(mockModule.getMock('ora').ctor.calledWith('building'));
 				assert.isTrue(mockSpinner.start.called);
 				assert.isTrue(mockSpinner.stop.called);
@@ -205,7 +214,7 @@ describe('command', () => {
 			doneHookStub.callsFake((name: string, callback: Function) => callback(stats));
 			invalidHookStub.callsFake((name: string, callback: Function) => callback(filename));
 
-			return main.run(getMockConfiguration(), { watch: true }).then(() => {
+			return main.run(getMockHelper(), { watch: true }).then(() => {
 				assert.isTrue(mockLogger.calledWith('stats', ['dist config'], false, 'watching...'));
 			});
 		});
@@ -214,7 +223,7 @@ describe('command', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			stub(console, 'warn');
 			return main
-				.run(getMockConfiguration(), { watch: 'memory' })
+				.run(getMockHelper(), { watch: 'memory' })
 				.then(() => {
 					assert.isTrue(
 						(console as any).warn.calledWith('Memory watch requires the dev server. Using file watch instead...')
@@ -263,7 +272,7 @@ describe('command', () => {
 		it('starts a webserver on the specified port', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			const port = 3000;
-			return main.run(getMockConfiguration(), { serve: true, port }).then(() => {
+			return main.run(getMockHelper(), { serve: true, port }).then(() => {
 				assert.isTrue(listenStub.calledWith(port));
 			});
 		});
@@ -273,7 +282,7 @@ describe('command', () => {
 			const express = mockModule.getMock('express').ctor;
 			const outputDir = '/output/dist';
 			output.path = outputDir;
-			return main.run(getMockConfiguration(), { serve: true, watch: true }).then(() => {
+			return main.run(getMockHelper(), { serve: true, watch: true }).then(() => {
 				assert.isTrue(express.static.calledWith(outputDir));
 				assert.isTrue(watchStub.called);
 			});
@@ -288,7 +297,7 @@ describe('command', () => {
 					}
 				};
 			});
-			return main.run(getMockConfiguration(), { serve: true }).then(
+			return main.run(getMockHelper(), { serve: true }).then(
 				() => {
 					throw new Error();
 				},
@@ -302,7 +311,7 @@ describe('command', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			stub(console, 'warn');
 			return main
-				.run(getMockConfiguration(), { serve: true, watch: 'memory' })
+				.run(getMockHelper(), { serve: true, watch: 'memory' })
 				.then(() => {
 					assert.isTrue(
 						(console as any).warn.calledWith('Memory watch requires `--mode=dev`. Using file watch instead...')
@@ -319,7 +328,7 @@ describe('command', () => {
 			const webpackMiddleware = mockModule.getMock('webpack-dev-middleware').ctor;
 			const hotMiddleware = mockModule.getMock('webpack-hot-middleware').ctor;
 			return main
-				.run(getMockConfiguration(), {
+				.run(getMockHelper(), {
 					mode: 'dev',
 					serve: true,
 					watch: 'memory'
@@ -345,7 +354,7 @@ describe('command', () => {
 		it('enables hot module replacement with --watch=memory', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			return main
-				.run(getMockConfiguration(), {
+				.run(getMockHelper(), {
 					mode: 'dev',
 					serve: true,
 					watch: 'memory'
@@ -366,7 +375,7 @@ describe('command', () => {
 			});
 
 			return main
-				.run(getMockConfiguration(), {
+				.run(getMockHelper(), {
 					mode: 'dev',
 					port: 3000,
 					serve: true,
@@ -396,7 +405,7 @@ describe('command', () => {
 		it('outputs the ejected config and updates package dev dependencies', () => {
 			const main = mockModule.getModuleUnderTest().default;
 			const packageJson = require(join(basePath, 'package.json'));
-			const ejectOptions = main.eject(getMockConfiguration());
+			const ejectOptions = main.eject(getMockHelper());
 			const rcPattern = /build-options\.json$/;
 
 			assert.lengthOf(ejectOptions.copy.files.filter((file: string) => rcPattern.test(file)), 1);
@@ -435,11 +444,82 @@ describe('command', () => {
 			assert.throws(
 				() => {
 					const main = mockModule.getModuleUnderTest().default;
-					main.eject(getMockConfiguration());
+					main.eject(getMockHelper());
 				},
 				Error,
 				`Failed reading dependencies from package.json - ${message}`
 			);
+		});
+	});
+
+	describe('validate', () => {
+		beforeEach(() => {
+			mockModule.dependencies(['fs', 'path']);
+			mockModule.getMock('fs').readFileSync = stub().returns('{}');
+			mockModule.getMock('path').join = stub().returns('schema.json');
+		});
+
+		it('validate is called and reads the schema file', async () => {
+			const readFileSyncStub = mockModule.getMock('fs').readFileSync;
+			const main = mockModule.getModuleUnderTest().default;
+			const result = main.validate(getMockHelper());
+			result
+				.then((valid: boolean) => {
+					assert.isTrue(valid);
+					assert.equal(readFileSyncStub.callCount, 1, 'readFileSync should only be called once');
+					assert.equal(
+						readFileSyncStub.getCall(0).args[0],
+						'schema.json',
+						'validate should be called with schema.json as schema'
+					);
+				})
+				.catch((error: Error) => {
+					throw new Error('validation should not throw an error');
+				});
+		});
+
+		it('throw an error if schema.json is not found', async () => {
+			const main = mockModule.getModuleUnderTest().default;
+			const readFileError = "ENOENT: no such file or directory, open 'schema.json'";
+			mockModule.getMock('fs').readFileSync = stub().throws(readFileError);
+			main
+				.validate(getMockHelper())
+				.then(() => {
+					throw new Error('should not resolve');
+				})
+				.catch((error: Error) => {
+					assert.strictEqual(
+						error.message,
+						`The dojorc schema for cli-build-widget could not be read: ${readFileError}`
+					);
+				});
+		});
+	});
+
+	describe('schema', () => {
+		let path: string;
+
+		beforeEach(() => {
+			path = join(__dirname, '../../src/schema.json');
+		});
+
+		it('is well formed json', () => {
+			const exists = existsSync(path);
+			assert.isTrue(exists, 'schema file should exist');
+			assert.doesNotThrow(() => {
+				const schema = readFileSync(path).toString();
+				JSON.parse(schema);
+			}, 'schema.json should be readable and valid JSON');
+		});
+
+		it('is a valid JSON Schema', () => {
+			const schema = JSON.parse(readFileSync(path).toString());
+
+			const ajv = new Ajv({ allErrors: true, verbose: true });
+			const validate = ajv.compile(schema);
+			validate({});
+
+			assert.equal(validate.errors, null, `schema should have no errors`);
 		});
 	});
 });

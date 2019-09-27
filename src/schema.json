@@ -1,0 +1,109 @@
+{
+	"definitions": {
+		"mode": {
+			"type": "string",
+			"enum": [
+				"dev",
+				"dist",
+				"test"
+			]
+		},
+		"watch": {
+			"type": "string",
+			"enum": [
+				"memory",
+				"file"
+			]
+		},
+		"serve": {
+			"type": "boolean"
+		},
+		"port": {
+			"type": "number"
+		},
+		"legacy": {
+			"type": "boolean"
+		},
+		"widgets": {
+			"type": "array",
+			"items": {
+				"type": ["string", "object"],
+				"required": ["file"],
+				"properties": {
+					"file": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"prefix": {
+			"type": "string"
+		},
+		"bundles": {
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": "array"
+				}
+			}
+		},
+		"features": {
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": ["boolean", "string", "number"]
+				}
+			}
+		}
+
+	},
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"mode": {
+			"$ref": "#/definitions/mode"
+		},
+		"m": {
+			"$ref": "#/definitions/mode"
+		},
+		"watch": {
+			"$ref": "#/definitions/watch"
+		},
+		"w": {
+			"$ref": "#/definitions/watch"
+		},
+		"serve" : {
+			"$ref": "#/definitions/serve"
+		},
+		"s": {
+			"$ref": "#/definitions/serve"
+		},
+		"port" : {
+			"$ref": "#/definitions/port"
+		},
+		"p": {
+			"$ref": "#/definitions/port"
+		},
+		"legacy": {
+			"$ref": "#/definitions/legacy"
+		},
+		"l": {
+			"$ref": "#/definitions/legacy"
+		},
+		"prefix": {
+			"$ref": "#/definitions/prefix"
+		},
+		"widgets": {
+			"$ref": "#/definitions/widgets"
+		},
+		"bundles": {
+			"$ref": "#/definitions/bundles"
+		},
+		"features": {
+			"$ref": "#/definitions/features"
+		}
+	}
+}
