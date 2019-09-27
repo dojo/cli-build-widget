@@ -23,7 +23,42 @@
 		},
 		"legacy": {
 			"type": "boolean"
+		},
+		"widgets": {
+			"type": "array",
+			"items": {
+				"type": ["string", "object"],
+				"required": ["file"],
+				"properties": {
+					"file": {
+						"type": "string"
+					},
+					"tag": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"prefix": {
+			"type": "string"
+		},
+		"bundles": {
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": "array"
+				}
+			}
+		},
+		"features": {
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": ["boolean", "string", "number"]
+				}
+			}
 		}
+
 	},
 	"type": "object",
 	"additionalProperties": false,
@@ -59,38 +94,16 @@
 			"$ref": "#/definitions/legacy"
 		},
 		"prefix": {
-			"type": "string"
+			"$ref": "#/definitions/prefix"
 		},
 		"widgets": {
-			"type": "array",
-			"items": {
-				"type": ["string", "object"],
-				"required": ["file"],
-				"properties": {
-					"file": {
-						"type": "string"
-					},
-					"tag": {
-						"type": "string"
-					}
-				}
-			}
+			"$ref": "#/definitions/widgets"
 		},
 		"bundles": {
-			"type": "object",
-			"patternProperties": {
-				"^.*$": {
-					"type": "array"
-				}
-			}
+			"$ref": "#/definitions/bundles"
 		},
 		"features": {
-			"type": "object",
-			"patternProperties": {
-				"^.*$": {
-					"type": ["boolean", "string", "number"]
-				}
-			}
+			"$ref": "#/definitions/features"
 		}
 	}
 }
