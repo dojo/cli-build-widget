@@ -11,6 +11,7 @@ import * as webpack from 'webpack';
 const postcssPresetEnv = require('postcss-preset-env');
 const slash = require('slash');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const basePath = process.cwd();
 const srcPath = path.join(basePath, 'src');
@@ -182,7 +183,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		},
 		resolve: {
 			modules: [basePath, path.join(basePath, 'node_modules')],
-			extensions
+			extensions,
+			plugins: [new TsconfigPathsPlugin({ configFile: path.join(basePath, 'tsconfig.json') })]
 		},
 		watchOptions: { ignored: /node_modules/ },
 		plugins: removeEmpty([

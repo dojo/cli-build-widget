@@ -126,6 +126,7 @@
     "strip-ansi": "4.0.0",
     "terser-webpack-plugin": "1.1.0",
     "ts-loader": "5.4.5",
+    "tsconfig-paths-webpack-plugin": "3.2.0",
     "tslint": "5.8.0",
     "tslint-loader": "3.5.4",
     "typed-css-modules": "0.3.1",
