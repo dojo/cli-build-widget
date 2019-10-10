@@ -180,6 +180,9 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			path: path.resolve('./output'),
 			pathinfo: false
 		},
+		resolveLoader: {
+			modules: [path.resolve(__dirname, 'node_modules'), 'node_modules']
+		},
 		resolve: {
 			modules: [basePath, path.join(basePath, 'node_modules')],
 			extensions
