@@ -8,7 +8,8 @@ import chalk from 'chalk';
 
 const pkgDir = require('pkg-dir');
 import devConfigFactory from './dev.config';
-import testConfigFactory from './test.config';
+import unitConfigFactory from './unit.config';
+import functionalConfigFactory from './functional.config';
 import distConfigFactory from './dist.config';
 import logger from './logger';
 import { moveBuildOptions, getWidgetName } from './util';
@@ -17,6 +18,8 @@ import { readFileSync } from 'fs';
 const fixMultipleWatchTrigger = require('webpack-mild-compile');
 const hotMiddleware = require('webpack-hot-middleware');
 const webpackMiddleware = require('webpack-dev-middleware');
+
+const testModes = ['test', 'unit', 'functional'];
 
 function createCompiler(config: webpack.Configuration[]) {
 	const compiler = webpack(config);
@@ -52,6 +55,13 @@ function build(config: webpack.Configuration[], args: any) {
 				const runningMessage = args.serve ? `Listening on port ${args.port}...` : '';
 				logger(stats.toJson(), config, args.target === 'lib', runningMessage);
 			}
+
+			if (args.mode === 'test') {
+				console.warn(
+					'Using `--mode=test` is deprecated and has only built the unit test bundle. This mode will be removed in the next major release, please use `unit` or `functional` explicitly instead.'
+				);
+			}
+
 			resolve();
 		});
 	});
@@ -173,7 +183,7 @@ interface WidgetConfig {
 }
 
 interface BuildArgs {
-	mode: 'dist' | 'dev' | 'test';
+	mode: 'dist' | 'dev' | 'test' | 'unit' | 'functional';
 	target: 'lib' | 'custom element';
 	watch: 'file' | 'memory';
 	serve: boolean;
@@ -191,7 +201,7 @@ const command: Command = {
 			describe: 'the output mode',
 			alias: 'm',
 			default: 'dist',
-			choices: ['dist', 'dev', 'test']
+			choices: ['dist', 'dev', ...testModes]
 		});
 
 		options('watch', {
@@ -260,13 +270,19 @@ const command: Command = {
 		let configs: webpack.Configuration[];
 		if (args.mode === 'dev') {
 			configs = [devConfigFactory({ ...rc, ...commandLineArgs, widgets })];
-		} else if (args.mode === 'test') {
-			configs = [testConfigFactory({ ...rc, ...commandLineArgs, widgets, legacy: true })];
+		} else if (args.mode === 'unit' || args.mode === 'test') {
+			configs = [unitConfigFactory({ ...rc, ...commandLineArgs, widgets, legacy: true })];
+		} else if (args.mode === 'functional') {
+			configs = [functionalConfigFactory({ ...rc, ...commandLineArgs, widgets, legacy: true })];
 		} else {
 			configs = [distConfigFactory({ ...rc, ...commandLineArgs, widgets })];
 		}
 
 		if (args.serve) {
+			if (testModes.indexOf(args.mode) !== -1) {
+				return Promise.reject(new Error(`Cannot use \`--serve\` with \`--mode=${args.mode}\``));
+			}
+
 			return serve(configs, args);
 		}
 
@@ -290,13 +306,14 @@ const command: Command = {
 					'./dist.config.js',
 					'./ejected.config.js',
 					'./template/custom-element.js',
-					'./test.config.js',
+					'./unit.config.js',
+					'./functional.config.js',
 					'./util.js'
 				]
 			},
 			hints: [
 				`to build run ${chalk.underline(
-					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test} --env.target={"custom element"|lib}'
+					'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|unit|functional} --env.target={"custom element"|lib}'
 				)}`
 			],
 			npm: {

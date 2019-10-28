@@ -16,20 +16,12 @@ function webpackConfig(args: any): webpack.Configuration {
 			.sync([`${basePath}/tests/unit/**/*.{ts,tsx}`, `${basePath}/src/**/*.spec.{ts,tsx}`])
 			.map((filename: string) => filename.replace(/\.ts$/, ''));
 
-		const functional = globby
-			.sync([`${basePath}/tests/functional/**/*.ts`])
-			.map((filename: string) => filename.replace(/\.ts$/, ''));
-
 		const tests: any = {};
 
 		if (unit.length) {
-			tests.unit = unit;
-		}
-
-		if (functional.length) {
-			tests.functional = functional;
-		}
-
+			tests.all = unit;
+        }
+        
 		return tests;
 	};
 	const externals: any[] = (config.externals as any[]) || [];
@@ -69,10 +61,10 @@ function webpackConfig(args: any): webpack.Configuration {
 	config.externals = externals;
 	config.devtool = 'inline-source-map';
 	config.output = {
-		...output,
-		chunkFilename: `[name].js`,
-		filename: '[name].js',
-		path: path.join(outputPath, 'test')
+        ...output,
+        chunkFilename: '[name].js',
+        filename: '[name].js',
+		path: path.join(outputPath, 'test', 'unit')
 	};
 	return config;
 }
