@@ -13,11 +13,13 @@ let mockLogger: SinonStub;
 let mockSpinner: any;
 let mockDevConfig: any;
 let mockDistConfig: any;
-let mockTestConfig: any;
+let mockUnitTestConfig: any;
+let mockFunctionalTestConfig: any;
 let compiler: any;
 let isError: boolean;
 let stats: any;
-let consoleStub = stub(console, 'log');
+let consoleStub: any;
+let consoleWarnStub: any;
 let doneHookStub: SinonStub;
 let invalidHookStub: SinonStub;
 let runStub: SinonStub;
@@ -51,7 +53,8 @@ describe('command', () => {
 		mockModule.dependencies([
 			'./dev.config',
 			'./dist.config',
-			'./test.config',
+			'./unit.config',
+			'./functional.config',
 			'./logger',
 			'express',
 			'log-update',
@@ -87,16 +90,22 @@ describe('command', () => {
 		mockModule.getMock('webpack').ctor.returns(compiler);
 		mockDevConfig = mockModule.getMock('./dev.config').default;
 		mockDistConfig = mockModule.getMock('./dist.config').default;
-		mockTestConfig = mockModule.getMock('./test.config').default;
+		mockUnitTestConfig = mockModule.getMock('./unit.config').default;
+		mockFunctionalTestConfig = mockModule.getMock('./functional.config').default;
 		mockDevConfig.returns('dev config');
 		mockDistConfig.returns('dist config');
-		mockTestConfig.returns('test config');
+		mockUnitTestConfig.returns('unit config');
+		mockFunctionalTestConfig.returns('functional config');
 		mockLogger = mockModule.getMock('./logger').default;
+
+		consoleWarnStub = stub(console, 'warn');
+		consoleStub = stub(console, 'log');
 	});
 
 	afterEach(() => {
 		mockModule.destroy();
 		consoleStub.restore();
+		consoleWarnStub.restore();
 	});
 
 	it('registers the command options', () => {
@@ -108,7 +117,7 @@ describe('command', () => {
 				describe: 'the output mode',
 				alias: 'm',
 				default: 'dist',
-				choices: ['dist', 'dev', 'test']
+				choices: ['dist', 'dev', 'test', 'unit', 'functional']
 			})
 		);
 	});
@@ -129,19 +138,40 @@ describe('command', () => {
 		});
 	});
 
-	it('can run test mode', () => {
+	it('can run unit mode', () => {
+		const main = mockModule.getModuleUnderTest().default;
+		return main.run(getMockHelper(), { mode: 'unit' }).then(() => {
+			assert.isTrue(mockUnitTestConfig.called);
+			assert.isTrue(mockLogger.calledWith('stats', ['unit config'], false));
+		});
+	});
+
+	it('can run functional mode', () => {
+		const main = mockModule.getModuleUnderTest().default;
+		return main.run(getMockHelper(), { mode: 'functional' }).then(() => {
+			assert.isTrue(mockFunctionalTestConfig.called);
+			assert.isTrue(mockLogger.calledWith('stats', ['functional config'], false));
+		});
+	});
+
+	it('falls back to unit mode and logs a warning when depracated test mode is used', () => {
 		const main = mockModule.getModuleUnderTest().default;
 		return main.run(getMockHelper(), { mode: 'test' }).then(() => {
-			assert.isTrue(mockTestConfig.called);
-			assert.isTrue(mockLogger.calledWith('stats', ['test config'], false));
+			assert.isTrue(mockUnitTestConfig.called);
+			assert.isTrue(mockLogger.calledWith('stats', ['unit config'], false));
+			assert.isTrue(
+				consoleWarnStub.calledWith(
+					'Using `--mode=test` is deprecated and has only built the unit test bundle. This mode will be removed in the next major release, please use `unit` or `functional` explicitly instead.'
+				)
+			);
 		});
 	});
 
 	it('logger not called if stats are not returned', () => {
 		stats = null;
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockHelper(), { mode: 'test' }).then(() => {
-			assert.isTrue(mockTestConfig.called);
+		return main.run(getMockHelper(), { mode: 'unit' }).then(() => {
+			assert.isTrue(mockUnitTestConfig.called);
 			assert.isTrue(mockLogger.notCalled);
 		});
 	});
@@ -149,7 +179,7 @@ describe('command', () => {
 	it('rejects if an error occurs', () => {
 		isError = true;
 		const main = mockModule.getModuleUnderTest().default;
-		return main.run(getMockHelper(), { mode: 'test' }).then(
+		return main.run(getMockHelper(), { mode: 'unit' }).then(
 			() => {
 				throw new Error();
 			},
@@ -221,18 +251,9 @@ describe('command', () => {
 
 		it('warns when attempting memory watch without the dev server', () => {
 			const main = mockModule.getModuleUnderTest().default;
-			stub(console, 'warn');
-			return main
-				.run(getMockHelper(), { watch: 'memory' })
-				.then(() => {
-					assert.isTrue(
-						(console as any).warn.calledWith('Memory watch requires the dev server. Using file watch instead...')
-					);
-					(console as any).warn.restore();
-				})
-				.catch(() => {
-					(console as any).warn.restore();
-				});
+			return main.run(getMockHelper(), { watch: 'memory' }).then(() => {
+				assert.isTrue(consoleWarnStub.calledWith('Memory watch requires the dev server. Using file watch instead...'));
+			});
 		});
 	});
 
@@ -309,18 +330,9 @@ describe('command', () => {
 
 		it('limits --watch=memory to --mode=dev', () => {
 			const main = mockModule.getModuleUnderTest().default;
-			stub(console, 'warn');
-			return main
-				.run(getMockHelper(), { serve: true, watch: 'memory' })
-				.then(() => {
-					assert.isTrue(
-						(console as any).warn.calledWith('Memory watch requires `--mode=dev`. Using file watch instead...')
-					);
-					(console as any).warn.restore();
-				})
-				.catch(() => {
-					(console as any).warn.restore();
-				});
+			return main.run(getMockHelper(), { serve: true, watch: 'memory' }).then(() => {
+				assert.isTrue(consoleWarnStub.calledWith('Memory watch requires `--mode=dev`. Using file watch instead...'));
+			});
 		});
 
 		it('registers middleware with --watch=memory', () => {
@@ -420,13 +432,14 @@ describe('command', () => {
 						'./dist.config.js',
 						'./ejected.config.js',
 						'./template/custom-element.js',
-						'./test.config.js',
+						'./unit.config.js',
+						'./functional.config.js',
 						'./util.js'
 					]
 				},
 				hints: [
 					`to build run ${chalk.underline(
-						'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|test} --env.target={"custom element"|lib}'
+						'./node_modules/.bin/webpack --config ./config/build-widget/ejected.config.js --env.mode={dev|dist|unit|functional} --env.target={"custom element"|lib}'
 					)}`
 				],
 				npm: {
