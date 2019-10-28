@@ -20,8 +20,8 @@ function webpackConfig(args: any): webpack.Configuration {
 
 		if (unit.length) {
 			tests.all = unit;
-        }
-        
+		}
+
 		return tests;
 	};
 	const externals: any[] = (config.externals as any[]) || [];
@@ -61,9 +61,9 @@ function webpackConfig(args: any): webpack.Configuration {
 	config.externals = externals;
 	config.devtool = 'inline-source-map';
 	config.output = {
-        ...output,
-        chunkFilename: '[name].js',
-        filename: '[name].js',
+		...output,
+		chunkFilename: '[name].js',
+		filename: '[name].js',
 		path: path.join(outputPath, 'test', 'unit')
 	};
 	return config;
