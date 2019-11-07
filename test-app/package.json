@@ -15,12 +15,13 @@
     "build:lib-app": "dojo build app && shx mv output/dist output/dist-lib-evergreen"
   },
   "dependencies": {
-    "@dojo/framework": "6.0.0-alpha.18",
+    "@dojo/framework": "7.0.0-alpha.2",
     "@webcomponents/custom-elements": "1.0.8",
     "tslib": "~1.9.0",
     "typescript": "3.4.5"
   },
   "devDependencies": {
+    "@dojo/cli": "7.0.0-alpha.1",
     "shx": "0.2.2",
     "intern": "4.2.2"
   }
