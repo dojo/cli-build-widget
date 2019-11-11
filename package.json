@@ -96,7 +96,7 @@
     "typescript": "3.4.5"
   },
   "dependencies": {
-    "@dojo/framework": "7.0.0-alpha.2",
+    "@dojo/framework": "7.0.0-alpha.3",
     "@dojo/webpack-contrib": "7.0.0-alpha.2",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
