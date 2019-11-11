@@ -1,6 +1,6 @@
 {
   "name": "@dojo/cli-build-widget",
-  "version": "7.0.0-alpha.2",
+  "version": "7.0.0-pre",
   "description": "CLI command to build Dojo custom elements",
   "engines": {
     "npm": ">=3.0.0"
