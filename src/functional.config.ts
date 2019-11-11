@@ -50,7 +50,7 @@ function webpackConfig(args: any): webpack.Configuration {
 		module.rules.push({
 			test: /src[\\\/].*\.ts(x)?$/,
 			use: {
-				loader: 'istanbul-instrumenter-loader',
+				loader: '@dojo/webpack-contrib/istanbul-loader',
 				options: instrumenterOptions
 			},
 			enforce: 'post'

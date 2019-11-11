@@ -14,7 +14,7 @@ function webpackConfig(args: any): webpack.Configuration {
 	config.entry = () => {
 		const unit = globby
 			.sync([`${basePath}/tests/unit/**/*.{ts,tsx}`, `${basePath}/src/**/*.spec.{ts,tsx}`])
-			.map((filename: string) => filename.replace(/\.ts$/, ''));
+			.map((filename: string) => filename.replace(/\.tsx?$/, ''));
 
 		const tests: any = {};
 
@@ -50,7 +50,7 @@ function webpackConfig(args: any): webpack.Configuration {
 		module.rules.push({
 			test: /src[\\\/].*\.ts(x)?$/,
 			use: {
-				loader: 'istanbul-instrumenter-loader',
+				loader: '@dojo/webpack-contrib/istanbul-loader',
 				options: instrumenterOptions
 			},
 			enforce: 'post'
