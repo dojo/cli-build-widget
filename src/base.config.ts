@@ -198,7 +198,32 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			} as any),
 			emitAll && emitAll.plugin
 		]),
+		externals: [
+			function(context, request, callback) {
+				const externals = (args.externals && args.externals.dependencies) || [];
+				function resolveExternal(externals: (string | { name?: string; type?: string })[]): string | void {
+					for (let external of externals) {
+						const name = external && (typeof external === 'string' ? external : external.name);
+						if (name && new RegExp(`^${name}[!(\/|\\)]?`).test(request)) {
+							return typeof external === 'string'
+								? request
+								: external.type
+									? `${external.type} ${request}`
+									: {
+											amd: request,
+											commonjs: request,
+											commonjs2: request,
+											root: request
+										};
+						}
+					}
+				}
+
+				callback(null, resolveExternal(externals));
+			}
+		],
 		module: {
+			noParse: /\.block/,
 			rules: removeEmpty([
 				tsLint && {
 					test: /\.ts$/,
