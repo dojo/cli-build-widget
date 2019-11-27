@@ -39,6 +39,42 @@
 				}
 			}
 		},
+		"externals" : {
+			"type": "object",
+			"additionalProperties": false,
+			"properties" : {
+				"outputPath": {
+					"type": "string"
+				},
+				"dependencies": {
+					"type": "array",
+					"items" : {
+						"type": ["object", "string"],
+						"required": ["from"],
+						"properties": {
+							"from" : {
+								"type": "string"
+							},
+							"to" : {
+								"type": "string"
+							},
+							"name" : {
+								"type": "string"
+							},
+							"inject" : {
+								"type": ["string", "boolean", "array"]
+							},
+							"type": {
+								"type" : "string",
+								"enum": [
+									"root", "umd", "amd", "commonjs", "commonjs2"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
 		"prefix": {
 			"type": "string"
 		},
@@ -101,6 +137,9 @@
 		},
 		"bundles": {
 			"$ref": "#/definitions/bundles"
+		},
+		"externals" : {
+			"$ref": "#/definitions/externals"
 		},
 		"features": {
 			"$ref": "#/definitions/features"
