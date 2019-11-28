@@ -2,12 +2,14 @@ import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePl
 import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
 import { emitAllFactory } from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
+import { classesMap } from '@dojo/webpack-contrib/css-module-class-map-loader/loader';
 import { existsSync } from 'fs';
 import * as loaderUtils from 'loader-utils';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
+const postcssModules = require('postcss-modules');
 const postcssPresetEnv = require('postcss-preset-env');
 const slash = require('slash');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
@@ -94,9 +96,10 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
 	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
+	const isLib = args.target === 'lib';
 
 	const emitAll =
-		args.target === 'lib' &&
+		isLib &&
 		emitAllFactory({
 			legacy: args.legacy,
 			inlineSourceMaps: false,
@@ -123,7 +126,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		features: {
 			'color-mod-function': true,
 			'nesting-rules': true,
-			'custom-properties': args.target === 'lib' ? { preserve: false } : undefined
+			'custom-properties': isLib ? { preserve: false } : undefined
 		},
 		autoprefixer: {
 			grid: args.legacy
@@ -134,16 +137,15 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		instance: jsonpIdent,
 		// ts-loader will, by default, use the `include`, `files`, and `exclude` options from `tsconfig`. Since
 		// library builds should include only the modules in the webpack build path.
-		onlyCompileBundledFiles: args.target === 'lib',
-		compilerOptions:
-			args.target === 'lib'
-				? {
-						...compilerOptions,
-						declaration: true,
-						rootDir: path.resolve('./src'),
-						outDir: path.resolve(`./output/${args.mode || 'dist'}`)
-					}
-				: compilerOptions,
+		onlyCompileBundledFiles: isLib,
+		compilerOptions: isLib
+			? {
+					...compilerOptions,
+					declaration: true,
+					rootDir: path.resolve('./src'),
+					outDir: path.resolve(`./output/${args.mode || 'dist'}`)
+				}
+			: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
 				before: removeEmpty([
@@ -162,10 +164,10 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	};
 
 	const config: webpack.Configuration = {
-		mode: args.target === 'lib' ? 'none' : 'development',
+		mode: isLib ? 'none' : 'development',
 		entry: widgets.reduce((entry: any, widget: any) => {
 			entry[widget.tag || widget.name] = [
-				args.target === 'lib'
+				isLib
 					? widget.path
 					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
 			];
@@ -173,8 +175,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		}, {}),
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: args.target === 'lib' ? '[name].js' : `[name]-${packageJson.version}.js`,
-			filename: args.target === 'lib' ? '[name].js' : `[name]-${packageJson.version}.js`,
+			chunkFilename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
+			filename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
 			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output'),
@@ -293,7 +295,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					test: new RegExp(`globalize(\\${path.sep}|$)`),
 					loader: 'imports-loader?define=>false'
 				},
-				args.target === 'lib' && {
+				isLib && {
 					exclude: allPaths,
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
@@ -305,19 +307,18 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					include: allPaths,
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
-					options:
-						args.target === 'lib'
-							? {
-									name: (file: string) => {
-										const fileDir = path.dirname(file.replace(srcPath, '')).replace(/^(\/|\\)/, '');
-										return `${fileDir}/[name].[ext]`;
-									}
+					options: isLib
+						? {
+								name: (file: string) => {
+									const fileDir = path.dirname(file.replace(srcPath, '')).replace(/^(\/|\\)/, '');
+									return `${fileDir}/[name].[ext]`;
 								}
-							: {
-									hash: 'sha512',
-									digest: 'hex',
-									name: '[hash:base64:8].[ext]'
-								}
+							}
+						: {
+								hash: 'sha512',
+								digest: 'hex',
+								name: '[hash:base64:8].[ext]'
+							}
 				},
 				{
 					test: /\.css$/,
@@ -332,8 +333,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				{
 					include: allPaths,
 					test: /.*\.css?$/,
-					use: [
-						args.target === 'lib'
+					use: removeEmpty([
+						isLib
 							? {
 									loader: MiniCssExtractPlugin.loader,
 									options: {
@@ -345,12 +346,13 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 								}
 							: MiniCssExtractPlugin.loader,
 						'@dojo/webpack-contrib/css-module-decorator-loader',
+						isLib && '@dojo/webpack-contrib/css-module-class-map-loader/loader',
 						{
 							loader: 'css-loader',
 							options: {
 								getLocalIdent,
 								importLoaders: 1,
-								localIdentName: '[name]__[local]__[hash:base64:5]',
+								localIdentName: isLib ? '[local]' : '[name]__[local]__[hash:base64:5]',
 								modules: true,
 								sourceMap: true
 							}
@@ -359,10 +361,20 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 							loader: 'postcss-loader?sourceMap',
 							options: {
 								ident: 'postcss',
-								plugins: [require('postcss-import')(), postcssPresetEnv(postcssPresetConfig)]
+								plugins: removeEmpty([
+									require('postcss-import')(),
+									isLib &&
+										postcssModules({
+											getJSON: (filename: string, json: any) => {
+												classesMap.set(filename, json);
+											},
+											generateScopedName: '[name]__[local]__[hash:base64:5]'
+										}),
+									postcssPresetEnv(postcssPresetConfig)
+								])
 							}
 						}
-					]
+					])
 				}
 			])
 		}
