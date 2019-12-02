@@ -11,6 +11,7 @@ import * as webpack from 'webpack';
 
 const postcssModules = require('postcss-modules');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssImport = require('postcss-import');
 const slash = require('slash');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 
@@ -332,7 +333,57 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				},
 				{
 					include: allPaths,
-					test: /.*\.css?$/,
+					test: /\.css$/,
+					exclude: /\.m\.css$/,
+					use: removeEmpty([
+						isLib
+							? {
+									loader: MiniCssExtractPlugin.loader,
+									options: {
+										publicPath: (resourcePath: string) => {
+											const outputPath = path.resolve(`./output/${args.mode || 'dist'}`);
+											return path.relative(path.dirname(resourcePath.replace(srcPath, outputPath)), outputPath) + '/';
+										}
+									}
+								}
+							: MiniCssExtractPlugin.loader,
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: true,
+								import: false
+							}
+						},
+						isLib && {
+							loader: 'postcss-loader?sourceMap',
+							options: {
+								ident: 'postcss',
+								plugins: removeEmpty([
+									postcssImport({
+										filter: (path: string) => {
+											return !/^https?:\/\//.test(path);
+										},
+										resolve: (id: string, basedir: string, importOptions: any = {}) => {
+											if (importOptions.filter) {
+												const result = importOptions.filter(id);
+												if (!result) {
+													return null;
+												}
+											}
+											if (id[0] === '~') {
+												return id.substr(1);
+											}
+											return id;
+										}
+									})
+								])
+							}
+						}
+					])
+				},
+				{
+					include: allPaths,
+					test: /\.m\.css$/,
 					use: removeEmpty([
 						isLib
 							? {
@@ -362,7 +413,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 							options: {
 								ident: 'postcss',
 								plugins: removeEmpty([
-									require('postcss-import')(),
+									postcssImport(),
 									isLib &&
 										postcssModules({
 											getJSON: (filename: string, json: any) => {
