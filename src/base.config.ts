@@ -96,8 +96,9 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const jsonpIdent = 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
-	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
 	const isLib = args.target === 'lib';
+	let features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
+	features = { ...features, 'cldr-elide': true };
 
 	const emitAll =
 		isLib &&
