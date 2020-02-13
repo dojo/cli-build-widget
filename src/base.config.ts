@@ -96,8 +96,9 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 	const jsonpIdent = 'custom-elements';
 	const extensions = args.legacy ? ['.ts', '.tsx', '.js'] : ['.ts', '.tsx', '.mjs', '.js'];
 	const compilerOptions = args.legacy ? {} : { target: 'es6', module: 'esnext' };
-	const features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
 	const isLib = args.target === 'lib';
+	let features = args.legacy ? args.features : { ...(args.features || {}), ...getFeatures('modern') };
+	features = { ...features, 'cldr-elide': true };
 
 	const emitAll =
 		isLib &&
@@ -145,7 +146,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					declaration: true,
 					rootDir: path.resolve('./src'),
 					outDir: path.resolve(`./output/${args.mode || 'dist'}`)
-				}
+			  }
 			: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
@@ -170,7 +171,11 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			entry[widget.tag || widget.name] = [
 				isLib
 					? widget.path
-					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
+					: `imports-loader?widgetFactory=${widget.path}!${path.join(
+							__dirname,
+							'template',
+							'custom-element.js'
+					  )}`
 			];
 			return entry;
 		}, {}),
@@ -211,13 +216,13 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 							return typeof external === 'string'
 								? request
 								: external.type
-									? `${external.type} ${request}`
-									: {
-											amd: request,
-											commonjs: request,
-											commonjs2: request,
-											root: request
-										};
+								? `${external.type} ${request}`
+								: {
+										amd: request,
+										commonjs: request,
+										commonjs2: request,
+										root: request
+								  };
 						}
 					}
 				}
@@ -314,12 +319,12 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 									const fileDir = path.dirname(file.replace(srcPath, '')).replace(/^(\/|\\)/, '');
 									return `${fileDir}/[name].[ext]`;
 								}
-							}
+						  }
 						: {
 								hash: 'sha512',
 								digest: 'hex',
 								name: '[hash:base64:8].[ext]'
-							}
+						  }
 				},
 				{
 					test: /\.css$/,
@@ -342,10 +347,15 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 									options: {
 										publicPath: (resourcePath: string) => {
 											const outputPath = path.resolve(`./output/${args.mode || 'dist'}`);
-											return path.relative(path.dirname(resourcePath.replace(srcPath, outputPath)), outputPath) + '/';
+											return (
+												path.relative(
+													path.dirname(resourcePath.replace(srcPath, outputPath)),
+													outputPath
+												) + '/'
+											);
 										}
 									}
-								}
+							  }
 							: MiniCssExtractPlugin.loader,
 						{
 							loader: 'css-loader',
@@ -391,10 +401,15 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 									options: {
 										publicPath: (resourcePath: string) => {
 											const outputPath = path.resolve(`./output/${args.mode || 'dist'}`);
-											return path.relative(path.dirname(resourcePath.replace(srcPath, outputPath)), outputPath) + '/';
+											return (
+												path.relative(
+													path.dirname(resourcePath.replace(srcPath, outputPath)),
+													outputPath
+												) + '/'
+											);
 										}
 									}
-								}
+							  }
 							: MiniCssExtractPlugin.loader,
 						'@dojo/webpack-contrib/css-module-decorator-loader',
 						isLib && '@dojo/webpack-contrib/css-module-class-map-loader/loader',
