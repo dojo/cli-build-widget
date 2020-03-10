@@ -268,12 +268,12 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					test: new RegExp(`globalize(\\${path.sep}|$)`),
 					loader: 'imports-loader?define=>false'
 				},
-				args.target === 'lib' && {
+				{
 					exclude: allPaths,
 					test: /.*\.(gif|png|jpe?g|svg|eot|ttf|woff|woff2)$/i,
 					loader: 'file-loader',
 					options: {
-						emitFile: false
+						emitFile: args.target !== 'lib'
 					}
 				},
 				{
