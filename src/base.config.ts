@@ -175,6 +175,24 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			];
 			return entry;
 		}, {}),
+		optimization: {
+			splitChunks: {
+				cacheGroups: {
+					default: false,
+					vendors: false,
+
+					common: {
+						name: 'bootstrap',
+						minChunks: 2,
+						chunks: 'all',
+						priority: 10,
+						reuseExistingChunk: true,
+						enforce: true,
+						test: ({ resource }) => /node_modules/.test(resource)
+					}
+				}
+			}
+		},
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
 			chunkFilename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
