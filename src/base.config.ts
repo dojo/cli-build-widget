@@ -1,5 +1,4 @@
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
-import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
 import { emitAllFactory } from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
 import { classesMap } from '@dojo/webpack-contrib/css-module-class-map-loader/loader';
@@ -150,31 +149,21 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
-				before: removeEmpty([
-					args.target !== 'lib' &&
-						elementTransformer(program, {
-							elementPrefix,
-							customElementFiles: widgets.map((widget: any) => ({
-								file: path.resolve(widget.path),
-								tag: widget.tag
-							}))
-						}),
-					emitAll && emitAll.transformer
-				])
+				before: removeEmpty([emitAll && emitAll.transformer])
 			};
 		}
 	};
 
 	const config: webpack.Configuration = {
 		mode: isLib ? 'none' : 'development',
-		entry: widgets.reduce((entry: any, widget: any) => {
-			entry[widget.tag || widget.name] = [
-				isLib
-					? widget.path
-					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
-			];
-			return entry;
-		}, {}),
+		entry: isLib
+			? widgets.reduce((entry: any, widget: any) => {
+					entry[widget.tag || widget.name] = [widget.path];
+					return entry;
+				}, {})
+			: {
+					bootstrap: path.resolve(__dirname, 'template', 'custom-element.js')
+				},
 		optimization: {
 			splitChunks: {
 				cacheGroups: {
@@ -247,6 +236,14 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		module: {
 			noParse: /\.block/,
 			rules: removeEmpty([
+				{
+					test: path.resolve(__dirname, 'template', 'custom-element.js'),
+					loader: path.resolve(__dirname, '../webpack-contrib/element-loader/ElementLoader.js'),
+					options: {
+						widgets: widgets,
+						elementPrefix
+					}
+				},
 				tsLint && {
 					test: /\.ts$/,
 					enforce: 'pre',

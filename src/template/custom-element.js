@@ -1,4 +1,9 @@
 var registerCustomElement = require('@dojo/framework/core/registerCustomElement').default;
 
-var defaultExport = widgetFactory.default;
-defaultExport && registerCustomElement(defaultExport);
+function useDefault(p) {
+	return p.then(function (r) {
+		return r.default;
+	});
+}
+
+
