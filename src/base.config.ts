@@ -171,7 +171,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					vendors: false,
 
 					common: {
-						name: 'bootstrap',
+						name: 'common',
 						minChunks: 2,
 						chunks: 'all',
 						priority: 10,
