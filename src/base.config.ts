@@ -230,7 +230,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					}
 				}
 
-				callback(null, resolveExternal(externals));
+				callback(null, resolveExternal(externals) as any);
 			}
 		],
 		module: {
