@@ -1,5 +1,4 @@
 import CssModulePlugin from '@dojo/webpack-contrib/css-module-plugin/CssModulePlugin';
-import elementTransformer from '@dojo/webpack-contrib/element-transformer/ElementTransformer';
 import { emitAllFactory } from '@dojo/webpack-contrib/emit-all-plugin/EmitAllPlugin';
 import getFeatures from '@dojo/webpack-contrib/static-build-loader/getFeatures';
 import { classesMap } from '@dojo/webpack-contrib/css-module-class-map-loader/loader';
@@ -25,13 +24,18 @@ const packageName = packageJson.name || '';
 const tsLintPath = path.join(basePath, 'tslint.json');
 const tsLint = existsSync(tsLintPath) ? require(tsLintPath) : false;
 
-function getJsonpFunctionName(name: string) {
-	name = name
+function parsePackageName(packageName: string) {
+	return packageName
 		.replace(/[^a-z0-9_]/g, ' ')
 		.trim()
 		.replace(/\s+/g, '_');
-	return `dojoWebpackJsonp${name}`;
 }
+
+function getJsonpFunctionName(packageName: string) {
+	return `dojoWebpackJsonp${parsePackageName(packageName)}`;
+}
+
+const entryName = parsePackageName(packageName || 'bootstrap');
 
 function getUMDCompatLoader(options: { bundles?: { [key: string]: string[] } }) {
 	const { bundles = {} } = options;
@@ -150,31 +154,39 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			: compilerOptions,
 		getCustomTransformers(program: any) {
 			return {
-				before: removeEmpty([
-					args.target !== 'lib' &&
-						elementTransformer(program, {
-							elementPrefix,
-							customElementFiles: widgets.map((widget: any) => ({
-								file: path.resolve(widget.path),
-								tag: widget.tag
-							}))
-						}),
-					emitAll && emitAll.transformer
-				])
+				before: removeEmpty([emitAll && emitAll.transformer])
 			};
 		}
 	};
 
 	const config: webpack.Configuration = {
 		mode: isLib ? 'none' : 'development',
-		entry: widgets.reduce((entry: any, widget: any) => {
-			entry[widget.tag || widget.name] = [
-				isLib
-					? widget.path
-					: `imports-loader?widgetFactory=${widget.path}!${path.join(__dirname, 'template', 'custom-element.js')}`
-			];
-			return entry;
-		}, {}),
+		entry: isLib
+			? widgets.reduce((entry: any, widget: any) => {
+					entry[widget.tag || widget.name] = [widget.path];
+					return entry;
+				}, {})
+			: {
+					[entryName]: path.resolve(__dirname, 'template', 'custom-element.js')
+				},
+		optimization: {
+			splitChunks: {
+				cacheGroups: {
+					default: false,
+					vendors: false,
+
+					common: {
+						name: 'common',
+						minChunks: 2,
+						chunks: 'all',
+						priority: 10,
+						reuseExistingChunk: true,
+						enforce: true,
+						test: ({ resource }) => /node_modules/.test(resource)
+					}
+				}
+			}
+		},
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
 			chunkFilename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
@@ -200,6 +212,9 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 				filename: `[name]-${packageJson.version}.css`,
 				sourceMap: true
 			} as any),
+			new webpack.DefinePlugin({
+				__ENTRY__: JSON.stringify(`${entryName}-${packageJson.version}`)
+			}),
 			emitAll && emitAll.plugin
 		]),
 		externals: [
@@ -223,12 +238,20 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					}
 				}
 
-				callback(null, resolveExternal(externals));
+				callback(null, resolveExternal(externals) as any);
 			}
 		],
 		module: {
 			noParse: /\.block/,
 			rules: removeEmpty([
+				{
+					test: path.resolve(__dirname, 'template', 'custom-element.js'),
+					loader: path.resolve(__dirname, '../webpack-contrib/element-loader/ElementLoader.js'),
+					options: {
+						widgets: widgets,
+						elementPrefix
+					}
+				},
 				tsLint && {
 					test: /\.ts$/,
 					enforce: 'pre',

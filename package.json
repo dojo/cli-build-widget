@@ -96,14 +96,14 @@
     "typescript": "3.4.5"
   },
   "dependencies": {
-    "@dojo/framework": "~7.0.0",
-    "@dojo/webpack-contrib": "~7.0.0",
+    "@dojo/framework": "8.0.0-beta.3",
+    "@dojo/webpack-contrib": "8.0.0-beta.1",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
     "cli-columns": "3.1.2",
     "css-loader": "1.0.1",
     "express": "4.16.2",
-    "file-loader": "^3.0.1",
+    "file-loader": "3.0.1",
     "globby": "7.1.1",
     "gzip-size": "4.1.0",
     "html-webpack-plugin": "3.2.0",
