@@ -32,6 +32,8 @@ function getJsonpFunctionName(name: string) {
 	return `dojoWebpackJsonp${name}`;
 }
 
+const entryName = getJsonpFunctionName(packageName || 'bootstrap');
+
 function getUMDCompatLoader(options: { bundles?: { [key: string]: string[] } }) {
 	const { bundles = {} } = options;
 	return {
@@ -162,7 +164,7 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 					return entry;
 				}, {})
 			: {
-					bootstrap: path.resolve(__dirname, 'template', 'custom-element.js')
+					[entryName]: path.resolve(__dirname, 'template', 'custom-element.js')
 				},
 		optimization: {
 			splitChunks: {
@@ -184,8 +186,8 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 		},
 		node: { dgram: 'empty', net: 'empty', tls: 'empty', fs: 'empty' },
 		output: {
-			chunkFilename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
-			filename: isLib ? '[name].js' : `[name]-${packageJson.version}.js`,
+			chunkFilename: '[name].js',
+			filename: '[name].js',
 			jsonpFunction: getJsonpFunctionName(`-${packageName}-${jsonpIdent}`),
 			libraryTarget: 'jsonp',
 			path: path.resolve('./output'),
@@ -204,9 +206,12 @@ export default function webpackConfigFactory(args: any): webpack.Configuration {
 			new webpack.BannerPlugin(banner),
 			new IgnorePlugin(/request\/providers\/node/),
 			new MiniCssExtractPlugin({
-				filename: `[name]-${packageJson.version}.css`,
+				filename: '[name].css',
 				sourceMap: true
 			} as any),
+			new webpack.DefinePlugin({
+				__ENTRY__: JSON.stringify(entryName)
+			}),
 			emitAll && emitAll.plugin
 		]),
 		externals: [
