@@ -24,15 +24,18 @@ const packageName = packageJson.name || '';
 const tsLintPath = path.join(basePath, 'tslint.json');
 const tsLint = existsSync(tsLintPath) ? require(tsLintPath) : false;
 
-function getJsonpFunctionName(name: string) {
-	name = name
+function parsePackageName(packageName: string) {
+	return packageName
 		.replace(/[^a-z0-9_]/g, ' ')
 		.trim()
 		.replace(/\s+/g, '_');
-	return `dojoWebpackJsonp${name}`;
 }
 
-const entryName = getJsonpFunctionName(packageName || 'bootstrap');
+function getJsonpFunctionName(packageName: string) {
+	return `dojoWebpackJsonp${parsePackageName(packageName)}`;
+}
+
+const entryName = parsePackageName(packageName || 'bootstrap');
 
 function getUMDCompatLoader(options: { bundles?: { [key: string]: string[] } }) {
 	const { bundles = {} } = options;
