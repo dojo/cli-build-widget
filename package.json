@@ -97,7 +97,7 @@
   },
   "dependencies": {
     "@dojo/framework": "8.0.0-beta.3",
-    "@dojo/webpack-contrib": "8.0.0-alpha.3",
+    "@dojo/webpack-contrib": "8.0.0-beta.1",
     "chalk": "2.4.1",
     "clean-webpack-plugin": "1.0.0",
     "cli-columns": "3.1.2",
