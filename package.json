@@ -90,7 +90,7 @@
     "prettier": "1.8.2",
     "rimraf": "2.6.2",
     "serve": "11.0.2",
-    "shelljs": "0.7.8",
+    "shelljs": "0.8.5",
     "shx": "0.2.2",
     "sinon": "~4.5.0",
     "typescript": "3.4.5"
