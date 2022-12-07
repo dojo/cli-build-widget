@@ -23,6 +23,6 @@
   "devDependencies": {
     "@dojo/cli": "7.0.0-alpha.1",
     "shx": "0.2.2",
-    "intern": "4.2.2"
+    "intern": "4.10.1"
   }
 }
